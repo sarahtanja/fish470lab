@@ -1,0 +1,31 @@
+---
+title: "Population structure in Hawaiian pilot whales"
+subtitle: "Reviewing the scientific method, R, `tidyverse`, and markdown"
+format: html
+---
+
+# The scientific method
+
+# Review R, tidyverse, and markdown
+
+# Population structure in Hawaiian pilot whales
+
+## Step 1: start a script
+- Set up working environment
+- Load libraries
+
+## Step 2: write your hypotheses
+- Null hypothesis (H0): 
+  - There is no population structure among Hawaiian short-finned pilot whales.
+- Alternative hypothesis (H1a): 
+  - There is significant population structure among Hawaiian short-finned pilot whales.
+
+# Lab Reflection
+
+What does this data tell you about population structure in Hawaiian
+short-finned pilot whales?
+
+1. Include your null and alternative hypotheses, and at least one plot you made today.
+2. Describe their population structure in terms of the evolutionary
+processes we learned about this week.
+3. Be brief! <1 page please.
