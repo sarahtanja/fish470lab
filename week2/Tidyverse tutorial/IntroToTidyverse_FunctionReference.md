@@ -33,7 +33,7 @@ This document lists all the functions introduced in the IntroToTidyverse tutoria
 ### `rename()`
 **Package:** dplyr  
 **Purpose:** Changes the names of columns in a dataframe to new names.  
-**Example:** `rename("gardens" = \`gardens: (United States)\`, "date" = Month)`
+**Example:** `rename("gardens" = `gardens: (United States)`, "date" = Month)`
 
 ### `mutate()`
 **Package:** dplyr  
@@ -63,7 +63,7 @@ This document lists all the functions introduced in the IntroToTidyverse tutoria
 ### `filter()`
 **Package:** dplyr  
 **Purpose:** Selects rows from a dataframe that meet specified conditions.  
-**Example:** `filter(month %in% c("05","01"))` or `filter(search_type == "gardens")`
+**Example:** `filter(month %in% c("05","01"))` or `filter(search_type == "gardens")` or `filter(search_type == "ice_skating")`
 
 ## Date/Time Functions (lubridate)
 
