@@ -11,14 +11,28 @@ format: html
 # Population structure in Hawaiian pilot whales
 
 ## Step 1: start a script
+
 - Set up working environment
+
 - Load libraries
+```{r}
+library(tidyverse)
+```
+
+- Import data
+```{r}
+
+```
+
+- Make exploratory visualizations
 
 ## Step 2: write your hypotheses
 - Null hypothesis (H0): 
   - There is no population structure among Hawaiian short-finned pilot whales.
 - Alternative hypothesis (H1a): 
   - There is significant population structure among Hawaiian short-finned pilot whales.
+
+## Step 3: test your hypotheses
 
 # Lab Reflection
 

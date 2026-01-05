@@ -60,7 +60,6 @@ Look at your new data frame. It should now have five columns with tidy column na
 Let's start by plotting our raw data.
 
 ```{r}
-
 search_data_tidy %>% #use the search_data_tidy data frame
   ggplot() + #start a plotting environment
   geom_line(aes(x = date, y = gardens), color = "purple") + #add a layer with the number of garden searches in each month and year
@@ -95,7 +94,6 @@ Look at your data again. You should have some new columns now: search_type, with
 Let's see what we get with our new dataset
 
 ```{r}
-
 search_data_long %>% #use search_data_long as the input
   ggplot() + #create a plotting environment
   geom_line(aes(x = date, y=nSearches, color = search_type)) + #create a new layer with number of searches by date, with color groups for each search type
@@ -217,6 +215,7 @@ A quick note on color palettes: color can be used to convey important informatio
 2. [RColorBrewer](https://r-graph-gallery.com/38-rcolorbrewers-palettes.html)
 3. [PNWColors](https://github.com/jakelawlor/PNWColors)
 4. [ggsci](https://nanx.me/ggsci/)
+5. [colorspace](https://colorspace.r-forge.r-project.org)
 
 If you finish this tutorial and have extra time, try out this exercise:
 
