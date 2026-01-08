@@ -1,8 +1,30 @@
 ---
 title: "FISH470-IntrotoTidyverse-Lab"
 author: "Sarah Tanja"
-format: html
-editor: visual
+date: 10/14/2024
+date-modified: today
+format:
+  gfm: 
+    toc: true
+    number-sections: true
+  html:
+    theme: journal
+    highlight-style: github
+    page-layout: article
+    code-background: true
+    code-tools: 
+      source: true
+      toggle: true
+    toc: true
+    toc-depth: 2
+    toc-location: left
+    number-sections: true
+    df-print: kable
+    smooth-scroll: true
+    link-external-icon: true
+    link-external-newwindow: true
+    reference-location: margin
+    citation-location: margin
 ---
 
 # The scientific method

@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Sarah Tanja">
+<meta name="dcterms.date" content="2024-10-14">
 
 <title>FISH470-IntrotoTidyverse-Lab</title>
 <style>
@@ -66,23 +67,64 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="FISH470-IntroToTidyverse-Lab_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="FISH470-IntroToTidyverse-Lab_files/libs/quarto-html/anchor.min.js"></script>
 <link href="FISH470-IntroToTidyverse-Lab_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="FISH470-IntroToTidyverse-Lab_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="FISH470-IntroToTidyverse-Lab_files/libs/quarto-html/quarto-syntax-highlighting-4a990d8dcb58f517c7c86712b8f2ac7c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="FISH470-IntroToTidyverse-Lab_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="FISH470-IntroToTidyverse-Lab_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="FISH470-IntroToTidyverse-Lab_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="FISH470-IntroToTidyverse-Lab_files/libs/bootstrap/bootstrap-9af6de2548c106c4a05dbc3b1b139c6f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 </head>
 
-<body class="fullcontent quarto-light">
+<body class="quarto-light">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#the-scientific-method" id="toc-the-scientific-method" class="nav-link active" data-scroll-target="#the-scientific-method"><span class="header-section-number">1</span> The scientific method</a></li>
+  <li><a href="#review-r-tidyverse-and-markdown" id="toc-review-r-tidyverse-and-markdown" class="nav-link" data-scroll-target="#review-r-tidyverse-and-markdown"><span class="header-section-number">2</span> Review R, tidyverse, and markdown</a>
+  <ul class="collapse">
+  <li><a href="#review-r-coding" id="toc-review-r-coding" class="nav-link" data-scroll-target="#review-r-coding"><span class="header-section-number">2.1</span> Review R coding</a></li>
+  </ul></li>
+  <li><a href="#tidyverse-tutorial" id="toc-tidyverse-tutorial" class="nav-link" data-scroll-target="#tidyverse-tutorial"><span class="header-section-number">3</span> Tidyverse Tutorial</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">3.1</span> Introduction</a></li>
+  <li><a href="#step-0-set-up-environment" id="toc-step-0-set-up-environment" class="nav-link" data-scroll-target="#step-0-set-up-environment"><span class="header-section-number">3.2</span> Step 0: Set up environment</a></li>
+  <li><a href="#step-1-import-data" id="toc-step-1-import-data" class="nav-link" data-scroll-target="#step-1-import-data"><span class="header-section-number">3.3</span> Step 1: Import data</a></li>
+  <li><a href="#step-2-wrangle-your-data" id="toc-step-2-wrangle-your-data" class="nav-link" data-scroll-target="#step-2-wrangle-your-data"><span class="header-section-number">3.4</span> Step 2: Wrangle your data</a></li>
+  <li><a href="#step-3-visualize-data" id="toc-step-3-visualize-data" class="nav-link" data-scroll-target="#step-3-visualize-data"><span class="header-section-number">3.5</span> Step 3: Visualize data</a></li>
+  <li><a href="#step-2b-wrangle-your-data-again" id="toc-step-2b-wrangle-your-data-again" class="nav-link" data-scroll-target="#step-2b-wrangle-your-data-again"><span class="header-section-number">3.6</span> Step 2b: Wrangle your data again</a></li>
+  <li><a href="#step-3b-plot-the-data-again" id="toc-step-3b-plot-the-data-again" class="nav-link" data-scroll-target="#step-3b-plot-the-data-again"><span class="header-section-number">3.7</span> Step 3b: Plot the data again</a></li>
+  <li><a href="#step-2c-more-wrangling" id="toc-step-2c-more-wrangling" class="nav-link" data-scroll-target="#step-2c-more-wrangling"><span class="header-section-number">3.8</span> Step 2c: More wrangling!</a></li>
+  <li><a href="#step-3c-more-plotting" id="toc-step-3c-more-plotting" class="nav-link" data-scroll-target="#step-3c-more-plotting"><span class="header-section-number">3.9</span> Step 3c: More plotting!</a></li>
+  <li><a href="#step-2d-one-last-data-wrangle" id="toc-step-2d-one-last-data-wrangle" class="nav-link" data-scroll-target="#step-2d-one-last-data-wrangle"><span class="header-section-number">3.10</span> Step 2d: One last data wrangle</a></li>
+  <li><a href="#step-4-model-your-data" id="toc-step-4-model-your-data" class="nav-link" data-scroll-target="#step-4-model-your-data"><span class="header-section-number">3.11</span> Step 4: Model your data</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">3.12</span> Conclusion</a></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise"><span class="header-section-number">3.13</span> Exercise</a></li>
+  </ul></li>
+  <li><a href="#population-structure-in-hawaiian-pilot-whales" id="toc-population-structure-in-hawaiian-pilot-whales" class="nav-link" data-scroll-target="#population-structure-in-hawaiian-pilot-whales"><span class="header-section-number">4</span> Population structure in Hawaiian pilot whales</a>
+  <ul class="collapse">
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background"><span class="header-section-number">4.1</span> Background</a></li>
+  <li><a href="#step-0-set-up-environment-1" id="toc-step-0-set-up-environment-1" class="nav-link" data-scroll-target="#step-0-set-up-environment-1"><span class="header-section-number">4.2</span> Step 0: Set up environment</a></li>
+  <li><a href="#step-1-import-data-1" id="toc-step-1-import-data-1" class="nav-link" data-scroll-target="#step-1-import-data-1"><span class="header-section-number">4.3</span> Step 1: Import data</a></li>
+  <li><a href="#step-2-wrangle-your-data-1" id="toc-step-2-wrangle-your-data-1" class="nav-link" data-scroll-target="#step-2-wrangle-your-data-1"><span class="header-section-number">4.4</span> Step 2: Wrangle your data</a></li>
+  <li><a href="#step-3-visualize-data-1" id="toc-step-3-visualize-data-1" class="nav-link" data-scroll-target="#step-3-visualize-data-1"><span class="header-section-number">4.5</span> Step 3: Visualize data</a></li>
+  <li><a href="#step-4-model-data" id="toc-step-4-model-data" class="nav-link" data-scroll-target="#step-4-model-data"><span class="header-section-number">4.6</span> Step 4: Model data</a></li>
+  </ul></li>
+  <li><a href="#lab-reflection" id="toc-lab-reflection" class="nav-link" data-scroll-target="#lab-reflection"><span class="header-section-number">5</span> Lab Reflection</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="FISH470-IntroToTidyverse-Lab.md"><i class="bi bi-file-code"></i>Github (GFM)</a></li></ul></div></nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">FISH470-IntrotoTidyverse-Lab</h1>
+<div class="quarto-title-block"><div><h1 class="title">FISH470-IntrotoTidyverse-Lab</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -96,7 +138,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </div>
   </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 14, 2024</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">January 8, 2026</p>
+    </div>
+  </div>
     
   </div>
   
@@ -105,15 +159,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="the-scientific-method" class="level1">
-<h1>The scientific method</h1>
+<section id="the-scientific-method" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> The scientific method</h1>
 </section>
-<section id="review-r-tidyverse-and-markdown" class="level1">
-<h1>Review R, tidyverse, and markdown</h1>
-<section id="review-r-coding" class="level2">
-<h2 class="anchored" data-anchor-id="review-r-coding">Review R coding</h2>
-<section id="learning-goals" class="level4">
-<h4 class="anchored" data-anchor-id="learning-goals">Learning Goals:</h4>
+<section id="review-r-tidyverse-and-markdown" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Review R, tidyverse, and markdown</h1>
+<section id="review-r-coding" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="review-r-coding"><span class="header-section-number">2.1</span> Review R coding</h2>
+<section id="learning-goals" class="level4" data-number="2.1.0.1">
+<h4 data-number="2.1.0.1" class="anchored" data-anchor-id="learning-goals"><span class="header-section-number">2.1.0.1</span> Learning Goals:</h4>
 <ol type="1">
 <li><p>Learn to use the R tidyverse to import data and perform basic data tidying and manipulation.</p></li>
 <li><p>Learn to use the ggplot package in R to create basic plots of your data.</p></li>
@@ -130,15 +184,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 </section>
-<section id="tidyverse-tutorial" class="level1">
-<h1>Tidyverse Tutorial</h1>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<section id="tidyverse-tutorial" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Tidyverse Tutorial</h1>
+<section id="introduction" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">3.1</span> Introduction</h2>
 <p>This tutorial steps through some of the basic fuctions of the tidyverse collection of packages that you will use throughout the course. Work through these steps in groups of 2-3. Each person should work in their own R Notebook. Use that notebook to type out each of the commands included in this tutorial, and to take notes on each step.</p>
 <p>For this tutorial, we will be comparing trends in the number of Google searches for the terms “gardens” and “ice skating” over time. I downloaded this dataset from the <a href="https://trends.google.com/trends/">Google trends</a> website. Once you are comfortable with the material in this tutorial, you can download any dataset of search terms from their website and explore trends and patterns using the tidyverse. You can find this dataset on today’s Canvas page - download that dataset and make sure it’s in the same folder as your R Notebook.</p>
 </section>
-<section id="step-0-set-up-environment" class="level2">
-<h2 class="anchored" data-anchor-id="step-0-set-up-environment">Step 0: Set up environment</h2>
+<section id="step-0-set-up-environment" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="step-0-set-up-environment"><span class="header-section-number">3.2</span> Step 0: Set up environment</h2>
 <p>Before starting any project, you will always need to set up your environment. This can include loading any libraries you will need, setting global formatting options, or a number of other advanced functions. For now, we will focus on loading libraries. You will need readr, tidyr, dplyr, and ggplot, which are all part of the tidyverse universe and can all be loaded together:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -168,8 +222,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="step-1-import-data" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-import-data">Step 1: Import data</h2>
+<section id="step-1-import-data" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="step-1-import-data"><span class="header-section-number">3.3</span> Step 1: Import data</h2>
 <p>Now that you have your environment set up, the first thing you will want to do is import the data that you are working with. The most common way this is done is by reading in a comma-separated file (csv) or tab-delimited file (e.g.&nbsp;tsv or txt files). We are using a csv file for this exercise, so you can read in your data using read_csv() from the readr package:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#read in data, assign to a meaningful object name </span></span>
@@ -188,8 +242,8 @@ dbl (2): gardens: (United States), ice skating: (United States)
 <p>Once you have imported your data, take a look at it to make sure it makes sense. You can do this in two ways: first, in the environment window (upper right corner), find the variable called “search_data” and click on the blue arrow. This will show a drop-down summary of your data. You’ll see each column listed as a vector, and it will show you the name of the column, the type or class of data, and the number of observations in each column.</p>
 <p>You can also look at your data in the viewer. Click on the name of the data frame in the environment to open it up in the viewer window. Notice that it opens as a separate tab, and that each vector is shown as a column, with a row for each observation. In this case, we have three columns: one for month/year, one for the garden search term, and one for the ice skating search term. There are a total of 256 observations for each of those columns.</p>
 </section>
-<section id="step-2-wrangle-your-data" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-wrangle-your-data">Step 2: Wrangle your data</h2>
+<section id="step-2-wrangle-your-data" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="step-2-wrangle-your-data"><span class="header-section-number">3.4</span> Step 2: Wrangle your data</h2>
 <p>Usually, the data that you import won’t be exactly what you want to plot or model. Sometimes it will require some tidying - for example, you may incomplete observations (rows) that you need to remove, or inconsistent data entry that needs to be cleaned up (e.g.&nbsp;if the dates are entered as May 2025 and 04/2025, R will not recognize what this is).</p>
 <p>Before moving on, we’re going to do three basic tidying steps. First, we’ll separate the date column so that we have a column for month and another for year. Then we’ll change our column names so that they’re easier to use later. Finally, we’ll specify that the date column is actually populated with dates (instead of just a character strings), which R can understand on a chronological scale. All of these changes will get assigned to a new variable, so that we don’t confuse ourselves later.</p>
 <p>To do this cleanly, we’re going to use one of the most powerful functions of the tidyverse: the pipe function. The pipe functions tells R to take the data output from one step and send it to the next step. This allows us to write tidy code, in list formats, that is easy to read later.</p>
@@ -202,8 +256,8 @@ dbl (2): gardens: (United States), ice skating: (United States)
 </div>
 <p>Look at your new data frame. It should now have five columns with tidy column names, and the “date” column should be in Date format instead of character format.</p>
 </section>
-<section id="step-3-visualize-data" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-visualize-data">Step 3: Visualize data</h2>
+<section id="step-3-visualize-data" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="step-3-visualize-data"><span class="header-section-number">3.5</span> Step 3: Visualize data</h2>
 <p>Let’s start by plotting our raw data.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>search_data_tidy <span class="sc">%&gt;%</span> <span class="co">#use the search_data_tidy data frame   </span></span>
@@ -223,8 +277,8 @@ dbl (2): gardens: (United States), ice skating: (United States)
 <p>Pretty cool, right? It looks like we have some cyclical patterns, and maybe they’re opposite each other. It also looks like once of the searches is trending down over time, while the other is staying consistent.</p>
 <p>This is a nice visualization of our data, but I think we can do better. Let’s make it easier to see some of those patterns by doing a bit more manipulation of our dataset.</p>
 </section>
-<section id="step-2b-wrangle-your-data-again" class="level2">
-<h2 class="anchored" data-anchor-id="step-2b-wrangle-your-data-again">Step 2b: Wrangle your data again</h2>
+<section id="step-2b-wrangle-your-data-again" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="step-2b-wrangle-your-data-again"><span class="header-section-number">3.6</span> Step 2b: Wrangle your data again</h2>
 <p>First, we can’t really tell from the plot which line corresponds with which search. It would be nice to have that information in a legend. In order to do that, we need to give ggplot a single column of data for the y values (number of searches), and a second column of data for the grouping variable. We’ll change the format of our data frame to do that.</p>
 <p>It would also be nice if the two lines weren’t so far apart. Clearly, there are more searches overall for “gardens” than for “ice skating”, but we’re more interested in the trends over time. Let’s normalize our data so that we can see those trends more clearly.</p>
 <ul>
@@ -245,8 +299,8 @@ dbl (2): gardens: (United States), ice skating: (United States)
 </div>
 <p>Look at your data again. You should have some new columns now: search_type, with “gardens” and “ice_skating” as two types of searches, and nSearches, which has been normalized to be the number of searches over or under the mean number of searches.</p>
 </section>
-<section id="step-3b-plot-the-data-again" class="level2">
-<h2 class="anchored" data-anchor-id="step-3b-plot-the-data-again">Step 3b: Plot the data again</h2>
+<section id="step-3b-plot-the-data-again" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="step-3b-plot-the-data-again"><span class="header-section-number">3.7</span> Step 3b: Plot the data again</h2>
 <p>Let’s see what we get with our new dataset</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>search_data_long <span class="sc">%&gt;%</span> <span class="co">#use search_data_long as the input   </span></span>
@@ -265,8 +319,8 @@ dbl (2): gardens: (United States), ice skating: (United States)
 <p>This way, we can confirm what we thought we saw before: the cyclical nature of the two search types are opposite each other, and searches for “gardens” have been decreasing over time while searches for “ice skating” have not.</p>
 <p>What if we want to know which month has the greatest number of searches for each of the search types? Let’s go back to the data.</p>
 </section>
-<section id="step-2c-more-wrangling" class="level2">
-<h2 class="anchored" data-anchor-id="step-2c-more-wrangling">Step 2c: More wrangling!</h2>
+<section id="step-2c-more-wrangling" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="step-2c-more-wrangling"><span class="header-section-number">3.8</span> Step 2c: More wrangling!</h2>
 <p>Probably the easiest way to answer that question will be to get a average of the number of searches in each month across all years in the dataset, and then see which month is the greatest for each one. Let’s do that in two steps this time, so that we can see the output of each.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#summarize searches in each month and assign to a meaningful variable name </span></span>
@@ -285,25 +339,43 @@ dbl (2): gardens: (United States), ice skating: (United States)
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="co">#always ungroup</span></span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>max_searches</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 3
-  search_type month mean_searches
-  &lt;chr&gt;       &lt;chr&gt;         &lt;dbl&gt;
-1 gardens     05             14.6
-2 ice_skating 12             24.8</code></pre>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">search_type</th>
+<th style="text-align: left;">month</th>
+<th style="text-align: right;">mean_searches</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">gardens</td>
+<td style="text-align: left;">05</td>
+<td style="text-align: right;">14.56027</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ice_skating</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: right;">24.77939</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 <p>And just like that, we have our answer! But we can also plot this data, if we want to visualize it.</p>
 </section>
-<section id="step-3c-more-plotting" class="level2">
-<h2 class="anchored" data-anchor-id="step-3c-more-plotting">Step 3c: More plotting!</h2>
+<section id="step-3c-more-plotting" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="step-3c-more-plotting"><span class="header-section-number">3.9</span> Step 3c: More plotting!</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>searches_by_month <span class="sc">%&gt;%</span> <span class="co">#use searches_by_month as input data   </span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="co">#open a ggplot environment   </span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.numeric</span>(month), <span class="at">y =</span> mean_searches, <span class="at">color =</span> search_type)) <span class="sc">+</span> <span class="co">#add a layer with a line for number of searches in each month, grouped by search type   </span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> <span class="co">#make it prettier   </span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"month"</span>) <span class="sc">+</span> <span class="co">#add a more descriptive x axis label   </span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean number of searches"</span>) <span class="co">#add a more descriptive y axis label}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>searches_by_month <span class="sc">%&gt;%</span> <span class="co">#use searches_by_month as input data   </span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="co">#open a ggplot environment   </span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.numeric</span>(month), <span class="at">y =</span> mean_searches, <span class="at">color =</span> search_type)) <span class="sc">+</span> <span class="co">#add a layer with a line for number of searches in each month, grouped by search type   </span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> <span class="co">#make it prettier   </span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"month"</span>) <span class="sc">+</span> <span class="co">#add a more descriptive x axis label   </span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean number of searches"</span>) <span class="co">#add a more descriptive y axis label}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -314,12 +386,12 @@ dbl (2): gardens: (United States), ice skating: (United States)
 </div>
 <p>This plot allows us to see seasonal trends within a year. Pretty cool! We ca also plot all of the years separately, instead of an average.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>search_data_long <span class="sc">%&gt;%</span>  <span class="co">#use search_data_long as input data   </span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="co">#open a ggplot environment   </span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.numeric</span>(month), <span class="at">y =</span> nSearches, <span class="at">color =</span> search_type)) <span class="sc">+</span> <span class="co">#add a layer with a point for number of searches in each month, grouped by search type   </span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> <span class="co">#make it prettier   </span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"month"</span>) <span class="sc">+</span> <span class="co">#add a more descriptive x axis label   </span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Number of searches"</span>) <span class="co">#add a more descriptive y axis label}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>search_data_long <span class="sc">%&gt;%</span>  <span class="co">#use search_data_long as input data   </span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="co">#open a ggplot environment   </span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.numeric</span>(month), <span class="at">y =</span> nSearches, <span class="at">color =</span> search_type)) <span class="sc">+</span> <span class="co">#add a layer with a point for number of searches in each month, grouped by search type   </span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> <span class="co">#make it prettier   </span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"month"</span>) <span class="sc">+</span> <span class="co">#add a more descriptive x axis label   </span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Number of searches"</span>) <span class="co">#add a more descriptive y axis label}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -332,32 +404,32 @@ dbl (2): gardens: (United States), ice skating: (United States)
 <p>For now, let’s test out one basic analysis to see whether our maximum search months are significantly greater than our minimum search months. Our null hypothesis here is that there are no significant differences between months with maximum and minimum searches, for either search type. We’ll have two alternate hypotheses: that there are significant differences between maximum and minimum months for (1) one of the two search types, or (2) both of the search types.</p>
 <p>We’ll need to do a bit more data wrangling, and then we’ll use an ANOVA to determine whether the difference between the maximum and minimum months is greater than the differences among years within each month.</p>
 </section>
-<section id="step-2d-one-last-data-wrangle" class="level2">
-<h2 class="anchored" data-anchor-id="step-2d-one-last-data-wrangle">Step 2d: One last data wrangle</h2>
+<section id="step-2d-one-last-data-wrangle" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="step-2d-one-last-data-wrangle"><span class="header-section-number">3.10</span> Step 2d: One last data wrangle</h2>
 <p>We know that the maximum searches for “gardens” happen in May, and the most searches for “ice skating” happen in December. I’m going to eyeball the data and say searches for “gardens” are lowest in January, and searches for “ice skating” are lowest in May. You could confirm that by summarizing the data as we did in Step 2c. Before we can model our data using an ANOVA, we need to filter it to contain the appropriate months and search types.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#filter data and assign it a meaningful variable name </span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>maxmin_gardens <span class="ot">&lt;-</span> search_data_long <span class="sc">%&gt;%</span> <span class="co">#use search_data_long as the input   </span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(month <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"05"</span>,<span class="st">"01"</span>)) <span class="sc">%&gt;%</span> <span class="co">#include only the months with max and min nSearches   </span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(search_type <span class="sc">==</span> <span class="st">"gardens"</span>) <span class="co">#include only the "gardens" search term   </span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co">#filter data and assign it a meaningful variable name </span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>maxmin_iceskate <span class="ot">&lt;-</span> search_data_long <span class="sc">%&gt;%</span> <span class="co">#use search_data_long as the input   </span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(month <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"05"</span>,<span class="st">"01"</span>)) <span class="sc">%&gt;%</span> <span class="co">#include only the months with max and min nSearches   </span></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(search_type <span class="sc">==</span> <span class="st">"ice_skating"</span>) <span class="co">#include only the "gardens" search term}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#filter data and assign it a meaningful variable name </span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>maxmin_gardens <span class="ot">&lt;-</span> search_data_long <span class="sc">%&gt;%</span> <span class="co">#use search_data_long as the input   </span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(month <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"05"</span>,<span class="st">"01"</span>)) <span class="sc">%&gt;%</span> <span class="co">#include only the months with max and min nSearches   </span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(search_type <span class="sc">==</span> <span class="st">"gardens"</span>) <span class="co">#include only the "gardens" search term   </span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co">#filter data and assign it a meaningful variable name </span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>maxmin_iceskate <span class="ot">&lt;-</span> search_data_long <span class="sc">%&gt;%</span> <span class="co">#use search_data_long as the input   </span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(month <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"05"</span>,<span class="st">"01"</span>)) <span class="sc">%&gt;%</span> <span class="co">#include only the months with max and min nSearches   </span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(search_type <span class="sc">==</span> <span class="st">"ice_skating"</span>) <span class="co">#include only the "gardens" search term}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now we’re ready to test our hypothesis with an ANOVA.</p>
 </section>
-<section id="step-4-model-your-data" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-model-your-data">Step 4: Model your data</h2>
+<section id="step-4-model-your-data" class="level2" data-number="3.11">
+<h2 data-number="3.11" class="anchored" data-anchor-id="step-4-model-your-data"><span class="header-section-number">3.11</span> Step 4: Model your data</h2>
 <p>First let’s look at searches for “gardens”:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#run an ANOVA and assign it a meaningful variable name </span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>gardens_anova <span class="ot">&lt;-</span> <span class="fu">aov</span>(<span class="at">formula =</span> nSearches <span class="sc">~</span> month, <span class="at">data =</span> maxmin_gardens) <span class="co">#y variable is nSearches, x variable is month, using the maxmin_gardens dataset  summary(gardens_anova)}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#run an ANOVA and assign it a meaningful variable name </span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>gardens_anova <span class="ot">&lt;-</span> <span class="fu">aov</span>(<span class="at">formula =</span> nSearches <span class="sc">~</span> month, <span class="at">data =</span> maxmin_gardens) <span class="co">#y variable is nSearches, x variable is month, using the maxmin_gardens dataset  summary(gardens_anova)}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Looking at a summary of our ANOVA shows us that the difference in number of searches between maximum and minimum months is statistically significant. Based on this, we can reject our null hypothesis and focus on our two alternative hypotheses.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gardens_anova)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gardens_anova)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>            Df Sum Sq Mean Sq F value   Pr(&gt;F)    
 month        1   8420    8420   173.4 2.57e-16 ***
@@ -368,12 +440,12 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>Now let’s try searches for “ice skating”:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">#run an ANOVA and assign it a meaningful variable name </span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>iceskate_anova <span class="ot">&lt;-</span> <span class="fu">aov</span>(<span class="at">formula =</span> nSearches <span class="sc">~</span> month, <span class="at">data =</span> maxmin_iceskate) <span class="co">#y variable is nSearches, x variable is month, using the maxmin_iceskate dataset  summary(iceskate_anova)}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#run an ANOVA and assign it a meaningful variable name </span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>iceskate_anova <span class="ot">&lt;-</span> <span class="fu">aov</span>(<span class="at">formula =</span> nSearches <span class="sc">~</span> month, <span class="at">data =</span> maxmin_iceskate) <span class="co">#y variable is nSearches, x variable is month, using the maxmin_iceskate dataset  summary(iceskate_anova)}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The summary of our ice skating ANOVA shows us that the difference in number of searches between maximum and minimum months is also statistically significant. Based on this, we would conclude that our 2nd alternative hypothesis is true: that the number of searches in maximum and minimum months is different for both search types.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(iceskate_anova)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(iceskate_anova)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>            Df Sum Sq Mean Sq F value Pr(&gt;F)    
 month        1   3854    3854    1206 &lt;2e-16 ***
@@ -383,15 +455,15 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 </section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<section id="conclusion" class="level2" data-number="3.12">
+<h2 data-number="3.12" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">3.12</span> Conclusion</h2>
 <p>Once you’ve gone through this tutorial, you should have a decent feel for: 1. The tidy data analysis workflow, and 2. How to use the tidyverse to wrangle and visualize your data.</p>
 <p>This is just the tip of the iceberg. R and tidyverse are both community-supported coding languages, and because we have a great community, R is a powerful coding language that allows you to do almost anything you can dream of. Over the coming weeks we’ll use tidyverse and the tidy data analysis workflow to analyze real marine mammal research questions. We’ll (1) wrangle and visualize data, (2) make observations about the patterns we see, (3) use those observations to develop hypotheses, and (4) test those hypotheses with basic models.</p>
 <p>Today we used some of the most common functions in tidyverse: filter, separate, mutate, summarise, date formatting, pivot, and ggplot. There are many many more. There are good cheat sheets for <a href="https://rstudio.github.io/cheatsheets/html/tidyr.html">tidyr</a>, <a href="https://rstudio.github.io/cheatsheets/html/data-transformation.html">dplyr</a>, <a href="https://rstudio.github.io/cheatsheets/html/lubridate.html">lubridate</a>, <a href="https://rstudio.github.io/cheatsheets/html/data-visualization.html">ggplot</a>, and many more on the <a href="https://posit.co/resources/cheatsheets/">Post Cheatsheets</a> website.</p>
 <p>If you finish this tutorial and have extra time, try out this exercise:</p>
 </section>
-<section id="exercise" class="level2">
-<h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
+<section id="exercise" class="level2" data-number="3.13">
+<h2 data-number="3.13" class="anchored" data-anchor-id="exercise"><span class="header-section-number">3.13</span> Exercise</h2>
 <p>Did you notice that the number of searches for one search type seemed to decrease while the other did not? Let’s see if that was real.</p>
 <ol type="1">
 <li>First write out your null and alternative hypotheses.</li>
@@ -401,10 +473,10 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </ol>
 </section>
 </section>
-<section id="population-structure-in-hawaiian-pilot-whales" class="level1">
-<h1>Population structure in Hawaiian pilot whales</h1>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
+<section id="population-structure-in-hawaiian-pilot-whales" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Population structure in Hawaiian pilot whales</h1>
+<section id="background" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="background"><span class="header-section-number">4.1</span> Background</h2>
 <p>Before this week’s lab, please spend some time looking at the figure below to familiarize yourselves with the concept of&nbsp;<strong>genetic relatedness,</strong>&nbsp;which is defined as&nbsp;<em>the proportion of your DNA that you share with another individual</em>. Closer relatives share more of their DNA, and more distant relatives share less and less of it.</p>
 <p><img src="../refs/genetic-relatedness.png" class="img-fluid"></p>
 <p>When we average across a population, or across all living things, we find that all individuals share roughly half (50%) of their DNA with their immediate relatives - that is, their parents, offspring, and full siblings (see the darkest grey ellipse in the center of the figure above). All of these relationships are therefore considered to have a <strong><em>relatedness coefficient</em></strong> of 0.5.</p>
@@ -437,8 +509,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </tbody>
 </table>
 </section>
-<section id="step-0-set-up-environment-1" class="level2">
-<h2 class="anchored" data-anchor-id="step-0-set-up-environment-1">Step 0: Set up environment</h2>
+<section id="step-0-set-up-environment-1" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="step-0-set-up-environment-1"><span class="header-section-number">4.2</span> Step 0: Set up environment</h2>
 <ul>
 <li><p><a href="https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects">Create an R project</a></p></li>
 <li><p>Organize your project directory structure</p></li>
@@ -459,14 +531,14 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <li><p>Load libraries</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="step-1-import-data-1" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-import-data-1">Step 1: Import data</h2>
+<section id="step-1-import-data-1" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="step-1-import-data-1"><span class="header-section-number">4.3</span> Step 1: Import data</h2>
 <p>Now that you have your environment set up, the first thing you will want to do is import the data that you are working with. The most common way this is done is by reading in a comma-separated file (csv) or tab-delimited file (e.g.&nbsp;tsv or txt files). We are using a csv file for this exercise, so you can read in your data using read_csv() from the readr package:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>related <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/SFPW_relatedness_associations.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>related <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/SFPW_relatedness_associations.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>New names:
 Rows: 90000 Columns: 9
@@ -477,7 +549,7 @@ Rows: 90000 Columns: 9
 Specify the column types or set `show_col_types = FALSE` to quiet this message.
 • `` -&gt; `...1`</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>haplotypes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/SFPW_mtDNA_haplotypes.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>haplotypes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/SFPW_mtDNA_haplotypes.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>New names:
 Rows: 300 Columns: 6
@@ -492,32 +564,101 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <p>Once you have imported your data, take a look at it to make sure it makes sense. You can do this in two ways: first, in the environment window (upper right corner), find the variable called “search_data” and click on the blue arrow. This will show a drop-down summary of your data. You’ll see each column listed as a vector, and it will show you the name of the column, the type or class of data, and the number of observations in each column.</p>
 <p>You can also look at your data in the viewer. Click on the name of the data frame in the environment to open it up in the viewer window. Notice that it opens as a separate tab, and that each vector is shown as a column, with a row for each observation. In this case, we have three columns: one for month/year, one for the garden search term, and one for the ice skating search term. There are a total of 256 observations for each of those columns.</p>
 </section>
-<section id="step-2-wrangle-your-data-1" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-wrangle-your-data-1">Step 2: Wrangle your data</h2>
+<section id="step-2-wrangle-your-data-1" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="step-2-wrangle-your-data-1"><span class="header-section-number">4.4</span> Step 2: Wrangle your data</h2>
 <p>Usually, the data that you import won’t be exactly what you want to plot or model. Sometimes it will require some tidying - for example, you may have incomplete observations (rows) that you need to remove, or inconsistent data entry that needs to be cleaned up. In this case, the first column imported a column of row numbers that are not useful for us. We can use a pipe operator <code>%&gt;%</code> , which has a <code>Ctrl+Alt+p</code> default hotkey assigned in <code>Tools/Keyboard Shortcuts Help</code> followed by the command <code>dplyr::select</code> to select all columns except column 1 <code>(-1)</code> . This drops column 1 from our dataframe.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>related <span class="ot">&lt;-</span> related <span class="sc">%&gt;%</span> </span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>)</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>haplotypes <span class="ot">&lt;-</span> haplotypes <span class="sc">%&gt;%</span> </span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>related <span class="ot">&lt;-</span> related <span class="sc">%&gt;%</span> </span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>haplotypes <span class="ot">&lt;-</span> haplotypes <span class="sc">%&gt;%</span> </span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Take some time to familiarize yourself with the data. Explore the columns, what information is present, and what questions you can ask of the data.</p>
 <p>Functions like <code>head</code> , <code>summary</code>, and <code>str</code> are helpful for dataframe familiarization.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(related)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 8
-  clust1  ind1 island1 clust2  ind2 island2   rel assoc
-   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;
-1      1     1 Hawaii       1     1 Hawaii  0.614 0.755
-2      1     1 Hawaii       1    10 Hawaii  0.501 0.675
-3      1     1 Hawaii       1    11 Hawaii  0.742 0.935
-4      1     1 Hawaii       1    12 Hawaii  0.745 0.885
-5      1     1 Hawaii       1    13 Hawaii  0.726 1    
-6      1     1 Hawaii       1    14 Hawaii  0.674 0.836</code></pre>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(related)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">clust1</th>
+<th style="text-align: right;">ind1</th>
+<th style="text-align: left;">island1</th>
+<th style="text-align: right;">clust2</th>
+<th style="text-align: right;">ind2</th>
+<th style="text-align: left;">island2</th>
+<th style="text-align: right;">rel</th>
+<th style="text-align: right;">assoc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: right;">0.6140150</td>
+<td style="text-align: right;">0.7552239</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: right;">0.5008173</td>
+<td style="text-align: right;">0.6746087</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: right;">0.7420147</td>
+<td style="text-align: right;">0.9352217</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: right;">0.7454757</td>
+<td style="text-align: right;">0.8846820</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: right;">0.7263974</td>
+<td style="text-align: right;">1.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: right;">0.6744903</td>
+<td style="text-align: right;">0.8362351</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(related)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(related)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     clust1        ind1         island1              clust2        ind2      
  Min.   : 1   Min.   : 1.00   Length:90000       Min.   : 1   Min.   : 1.00  
@@ -534,7 +675,7 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
                     3rd Qu.:0.2684   3rd Qu.:0.3434  
                     Max.   :0.9510   Max.   :1.0000  </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(related)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(related)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>tibble [90,000 × 8] (S3: tbl_df/tbl/data.frame)
  $ clust1 : num [1:90000] 1 1 1 1 1 1 1 1 1 1 ...
@@ -548,19 +689,67 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(haplotypes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 5
-  indID       cluster individual island haps 
-  &lt;chr&gt;         &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;
-1 1_1_Hawaii        1          1 Hawaii A    
-2 5_1_Hawaii        5          1 Hawaii A    
-3 6_1_Hawaii        6          1 Hawaii D    
-4 8_1_Hawaii        8          1 Hawaii A    
-5 12_1_Hawaii      12          1 Hawaii D    
-6 1_2_Hawaii        1          2 Hawaii A    </code></pre>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(haplotypes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">indID</th>
+<th style="text-align: right;">cluster</th>
+<th style="text-align: right;">individual</th>
+<th style="text-align: left;">island</th>
+<th style="text-align: left;">haps</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1_1_Hawaii</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: left;">A</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5_1_Hawaii</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: left;">A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6_1_Hawaii</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: left;">D</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8_1_Hawaii</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: left;">A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">12_1_Hawaii</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: left;">D</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1_2_Hawaii</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Hawaii</td>
+<td style="text-align: left;">A</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(haplotypes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(haplotypes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    indID              cluster     individual       island         
  Length:300         Min.   : 1   Min.   : 1.00   Length:300        
@@ -577,7 +766,7 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
                    
                    </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(haplotypes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(haplotypes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>tibble [300 × 5] (S3: tbl_df/tbl/data.frame)
  $ indID     : chr [1:300] "1_1_Hawaii" "5_1_Hawaii" "6_1_Hawaii" "8_1_Hawaii" ...
@@ -606,28 +795,28 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <p>Begin with the end in mind: now that we have an idea of the end, we can wrangle our data further!</p>
 <p>Keep within cluster comparisons:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>within_cluster <span class="ot">&lt;-</span> related <span class="sc">%&gt;%</span> </span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(clust1 <span class="sc">==</span> clust2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>within_cluster <span class="ot">&lt;-</span> related <span class="sc">%&gt;%</span> </span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(clust1 <span class="sc">==</span> clust2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Remove rows where the coefficient shows relatedness to self</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>within_cluster <span class="ot">&lt;-</span> within_cluster <span class="sc">%&gt;%</span> </span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>ind1 <span class="sc">==</span> ind2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>within_cluster <span class="ot">&lt;-</span> within_cluster <span class="sc">%&gt;%</span> </span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>ind1 <span class="sc">==</span> ind2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="step-3-visualize-data-1" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-visualize-data-1">Step 3: Visualize data</h2>
+<section id="step-3-visualize-data-1" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="step-3-visualize-data-1"><span class="header-section-number">4.5</span> Step 3: Visualize data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(within_cluster,</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(clust1),</span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> rel)) <span class="sc">+</span></span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">outlier.alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
-<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.15</span>, <span class="at">alpha =</span> <span class="fl">0.4</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Cluster"</span>,</span>
-<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Relatedness coefficient"</span></span>
-<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(within_cluster,</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(clust1),</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> rel)) <span class="sc">+</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">outlier.alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.15</span>, <span class="at">alpha =</span> <span class="fl">0.4</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Cluster"</span>,</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Relatedness coefficient"</span></span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -638,31 +827,53 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </div>
 <p>Are any of these clusters more or less spread out on the y axis of relatedness than others? It’s kind of hard to tell… But maybe cluster 4 and 5 are less spread than, say, cluster 15. We can do a quick statistical test on this with Levene’s test for initial exploration.</p>
 </section>
-<section id="step-4-model-data" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-model-data">Step 4: Model data</h2>
+<section id="step-4-model-data" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="step-4-model-data"><span class="header-section-number">4.6</span> Step 4: Model data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">leveneTest</span>(rel <span class="sc">~</span> clust1, <span class="at">data=</span> within_cluster)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">leveneTest</span>(rel <span class="sc">~</span> clust1, <span class="at">data=</span> within_cluster)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Make <code>clust1</code> a factor</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>within_cluster <span class="ot">&lt;-</span> within_cluster <span class="sc">%&gt;%</span> </span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">clust1 =</span> <span class="fu">factor</span>(clust1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>within_cluster <span class="ot">&lt;-</span> within_cluster <span class="sc">%&gt;%</span> </span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">clust1 =</span> <span class="fu">factor</span>(clust1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Try to model with <code>leveneTest</code> again</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">leveneTest</span>(rel <span class="sc">~</span> clust1, <span class="at">data=</span> within_cluster)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Levene's Test for Homogeneity of Variance (center = median)
-        Df F value Pr(&gt;F)
-group   14  0.4487 0.9588
-      5685               </code></pre>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">leveneTest</span>(rel <span class="sc">~</span> clust1, <span class="at">data=</span> within_cluster)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Df</th>
+<th style="text-align: right;">F value</th>
+<th style="text-align: right;">Pr(&gt;F)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">group</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">0.4487499</td>
+<td style="text-align: right;">0.9587698</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: right;">5685</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 <p>Here we see that Levene’s test for variance is not significant, indicating that variances of relatedness clusters are similar. Aka.. each cluster is similarly “incestuous”, or “inbred”. What does it say that each cluster has an average relatedness coefficient of 0.6?</p>
 </section>
 </section>
-<section id="lab-reflection" class="level1">
-<h1>Lab Reflection</h1>
+<section id="lab-reflection" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Lab Reflection</h1>
 <p>Try this again exploring relatedness within different metadata bins (island, haplotype).</p>
 <p>What does this data tell you about population structure in Hawaiian short-finned pilot whales?</p>
 <ol type="1">
@@ -670,6 +881,8 @@ group   14  0.4487 0.9588
 <li>Describe their population structure in terms of the evolutionary processes we learned about this week.</li>
 <li>Be brief! &lt;1 page please.</li>
 </ol>
+<!-- -->
+
 </section>
 
 </main>
@@ -744,6 +957,57 @@ group   14  0.4487 0.9588
       });
       clipboardModal.on('success', onCopySuccess);
     }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
         var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -760,6 +1024,13 @@ group   14  0.4487 0.9588
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -1072,10 +1343,457 @@ group   14  0.4487 0.9588
       }
     }
   });
-  </script>
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb48" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "FISH470-IntrotoTidyverse-Lab"</span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Sarah Tanja"</span></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 10/14/2024</span></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="an">date-modified:</span><span class="co"> today</span></span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="co">  gfm: </span></span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a><span class="co">    number-sections: true</span></span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: journal</span></span>
+<span id="cb48-12"><a href="#cb48-12" aria-hidden="true" tabindex="-1"></a><span class="co">    highlight-style: github</span></span>
+<span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a><span class="co">    page-layout: article</span></span>
+<span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a><span class="co">    code-background: true</span></span>
+<span id="cb48-15"><a href="#cb48-15" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: </span></span>
+<span id="cb48-16"><a href="#cb48-16" aria-hidden="true" tabindex="-1"></a><span class="co">      source: true</span></span>
+<span id="cb48-17"><a href="#cb48-17" aria-hidden="true" tabindex="-1"></a><span class="co">      toggle: true</span></span>
+<span id="cb48-18"><a href="#cb48-18" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb48-19"><a href="#cb48-19" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-depth: 2</span></span>
+<span id="cb48-20"><a href="#cb48-20" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-location: left</span></span>
+<span id="cb48-21"><a href="#cb48-21" aria-hidden="true" tabindex="-1"></a><span class="co">    number-sections: true</span></span>
+<span id="cb48-22"><a href="#cb48-22" aria-hidden="true" tabindex="-1"></a><span class="co">    df-print: kable</span></span>
+<span id="cb48-23"><a href="#cb48-23" aria-hidden="true" tabindex="-1"></a><span class="co">    smooth-scroll: true</span></span>
+<span id="cb48-24"><a href="#cb48-24" aria-hidden="true" tabindex="-1"></a><span class="co">    link-external-icon: true</span></span>
+<span id="cb48-25"><a href="#cb48-25" aria-hidden="true" tabindex="-1"></a><span class="co">    link-external-newwindow: true</span></span>
+<span id="cb48-26"><a href="#cb48-26" aria-hidden="true" tabindex="-1"></a><span class="co">    reference-location: margin</span></span>
+<span id="cb48-27"><a href="#cb48-27" aria-hidden="true" tabindex="-1"></a><span class="co">    citation-location: margin</span></span>
+<span id="cb48-28"><a href="#cb48-28" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb48-29"><a href="#cb48-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-30"><a href="#cb48-30" aria-hidden="true" tabindex="-1"></a><span class="fu"># The scientific method</span></span>
+<span id="cb48-31"><a href="#cb48-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-32"><a href="#cb48-32" aria-hidden="true" tabindex="-1"></a><span class="fu"># Review R, tidyverse, and markdown</span></span>
+<span id="cb48-33"><a href="#cb48-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-34"><a href="#cb48-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## Review R coding</span></span>
+<span id="cb48-35"><a href="#cb48-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-36"><a href="#cb48-36" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Learning Goals:</span></span>
+<span id="cb48-37"><a href="#cb48-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-38"><a href="#cb48-38" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Learn to use the R tidyverse to import data and perform basic data tidying and manipulation.</span>
+<span id="cb48-39"><a href="#cb48-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-40"><a href="#cb48-40" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Learn to use the ggplot package in R to create basic plots of your data.</span>
+<span id="cb48-41"><a href="#cb48-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-42"><a href="#cb48-42" aria-hidden="true" tabindex="-1"></a>For this week's lab, I will expect that you have a basic understanding of R, including how to open R, define variables/objects, use basic R vocabulary (e.g. vectors, matrices, and dataframes), and write code using an Rscript or Rmarkdown file. Please review any of these topics that feel unfamiliar to you, using the following videos (from the <span class="co">[</span><span class="ot">Cradle to GraveRLinks to an external site.</span><span class="co">](https://www.youtube.com/@CradleToGraveR)</span> YouTube Channel) as needed:</span>
+<span id="cb48-43"><a href="#cb48-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-44"><a href="#cb48-44" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span><span class="co">[</span><span class="ot">R for beginners</span><span class="co">](https://youtu.be/oYopG3UBr-U?si=Q6tqVXJRcFmWvUUa)</span> (\~10 min)</span>
+<span id="cb48-45"><a href="#cb48-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-46"><a href="#cb48-46" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span><span class="co">[</span><span class="ot">Rmarkdown Part 1</span><span class="co">](https://youtu.be/W3sC_M1miFc?si=-7l-SLubktOcMGVY)</span> (\~10 min)</span>
+<span id="cb48-47"><a href="#cb48-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-48"><a href="#cb48-48" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span><span class="co">[</span><span class="ot">Rmarkdown Part 2</span><span class="co">](https://youtu.be/j7Xo7xFA3Bg?si=tBMosA7ZRpU0MUJv)</span> (\~10 min)</span>
+<span id="cb48-49"><a href="#cb48-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-50"><a href="#cb48-50" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span><span class="co">[</span><span class="ot">Vectors and Functions</span><span class="co">](https://youtu.be/bCLlT44WR4g?si=eAaSraL2ex-IjMjz)</span> (\~10 min)</span>
+<span id="cb48-51"><a href="#cb48-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-52"><a href="#cb48-52" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span><span class="co">[</span><span class="ot">Importing .csv files using tidyverse</span><span class="co">](https://www.youtube.com/watch?v=ds6vNpcCZ8c)</span> (\~10 min) <span class="sc">\&lt;</span>- Everyone should watch at least this video!</span>
+<span id="cb48-53"><a href="#cb48-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-54"><a href="#cb48-54" aria-hidden="true" tabindex="-1"></a>These videos will work best if you follow along with the exercises in R.</span>
+<span id="cb48-55"><a href="#cb48-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-56"><a href="#cb48-56" aria-hidden="true" tabindex="-1"></a><span class="fu"># Tidyverse Tutorial</span></span>
+<span id="cb48-57"><a href="#cb48-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-58"><a href="#cb48-58" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction</span></span>
+<span id="cb48-59"><a href="#cb48-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-60"><a href="#cb48-60" aria-hidden="true" tabindex="-1"></a>This tutorial steps through some of the basic fuctions of the tidyverse collection of packages that you will use throughout the course. Work through these steps in groups of 2-3. Each person should work in their own R Notebook. Use that notebook to type out each of the commands included in this tutorial, and to take notes on each step.</span>
+<span id="cb48-61"><a href="#cb48-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-62"><a href="#cb48-62" aria-hidden="true" tabindex="-1"></a>For this tutorial, we will be comparing trends in the number of Google searches for the terms "gardens" and "ice skating" over time. I downloaded this dataset from the <span class="co">[</span><span class="ot">Google trends</span><span class="co">](https://trends.google.com/trends/)</span> website. Once you are comfortable with the material in this tutorial, you can download any dataset of search terms from their website and explore trends and patterns using the tidyverse. You can find this dataset on today's Canvas page - download that dataset and make sure it's in the same folder as your R Notebook.</span>
+<span id="cb48-63"><a href="#cb48-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-64"><a href="#cb48-64" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 0: Set up environment</span></span>
+<span id="cb48-65"><a href="#cb48-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-66"><a href="#cb48-66" aria-hidden="true" tabindex="-1"></a>Before starting any project, you will always need to set up your environment. This can include loading any libraries you will need, setting global formatting options, or a number of other advanced functions. For now, we will focus on loading libraries. You will need readr, tidyr, dplyr, and ggplot, which are all part of the tidyverse universe and can all be loaded together:</span>
+<span id="cb48-67"><a href="#cb48-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-68"><a href="#cb48-68" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, label=load-libraries}</span></span>
+<span id="cb48-69"><a href="#cb48-69" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb48-70"><a href="#cb48-70" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-71"><a href="#cb48-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-72"><a href="#cb48-72" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 1: Import data</span></span>
+<span id="cb48-73"><a href="#cb48-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-74"><a href="#cb48-74" aria-hidden="true" tabindex="-1"></a>Now that you have your environment set up, the first thing you will want to do is import the data that you are working with. The most common way this is done is by reading in a comma-separated file (csv) or tab-delimited file (e.g. tsv or txt files). We are using a csv file for this exercise, so you can read in your data using read_csv() from the readr package:</span>
+<span id="cb48-75"><a href="#cb48-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-78"><a href="#cb48-78" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-79"><a href="#cb48-79" aria-hidden="true" tabindex="-1"></a><span class="co">#read in data, assign to a meaningful object name </span></span>
+<span id="cb48-80"><a href="#cb48-80" aria-hidden="true" tabindex="-1"></a>search_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/GoogleTrends_timeline.csv"</span>, <span class="at">col_names =</span> <span class="cn">TRUE</span>)  <span class="co">#this creates an object that is called a dataframe in R. Data frames, like matrices or data tables, have one column per variable and one row per observation. Unlike matrices or data tables, dataframes can store data of various different types together - for example, numbers, integers, character strings (words), or factors. this dataframe has two columns classified as numeric, and one classified as character.}</span></span>
+<span id="cb48-81"><a href="#cb48-81" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-82"><a href="#cb48-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-83"><a href="#cb48-83" aria-hidden="true" tabindex="-1"></a>Once you have imported your data, take a look at it to make sure it makes sense. You can do this in two ways: first, in the environment window (upper right corner), find the variable called "search_data" and click on the blue arrow. This will show a drop-down summary of your data. You'll see each column listed as a vector, and it will show you the name of the column, the type or class of data, and the number of observations in each column.</span>
+<span id="cb48-84"><a href="#cb48-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-85"><a href="#cb48-85" aria-hidden="true" tabindex="-1"></a>You can also look at your data in the viewer. Click on the name of the data frame in the environment to open it up in the viewer window. Notice that it opens as a separate tab, and that each vector is shown as a column, with a row for each observation. In this case, we have three columns: one for month/year, one for the garden search term, and one for the ice skating search term. There are a total of 256 observations for each of those columns.</span>
+<span id="cb48-86"><a href="#cb48-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-87"><a href="#cb48-87" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 2: Wrangle your data</span></span>
+<span id="cb48-88"><a href="#cb48-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-89"><a href="#cb48-89" aria-hidden="true" tabindex="-1"></a>Usually, the data that you import won't be exactly what you want to plot or model. Sometimes it will require some tidying - for example, you may incomplete observations (rows) that you need to remove, or inconsistent data entry that needs to be cleaned up (e.g. if the dates are entered as May 2025 and 04/2025, R will not recognize what this is).</span>
+<span id="cb48-90"><a href="#cb48-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-91"><a href="#cb48-91" aria-hidden="true" tabindex="-1"></a>Before moving on, we're going to do three basic tidying steps. First, we'll separate the date column so that we have a column for month and another for year. Then we'll change our column names so that they're easier to use later. Finally, we'll specify that the date column is actually populated with dates (instead of just a character strings), which R can understand on a chronological scale. All of these changes will get assigned to a new variable, so that we don't confuse ourselves later.</span>
+<span id="cb48-92"><a href="#cb48-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-93"><a href="#cb48-93" aria-hidden="true" tabindex="-1"></a>To do this cleanly, we're going to use one of the most powerful functions of the tidyverse: the pipe function. The pipe functions tells R to take the data output from one step and send it to the next step. This allows us to write tidy code, in list formats, that is easy to read later.</span>
+<span id="cb48-94"><a href="#cb48-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-97"><a href="#cb48-97" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-98"><a href="#cb48-98" aria-hidden="true" tabindex="-1"></a><span class="co"># tidy dataframe </span></span>
+<span id="cb48-99"><a href="#cb48-99" aria-hidden="true" tabindex="-1"></a>search_data_tidy <span class="ot">&lt;-</span> search_data <span class="sc">%&gt;%</span>    </span>
+<span id="cb48-100"><a href="#cb48-100" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(Month, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"year"</span>, <span class="st">"month"</span>), <span class="at">sep =</span> <span class="st">"-"</span>, <span class="at">remove =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> <span class="co">#separate column into year and month   </span></span>
+<span id="cb48-101"><a href="#cb48-101" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">"gardens"</span> <span class="ot">=</span> <span class="st">`</span><span class="at">gardens: (United States)</span><span class="st">`</span>, <span class="st">"ice_skating"</span> <span class="ot">=</span> <span class="st">`</span><span class="at">ice skating: (United States)</span><span class="st">`</span>, <span class="st">"date"</span> <span class="ot">=</span> Month) <span class="sc">%&gt;%</span>  <span class="co">#give columns shorter names   </span></span>
+<span id="cb48-102"><a href="#cb48-102" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">ym</span>(date)) <span class="co">#change the date column to year-month format}</span></span>
+<span id="cb48-103"><a href="#cb48-103" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-104"><a href="#cb48-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-105"><a href="#cb48-105" aria-hidden="true" tabindex="-1"></a>Look at your new data frame. It should now have five columns with tidy column names, and the "date" column should be in Date format instead of character format.</span>
+<span id="cb48-106"><a href="#cb48-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-107"><a href="#cb48-107" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 3: Visualize data</span></span>
+<span id="cb48-108"><a href="#cb48-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-109"><a href="#cb48-109" aria-hidden="true" tabindex="-1"></a>Let's start by plotting our raw data.</span>
+<span id="cb48-110"><a href="#cb48-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-113"><a href="#cb48-113" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-114"><a href="#cb48-114" aria-hidden="true" tabindex="-1"></a>search_data_tidy <span class="sc">%&gt;%</span> <span class="co">#use the search_data_tidy data frame   </span></span>
+<span id="cb48-115"><a href="#cb48-115" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="co">#start a plotting environment   </span></span>
+<span id="cb48-116"><a href="#cb48-116" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> gardens), <span class="at">color =</span> <span class="st">"purple"</span>) <span class="sc">+</span> <span class="co">#add a layer with the number of garden searches in each month and year   </span></span>
+<span id="cb48-117"><a href="#cb48-117" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> ice_skating), <span class="at">color =</span> <span class="st">"cornflowerblue"</span>) <span class="sc">+</span> <span class="co">#add a layer with the number of ice skating searches in each month and year   </span></span>
+<span id="cb48-118"><a href="#cb48-118" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> <span class="co">#change the look and feel of the plot   </span></span>
+<span id="cb48-119"><a href="#cb48-119" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Number of searches"</span>)</span>
+<span id="cb48-120"><a href="#cb48-120" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-121"><a href="#cb48-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-122"><a href="#cb48-122" aria-hidden="true" tabindex="-1"></a>Pretty cool, right? It looks like we have some cyclical patterns, and maybe they're opposite each other. It also looks like once of the searches is trending down over time, while the other is staying consistent.</span>
+<span id="cb48-123"><a href="#cb48-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-124"><a href="#cb48-124" aria-hidden="true" tabindex="-1"></a>This is a nice visualization of our data, but I think we can do better. Let's make it easier to see some of those patterns by doing a bit more manipulation of our dataset.</span>
+<span id="cb48-125"><a href="#cb48-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-126"><a href="#cb48-126" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 2b: Wrangle your data again</span></span>
+<span id="cb48-127"><a href="#cb48-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-128"><a href="#cb48-128" aria-hidden="true" tabindex="-1"></a>First, we can't really tell from the plot which line corresponds with which search. It would be nice to have that information in a legend. In order to do that, we need to give ggplot a single column of data for the y values (number of searches), and a second column of data for the grouping variable. We'll change the format of our data frame to do that.</span>
+<span id="cb48-129"><a href="#cb48-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-130"><a href="#cb48-130" aria-hidden="true" tabindex="-1"></a>It would also be nice if the two lines weren't so far apart. Clearly, there are more searches overall for "gardens" than for "ice skating", but we're more interested in the trends over time. Let's normalize our data so that we can see those trends more clearly.</span>
+<span id="cb48-131"><a href="#cb48-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-132"><a href="#cb48-132" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>#use the tidy data as input</span>
+<span id="cb48-133"><a href="#cb48-133" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>#pivot from "wide" format to "long" format</span>
+<span id="cb48-134"><a href="#cb48-134" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>#group the rows according to the type of search</span>
+<span id="cb48-135"><a href="#cb48-135" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>#mutate nSearches: calculate the mean for each group (in this case we've grouped by search_type), then subtract the mean from each value in nSearches.</span>
+<span id="cb48-136"><a href="#cb48-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-139"><a href="#cb48-139" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-140"><a href="#cb48-140" aria-hidden="true" tabindex="-1"></a><span class="co"># pivot the data frame from wide to long and normalize data</span></span>
+<span id="cb48-141"><a href="#cb48-141" aria-hidden="true" tabindex="-1"></a>search_data_long <span class="ot">&lt;-</span> search_data_tidy <span class="sc">%&gt;%</span></span>
+<span id="cb48-142"><a href="#cb48-142" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(gardens<span class="sc">:</span>ice_skating,</span>
+<span id="cb48-143"><a href="#cb48-143" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"search_type"</span>,</span>
+<span id="cb48-144"><a href="#cb48-144" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"nSearches"</span>) <span class="sc">%&gt;%</span>          </span>
+<span id="cb48-145"><a href="#cb48-145" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(search_type) <span class="sc">%&gt;%</span></span>
+<span id="cb48-146"><a href="#cb48-146" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">nSearches =</span> nSearches <span class="sc">-</span> <span class="fu">mean</span>(nSearches)) <span class="sc">%&gt;%</span></span>
+<span id="cb48-147"><a href="#cb48-147" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="co">#always ungroup your dataframe once you're done</span></span>
+<span id="cb48-148"><a href="#cb48-148" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-149"><a href="#cb48-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-150"><a href="#cb48-150" aria-hidden="true" tabindex="-1"></a>Look at your data again. You should have some new columns now: search_type, with "gardens" and "ice_skating" as two types of searches, and nSearches, which has been normalized to be the number of searches over or under the mean number of searches.</span>
+<span id="cb48-151"><a href="#cb48-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-152"><a href="#cb48-152" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 3b: Plot the data again</span></span>
+<span id="cb48-153"><a href="#cb48-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-154"><a href="#cb48-154" aria-hidden="true" tabindex="-1"></a>Let's see what we get with our new dataset</span>
+<span id="cb48-155"><a href="#cb48-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-158"><a href="#cb48-158" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-159"><a href="#cb48-159" aria-hidden="true" tabindex="-1"></a>search_data_long <span class="sc">%&gt;%</span> <span class="co">#use search_data_long as the input   </span></span>
+<span id="cb48-160"><a href="#cb48-160" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="co">#create a plotting environment   </span></span>
+<span id="cb48-161"><a href="#cb48-161" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y=</span>nSearches, <span class="at">color =</span> search_type)) <span class="sc">+</span> <span class="co">#create a new layer with number of searches by date, with color groups for each search type   </span></span>
+<span id="cb48-162"><a href="#cb48-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> <span class="co">#make the plot prettier   </span></span>
+<span id="cb48-163"><a href="#cb48-163" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Number of Searches"</span>) <span class="co">#make a more descriptive y axis label</span></span>
+<span id="cb48-164"><a href="#cb48-164" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-165"><a href="#cb48-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-166"><a href="#cb48-166" aria-hidden="true" tabindex="-1"></a>This way, we can confirm what we thought we saw before: the cyclical nature of the two search types are opposite each other, and searches for "gardens" have been decreasing over time while searches for "ice skating" have not.</span>
+<span id="cb48-167"><a href="#cb48-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-168"><a href="#cb48-168" aria-hidden="true" tabindex="-1"></a>What if we want to know which month has the greatest number of searches for each of the search types? Let's go back to the data.</span>
+<span id="cb48-169"><a href="#cb48-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-170"><a href="#cb48-170" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 2c: More wrangling!</span></span>
+<span id="cb48-171"><a href="#cb48-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-172"><a href="#cb48-172" aria-hidden="true" tabindex="-1"></a>Probably the easiest way to answer that question will be to get a average of the number of searches in each month across all years in the dataset, and then see which month is the greatest for each one. Let's do that in two steps this time, so that we can see the output of each.</span>
+<span id="cb48-173"><a href="#cb48-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-176"><a href="#cb48-176" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-177"><a href="#cb48-177" aria-hidden="true" tabindex="-1"></a><span class="co">#summarize searches in each month and assign to a meaningful variable name </span></span>
+<span id="cb48-178"><a href="#cb48-178" aria-hidden="true" tabindex="-1"></a>searches_by_month <span class="ot">&lt;-</span> search_data_long <span class="sc">%&gt;%</span> <span class="co">#use search_data_long as the input   </span></span>
+<span id="cb48-179"><a href="#cb48-179" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(search_type,month) <span class="sc">%&gt;%</span> <span class="co">#group by month and search type   </span></span>
+<span id="cb48-180"><a href="#cb48-180" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_searches =</span> <span class="fu">mean</span>(nSearches)) <span class="sc">%&gt;%</span> <span class="co">#calculate the (normalized) mean number of searches in each group   </span></span>
+<span id="cb48-181"><a href="#cb48-181" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="co">#always ungroup    </span></span>
+<span id="cb48-182"><a href="#cb48-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-183"><a href="#cb48-183" aria-hidden="true" tabindex="-1"></a><span class="co">#find the months with the highest number of searches and assign to a meaningful variable name </span></span>
+<span id="cb48-184"><a href="#cb48-184" aria-hidden="true" tabindex="-1"></a>max_searches <span class="ot">&lt;-</span> searches_by_month <span class="sc">%&gt;%</span> <span class="co">#use searches_by_month as the input   </span></span>
+<span id="cb48-185"><a href="#cb48-185" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(search_type) <span class="sc">%&gt;%</span> <span class="co">#group by search type   </span></span>
+<span id="cb48-186"><a href="#cb48-186" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(mean_searches) <span class="sc">%&gt;%</span> <span class="co">#get the row with the maximum number of searches for each    group   </span></span>
+<span id="cb48-187"><a href="#cb48-187" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="co">#always ungroup</span></span>
+<span id="cb48-188"><a href="#cb48-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-189"><a href="#cb48-189" aria-hidden="true" tabindex="-1"></a>max_searches</span>
+<span id="cb48-190"><a href="#cb48-190" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-191"><a href="#cb48-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-192"><a href="#cb48-192" aria-hidden="true" tabindex="-1"></a>And just like that, we have our answer! But we can also plot this data, if we want to visualize it.</span>
+<span id="cb48-193"><a href="#cb48-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-194"><a href="#cb48-194" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 3c: More plotting!</span></span>
+<span id="cb48-195"><a href="#cb48-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-198"><a href="#cb48-198" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-199"><a href="#cb48-199" aria-hidden="true" tabindex="-1"></a>searches_by_month <span class="sc">%&gt;%</span> <span class="co">#use searches_by_month as input data   </span></span>
+<span id="cb48-200"><a href="#cb48-200" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="co">#open a ggplot environment   </span></span>
+<span id="cb48-201"><a href="#cb48-201" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.numeric</span>(month), <span class="at">y =</span> mean_searches, <span class="at">color =</span> search_type)) <span class="sc">+</span> <span class="co">#add a layer with a line for number of searches in each month, grouped by search type   </span></span>
+<span id="cb48-202"><a href="#cb48-202" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> <span class="co">#make it prettier   </span></span>
+<span id="cb48-203"><a href="#cb48-203" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"month"</span>) <span class="sc">+</span> <span class="co">#add a more descriptive x axis label   </span></span>
+<span id="cb48-204"><a href="#cb48-204" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean number of searches"</span>) <span class="co">#add a more descriptive y axis label}</span></span>
+<span id="cb48-205"><a href="#cb48-205" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-206"><a href="#cb48-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-207"><a href="#cb48-207" aria-hidden="true" tabindex="-1"></a>This plot allows us to see seasonal trends within a year. Pretty cool! We ca also plot all of the years separately, instead of an average.</span>
+<span id="cb48-208"><a href="#cb48-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-211"><a href="#cb48-211" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-212"><a href="#cb48-212" aria-hidden="true" tabindex="-1"></a>search_data_long <span class="sc">%&gt;%</span>  <span class="co">#use search_data_long as input data   </span></span>
+<span id="cb48-213"><a href="#cb48-213" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="co">#open a ggplot environment   </span></span>
+<span id="cb48-214"><a href="#cb48-214" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.numeric</span>(month), <span class="at">y =</span> nSearches, <span class="at">color =</span> search_type)) <span class="sc">+</span> <span class="co">#add a layer with a point for number of searches in each month, grouped by search type   </span></span>
+<span id="cb48-215"><a href="#cb48-215" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> <span class="co">#make it prettier   </span></span>
+<span id="cb48-216"><a href="#cb48-216" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"month"</span>) <span class="sc">+</span> <span class="co">#add a more descriptive x axis label   </span></span>
+<span id="cb48-217"><a href="#cb48-217" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Number of searches"</span>) <span class="co">#add a more descriptive y axis label}</span></span>
+<span id="cb48-218"><a href="#cb48-218" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-219"><a href="#cb48-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-220"><a href="#cb48-220" aria-hidden="true" tabindex="-1"></a>The data wrangling and visualization cycle can happen a number of times, and tells us a lot about what patterns are emerging in our dataset. Once we have a good sense of what's going on, we might want to test some of our hypotheses using statistics. We're not going to go in depth into modeling in this class - if you want to go into research, you should always be taking as many quantitative classes as you can.</span>
+<span id="cb48-221"><a href="#cb48-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-222"><a href="#cb48-222" aria-hidden="true" tabindex="-1"></a>For now, let's test out one basic analysis to see whether our maximum search months are significantly greater than our minimum search months. Our null hypothesis here is that there are no significant differences between months with maximum and minimum searches, for either search type. We'll have two alternate hypotheses: that there are significant differences between maximum and minimum months for (1) one of the two search types, or (2) both of the search types.</span>
+<span id="cb48-223"><a href="#cb48-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-224"><a href="#cb48-224" aria-hidden="true" tabindex="-1"></a>We'll need to do a bit more data wrangling, and then we'll use an ANOVA to determine whether the difference between the maximum and minimum months is greater than the differences among years within each month.</span>
+<span id="cb48-225"><a href="#cb48-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-226"><a href="#cb48-226" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 2d: One last data wrangle</span></span>
+<span id="cb48-227"><a href="#cb48-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-228"><a href="#cb48-228" aria-hidden="true" tabindex="-1"></a>We know that the maximum searches for "gardens" happen in May, and the most searches for "ice skating" happen in December. I'm going to eyeball the data and say searches for "gardens" are lowest in January, and searches for "ice skating" are lowest in May. You could confirm that by summarizing the data as we did in Step 2c. Before we can model our data using an ANOVA, we need to filter it to contain the appropriate months and search types.</span>
+<span id="cb48-229"><a href="#cb48-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-232"><a href="#cb48-232" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-233"><a href="#cb48-233" aria-hidden="true" tabindex="-1"></a><span class="co">#filter data and assign it a meaningful variable name </span></span>
+<span id="cb48-234"><a href="#cb48-234" aria-hidden="true" tabindex="-1"></a>maxmin_gardens <span class="ot">&lt;-</span> search_data_long <span class="sc">%&gt;%</span> <span class="co">#use search_data_long as the input   </span></span>
+<span id="cb48-235"><a href="#cb48-235" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(month <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"05"</span>,<span class="st">"01"</span>)) <span class="sc">%&gt;%</span> <span class="co">#include only the months with max and min nSearches   </span></span>
+<span id="cb48-236"><a href="#cb48-236" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(search_type <span class="sc">==</span> <span class="st">"gardens"</span>) <span class="co">#include only the "gardens" search term   </span></span>
+<span id="cb48-237"><a href="#cb48-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-238"><a href="#cb48-238" aria-hidden="true" tabindex="-1"></a><span class="co">#filter data and assign it a meaningful variable name </span></span>
+<span id="cb48-239"><a href="#cb48-239" aria-hidden="true" tabindex="-1"></a>maxmin_iceskate <span class="ot">&lt;-</span> search_data_long <span class="sc">%&gt;%</span> <span class="co">#use search_data_long as the input   </span></span>
+<span id="cb48-240"><a href="#cb48-240" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(month <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"05"</span>,<span class="st">"01"</span>)) <span class="sc">%&gt;%</span> <span class="co">#include only the months with max and min nSearches   </span></span>
+<span id="cb48-241"><a href="#cb48-241" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(search_type <span class="sc">==</span> <span class="st">"ice_skating"</span>) <span class="co">#include only the "gardens" search term}</span></span>
+<span id="cb48-242"><a href="#cb48-242" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-243"><a href="#cb48-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-244"><a href="#cb48-244" aria-hidden="true" tabindex="-1"></a>Now we're ready to test our hypothesis with an ANOVA.</span>
+<span id="cb48-245"><a href="#cb48-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-246"><a href="#cb48-246" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 4: Model your data</span></span>
+<span id="cb48-247"><a href="#cb48-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-248"><a href="#cb48-248" aria-hidden="true" tabindex="-1"></a>First let's look at searches for "gardens":</span>
+<span id="cb48-249"><a href="#cb48-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-252"><a href="#cb48-252" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-253"><a href="#cb48-253" aria-hidden="true" tabindex="-1"></a><span class="co">#run an ANOVA and assign it a meaningful variable name </span></span>
+<span id="cb48-254"><a href="#cb48-254" aria-hidden="true" tabindex="-1"></a>gardens_anova <span class="ot">&lt;-</span> <span class="fu">aov</span>(<span class="at">formula =</span> nSearches <span class="sc">~</span> month, <span class="at">data =</span> maxmin_gardens) <span class="co">#y variable is nSearches, x variable is month, using the maxmin_gardens dataset  summary(gardens_anova)}</span></span>
+<span id="cb48-255"><a href="#cb48-255" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-256"><a href="#cb48-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-257"><a href="#cb48-257" aria-hidden="true" tabindex="-1"></a>Looking at a summary of our ANOVA shows us that the difference in number of searches between maximum and minimum months is statistically significant. Based on this, we can reject our null hypothesis and focus on our two alternative hypotheses.</span>
+<span id="cb48-258"><a href="#cb48-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-261"><a href="#cb48-261" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-262"><a href="#cb48-262" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gardens_anova)</span>
+<span id="cb48-263"><a href="#cb48-263" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-264"><a href="#cb48-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-265"><a href="#cb48-265" aria-hidden="true" tabindex="-1"></a>Now let's try searches for "ice skating":</span>
+<span id="cb48-266"><a href="#cb48-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-269"><a href="#cb48-269" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-270"><a href="#cb48-270" aria-hidden="true" tabindex="-1"></a><span class="co">#run an ANOVA and assign it a meaningful variable name </span></span>
+<span id="cb48-271"><a href="#cb48-271" aria-hidden="true" tabindex="-1"></a>iceskate_anova <span class="ot">&lt;-</span> <span class="fu">aov</span>(<span class="at">formula =</span> nSearches <span class="sc">~</span> month, <span class="at">data =</span> maxmin_iceskate) <span class="co">#y variable is nSearches, x variable is month, using the maxmin_iceskate dataset  summary(iceskate_anova)}</span></span>
+<span id="cb48-272"><a href="#cb48-272" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-273"><a href="#cb48-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-274"><a href="#cb48-274" aria-hidden="true" tabindex="-1"></a>The summary of our ice skating ANOVA shows us that the difference in number of searches between maximum and minimum months is also statistically significant. Based on this, we would conclude that our 2nd alternative hypothesis is true: that the number of searches in maximum and minimum months is different for both search types.</span>
+<span id="cb48-275"><a href="#cb48-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-278"><a href="#cb48-278" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-279"><a href="#cb48-279" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(iceskate_anova)</span>
+<span id="cb48-280"><a href="#cb48-280" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-281"><a href="#cb48-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-282"><a href="#cb48-282" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusion</span></span>
+<span id="cb48-283"><a href="#cb48-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-284"><a href="#cb48-284" aria-hidden="true" tabindex="-1"></a>Once you've gone through this tutorial, you should have a decent feel for: 1. The tidy data analysis workflow, and 2. How to use the tidyverse to wrangle and visualize your data.</span>
+<span id="cb48-285"><a href="#cb48-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-286"><a href="#cb48-286" aria-hidden="true" tabindex="-1"></a>This is just the tip of the iceberg. R and tidyverse are both community-supported coding languages, and because we have a great community, R is a powerful coding language that allows you to do almost anything you can dream of. Over the coming weeks we'll use tidyverse and the tidy data analysis workflow to analyze real marine mammal research questions. We'll (1) wrangle and visualize data, (2) make observations about the patterns we see, (3) use those observations to develop hypotheses, and (4) test those hypotheses with basic models.</span>
+<span id="cb48-287"><a href="#cb48-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-288"><a href="#cb48-288" aria-hidden="true" tabindex="-1"></a>Today we used some of the most common functions in tidyverse: filter, separate, mutate, summarise, date formatting, pivot, and ggplot. There are many many more. There are good cheat sheets for <span class="co">[</span><span class="ot">tidyr</span><span class="co">](https://rstudio.github.io/cheatsheets/html/tidyr.html)</span>, <span class="co">[</span><span class="ot">dplyr</span><span class="co">](https://rstudio.github.io/cheatsheets/html/data-transformation.html)</span>, <span class="co">[</span><span class="ot">lubridate</span><span class="co">](https://rstudio.github.io/cheatsheets/html/lubridate.html)</span>, <span class="co">[</span><span class="ot">ggplot</span><span class="co">](https://rstudio.github.io/cheatsheets/html/data-visualization.html)</span>, and many more on the <span class="co">[</span><span class="ot">Post Cheatsheets</span><span class="co">](https://posit.co/resources/cheatsheets/)</span> website.</span>
+<span id="cb48-289"><a href="#cb48-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-290"><a href="#cb48-290" aria-hidden="true" tabindex="-1"></a>If you finish this tutorial and have extra time, try out this exercise:</span>
+<span id="cb48-291"><a href="#cb48-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-292"><a href="#cb48-292" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise</span></span>
+<span id="cb48-293"><a href="#cb48-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-294"><a href="#cb48-294" aria-hidden="true" tabindex="-1"></a>Did you notice that the number of searches for one search type seemed to decrease while the other did not? Let's see if that was real.</span>
+<span id="cb48-295"><a href="#cb48-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-296"><a href="#cb48-296" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>First write out your null and alternative hypotheses.</span>
+<span id="cb48-297"><a href="#cb48-297" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Then, plot the data: use search_data_long and a geom_point() layer to plot year on the x axis and nSearches on the y axis, with search_type as color (grouping variable). Add a smoothed line: use geom_smooth() to add a linear regression with the same x, y, and grouping variables.</span>
+<span id="cb48-298"><a href="#cb48-298" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Filter search_data_long to create two separate dataframes: one for "gardens" and one for "ice_skating".</span>
+<span id="cb48-299"><a href="#cb48-299" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>Run a linear model for each dataset (<span class="co">[</span><span class="ot">lm()</span><span class="co">](https://www.codecademy.com/learn/learn-linear-regression-in-r/modules/linear-regression-in-r/cheatsheet)</span>) and look at the summary to determine whether the relationship between year and nSearches is significant for each search type.</span>
+<span id="cb48-300"><a href="#cb48-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-301"><a href="#cb48-301" aria-hidden="true" tabindex="-1"></a><span class="fu"># Population structure in Hawaiian pilot whales</span></span>
+<span id="cb48-302"><a href="#cb48-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-303"><a href="#cb48-303" aria-hidden="true" tabindex="-1"></a><span class="fu">## Background</span></span>
+<span id="cb48-304"><a href="#cb48-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-305"><a href="#cb48-305" aria-hidden="true" tabindex="-1"></a>Before this week's lab, please spend some time looking at the figure below to familiarize yourselves with the concept of&nbsp;**genetic relatedness,**&nbsp;which is defined as&nbsp;*the proportion of your DNA that you share with another individual*. Closer relatives share more of their DNA, and more distant relatives share less and less of it.</span>
+<span id="cb48-306"><a href="#cb48-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-307"><a href="#cb48-307" aria-hidden="true" tabindex="-1"></a><span class="al">![](../refs/genetic-relatedness.png)</span></span>
+<span id="cb48-308"><a href="#cb48-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-309"><a href="#cb48-309" aria-hidden="true" tabindex="-1"></a>When we average across a population, or across all living things, we find that all individuals share roughly half (50%) of their DNA with their immediate relatives - that is, their parents, offspring, and full siblings (see the darkest grey ellipse in the center of the figure above). All of these relationships are therefore considered to have a ***relatedness coefficient*** of 0.5.</span>
+<span id="cb48-310"><a href="#cb48-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-311"><a href="#cb48-311" aria-hidden="true" tabindex="-1"></a>If we expand out to the next grey ellipse in the figure, which represents our next closest family members, we see that all individuals share roughly 1/4 (25%) of their DNA with these extended family relatives - that is, half-siblings, grandparents and grandchildren, and aunts/uncles or nephews/nieces. All of these relationships are therefore considered to have a ***relatedness coefficient*** of 0.25.</span>
+<span id="cb48-312"><a href="#cb48-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-313"><a href="#cb48-313" aria-hidden="true" tabindex="-1"></a>We can expand out again to the third largest grey ellipse in the figure, and we see that all individuals share roughly 1/8 (12.5%) of their DNA with these distant family relatives - that is, great-grandparents and great-grandchildren, great aunts and uncles, and great nieces and nephews. All of these relationships are therefore considered to have a ***relatedness coefficient*** of 0.125.</span>
+<span id="cb48-314"><a href="#cb48-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-315"><a href="#cb48-315" aria-hidden="true" tabindex="-1"></a>Scientists can use this information to build pedigrees and determine family relationships in wild populations using a combination of genetic data, age data, and sex data. For example, if you know that two individual California sea lions - one is a 17yo female and the other is a 5yo female - have a relatedness coefficient of 0.54, meaning that just over half of their DNA is identical, you may be able to determine that these two individuals are either parent-offspring or full siblings. Given the age difference between the two, there's a good chance that the older female is the mom and the younger female is the daughter.</span>
+<span id="cb48-316"><a href="#cb48-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-317"><a href="#cb48-317" aria-hidden="true" tabindex="-1"></a>What do you think is the relationship of the following individuals?</span>
+<span id="cb48-318"><a href="#cb48-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-319"><a href="#cb48-319" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>                  <span class="pp">|</span>                  <span class="pp">|</span>                             <span class="pp">|</span></span>
+<span id="cb48-320"><a href="#cb48-320" aria-hidden="true" tabindex="-1"></a><span class="pp">|:----------------:|:----------------:|:---------------------------:|</span></span>
+<span id="cb48-321"><a href="#cb48-321" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Individual 1** | **Individual 2** | **Relatedness Coefficient** <span class="pp">|</span></span>
+<span id="cb48-322"><a href="#cb48-322" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>    20yo male     <span class="pp">|</span>   10yo female    <span class="pp">|</span>            0.23             <span class="pp">|</span></span>
+<span id="cb48-323"><a href="#cb48-323" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>   13yo female    <span class="pp">|</span>   10yo female    <span class="pp">|</span>            0.56             <span class="pp">|</span></span>
+<span id="cb48-324"><a href="#cb48-324" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>    38yo male     <span class="pp">|</span>     4yo male     <span class="pp">|</span>            0.26             <span class="pp">|</span></span>
+<span id="cb48-325"><a href="#cb48-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-326"><a href="#cb48-326" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 0: Set up environment</span></span>
+<span id="cb48-327"><a href="#cb48-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-328"><a href="#cb48-328" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Create an R project</span><span class="co">](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects)</span></span>
+<span id="cb48-329"><a href="#cb48-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-330"><a href="#cb48-330" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Organize your project directory structure</span>
+<span id="cb48-331"><a href="#cb48-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-332"><a href="#cb48-332" aria-hidden="true" tabindex="-1"></a>Here is a simple example to start off:</span>
+<span id="cb48-333"><a href="#cb48-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-334"><a href="#cb48-334" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
+<span id="cb48-335"><a href="#cb48-335" aria-hidden="true" tabindex="-1"></a><span class="in">.</span></span>
+<span id="cb48-336"><a href="#cb48-336" aria-hidden="true" tabindex="-1"></a><span class="in">└── my_awesome_project</span></span>
+<span id="cb48-337"><a href="#cb48-337" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── code</span></span>
+<span id="cb48-338"><a href="#cb48-338" aria-hidden="true" tabindex="-1"></a><span class="in">    │   └── my_code.Rmd</span></span>
+<span id="cb48-339"><a href="#cb48-339" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── data</span></span>
+<span id="cb48-340"><a href="#cb48-340" aria-hidden="true" tabindex="-1"></a><span class="in">    │   ├── some_data.csv</span></span>
+<span id="cb48-341"><a href="#cb48-341" aria-hidden="true" tabindex="-1"></a><span class="in">    │   └── more_data.csv</span></span>
+<span id="cb48-342"><a href="#cb48-342" aria-hidden="true" tabindex="-1"></a><span class="in">    └── output</span></span>
+<span id="cb48-343"><a href="#cb48-343" aria-hidden="true" tabindex="-1"></a><span class="in">        └── figs</span></span>
+<span id="cb48-344"><a href="#cb48-344" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-345"><a href="#cb48-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-346"><a href="#cb48-346" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Open a new <span class="in">`.rmd`</span> file in your <span class="in">`code`</span> folder</span>
+<span id="cb48-347"><a href="#cb48-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-348"><a href="#cb48-348" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Title &amp; date your code file!</span>
+<span id="cb48-349"><a href="#cb48-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-350"><a href="#cb48-350" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Load libraries</span>
+<span id="cb48-351"><a href="#cb48-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-354"><a href="#cb48-354" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-355"><a href="#cb48-355" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb48-356"><a href="#cb48-356" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-357"><a href="#cb48-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-358"><a href="#cb48-358" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 1: Import data</span></span>
+<span id="cb48-359"><a href="#cb48-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-360"><a href="#cb48-360" aria-hidden="true" tabindex="-1"></a>Now that you have your environment set up, the first thing you will want to do is import the data that you are working with. The most common way this is done is by reading in a comma-separated file (csv) or tab-delimited file (e.g. tsv or txt files). We are using a csv file for this exercise, so you can read in your data using read_csv() from the readr package:</span>
+<span id="cb48-361"><a href="#cb48-361" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-364"><a href="#cb48-364" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-365"><a href="#cb48-365" aria-hidden="true" tabindex="-1"></a>related <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/SFPW_relatedness_associations.csv"</span>)</span>
+<span id="cb48-366"><a href="#cb48-366" aria-hidden="true" tabindex="-1"></a>haplotypes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/SFPW_mtDNA_haplotypes.csv"</span>)</span>
+<span id="cb48-367"><a href="#cb48-367" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-368"><a href="#cb48-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-369"><a href="#cb48-369" aria-hidden="true" tabindex="-1"></a>Once you have imported your data, take a look at it to make sure it makes sense. You can do this in two ways: first, in the environment window (upper right corner), find the variable called "search_data" and click on the blue arrow. This will show a drop-down summary of your data. You'll see each column listed as a vector, and it will show you the name of the column, the type or class of data, and the number of observations in each column.</span>
+<span id="cb48-370"><a href="#cb48-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-371"><a href="#cb48-371" aria-hidden="true" tabindex="-1"></a>You can also look at your data in the viewer. Click on the name of the data frame in the environment to open it up in the viewer window. Notice that it opens as a separate tab, and that each vector is shown as a column, with a row for each observation. In this case, we have three columns: one for month/year, one for the garden search term, and one for the ice skating search term. There are a total of 256 observations for each of those columns.</span>
+<span id="cb48-372"><a href="#cb48-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-373"><a href="#cb48-373" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 2: Wrangle your data</span></span>
+<span id="cb48-374"><a href="#cb48-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-375"><a href="#cb48-375" aria-hidden="true" tabindex="-1"></a>Usually, the data that you import won't be exactly what you want to plot or model. Sometimes it will require some tidying - for example, you may have incomplete observations (rows) that you need to remove, or inconsistent data entry that needs to be cleaned up. In this case, the first column imported a column of row numbers that are not useful for us. We can use a pipe operator <span class="in">`%&gt;%`</span> , which has a <span class="in">`Ctrl+Alt+p`</span> default hotkey assigned in <span class="in">`Tools/Keyboard Shortcuts Help`</span> followed by the command <span class="in">`dplyr::select`</span> to select all columns except column 1 <span class="in">`(-1)`</span> . This drops column 1 from our dataframe.</span>
+<span id="cb48-376"><a href="#cb48-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-379"><a href="#cb48-379" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-380"><a href="#cb48-380" aria-hidden="true" tabindex="-1"></a>related <span class="ot">&lt;-</span> related <span class="sc">%&gt;%</span> </span>
+<span id="cb48-381"><a href="#cb48-381" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb48-382"><a href="#cb48-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-383"><a href="#cb48-383" aria-hidden="true" tabindex="-1"></a>haplotypes <span class="ot">&lt;-</span> haplotypes <span class="sc">%&gt;%</span> </span>
+<span id="cb48-384"><a href="#cb48-384" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb48-385"><a href="#cb48-385" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-386"><a href="#cb48-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-387"><a href="#cb48-387" aria-hidden="true" tabindex="-1"></a>Take some time to familiarize yourself with the data. Explore the columns, what information is present, and what questions you can ask of the data.</span>
+<span id="cb48-388"><a href="#cb48-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-389"><a href="#cb48-389" aria-hidden="true" tabindex="-1"></a>Functions like <span class="in">`head`</span> , <span class="in">`summary`</span>, and <span class="in">`str`</span> are helpful for dataframe familiarization.</span>
+<span id="cb48-390"><a href="#cb48-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-393"><a href="#cb48-393" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-394"><a href="#cb48-394" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(related)</span>
+<span id="cb48-395"><a href="#cb48-395" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(related)</span>
+<span id="cb48-396"><a href="#cb48-396" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(related)</span>
+<span id="cb48-397"><a href="#cb48-397" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-398"><a href="#cb48-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-401"><a href="#cb48-401" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-402"><a href="#cb48-402" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(haplotypes)</span>
+<span id="cb48-403"><a href="#cb48-403" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(haplotypes)</span>
+<span id="cb48-404"><a href="#cb48-404" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(haplotypes)</span>
+<span id="cb48-405"><a href="#cb48-405" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-406"><a href="#cb48-406" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-407"><a href="#cb48-407" aria-hidden="true" tabindex="-1"></a>After exploring the data, we can see the individual pilot whales are described by cluster, island, and haplotype. Now we're ready to ask questions about the data.. Like: "What is the spread of relatedness coefficients within clusters? Are some clusters more closely related than others?" These questions can be specifically rephrased as hypothesis.</span>
+<span id="cb48-408"><a href="#cb48-408" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-409"><a href="#cb48-409" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Write your hypotheses</span>
+<span id="cb48-410"><a href="#cb48-410" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>Null hypothesis (H0):</span>
+<span id="cb48-411"><a href="#cb48-411" aria-hidden="true" tabindex="-1"></a><span class="ss">        -   </span>All pilot whale clusters are equally related.</span>
+<span id="cb48-412"><a href="#cb48-412" aria-hidden="true" tabindex="-1"></a><span class="ss">        -   </span>There is no difference in relatedness among Hawaiian short-finned pilot whale clusters.</span>
+<span id="cb48-413"><a href="#cb48-413" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>Alternative hypothesis (H1a):</span>
+<span id="cb48-414"><a href="#cb48-414" aria-hidden="true" tabindex="-1"></a><span class="ss">        -   </span>Some pilot whale clusters are more incestuous than others.</span>
+<span id="cb48-415"><a href="#cb48-415" aria-hidden="true" tabindex="-1"></a><span class="ss">        -   </span>There is significant difference in relatedness in Hawaiian short-finned pilot whale clusters.</span>
+<span id="cb48-416"><a href="#cb48-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-417"><a href="#cb48-417" aria-hidden="true" tabindex="-1"></a>Begin with the end in mind: now that we have an idea of the end, we can wrangle our data further!</span>
+<span id="cb48-418"><a href="#cb48-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-419"><a href="#cb48-419" aria-hidden="true" tabindex="-1"></a>Keep within cluster comparisons:</span>
+<span id="cb48-420"><a href="#cb48-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-423"><a href="#cb48-423" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-424"><a href="#cb48-424" aria-hidden="true" tabindex="-1"></a>within_cluster <span class="ot">&lt;-</span> related <span class="sc">%&gt;%</span> </span>
+<span id="cb48-425"><a href="#cb48-425" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(clust1 <span class="sc">==</span> clust2)</span>
+<span id="cb48-426"><a href="#cb48-426" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-427"><a href="#cb48-427" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-428"><a href="#cb48-428" aria-hidden="true" tabindex="-1"></a>Remove rows where the coefficient shows relatedness to self</span>
+<span id="cb48-429"><a href="#cb48-429" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-432"><a href="#cb48-432" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-433"><a href="#cb48-433" aria-hidden="true" tabindex="-1"></a>within_cluster <span class="ot">&lt;-</span> within_cluster <span class="sc">%&gt;%</span> </span>
+<span id="cb48-434"><a href="#cb48-434" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>ind1 <span class="sc">==</span> ind2)</span>
+<span id="cb48-435"><a href="#cb48-435" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-436"><a href="#cb48-436" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-437"><a href="#cb48-437" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 3: Visualize data</span></span>
+<span id="cb48-438"><a href="#cb48-438" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-441"><a href="#cb48-441" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-442"><a href="#cb48-442" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(within_cluster,</span>
+<span id="cb48-443"><a href="#cb48-443" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(clust1),</span>
+<span id="cb48-444"><a href="#cb48-444" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> rel)) <span class="sc">+</span></span>
+<span id="cb48-445"><a href="#cb48-445" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">outlier.alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb48-446"><a href="#cb48-446" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.15</span>, <span class="at">alpha =</span> <span class="fl">0.4</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb48-447"><a href="#cb48-447" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb48-448"><a href="#cb48-448" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Cluster"</span>,</span>
+<span id="cb48-449"><a href="#cb48-449" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Relatedness coefficient"</span></span>
+<span id="cb48-450"><a href="#cb48-450" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb48-451"><a href="#cb48-451" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb48-452"><a href="#cb48-452" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-453"><a href="#cb48-453" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-454"><a href="#cb48-454" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-455"><a href="#cb48-455" aria-hidden="true" tabindex="-1"></a>Are any of these clusters more or less spread out on the y axis of relatedness than others? It's kind of hard to tell... But maybe cluster 4 and 5 are less spread than, say, cluster 15. We can do a quick statistical test on this with Levene's test for initial exploration.</span>
+<span id="cb48-456"><a href="#cb48-456" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-457"><a href="#cb48-457" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 4: Model data</span></span>
+<span id="cb48-458"><a href="#cb48-458" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-459"><a href="#cb48-459" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
+<span id="cb48-460"><a href="#cb48-460" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">leveneTest</span>(rel <span class="sc">~</span> clust1, <span class="at">data=</span> within_cluster)</span>
+<span id="cb48-461"><a href="#cb48-461" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-462"><a href="#cb48-462" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-463"><a href="#cb48-463" aria-hidden="true" tabindex="-1"></a>Make <span class="in">`clust1`</span> a factor</span>
+<span id="cb48-464"><a href="#cb48-464" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-467"><a href="#cb48-467" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-468"><a href="#cb48-468" aria-hidden="true" tabindex="-1"></a>within_cluster <span class="ot">&lt;-</span> within_cluster <span class="sc">%&gt;%</span> </span>
+<span id="cb48-469"><a href="#cb48-469" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">clust1 =</span> <span class="fu">factor</span>(clust1))</span>
+<span id="cb48-470"><a href="#cb48-470" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-471"><a href="#cb48-471" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-472"><a href="#cb48-472" aria-hidden="true" tabindex="-1"></a>Try to model with <span class="in">`leveneTest`</span> again</span>
+<span id="cb48-473"><a href="#cb48-473" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-476"><a href="#cb48-476" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb48-477"><a href="#cb48-477" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">leveneTest</span>(rel <span class="sc">~</span> clust1, <span class="at">data=</span> within_cluster)</span>
+<span id="cb48-478"><a href="#cb48-478" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb48-479"><a href="#cb48-479" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-480"><a href="#cb48-480" aria-hidden="true" tabindex="-1"></a>Here we see that Levene's test for variance is not significant, indicating that variances of relatedness clusters are similar. Aka.. each cluster is similarly "incestuous", or "inbred". What does it say that each cluster has an average relatedness coefficient of 0.6?</span>
+<span id="cb48-481"><a href="#cb48-481" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-482"><a href="#cb48-482" aria-hidden="true" tabindex="-1"></a><span class="fu"># Lab Reflection</span></span>
+<span id="cb48-483"><a href="#cb48-483" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-484"><a href="#cb48-484" aria-hidden="true" tabindex="-1"></a>Try this again exploring relatedness within different metadata bins (island, haplotype).</span>
+<span id="cb48-485"><a href="#cb48-485" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-486"><a href="#cb48-486" aria-hidden="true" tabindex="-1"></a>What does this data tell you about population structure in Hawaiian short-finned pilot whales?</span>
+<span id="cb48-487"><a href="#cb48-487" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-488"><a href="#cb48-488" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Include your null and alternative hypotheses, and at least one plot you made today.</span>
+<span id="cb48-489"><a href="#cb48-489" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Describe their population structure in terms of the evolutionary processes we learned about this week.</span>
+<span id="cb48-490"><a href="#cb48-490" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Be brief! <span class="sc">\&lt;</span>1 page please.</span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 
 
 
 
+<script src="FISH470-IntroToTidyverse-Lab_files/libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
