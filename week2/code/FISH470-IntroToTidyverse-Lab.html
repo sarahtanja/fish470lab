@@ -347,7 +347,9 @@ dbl (2): gardens: (United States), ice skating: (United States)
 <span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(search_type <span class="sc">==</span> <span class="st">"ice_skating"</span>) <span class="co">#include only the "gardens" search term}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now we’re ready to test our hypothesis with an ANOVA.</p>
-<p>Step 4: Model your data</p>
+</section>
+<section id="step-4-model-your-data" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-model-your-data">Step 4: Model your data</h2>
 <p>First let’s look at searches for “gardens”:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#run an ANOVA and assign it a meaningful variable name </span></span>
@@ -404,7 +406,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>Before this week’s lab, please spend some time looking at the figure below to familiarize yourselves with the concept of&nbsp;<strong>genetic relatedness,</strong>&nbsp;which is defined as&nbsp;<em>the proportion of your DNA that you share with another individual</em>. Closer relatives share more of their DNA, and more distant relatives share less and less of it.</p>
-<p><img src="refs/genetic-relatedness.png" class="img-fluid"></p>
+<p><img src="../refs/genetic-relatedness.png" class="img-fluid"></p>
 <p>When we average across a population, or across all living things, we find that all individuals share roughly half (50%) of their DNA with their immediate relatives - that is, their parents, offspring, and full siblings (see the darkest grey ellipse in the center of the figure above). All of these relationships are therefore considered to have a <strong><em>relatedness coefficient</em></strong> of 0.5.</p>
 <p>If we expand out to the next grey ellipse in the figure, which represents our next closest family members, we see that all individuals share roughly 1/4 (25%) of their DNA with these extended family relatives - that is, half-siblings, grandparents and grandchildren, and aunts/uncles or nephews/nieces. All of these relationships are therefore considered to have a <strong><em>relatedness coefficient</em></strong> of 0.25.</p>
 <p>We can expand out again to the third largest grey ellipse in the figure, and we see that all individuals share roughly 1/8 (12.5%) of their DNA with these distant family relatives - that is, great-grandparents and great-grandchildren, great aunts and uncles, and great nieces and nephews. All of these relationships are therefore considered to have a <strong><em>relatedness coefficient</em></strong> of 0.125.</p>
@@ -438,31 +440,230 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="step-0-set-up-environment-1" class="level2">
 <h2 class="anchored" data-anchor-id="step-0-set-up-environment-1">Step 0: Set up environment</h2>
 <ul>
-<li><p>Create an R project with an organized directory structure</p>
-<pre><code>. └── my_awesome_project     ├── src     ├── output     ├── data     │   ├── raw     │   └── processed     ├── README.md     ├── run_analyses.R      └── .gitignore</code></pre></li>
-<li><p>Open a new <code>.rmd</code> or <code>.qmd</code> file in your <code>code</code> folder</p></li>
+<li><p><a href="https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects">Create an R project</a></p></li>
+<li><p>Organize your project directory structure</p></li>
+</ul>
+<p>Here is a simple example to start off:</p>
+<pre><code>.
+└── my_awesome_project
+    ├── code
+    │   └── my_code.Rmd
+    ├── data
+    │   ├── some_data.csv
+    │   └── more_data.csv
+    └── output
+        └── figs</code></pre>
+<ul>
+<li><p>Open a new <code>.rmd</code> file in your <code>code</code> folder</p></li>
 <li><p>Title &amp; date your code file!</p></li>
 <li><p>Load libraries</p></li>
 </ul>
-<p>Step 1: Import data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-1-import-data-1" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-import-data-1">Step 1: Import data</h2>
+<p>Now that you have your environment set up, the first thing you will want to do is import the data that you are working with. The most common way this is done is by reading in a comma-separated file (csv) or tab-delimited file (e.g.&nbsp;tsv or txt files). We are using a csv file for this exercise, so you can read in your data using read_csv() from the readr package:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>related <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/SFPW_relatedness_associations.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>New names:
+Rows: 90000 Columns: 9
+── Column specification
+──────────────────────────────────────────────────────── Delimiter: "," chr
+(2): island1, island2 dbl (7): ...1, clust1, ind1, clust2, ind2, rel, assoc
+ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
+Specify the column types or set `show_col_types = FALSE` to quiet this message.
+• `` -&gt; `...1`</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>haplotypes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/SFPW_mtDNA_haplotypes.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>New names:
+Rows: 300 Columns: 6
+── Column specification
+──────────────────────────────────────────────────────── Delimiter: "," chr
+(3): indID, island, haps dbl (3): ...1, cluster, individual
+ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
+Specify the column types or set `show_col_types = FALSE` to quiet this message.
+• `` -&gt; `...1`</code></pre>
+</div>
+</div>
+<p>Once you have imported your data, take a look at it to make sure it makes sense. You can do this in two ways: first, in the environment window (upper right corner), find the variable called “search_data” and click on the blue arrow. This will show a drop-down summary of your data. You’ll see each column listed as a vector, and it will show you the name of the column, the type or class of data, and the number of observations in each column.</p>
+<p>You can also look at your data in the viewer. Click on the name of the data frame in the environment to open it up in the viewer window. Notice that it opens as a separate tab, and that each vector is shown as a column, with a row for each observation. In this case, we have three columns: one for month/year, one for the garden search term, and one for the ice skating search term. There are a total of 256 observations for each of those columns.</p>
+</section>
+<section id="step-2-wrangle-your-data-1" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-wrangle-your-data-1">Step 2: Wrangle your data</h2>
+<p>Usually, the data that you import won’t be exactly what you want to plot or model. Sometimes it will require some tidying - for example, you may have incomplete observations (rows) that you need to remove, or inconsistent data entry that needs to be cleaned up. In this case, the first column imported a column of row numbers that are not useful for us. We can use a pipe operator <code>%&gt;%</code> , which has a <code>Ctrl+Alt+p</code> default hotkey assigned in <code>Tools/Keyboard Shortcuts Help</code> followed by the command <code>dplyr::select</code> to select all columns except column 1 <code>(-1)</code> . This drops column 1 from our dataframe.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>related <span class="ot">&lt;-</span> related <span class="sc">%&gt;%</span> </span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>haplotypes <span class="ot">&lt;-</span> haplotypes <span class="sc">%&gt;%</span> </span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Take some time to familiarize yourself with the data. Explore the columns, what information is present, and what questions you can ask of the data.</p>
+<p>Functions like <code>head</code> , <code>summary</code>, and <code>str</code> are helpful for dataframe familiarization.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(related)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 8
+  clust1  ind1 island1 clust2  ind2 island2   rel assoc
+   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;
+1      1     1 Hawaii       1     1 Hawaii  0.614 0.755
+2      1     1 Hawaii       1    10 Hawaii  0.501 0.675
+3      1     1 Hawaii       1    11 Hawaii  0.742 0.935
+4      1     1 Hawaii       1    12 Hawaii  0.745 0.885
+5      1     1 Hawaii       1    13 Hawaii  0.726 1    
+6      1     1 Hawaii       1    14 Hawaii  0.674 0.836</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(related)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     clust1        ind1         island1              clust2        ind2      
+ Min.   : 1   Min.   : 1.00   Length:90000       Min.   : 1   Min.   : 1.00  
+ 1st Qu.: 4   1st Qu.: 5.75   Class :character   1st Qu.: 4   1st Qu.: 5.75  
+ Median : 8   Median :10.50   Mode  :character   Median : 8   Median :10.50  
+ Mean   : 8   Mean   :10.50                      Mean   : 8   Mean   :10.50  
+ 3rd Qu.:12   3rd Qu.:15.25                      3rd Qu.:12   3rd Qu.:15.25  
+ Max.   :15   Max.   :20.00                      Max.   :15   Max.   :20.00  
+   island2               rel             assoc       
+ Length:90000       Min.   :0.0000   Min.   :0.0000  
+ Class :character   1st Qu.:0.1010   1st Qu.:0.1010  
+ Mode  :character   Median :0.1589   Median :0.2082  
+                    Mean   :0.2004   Mean   :0.2447  
+                    3rd Qu.:0.2684   3rd Qu.:0.3434  
+                    Max.   :0.9510   Max.   :1.0000  </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(related)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [90,000 × 8] (S3: tbl_df/tbl/data.frame)
+ $ clust1 : num [1:90000] 1 1 1 1 1 1 1 1 1 1 ...
+ $ ind1   : num [1:90000] 1 1 1 1 1 1 1 1 1 1 ...
+ $ island1: chr [1:90000] "Hawaii" "Hawaii" "Hawaii" "Hawaii" ...
+ $ clust2 : num [1:90000] 1 1 1 1 1 1 1 1 1 1 ...
+ $ ind2   : num [1:90000] 1 10 11 12 13 14 15 16 17 18 ...
+ $ island2: chr [1:90000] "Hawaii" "Hawaii" "Hawaii" "Hawaii" ...
+ $ rel    : num [1:90000] 0.614 0.501 0.742 0.745 0.726 ...
+ $ assoc  : num [1:90000] 0.755 0.675 0.935 0.885 1 ...</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(haplotypes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 5
+  indID       cluster individual island haps 
+  &lt;chr&gt;         &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;
+1 1_1_Hawaii        1          1 Hawaii A    
+2 5_1_Hawaii        5          1 Hawaii A    
+3 6_1_Hawaii        6          1 Hawaii D    
+4 8_1_Hawaii        8          1 Hawaii A    
+5 12_1_Hawaii      12          1 Hawaii D    
+6 1_2_Hawaii        1          2 Hawaii A    </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(haplotypes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    indID              cluster     individual       island         
+ Length:300         Min.   : 1   Min.   : 1.00   Length:300        
+ Class :character   1st Qu.: 4   1st Qu.: 5.75   Class :character  
+ Mode  :character   Median : 8   Median :10.50   Mode  :character  
+                    Mean   : 8   Mean   :10.50                     
+                    3rd Qu.:12   3rd Qu.:15.25                     
+                    Max.   :15   Max.   :20.00                     
+     haps          
+ Length:300        
+ Class :character  
+ Mode  :character  
+                   
+                   
+                   </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(haplotypes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [300 × 5] (S3: tbl_df/tbl/data.frame)
+ $ indID     : chr [1:300] "1_1_Hawaii" "5_1_Hawaii" "6_1_Hawaii" "8_1_Hawaii" ...
+ $ cluster   : num [1:300] 1 5 6 8 12 1 5 6 8 12 ...
+ $ individual: num [1:300] 1 1 1 1 1 2 2 2 2 2 ...
+ $ island    : chr [1:300] "Hawaii" "Hawaii" "Hawaii" "Hawaii" ...
+ $ haps      : chr [1:300] "A" "A" "D" "A" ...</code></pre>
+</div>
+</div>
+<p>After exploring the data, we can see the individual pilot whales are described by cluster, island, and haplotype. Now we’re ready to ask questions about the data.. Like: “What is the spread of relatedness coefficients within clusters? Are some clusters more closely related than others?” These questions can be specifically rephrased as hypothesis.</p>
 <ul>
 <li>Write your hypotheses
 <ul>
 <li>Null hypothesis (H0):
 <ul>
-<li>There is no population structure among Hawaiian short-finned pilot whales.</li>
+<li>All pilot whale clusters are equally related.</li>
+<li>There is no difference in relatedness among Hawaiian short-finned pilot whale clusters.</li>
 </ul></li>
 <li>Alternative hypothesis (H1a):
 <ul>
-<li>There is significant population structure among Hawaiian short-finned pilot whales.</li>
+<li>Some pilot whale clusters are more incestuous than others.</li>
+<li>There is significant difference in relatedness in Hawaiian short-finned pilot whale clusters.</li>
 </ul></li>
 </ul></li>
-<li></li>
 </ul>
+<p>Begin with the end in mind: now that we have an idea of the end, we can wrangle our data further!</p>
+<p>Keep within cluster comparisons:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>within_cluster <span class="ot">&lt;-</span> related <span class="sc">%&gt;%</span> </span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(clust1 <span class="sc">==</span> clust2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Remove rows where the coefficient shows relatedness to self</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>within_cluster <span class="ot">&lt;-</span> within_cluster <span class="sc">%&gt;%</span> </span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>ind1 <span class="sc">==</span> ind2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-3-visualize-data-1" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-visualize-data-1">Step 3: Visualize data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(within_cluster,</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(clust1),</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> rel)) <span class="sc">+</span></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">outlier.alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.15</span>, <span class="at">alpha =</span> <span class="fl">0.4</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Cluster"</span>,</span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Relatedness coefficient"</span></span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="FISH470-IntroToTidyverse-Lab_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Are any of these clusters more or less spread out on the y axis of relatedness than others? It’s kind of hard to tell… But maybe cluster 4 and 5 are less spread than, say, cluster 15. We can do a quick statistical test on this with Levene’s test for initial exploration.</p>
+</section>
+<section id="step-4-model-data" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-model-data">Step 4: Model data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">leveneTest</span>(rel <span class="sc">~</span> clust1, <span class="at">data=</span> within_cluster)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Make <code>clust1</code> a factor</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>within_cluster <span class="ot">&lt;-</span> within_cluster <span class="sc">%&gt;%</span> </span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">clust1 =</span> <span class="fu">factor</span>(clust1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Try to model with <code>leveneTest</code> again</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">leveneTest</span>(rel <span class="sc">~</span> clust1, <span class="at">data=</span> within_cluster)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Levene's Test for Homogeneity of Variance (center = median)
+        Df F value Pr(&gt;F)
+group   14  0.4487 0.9588
+      5685               </code></pre>
+</div>
+</div>
+<p>Here we see that Levene’s test for variance is not significant, indicating that variances of relatedness clusters are similar. Aka.. each cluster is similarly “incestuous”, or “inbred”. What does it say that each cluster has an average relatedness coefficient of 0.6?</p>
 </section>
 </section>
 <section id="lab-reflection" class="level1">
 <h1>Lab Reflection</h1>
+<p>Try this again exploring relatedness within different metadata bins (island, haplotype).</p>
 <p>What does this data tell you about population structure in Hawaiian short-finned pilot whales?</p>
 <ol type="1">
 <li>Include your null and alternative hypotheses, and at least one plot you made today.</li>
