@@ -4,8 +4,22 @@ project:
 
 website:
   title: "FISH 470 Lab"
+  site-url: "https://sarahtanja.github.io/fish470-lab/"
+  repo-url: "https://sarahtanja.github.io/fish470-lab/"
 
+page-footer:
+    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
 
+sidebar:
+    pinned: true
+    align: center
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents:
+      - href: index.qmd
+        text: Modules
+        
 format:
   html:
     preview: true
@@ -18,7 +32,7 @@ format:
       toggle: true
     toc: true
     toc-depth: 2
-    toc-location: left
+    toc-location: right
     df-print: kable
     smooth-scroll: true
     link-external-icon: true
