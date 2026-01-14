@@ -7,7 +7,7 @@ listing:
   contents: 
     - modules/week2.qmd
     #- modules/week3/week3.qmd
-  sort: false
+  sort: "false"
   type: grid
   grid-item-align: center
   sort-ui: false
@@ -16,4 +16,14 @@ listing:
 #title-block-banner: true
 ---
 
-Welcome to the Modules page! Here you can find various learning modules designed to help you enhance your skills in data analysis and visualization using R and the tidyverse. Each module includes background information, step-by-step instructions, and practical exercises to reinforce your learning.
+Welcome to the `R` based coding modules for FISH 470 Lab! Here you can find various learning modules designed to help you enhance your skills in data analysis and visualization using `R` and the `tidyverse`. Each module includes background information, step-by-step instructions, and practical exercises to reinforce your learning. When first learning to code, repitition and replication are key! I challenge you to work through the modules by physically typing out the commands rather than copy-paste. This will help you become more familiar with the syntax and structure of `R` programming. Don't hesitate to experiment with the code and use the help function `?function_name` frequently. 
+
+I encourage you to print out these cheat sheets and keep them handy as you work through the modules:
+
+-   [tidyr](https://rstudio.github.io/cheatsheets/html/tidyr.html)
+-   [dplyr](https://rstudio.github.io/cheatsheets/html/data-transformation.html)
+-   [lubridate](https://rstudio.github.io/cheatsheets/html/lubridate.html)
+-   [ggplot](https://rstudio.github.io/cheatsheets/html/data-visualization.html)
+-   [many more Posit cheatsheets](https://posit.co/resources/cheatsheets/) !
+
+Happy coding!

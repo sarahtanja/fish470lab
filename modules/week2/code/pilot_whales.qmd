@@ -9,6 +9,7 @@ date: "2026-01-13"
 date-modified: today
 order: 2
 format: html
+bibliography: "../refs/bib.bibtex"
 ---
 
 ```{r, setup, include=FALSE}
@@ -22,7 +23,7 @@ knitr::opts_chunk$set(
 
 # Background
 
-Before this week's lab, please spend some time looking at the figure below to familiarize yourselves with the concept of **genetic relatedness,** which is defined as *the proportion of your DNA that you share with another individual*. Closer relatives share more of their DNA, and more distant relatives share less and less of it.
+Spend some time looking at the figure below to familiarize yourselves with the concept of **genetic relatedness,** which is defined as *the proportion of your DNA that you share with another individual*. Closer relatives share more of their DNA, and more distant relatives share less and less of it.
 
 ![](../refs/genetic-relatedness.png)
 
@@ -43,11 +44,23 @@ What do you think is the relationship of the following individuals?
 |   13yo female    |   10yo female    |            0.56             |
 |    38yo male     |     4yo male     |            0.26             |
 
+In this exercise, we will use our newfound `tidyverse` skills to explore genetic relatedness in Hawaiian short-finned pilot whales (*Globicephala macrorhynchus*). Using genetic data collected from biopsy samples, we can estimate relatedness coefficients between pairs of individuals and explore how relatedness varies within and between population groups.
+
+::: callout-note
+This data comes from a study by @vancise2017 that investigated population structure and social organization in Hawaiian pilot whales. You can read the full paper [here](https://pubmed.ncbi.nlm.nih.gov/29087034/).
+:::
+
 ## Step 0: Set up environment
 
--   [Create an R project](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects)
+-   [Create an R project](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects) (OR a new folder in an existing R project!)
 
 -   Organize your project directory structure
+
+-   Download [data files](https://canvas.uw.edu/courses/1860380/pages/lab-reviewing-r-and-the-scientific-method?module_item_id=25209043#:~:text=0.26-,In%2DClass%20Materials%3A,-SFPW_mtDNA_haplotypes.csv) and put them in a data folder!
+
+::: calllout-tip
+Best practice is to never modify the raw data directly in excel!!! You don't want to accidentally change a number or delete something. The data folder should just be input to your code.. any output or data wrangling done within the code should be directed to an output folder so that you don't risk overwriting your raw data.
+:::
 
 Here is a simple example to start off:
 
@@ -67,6 +80,10 @@ Here is a simple example to start off:
 
 -   Title & date your code file!
 
+![](images/title-date.png){width=150%}
+
+-   Insert a code chunk with `Ctrl+Alt+i` for Windows or `Cmd+Option+i` for Mac.
+
 -   Load libraries
 
 ```{r}
@@ -75,7 +92,7 @@ library("tidyverse")
 
 ## Step 1: Import data
 
-Now that you have your environment set up, the first thing you will want to do is import the data that you are working with. The most common way this is done is by reading in a comma-separated file (csv) or tab-delimited file (e.g. tsv or txt files). We are using a csv file for this exercise, so you can read in your data using read_csv() from the readr package:
+Now that you have your environment set up, the first thing you will want to do is import the data that you are working with. The most common way this is done is by reading in a comma-separated file (csv) or tab-delimited file (e.g. tsv or txt files). We are using a csv file for this exercise, so you can read in your data using `read_csv()`from the `readr` package:
 
 ```{r}
 related <- read_csv("../data/SFPW_relatedness_associations.csv")
@@ -84,11 +101,33 @@ haplotypes <- read_csv("../data/SFPW_mtDNA_haplotypes.csv")
 
 Once you have imported your data, take a look at it to make sure it makes sense. You can do this in two ways: first, in the environment window (upper right corner), find the variable called "search_data" and click on the blue arrow. This will show a drop-down summary of your data. You'll see each column listed as a vector, and it will show you the name of the column, the type or class of data, and the number of observations in each column.
 
-You can also look at your data in the viewer. Click on the name of the data frame in the environment to open it up in the viewer window. Notice that it opens as a separate tab, and that each vector is shown as a column, with a row for each observation. In this case, we have three columns: one for month/year, one for the garden search term, and one for the ice skating search term. There are a total of 256 observations for each of those columns.
+You can also look at your data in the viewer. Click on the name of the data frame in the environment to open it up in the viewer window. Notice that it opens as a separate tab, and that each vector is shown as a column, with a row for each observation. 
+
+Finally, you can print a summary of your data frame in the console using the `summary()` function:
+
+```{r}
+summary(related)
+```
+
+```{r}
+summary(haplotypes)
+```
+
+::: callout-tip
+Also try the `head()` and `str()` functions... what do these do??
+:::
 
 ## Step 2: Wrangle your data
 
-Usually, the data that you import won't be exactly what you want to plot or model. Sometimes it will require some tidying - for example, you may have incomplete observations (rows) that you need to remove, or inconsistent data entry that needs to be cleaned up. In this case, the first column imported a column of row numbers that are not useful for us. We can use a pipe operator `%>%` , which has a `Ctrl+Alt+p` default hotkey assigned in `Tools/Keyboard Shortcuts Help` followed by the command `dplyr::select` to select all columns except column 1 `(-1)` . This drops column 1 from our dataframe.
+Usually, the data that you import won't be exactly what you want to plot or model. Sometimes it will require some tidying. In this case, the first column imported a column of row numbers that are not useful for us (they appear to be rownames of row numbers). So let's use `R` to remove that first column from both dataframes.
+
+To do this cleanly, we're going to use one of the most powerful functions of the `tidyverse`: the pipe `%>%` function. The pipe functions tells `R` to take the data output from one step and send it to the next step. This allows us to write tidy code, in list formats, that is easy to read later.
+
+::: callout-tip
+You can insert a pipe operator `%>%` using the keyboard shortcut `Ctrl+Alt+p` (Windows) or `Cmd+Option+p` (Mac).
+:::
+
+We can use a pipe operator `%>%`, followed by the command `dplyr::select` to select all columns except column 1 `(-1)` . This drops column 1 from our dataframes, and saves the output which overwrites the `related` and `haplotypes` dataframes respectively.
 
 ```{r}
 related <- related %>% 
@@ -114,7 +153,9 @@ summary(haplotypes)
 str(haplotypes)
 ```
 
-After exploring the data, we can see the individual pilot whales are described by cluster, island, and haplotype. Now we're ready to ask questions about the data.. Like: "What is the spread of relatedness coefficients within clusters? Are some clusters more closely related than others?" These questions can be specifically rephrased as hypothesis.
+After exploring the data, we can see the individual pilot whales are described by cluster, island, and haplotype in the `haplotypes` dataframe. The `related` dataframe contains pairwise relatedness coefficients between individuals, along with their cluster and island designations.
+
+Now we're ready to ask questions about the data.. Like: "What is the average relatedness coefficients within clusters? Are some clusters more closely related than others?" These questions can be specifically rephrased as hypothesis.
 
 -   Write your hypotheses
     -   Null hypothesis (H0):
@@ -129,21 +170,21 @@ Begin with the end in mind: now that we have an idea of the end, we can wrangle 
 Keep within cluster comparisons:
 
 ```{r}
-within_cluster <- related %>% 
+by_cluster <- related %>% 
   filter(clust1 == clust2)
 ```
 
 Remove rows where the coefficient shows relatedness to self
 
 ```{r}
-within_cluster <- within_cluster %>% 
+by_cluster <- by_cluster %>% 
   filter(!ind1 == ind2)
 ```
 
 ## Step 3: Visualize data
 
 ```{r}
-ggplot(within_cluster,
+ggplot(by_cluster,
        aes(x = factor(clust1),
            y = rel)) +
   geom_boxplot(outlier.alpha = 0.3) +
@@ -156,25 +197,31 @@ ggplot(within_cluster,
 
 ```
 
-Are any of these clusters more or less spread out on the y axis of relatedness than others? It's kind of hard to tell... But maybe cluster 4 and 5 are less spread than, say, cluster 15. We can do a quick statistical test on this with Levene's test for initial exploration.
+Do any of these clusters have on average, a greater relatedness coefficient compared to other clusters? What do you notice about the data? What questions does it make you ask?
 
-## Step 4: Model data
+## Step 4: Model the data
+
+Here we can run a One-Way ANOVA to test the null hypothesis that all clusters have the same average relatedness coefficient.
+
+```{r}
+anova_results <- aov(rel ~ clust1, data= by_cluster)
+summary(anova_results)
+```
+
+What does this result tell us? 
+What additional questions or visualizations can you make with this dataset?
+
+::: callout-tip
+Try exploring relatedness by island, or exploring between-cluster relatedness!
+:::
+
+## Step 5: Save your work
+Finally, don't forget to save your work! You can save your R script or R markdown file by clicking on the save icon in the toolbar, or by using the keyboard shortcut `Ctrl+S` (Windows) or `Cmd+S` (Mac).
+You can also save any plots you create using the `ggsave()` function from the `ggplot2` package. 
+For example, if you created a plot called `my_plot`, you could save it as a PNG file like this:
 
 ```{r, eval=FALSE}
-car::leveneTest(rel ~ clust1, data= within_cluster)
+ggsave("my_plot.png", plot = my_plot, path = "../output/figs", width = 6, height = 4)
 ```
 
-Make `clust1` a factor
-
-```{r}
-within_cluster <- within_cluster %>% 
-  mutate(clust1 = factor(clust1))
-```
-
-Try to model with `leveneTest` again
-
-```{r}
-car::leveneTest(rel ~ clust1, data= within_cluster)
-```
-
-Here we see that Levene's test for variance is not significant, indicating that variances of relatedness clusters are similar. Aka.. each cluster is similarly "incestuous", or "inbred". What does it say that each cluster has an average relatedness coefficient of 0.6?
+Make sure to specify the correct path to your output folder where you want to save the plot. You can adjust the width and height parameters to change the size of the saved plot.

@@ -1,15 +1,15 @@
 [
   {
+    "listing": "/index.html",
+    "items": [
+      "/modules/week2.html"
+    ]
+  },
+  {
     "listing": "/modules/week2.html",
     "items": [
       "/modules/week2/code/into_the_tidyverse.html",
       "/modules/week2/code/pilot_whales.html"
-    ]
-  },
-  {
-    "listing": "/index.html",
-    "items": [
-      "/modules/week2.html"
     ]
   }
 ]
