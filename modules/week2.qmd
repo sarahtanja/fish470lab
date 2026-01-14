@@ -1,0 +1,26 @@
+---
+title: "Into the Tidyverse"
+subtitle: "Week 2 Module"
+image: "week2.png"
+about:
+  id: description
+  template: trestles
+  image: "week2.png"
+listing: 
+  sort: "date desc"
+  type: table
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, reading-time]
+page-layout: full
+title-block-banner: true
+---
+
+::: {#description}
+#### Learning Goals:
+
+1.  Learn to use the R tidyverse to import data and perform basic data tidying and manipulation.
+
+2.  Learn to use the ggplot package in R to create basic plots of your data.
+:::

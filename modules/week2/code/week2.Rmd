@@ -1,0 +1,8 @@
+---
+title: "FISH 470 Lab #2"
+author: "Your Name"
+date: "2026-01-13"
+output: html_document
+draft: true
+---
+
