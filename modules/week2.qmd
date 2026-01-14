@@ -7,9 +7,9 @@ about:
   template: trestles
   image: "week2.png"
 listing: 
-  sort: "date desc"
+  sort: "order"
   type: table
-  categories: true
+  categories: false
   sort-ui: false
   filter-ui: false
   fields: [date, title, reading-time]

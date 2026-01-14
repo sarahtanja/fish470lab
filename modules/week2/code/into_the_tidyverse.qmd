@@ -1,11 +1,13 @@
 ---
-title: "Into to the Tidyverse"
+title: "1. Into to the Tidyverse"
 subtitle: "Data wrangling and visualization with R"
+page-layout: article
 author: 
   - Amy Van Cise
   - Sarah Tanja
 date: "2026-01-13"
 date-modified: today
+order: 1
 format: html
 ---
 

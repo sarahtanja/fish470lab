@@ -4,15 +4,9 @@ project:
 
 website:
   title: "FISH 470 Lab"
-  navbar:
-    left:
-      - href: modules.qmd
-        text: Modules
+
 
 format:
-  gfm: 
-    toc: true
-    number-sections: true
   html:
     preview: true
     theme: journal

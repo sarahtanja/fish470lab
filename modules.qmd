@@ -1,19 +1,18 @@
 ---
-title: "Modules"
+title: "FISH 470 Lab"
 page-layout: full
-title-block-banner: true
+title-block-banner: images/FSH-470-splash.jpg
 toc: true
 listing: 
   contents: 
     - modules/week2.qmd
     #- modules/week3/week3.qmd
-  sort: 'false'
+  sort: false
   type: grid
   grid-item-align: center
   sort-ui: false
   filter-ui: false
   fields: [image, title, subtitle]
-#title-block-banner: true
 ---
 
-Welcome to the Modules page! Here you can find various learning modules designed to help you enhance your skills in data analysis and visualization using R and the tidyverse. Each module includes background information, step-by-step instructions, and practical exercises to reinforce your learning.
+Welcome to the FISH 470 Lab page! Here you can find various learning modules designed to help you enhance your skills in data analysis and visualization using R and the tidyverse. Each module includes background information, step-by-step instructions, and practical exercises to reinforce your learning. Reference these pages in concert with the Canvas course site for the learning materials for FISH 470 Lab. 

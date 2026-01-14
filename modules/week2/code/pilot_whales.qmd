@@ -1,11 +1,13 @@
 ---
-title: "Population structure in Hawaiian pilot whales"
+title: "2. Population structure in Hawaiian pilot whales"
 subtitle: "Exploring genetic relatedness with R and the tidyverse"
+page-layout: article
 author:
   - Amy Van Cise
   - Sarah Tanja
 date: "2026-01-13"
 date-modified: today
+order: 2
 format: html
 ---
 
