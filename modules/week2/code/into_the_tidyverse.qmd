@@ -140,7 +140,7 @@ Before moving on, we're going to do three basic tidying steps. First, we'll sepa
 To do this cleanly, we're going to use one of the most powerful functions of the `tidyverse`: the pipe `%>%` function. The pipe functions tells `R` to take the data output from one step and send it to the next step. This allows us to write tidy code, in list formats, that is easy to read later.
 
 ::: callout-tip
-You can insert a pipe operator `%>%` using the keyboard shortcut `Ctrl+Alt+p` (Windows) or `Cmd+Option+p` (Mac).
+You can insert a pipe operator `%>%` using the keyboard shortcut `Ctrl+Shift+m` (Windows) or `Cmd+Shift+m` (Mac).
 :::
 
 ```{r}

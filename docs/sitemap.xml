@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+<<<<<<< HEAD
     <loc>https://sarahtanja.github.io/fish470-lab/index.html</loc>
     <lastmod>2026-01-14T18:53:02.887Z</lastmod>
   </url>
@@ -15,5 +16,29 @@
   <url>
     <loc>https://sarahtanja.github.io/fish470-lab/modules/week2.html</loc>
     <lastmod>2026-01-14T18:53:22.890Z</lastmod>
+=======
+    <loc>https://sarahtanja.github.io/fish470-lab/modules/week3.html</loc>
+    <lastmod>2026-01-15T20:41:53.737Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sarahtanja.github.io/fish470-lab/modules/week2.html</loc>
+    <lastmod>2026-01-15T19:59:06.443Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sarahtanja.github.io/fish470-lab/modules/week2/code/pilot_whales.html</loc>
+    <lastmod>2026-01-14T07:41:14.029Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sarahtanja.github.io/fish470-lab/index.html</loc>
+    <lastmod>2026-01-15T19:53:10.390Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sarahtanja.github.io/fish470-lab/modules/week2/code/into_the_tidyverse.html</loc>
+    <lastmod>2026-01-15T19:16:39.134Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sarahtanja.github.io/fish470-lab/modules/week3/code/analyse_calling_behavior.html</loc>
+    <lastmod>2026-01-15T20:29:22.829Z</lastmod>
+>>>>>>> a3aba78 (week3 from .r script to .rmd)
   </url>
 </urlset>

@@ -1,8 +1,14 @@
 [
   {
+<<<<<<< HEAD
     "listing": "/index.html",
     "items": [
       "/modules/week2.html"
+=======
+    "listing": "/modules/week3.html",
+    "items": [
+      "/modules/week3/code/analyse_calling_behavior.html"
+>>>>>>> a3aba78 (week3 from .r script to .rmd)
     ]
   },
   {
@@ -11,5 +17,15 @@
       "/modules/week2/code/into_the_tidyverse.html",
       "/modules/week2/code/pilot_whales.html"
     ]
+<<<<<<< HEAD
+=======
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/modules/week2.html",
+      "/modules/week3.html"
+    ]
+>>>>>>> a3aba78 (week3 from .r script to .rmd)
   }
 ]
