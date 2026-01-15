@@ -29,7 +29,7 @@ title-block-banner: true
 2. Introduce common markdown syntax for formatting text, inserting images, and creating links, and knitting from `.Rmd` or `.qmd` files for lab reports. 
 
 ::: callout-tip
-Checkout the [Quarto documentation](https://quarto.org/docs/) for more information on how to use Quarto to create reports, presentations, and websites. Another great resource is [RMarkdown for Scientists](https://rmd4sci.njtierney.com/) by [Nathaniel Tierney](https://njtierney.com/).
+Checkout the [Quarto documentation](https://quarto.org/docs/authoring/markdown-basics.html) for more information markdown basics. Another great resource is [RMarkdown for Scientists](https://rmd4sci.njtierney.com/) by [Nathaniel Tierney](https://njtierney.com/).
 :::
 
 :::

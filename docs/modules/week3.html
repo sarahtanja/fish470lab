@@ -59,6 +59,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
@@ -74,13 +75,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-4a990d8dcb58f517c7c86712b8f2ac7c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9fc1833b7501ca7959713b8e2f0e0b0f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b4e07c7c876bb7527ceeebcb81dc4167.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -163,11 +164,60 @@ window.Quarto = {
 };
 </script>
 
+<meta property="og:title" content="Beluga social vocals – FISH 470 Lab">
+<meta property="og:description" content="Week 3 Module">
+<meta property="og:image" content="https://sarahtanja.github.io/fish470lab/modules/week3.png">
+<meta property="og:site_name" content="FISH 470 Lab">
+<meta property="og:image:height" content="540">
+<meta property="og:image:width" content="960">
 </head>
 
-<body class="quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">FISH 470 Lab</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-modules" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Modules</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-modules">    
+        <li>
+    <a class="dropdown-item" href="../modules/week2.html">
+ <span class="dropdown-text">Week 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../modules/week3.html">
+ <span class="dropdown-text">Week 3</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sarahtanja/fish470lab"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
@@ -178,7 +228,7 @@ window.Quarto = {
   </div>
   <div class="quarto-title-meta column-page">
     </div>
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
@@ -212,7 +262,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Checkout the <a href="https://quarto.org/docs/">Quarto documentation</a> for more information on how to use Quarto to create reports, presentations, and websites. Another great resource is <a href="https://rmd4sci.njtierney.com/">RMarkdown for Scientists</a> by <a href="https://njtierney.com/">Nathaniel Tierney</a>.</p>
+<p>Checkout the <a href="https://quarto.org/docs/authoring/markdown-basics.html">Quarto documentation</a> for more information markdown basics. Another great resource is <a href="https://rmd4sci.njtierney.com/">RMarkdown for Scientists</a> by <a href="https://njtierney.com/">Nathaniel Tierney</a>.</p>
 </div>
 </div>
 </section>
@@ -380,7 +430,7 @@ Reading Time
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/sarahtanja\.github\.io\/fish470-lab\/");
+        var filterRegex = new RegExp("https:\/\/sarahtanja\.github\.io\/fish470lab\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -745,7 +795,7 @@ Reading Time
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Introduce common markdown syntax for formatting text, inserting images, and creating links, and knitting from <span class="in">`.Rmd`</span> or <span class="in">`.qmd`</span> files for lab reports. </span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>Checkout the <span class="co">[</span><span class="ot">Quarto documentation</span><span class="co">](https://quarto.org/docs/)</span> for more information on how to use Quarto to create reports, presentations, and websites. Another great resource is <span class="co">[</span><span class="ot">RMarkdown for Scientists</span><span class="co">](https://rmd4sci.njtierney.com/)</span> by <span class="co">[</span><span class="ot">Nathaniel Tierney</span><span class="co">](https://njtierney.com/)</span>.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>Checkout the <span class="co">[</span><span class="ot">Quarto documentation</span><span class="co">](https://quarto.org/docs/authoring/markdown-basics.html)</span> for more information markdown basics. Another great resource is <span class="co">[</span><span class="ot">RMarkdown for Scientists</span><span class="co">](https://rmd4sci.njtierney.com/)</span> by <span class="co">[</span><span class="ot">Nathaniel Tierney</span><span class="co">](https://njtierney.com/)</span>.</span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>

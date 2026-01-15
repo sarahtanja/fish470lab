@@ -4,36 +4,52 @@ project:
 
 website:
   title: "FISH 470 Lab"
-  site-url: "https://sarahtanja.github.io/fish470-lab/"
-  repo-url: "https://sarahtanja.github.io/fish470-lab/"
+  open-graph: true
+  page-navigation: true
+  site-url: https://sarahtanja.github.io/fish470lab/
+  repo-url: https://github.com/sarahtanja/fish470lab
+
+  navbar:
+    background: primary
+    float: true
+    left:
+      - text: "Modules"
+        menu:
+          - text: "Week 2"
+            file: modules/week2.qmd
+          - text: "Week 3"
+            file: modules/week3.qmd
+    right:
+      - icon: github
+        href: "https://github.com/sarahtanja/fish470lab"
+
+
 
 page-footer:
-    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+  right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
 
-sidebar:
-    pinned: true
-    align: center
-    style: "docked"
-    search: true
-    collapse-level: 1
-    contents:
-      - href: index.qmd
-        text: Modules
+#sidebar:
+#  pinned: true
+#  align: center
+#  style: "docked" # Or "floating" for more flexibility
+#  search: true
+#  collapse-level: 3
+#  contents:
+#    - href: index.qmd # index.html or index.qmd if building locally
+#      text: Modules
         
 format:
   html:
-    preview: true
     theme: journal
     highlight-style: github
     page-layout: article
+    toc: true
+    toc-depth: 2
+    toc-location: right
     code-background: true
     code-tools: 
       source: true
       toggle: true
-    toc: true
-    toc-depth: 2
-    toc-location: right
-    df-print: kable
     smooth-scroll: true
     link-external-icon: true
     link-external-newwindow: true
