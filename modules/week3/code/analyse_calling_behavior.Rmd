@@ -20,11 +20,27 @@ knitr::opts_chunk$set(
   comment = "") # Prevents appending '##' to beginning of lines in code output))      
 ```
 
+# Background
+
+In this script, we will analyze calling behavior in Cook Inlet beluga whales using a dataset from Arial Brewer that includes visual data on group size, behavior, calf presence, and calling rates (combined calls, whistles, and pulsed calls). We will visualize the distributions of these variables and explore how calling behavior varies with group size, behavior, and calf presence.
+
+![](/modules/week3/refs/arialinthefield.png){width="3in"}
+
+[Arial Brewer](https://scholar.google.com/citations?user=MTBjm9sAAAAJ&hl=en)
+
+[SAFS, Whale and Dolphin Ecology Lab PhD Student](https://www.amyvancise.com/our-lab), Year 6
+
+Arial earned a Bachelor of Science degree in Marine Biology from the University of California, Santa Cruz in 2010, and is a marine mammal biologist at NOAA focusing on the acoustic ecology and behavior of cetaceans.
+
+Arial has previously worked as a marine mammal trainer and field biologist and has participated in marine mammal surveys off the coasts of Mexico, California, Oregon, Washington, British Columbia, Alaska and Hawaii.
+
+At SAFS, Arial is investigating the vocal behavior, kinship, and microbiome variability of the endangered Cook Inlet beluga whale population in Alaska.
+
 # Install new packages
 
 In `R`, you only need to install packages into your library once...(until you update `R`, then packages may need to be re-installed). To install a new package that you have not yet installed, use the `install.packages("package_name")` function. You can run this line of code in your console (not in the script) to install any packages you don't have yet.
 
-For example, you may need to run `install.packages("ggsci")` to install the `ggsci` package. That is required for this script.
+For example, you may need to run `install.packages("ggsci")` to install the `ggsci` package.
 
 # Load libraries
 
@@ -37,24 +53,22 @@ library(ggsci)
 # Load your data
 
 ::: callout-important
-Pay attention to your file paths! You may need to change the file path below depending on where your data file is located relative to your working directory. Here, we assume you are working from a `.Rmd` script that is saved in your `code` folder, and the data file is located in a folder called `data` that is one level up from `code`.
+Pay attention to your file paths! You may need to change the file path below depending on where your data file is located relative to your working directory. Here, we assume you are working from a `.Rmd` script that is saved in your `code` folder, and the data file is located in a folder called `data` that is one level up from `code`. It's important to explicitly load your data in the script, if you use the "import data" GUi option that is *not* the tidyverse way because it isn't **reproducible** !
 :::
 
 ```{r}
 data <- read_csv("../data/CIB_calling_behavior.csv")
 ```
 
-# Let's do some initial data exploration
-
 ::: callout-tip
 As a reminder, you can insert a new code chunk with the keyboard shortcut `Ctrl + Alt + I` (Windows) or `Cmd + Option + I` (Mac).
 :::
 
-## Distributions of variables
+# View distributions with histograms
 
-When visualizing distributions with `geom_histogram()`, `ggplot` expects you to pass a value to the `x` aesthetic.
+When visualizing distributions with `geom_histogram()`, `ggplot` expects you to pass a single value to the `x` aesthetic.
 
-If we want to visualize group sizes, we pass `group_size` to the `x` variable.
+If we want to visualize counts of group sizes, we pass `group_size` to the `x` variable.
 
 ```{r}
 ggplot(data = data, aes(x=group_size)) +
@@ -66,7 +80,9 @@ ggplot(data = data, aes(x=group_size)) +
 What happens when you change the binwidth? Try changing it to 5 or 20 and see how the histogram changes.
 :::
 
-Now it's your turn! Create histograms like the one above for the following variables:
+## Now it's your turn!
+
+Create histograms like the one above for the following variables:
 
 -   `combined_call`
 -   `whistle`
@@ -98,23 +114,32 @@ ggplot(data = data, aes(x=pulsed_call)) +
   xlab("# pulsed calls / minute")
 ```
 
-# Now let's compare with our behavior parameters
+# Compare call types with behaviors
 
 -   Pivot the dataframe so that we can compare all call types at once
 
 ```{r}
 data.long <- data %>% 
-  pivot_longer(cols = c(combined_call,whistle,pulsed_call),names_to = "call", values_to = "num.call")
+  pivot_longer(cols = c(combined_call,whistle,pulsed_call),
+               names_to = "call", 
+               values_to = "num.call")
 ```
 
 -   Does the number of calls in each call type change with group size?
 
 ```{r}
-ggplot(data = data.long, aes(x = group_size, y = num.call, color = call, fill = call)) +
-  geom_point() +
-  theme_minimal()
+ggplot(data = data.long, 
+       aes(x = group_size, 
+           y = num.call, 
+           color = call, 
+           fill = call)) +
+        geom_bar(stat="identity", 
+                 position = "dodge", 
+                 alpha = 0.5) +
+        theme_minimal()
 ```
 
+-   Is there a difference between call types with group size?
 -   Is that difference statistically significant?
 
 ```{r}
@@ -123,9 +148,14 @@ lm.w <- lm(whistle ~ group_size, data = data)
 summary(lm.w)
 ```
 
+## Now it's your turn!
+
+Create exploratory visualizations and statistical tests to answer the following questions:
+
 -   Does the number of calls in each call type change with group behavior?
 
 ```{r}
+#| echo: false
 data.long %>% 
   filter(num.call > 0) %>% 
 ggplot(aes(x = call, y = num.call, color = behavior, fill = behavior)) +
@@ -133,16 +163,20 @@ ggplot(aes(x = call, y = num.call, color = behavior, fill = behavior)) +
   theme_minimal()
 ```
 
+::: callout-tip
+Can you recreate a graph like this one above?
+:::
+
 -   Is that difference statistically significant?
 
 ```{r}
-#| eval: false
+#| include: false
 lm.w.behavior <- aov(whistle ~ behavior, data = data)
 summary(lm.w.behavior)
 ```
 
 ```{r}
-#| eval: false
+#| include: false
 lm.pc.behavior <- lm(pulsed_call ~ behavior, data = data)
 summary(lm.pc.behavior)
 ```
@@ -150,6 +184,7 @@ summary(lm.pc.behavior)
 -   Does the number of calls in each call type change with calf presence?
 
 ```{r}
+#| include: false
 ggplot(data = data.long, aes(x = call, y = num.call, color = calf, fill = calf)) +
   geom_violin() +
   theme_minimal()
@@ -158,12 +193,12 @@ ggplot(data = data.long, aes(x = call, y = num.call, color = calf, fill = calf))
 -   Is that difference statistically significant?
 
 ```{r}
-#| eval: false
+#| include: false
 lm.cc.calf <- lm(combined_call ~ calf, data = data)
 summary(lm.cc.calf)
 ```
 
-# Put it all together in one pretty visualization
+## Use `facet_wrap()` to make plot multiples
 
 ```{r}
 data.long %>% 
@@ -178,7 +213,7 @@ ggplot(aes(x = call, y = num.call, color = behavior, fill = behavior)) +
   ylab("Number of calls")
 ```
 
-# Look at calling behavior approaching behavioral transition
+# Compare calling behavior approaching behavioral transition
 
 ```{r}
 data_update_long <- data %>% 
@@ -195,10 +230,13 @@ ggplot(data_update_long, aes(x = timediff_transition, y = nCalls, fill = call_ty
 ```{r}
 #| eval: false
 lm_callsOverTime <- lm(nCalls ~ abs(timediff_transition), data = data_update_long)  
+
 summary(lm_callsOverTime)
 ```
 
 ```{r}
+#| echo: false
+
 ggplot(data_update_long, aes(x = abs(timediff_transition), y = nCalls, 
                              color = call_type, fill = call_type)) +
   geom_jitter(size = 0.5) +
@@ -210,6 +248,32 @@ ggplot(data_update_long, aes(x = abs(timediff_transition), y = nCalls,
   xlab("Minutes to/from transition") +
   ylab("Number of calls")
 ```
+
+::: callout-tip
+Can you re-create a graph like this one above??
+:::
+
+# Now it's your turn!
+
+## Pick your question, visualization and interpretation
+
+For this weeks lab report, pick your favorite visualization from above and:
+
+1.  Customize the figure to make it your own (colors, labels, themes, etc.)
+
+2.  Write the null and alternative hypotheses that the figure addresses
+
+3.  Include the code chunk that generates that figure in your report
+
+4.  Write a short interpretation of what the figure shows
+
+    -    What patterns do you see?
+
+    -   What do you think those patterns mean in terms of beluga whale behavior?
+
+5.   Include an appropriate statistical test to assess whether the patterns you see are statistically significant
+
+6.  Write a short interpretation of the statistical test results
 
 # Knitting a lab report
 
