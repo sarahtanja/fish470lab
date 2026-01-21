@@ -186,20 +186,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
    
   <ul class="collapse">
   <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#install-new-packages" id="toc-install-new-packages" class="nav-link" data-scroll-target="#install-new-packages">Install new packages</a></li>
+  <li><a href="#step-1.-hypotheses-and-variables" id="toc-step-1.-hypotheses-and-variables" class="nav-link" data-scroll-target="#step-1.-hypotheses-and-variables">Step 1. Hypotheses and variables</a>
+  <ul class="collapse">
   <li><a href="#load-libraries" id="toc-load-libraries" class="nav-link" data-scroll-target="#load-libraries">Load libraries</a></li>
   <li><a href="#load-your-data" id="toc-load-your-data" class="nav-link" data-scroll-target="#load-your-data">Load your data</a></li>
-  <li><a href="#initial-data-exploration" id="toc-initial-data-exploration" class="nav-link" data-scroll-target="#initial-data-exploration">Initial data exploration</a>
-  <ul class="collapse">
-  <li><a href="#q1-do-belugas-use-different-types-of-calls-in-different-behavioral-or-groups-contexts" id="toc-q1-do-belugas-use-different-types-of-calls-in-different-behavioral-or-groups-contexts" class="nav-link" data-scroll-target="#q1-do-belugas-use-different-types-of-calls-in-different-behavioral-or-groups-contexts">Q1: Do belugas use different types of calls in different behavioral or groups contexts?</a></li>
-  <li><a href="#q2-does-beluga-vocal-behavior-number-or-type-of-calls-change-as-we-approach-a-change-in-group-behavior" id="toc-q2-does-beluga-vocal-behavior-number-or-type-of-calls-change-as-we-approach-a-change-in-group-behavior" class="nav-link" data-scroll-target="#q2-does-beluga-vocal-behavior-number-or-type-of-calls-change-as-we-approach-a-change-in-group-behavior">Q2: Does beluga vocal behavior (number or type of calls) change as we approach a change in group behavior?</a></li>
+  <li><a href="#initial-data-exploration" id="toc-initial-data-exploration" class="nav-link" data-scroll-target="#initial-data-exploration">Initial data exploration</a></li>
   </ul></li>
-  <li><a href="#data-visualization-with-ggplot2-tips-resources" id="toc-data-visualization-with-ggplot2-tips-resources" class="nav-link" data-scroll-target="#data-visualization-with-ggplot2-tips-resources">Data visualization with <code>ggplot2</code> tips &amp; resources</a></li>
-  <li><a href="#lab-reports" id="toc-lab-reports" class="nav-link" data-scroll-target="#lab-reports">Lab reports</a>
-  <ul class="collapse">
-  <li><a href="#pick-your-question-visualization-and-interpretation" id="toc-pick-your-question-visualization-and-interpretation" class="nav-link" data-scroll-target="#pick-your-question-visualization-and-interpretation">Pick your question, visualization and interpretation</a></li>
-  </ul></li>
+  <li><a href="#step-2.-wrangle-and-visualize-the-data" id="toc-step-2.-wrangle-and-visualize-the-data" class="nav-link" data-scroll-target="#step-2.-wrangle-and-visualize-the-data">Step 2. Wrangle and visualize the data</a></li>
+  <li><a href="#step-3.-model-the-relationship" id="toc-step-3.-model-the-relationship" class="nav-link" data-scroll-target="#step-3.-model-the-relationship">Step 3. Model the relationship</a></li>
+  <li><a href="#lab-reports" id="toc-lab-reports" class="nav-link" data-scroll-target="#lab-reports">Lab reports</a></li>
   <li><a href="#knitting-a-lab-report" id="toc-knitting-a-lab-report" class="nav-link" data-scroll-target="#knitting-a-lab-report">Knitting a lab report</a></li>
+  <li><a href="#data-visualization-with-ggplot2-tips-resources" id="toc-data-visualization-with-ggplot2-tips-resources" class="nav-link" data-scroll-target="#data-visualization-with-ggplot2-tips-resources">Data visualization with <code>ggplot2</code> tips &amp; resources</a></li>
   </ul>
 </nav>
     </div>
@@ -234,7 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">January 20, 2026</p>
+      <p class="date-modified">January 21, 2026</p>
     </div>
   </div>
     
@@ -246,65 +243,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="background" class="level1">
 <h1>Background</h1>
 <p>In this script, we will analyze calling behavior in Cook Inlet beluga whales using a dataset from Arial Brewer that includes visual data on group size, behavior, calf presence, and calling rates (combined calls, whistles, and pulsed calls). We will visualize the distributions of these variables and explore how calling behavior varies with group size, behavior, and calf presence. We will also explore how calling behavior changes as we approach behavioral transitions.</p>
-<p><img src="../../..\modules/week3/refs/arialinthefield.png" class="img-fluid" style="width:3in"></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="../../..\modules/week3/refs/arialinthefield.png" class="img-fluid figure-img" style="width:3in"></p>
+</figure>
+</div>
 <p><a href="https://scholar.google.com/citations?user=MTBjm9sAAAAJ&amp;hl=en">Arial Brewer</a> <a href="https://www.amyvancise.com/our-lab">SAFS, Whale and Dolphin Ecology Lab PhD Student</a></p>
 <blockquote class="blockquote">
 <p>Arial earned a Bachelor of Science degree in Marine Biology from the University of California, Santa Cruz in 2010, and is a marine mammal biologist at NOAA focusing on the acoustic ecology and behavior of cetaceans. Arial has previously worked as a marine mammal trainer and field biologist and has participated in marine mammal surveys off the coasts of Mexico, California, Oregon, Washington, British Columbia, Alaska and Hawaii.At SAFS, Arial is investigating the vocal behavior, kinship, and microbiome variability of the endangered Cook Inlet beluga whale population in Alaska.</p>
 </blockquote>
 <p>Voices of the Sea <a href="https://voicesinthesea.ucsd.edu/species/belugasNarwhals/beluga.html#">link</a></p>
-</section>
-<section id="install-new-packages" class="level1">
-<h1>Install new packages</h1>
-<p>In <code>R</code>, you only need to install packages into your library once…(until you update <code>R</code>, then packages may need to be re-installed). To install a new package that you have not yet installed, use the <code>install.packages("package_name")</code> function. You can run this line of code in your console (not in the script) to install any packages you don’t have yet.</p>
-<p>For example, you may need to run <code>install.packages("ggsci")</code> to install the <code>ggsci</code> package.</p>
-</section>
-<section id="load-libraries" class="level1">
-<h1>Load libraries</h1>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="do">## There are many cool color palettes... pick a handful to explore</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(PNWColors) <span class="co"># color palettes</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggsci) <span class="co"># color palettes</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(colorspace) <span class="co"># color palettes</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridis) <span class="co"># color palettes</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer) <span class="co"># color palettes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-right">
+<figure class="figure">
+<p><a href="https://www.fisheries.noaa.gov/feature-story/vocal-repertoire-cook-inlet-beluga-whales-documented-first-time"><img src="../../..\modules/week3/refs/750x500-cook-inlet-aerial-calf-afsc.jpg" class="img-fluid figure-img" alt="Cook Inlet beluga mother and calf in turbid waters. Credit: NOAA Fisheries/Paul Wade"></a></p>
+<p></p><figcaption class="figure-caption">Cook Inlet beluga mother and calf in turbid waters. Credit: NOAA Fisheries/Paul Wade</figcaption><p></p>
+</figure>
 </div>
-</section>
-<section id="load-your-data" class="level1">
-<h1>Load your data</h1>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Pay attention to your file paths! You may need to change the file path below depending on where your data file is located relative to your working directory. Here, we assume you are working from a <code>.Rmd</code> script that is saved in your <code>code</code> folder, and the data file is located in a folder called <code>data</code> that is one level up from <code>code</code>. It’s important to explicitly load your data in the script, if you use the “import data” GUi option that is <em>not</em> the tidyverse way because it isn’t <strong>reproducible</strong> !</p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/CIB_calling_behavior.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>As a reminder, you can insert a new code chunk with the keyboard shortcut <code>Ctrl + Alt + I</code> (Windows) or <code>Cmd + Option + I</code> (Mac).</p>
-</div>
-</div>
-</section>
-<section id="initial-data-exploration" class="level1">
-<h1>Initial data exploration</h1>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -316,7 +270,13 @@ Important
 </div>
 <div class="callout-body-container callout-body">
 <p>Explore the data in regards to your guiding research question (either Q1 or Q2!)</p>
-<p>Remember the scientific method steps: ### Step 1: Hypotheses and variables &gt; Write down your null and alternative hypotheses. Identify x and y variables.</p>
+<p>Remember the scientific method steps:</p>
+<section id="step-1-hypotheses-and-variables" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-hypotheses-and-variables">Step 1: Hypotheses and variables</h3>
+<ul>
+<li>Write down your null and alternative hypotheses. Identify x and y variables.</li>
+</ul>
+</section>
 <section id="step-2-explore-the-data-visually" class="level3">
 <h3 class="anchored" data-anchor-id="step-2-explore-the-data-visually">Step 2: Explore the data visually</h3>
 </section>
@@ -331,17 +291,86 @@ Important
 </section>
 </div>
 </div>
-<section id="q1-do-belugas-use-different-types-of-calls-in-different-behavioral-or-groups-contexts" class="level2">
-<h2 class="anchored" data-anchor-id="q1-do-belugas-use-different-types-of-calls-in-different-behavioral-or-groups-contexts">Q1: Do belugas use different types of calls in different behavioral or groups contexts?</h2>
+</section>
+<section id="step-1.-hypotheses-and-variables" class="level1">
+<h1>Step 1. Hypotheses and variables</h1>
+<ul>
+<li><p>Open an Rmd document in R.</p></li>
+<li><p>Write down your null and alternative hypotheses. Identify x and y variables.</p></li>
+<li><p>Set up your environment</p></li>
+</ul>
+<section id="load-libraries" class="level2">
+<h2 class="anchored" data-anchor-id="load-libraries">Load libraries</h2>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <code>R</code>, you only need to <strong>install</strong> packages into your library once…(until you update <code>R</code>, then packages may need to be re-installed). To install a new package that you have not yet installed, use the <code>install.packages("package_name")</code> function. You can run this line of code in your console (not in the script) to install any packages you don’t have yet.</p>
+<p>For example, you may need to run <code>install.packages("ggsci")</code> to install the <code>ggsci</code> package.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="do">## There are many cool color palettes... pick a handful to explore</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(PNWColors) <span class="co"># color palettes</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggsci) <span class="co"># color palettes</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(colorspace) <span class="co"># color palettes</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridis) <span class="co"># color palettes</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer) <span class="co"># color palettes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="load-your-data" class="level2">
+<h2 class="anchored" data-anchor-id="load-your-data">Load your data</h2>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pay attention to your file paths! You may need to change the file path below depending on where your data file is located relative to your working directory. Here, we assume you are working from a <code>.Rmd</code> script that is saved in your <code>code</code> folder, and the data file is located in a folder called <code>data</code> that is one level up from <code>code</code>. It’s important to explicitly load your data in the script, if you use the “import data” GUi option that is <em>not</em> the tidyverse way because it isn’t <strong>reproducible</strong> !</p>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As a reminder, you can insert a new code chunk with the keyboard shortcut <code>Ctrl + Alt + I</code> (Windows) or <code>Cmd + Option + I</code> (Mac).</p>
+</div>
+</div>
+<ul>
+<li>Look at your data! Can you find your x and y variables as columns of your data?</li>
+</ul>
+</section>
+<section id="initial-data-exploration" class="level2">
+<h2 class="anchored" data-anchor-id="initial-data-exploration">Initial data exploration</h2>
+<section id="q1-do-belugas-use-different-types-of-calls-in-different-behavioral-or-groups-contexts" class="level3">
+<h3 class="anchored" data-anchor-id="q1-do-belugas-use-different-types-of-calls-in-different-behavioral-or-groups-contexts">Q1: Do belugas use different types of calls in different behavioral or groups contexts?</h3>
 <blockquote class="blockquote">
 <p>Write down your null and alternative hypotheses. Identify x and y variables.</p>
 </blockquote>
 <p>When visualizing distributions with <code>geom_histogram()</code>, <code>ggplot</code> expects you to pass a single value to the <code>x</code> aesthetic.</p>
 <p>If we want to visualize counts of group sizes, we pass <code>group_size</code> to the <code>x</code> variable.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data, <span class="fu">aes</span>(<span class="at">x=</span>group_size)) <span class="sc">+</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth=</span><span class="dv">10</span>) <span class="sc">+</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"group size"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data, <span class="fu">aes</span>(<span class="at">x=</span>group_size)) <span class="sc">+</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth=</span><span class="dv">10</span>) <span class="sc">+</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"group size"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="analyse_calling_behavior_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -359,6 +388,7 @@ Tip
 <p>What happens when you change the binwidth? Try changing it to 5 or 20 and see how the histogram changes.</p>
 </div>
 </div>
+</section>
 <section id="now-its-your-turn-create-some-histograms" class="level3">
 <h3 class="anchored" data-anchor-id="now-its-your-turn-create-some-histograms">Now it’s your turn: Create some histograms!</h3>
 <p>Create histograms like the one above for the following variables:</p>
@@ -417,14 +447,13 @@ Tip
 </div>
 </div>
 </section>
-</section>
-<section id="q2-does-beluga-vocal-behavior-number-or-type-of-calls-change-as-we-approach-a-change-in-group-behavior" class="level2">
-<h2 class="anchored" data-anchor-id="q2-does-beluga-vocal-behavior-number-or-type-of-calls-change-as-we-approach-a-change-in-group-behavior">Q2: Does beluga vocal behavior (number or type of calls) change as we approach a change in group behavior?</h2>
+<section id="q2-does-beluga-vocal-behavior-number-or-type-of-calls-change-as-we-approach-a-change-in-group-behavior" class="level3">
+<h3 class="anchored" data-anchor-id="q2-does-beluga-vocal-behavior-number-or-type-of-calls-change-as-we-approach-a-change-in-group-behavior">Q2: Does beluga vocal behavior (number or type of calls) change as we approach a change in group behavior?</h3>
 <p>When visualizing counts of calls over time approaching a behavioral transition with <code>geom_bar()</code>, <code>ggplot</code> expects you to pass a single value to the <code>x</code> aesthetic (e.g., <code>timediff_transition</code>), and a single value to the <code>y</code> aesthetic (e.g., <code>combined_call</code>, <code>whistle</code>, or <code>pulsed_call</code>).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data, <span class="fu">aes</span>(<span class="at">x =</span> timediff_transition, <span class="at">y =</span> combined_call)) <span class="sc">+</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data, <span class="fu">aes</span>(<span class="at">x =</span> timediff_transition, <span class="at">y =</span> combined_call)) <span class="sc">+</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="analyse_calling_behavior_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -445,6 +474,7 @@ Tip
 <p>What happens when you change the geom from <code>geom_bar()</code> to <code>geom_point()</code> or <code>geom_jitter()</code>? Try it out and see how the plot changes.</p>
 </div>
 </div>
+</section>
 <section id="now-its-your-turn-create-some-data-exporation-visualizations" class="level3">
 <h3 class="anchored" data-anchor-id="now-its-your-turn-create-some-data-exporation-visualizations">Now it’s your turn: Create some data exporation visualizations!</h3>
 <p>Create visualizations like the one above for the following variables:</p>
@@ -497,60 +527,64 @@ Important
 </section>
 </section>
 </section>
-<section id="data-visualization-with-ggplot2-tips-resources" class="level1">
-<h1>Data visualization with <code>ggplot2</code> tips &amp; resources</h1>
+<section id="step-2.-wrangle-and-visualize-the-data" class="level1">
+<h1>Step 2. Wrangle and visualize the data</h1>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If your x and y variables are not columns, wrangle your dataset so that they are. Plot!</p>
 <ul>
-<li><p>Checkout great examples of <code>ggplot2</code> usage in the <a href="https://r-graph-gallery.com/">R graph gallery</a></p></li>
-<li><p>Review <code>ggplot2</code> structure with the <a href="https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf"><code>ggplot2</code>:cheatsheet</a></p></li>
-<li><p>Try using <code>facet_wrap()</code> or <code>facet_grid()</code> to create plot multiples based on a categorical variable (pass the categrorical variable to the <code>~</code> argument inside <code>facet_wrap()</code> or <code>facet_grid()</code>). An example might be <code>facet_wrap(~behavior)</code> to create separate plots for each behavior type.</p></li>
-<li><p>Make visually appealing plots by customizing colors, themes, and labels. Some useful functions include:</p>
-<ul>
-<li><p><code>scale_color_manual()</code> and <code>scale_fill_manual()</code> to customize colors</p></li>
-<li><p><code>theme_minimal()</code>, <code>theme_classic()</code>, <code>theme_bw()</code>, etc. to change overall plot theme</p></li>
-<li><p><code>xlab()</code>, <code>ylab()</code>, and <code>ggtitle()</code> to add axis labels and titles</p></li>
-</ul></li>
-<li><p>There are many gorgeous color palettes available in <code>R</code> packages like <code>PNWColors</code>, <code>colorspace</code>, <code>RColorBrewer</code>, and <code>viridis</code>. Explore these packages to find color schemes that enhance your visualizations.</p></li>
+<li><p><code>geom_bar()</code></p></li>
+<li><p><code>geom_point()</code></p></li>
+<li><p><code>geom_smooth()</code></p></li>
 </ul>
-<section id="ggsci" class="level3">
-<h3 class="anchored" data-anchor-id="ggsci">ggsci</h3>
-<p>Checkout the <code>ggsci</code> package <a href="https://nanx.me/ggsci/articles/ggsci.html">vignette</a> for scientific journal color palettes</p>
-</section>
-<section id="colorspace" class="level3">
-<h3 class="anchored" data-anchor-id="colorspace">colorspace</h3>
-<p>Try exploring the <a href="https://colorspace.r-forge.r-project.org/">colorspace</a> shiny app by running:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>colorspace<span class="sc">::</span><span class="fu">choose_palette</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="pnwcolors" class="level3">
-<h3 class="anchored" data-anchor-id="pnwcolors">PNWColors</h3>
-<p>More info can be found on the <a href="https://github.com/jakelawlor/PNWColors?tab=readme-ov-file#palettes">PNWColors GitHub page</a></p>
-<p>An example pallette is “Anemone”:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnw_palette</span>(<span class="st">"Anemone"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="analyse_calling_behavior_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
+<section id="step-3.-model-the-relationship" class="level1">
+<h1>Step 3. Model the relationship</h1>
+<p>Choose an appropriate model</p>
+<ul>
+<li><p>Categorical data:</p>
+<ul>
+<li>ANOVA <code>aov()</code></li>
+</ul></li>
+<li><p>Continuous data:</p>
+<ul>
+<li>linear regression <code>lm()</code></li>
+</ul></li>
+<li><p>Is the relationship significant?</p></li>
+<li><p>Is the relationship positive or negative?</p></li>
+</ul>
 </section>
 <section id="lab-reports" class="level1">
 <h1>Lab reports</h1>
-<section id="pick-your-question-visualization-and-interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="pick-your-question-visualization-and-interpretation">Pick your question, visualization and interpretation</h2>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your lab report should include the following components:</p>
 <ol type="1">
-<li><p>Customize a data exploration figure to make it your own (colors, labels, themes, etc.)</p></li>
-<li><p>Write the null and alternative hypotheses that the figure addresses</p></li>
-<li><p>Include the code chunk that generates that figure in your report</p></li>
-<li><p>Write a short interpretation of what the figure shows</p>
-<ul>
-<li><p>What patterns do you see?</p></li>
-<li><p>What do you think those patterns mean in terms of beluga whale behavior?</p></li>
-</ul></li>
-<li><p>Include an appropriate statistical test to assess whether the patterns you see are statistically significant</p></li>
-<li><p>Write a short interpretation of the statistical test results</p></li>
+<li><strong>Your falsifiable hypothesis</strong></li>
+<li><strong>The results of your statistical analysis</strong></li>
+<li><strong>A figure visualizing your results</strong></li>
+<li><strong>A determination of whether you do or do not reject your hypothesis.</strong></li>
 </ol>
-</section>
+</div>
+</div>
 </section>
 <section id="knitting-a-lab-report" class="level1">
 <h1>Knitting a lab report</h1>
@@ -567,6 +601,21 @@ knitr::opts_chunk$set(
 <p>Coincidentally, this is how we set options for individual chunks by adding parameters to the chunk header (e.g., <code>{r, echo=FALSE}</code> to hide code for that specific chunk). You can also click the settings wheel icon in the top right corner of any code chunk in RStudio to set chunk options via a graphical user interface (GUI).</p>
 <p><img src="../../..\modules/week3/refs/chunk-header.png" class="img-fluid"></p>
 <p>Experiment with including various chunk options and compare your knitted / rendered documents to see the differences.</p>
+</section>
+<section id="data-visualization-with-ggplot2-tips-resources" class="level1">
+<h1>Data visualization with <code>ggplot2</code> tips &amp; resources</h1>
+<ul>
+<li><p>Checkout great examples of <code>ggplot2</code> usage in the <a href="https://r-graph-gallery.com/">R graph gallery</a></p></li>
+<li><p>Review <code>ggplot2</code> structure with the <a href="https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf"><code>ggplot2</code>:cheatsheet</a></p></li>
+<li><p>Try using <code>facet_wrap()</code> or <code>facet_grid()</code> to create plot multiples based on a categorical variable (pass the categrorical variable to the <code>~</code> argument inside <code>facet_wrap()</code> or <code>facet_grid()</code>). An example might be <code>facet_wrap(~behavior)</code> to create separate plots for each behavior type.</p></li>
+<li><p>Make visually appealing plots by customizing colors, themes, and labels. Some useful functions include:</p>
+<ul>
+<li><p><code>scale_color_manual()</code> and <code>scale_fill_manual()</code> to customize colors</p></li>
+<li><p><code>theme_minimal()</code>, <code>theme_classic()</code>, <code>theme_bw()</code>, etc. to change overall plot theme</p></li>
+<li><p><code>xlab()</code>, <code>ylab()</code>, and <code>ggtitle()</code> to add axis labels and titles</p></li>
+</ul></li>
+<li><p>There are many gorgeous color palettes available in <code>R</code> packages like <code>PNWColors</code>, <code>colorspace</code>, <code>RColorBrewer</code>, and <code>viridis</code>. Explore these packages to find color schemes that enhance your visualizations.</p></li>
+</ul>
 
 
 <!-- -->
@@ -774,432 +823,437 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "1. Analyse calling behavior in Cook Inlet beluga whales"</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Data visualization with `R` and `ggplot2`"</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="an">page-layout:</span><span class="co"> article</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> </span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">  - Amy Van Cise</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">  - Sarah Tanja</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-01-15"</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="an">date-modified:</span><span class="co"> today</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="an">order:</span><span class="co"> 1</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, setup, include=FALSE}</span></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">echo =</span> <span class="cn">TRUE</span>, <span class="co"># Display code chunks</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">eval =</span> <span class="cn">TRUE</span>, <span class="co"># Evaluate code chunks</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">warning =</span> <span class="cn">FALSE</span>, <span class="co"># Hide warnings</span></span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">message =</span> <span class="cn">FALSE</span>, <span class="co"># Hide messages</span></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">comment =</span> <span class="st">""</span>) <span class="co"># Prevents appending '##' to beginning of lines in code output))      </span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="fu"># Background</span></span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>In this script, we will analyze calling behavior in Cook Inlet beluga whales using a dataset from Arial Brewer that includes visual data on group size, behavior, calf presence, and calling rates (combined calls, whistles, and pulsed calls). We will visualize the distributions of these variables and explore how calling behavior varies with group size, behavior, and calf presence. We will also explore how calling behavior changes as we approach behavioral transitions.</span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="al">![](/modules/week3/refs/arialinthefield.png)</span>{width="3in"}</span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Arial Brewer</span><span class="co">](https://scholar.google.com/citations?user=MTBjm9sAAAAJ&amp;hl=en)</span></span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">SAFS, Whale and Dolphin Ecology Lab PhD Student</span><span class="co">](https://www.amyvancise.com/our-lab)</span></span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Arial earned a Bachelor of Science degree in Marine Biology from the University of California, Santa Cruz in 2010, and is a marine mammal biologist at NOAA focusing on the acoustic ecology and behavior of cetaceans. Arial has previously worked as a marine mammal trainer and field biologist and has participated in marine mammal surveys off the coasts of Mexico, California, Oregon, Washington, British Columbia, Alaska and Hawaii.At SAFS, Arial is investigating the vocal behavior, kinship, and microbiome variability of the endangered Cook Inlet beluga whale population in Alaska.</span></span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>Voices of the Sea <span class="co">[</span><span class="ot">link</span><span class="co">](https://voicesinthesea.ucsd.edu/species/belugasNarwhals/beluga.html#)</span></span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a><span class="fu"># Install new packages</span></span>
-<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>In <span class="in">`R`</span>, you only need to install packages into your library once...(until you update <span class="in">`R`</span>, then packages may need to be re-installed). To install a new package that you have not yet installed, use the <span class="in">`install.packages("package_name")`</span> function. You can run this line of code in your console (not in the script) to install any packages you don't have yet.</span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>For example, you may need to run <span class="in">`install.packages("ggsci")`</span> to install the <span class="in">`ggsci`</span> package.</span>
-<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="fu"># Load libraries</span></span>
-<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a><span class="do">## There are many cool color palettes... pick a handful to explore</span></span>
-<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(PNWColors) <span class="co"># color palettes</span></span>
-<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggsci) <span class="co"># color palettes</span></span>
-<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(colorspace) <span class="co"># color palettes</span></span>
-<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridis) <span class="co"># color palettes</span></span>
-<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer) <span class="co"># color palettes</span></span>
-<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a><span class="fu"># Load your data</span></span>
-<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
-<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>Pay attention to your file paths! You may need to change the file path below depending on where your data file is located relative to your working directory. Here, we assume you are working from a <span class="in">`.Rmd`</span> script that is saved in your <span class="in">`code`</span> folder, and the data file is located in a folder called <span class="in">`data`</span> that is one level up from <span class="in">`code`</span>. It's important to explicitly load your data in the script, if you use the "import data" GUi option that is *not* the tidyverse way because it isn't **reproducible** !</span>
-<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/CIB_calling_behavior.csv"</span>)</span>
-<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
-<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>As a reminder, you can insert a new code chunk with the keyboard shortcut <span class="in">`Ctrl + Alt + I`</span> (Windows) or <span class="in">`Cmd + Option + I`</span> (Mac).</span>
-<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a><span class="fu"># Initial data exploration</span></span>
-<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
-<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a>Explore the data in regards to your guiding research question (either Q1 or Q2!)</span>
-<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>Remember the scientific method steps:</span>
-<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a><span class="fu">### Step 1: Hypotheses and variables</span></span>
-<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Write down your null and alternative hypotheses. Identify x and y variables.</span></span>
-<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a><span class="fu">### Step 2: Explore the data visually</span></span>
-<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a><span class="fu">### Step 3: Choose an appropriate model</span></span>
-<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Categorical data: ANOVA <span class="in">`aov()`</span></span>
-<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Continuous data: linear regression <span class="in">`lm()`</span></span>
-<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Is the relationship significant? </span>
-<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Is the relationship positive or negative?</span>
-<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a><span class="fu">## Q1: Do belugas use different types of calls in different behavioral or groups contexts?</span></span>
-<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Write down your null and alternative hypotheses. Identify x and y variables.</span></span>
-<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a>When visualizing distributions with <span class="in">`geom_histogram()`</span>, <span class="in">`ggplot`</span> expects you to pass a single value to the <span class="in">`x`</span> aesthetic.</span>
-<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a>If we want to visualize counts of group sizes, we pass <span class="in">`group_size`</span> to the <span class="in">`x`</span> variable.</span>
-<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-102"><a href="#cb8-102" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data, <span class="fu">aes</span>(<span class="at">x=</span>group_size)) <span class="sc">+</span></span>
-<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth=</span><span class="dv">10</span>) <span class="sc">+</span></span>
-<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"group size"</span>)</span>
-<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
-<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a>What happens when you change the binwidth? Try changing it to 5 or 20 and see how the histogram changes.</span>
-<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a><span class="fu">### Now it's your turn: Create some histograms!</span></span>
-<span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a>Create histograms like the one above for the following variables:</span>
-<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`combined_call`</span></span>
-<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`whistle`</span></span>
-<span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`pulsed_call`</span></span>
-<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-120"><a href="#cb8-120" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
-<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a>What do you notice about the distributions? Are they normally distributed? Skewed?</span>
-<span id="cb8-122"><a href="#cb8-122" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-123"><a href="#cb8-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-127"><a href="#cb8-127" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>combined_call)) <span class="sc">+</span></span>
-<span id="cb8-129"><a href="#cb8-129" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb8-130"><a href="#cb8-130" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"# combined calls / minute"</span>)</span>
-<span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-135"><a href="#cb8-135" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-136"><a href="#cb8-136" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-137"><a href="#cb8-137" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data, <span class="fu">aes</span>(<span class="at">x=</span>whistle)) <span class="sc">+</span></span>
-<span id="cb8-138"><a href="#cb8-138" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb8-139"><a href="#cb8-139" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"# whistles / minute"</span>)</span>
-<span id="cb8-140"><a href="#cb8-140" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-141"><a href="#cb8-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-144"><a href="#cb8-144" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-145"><a href="#cb8-145" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-146"><a href="#cb8-146" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data, <span class="fu">aes</span>(<span class="at">x=</span>pulsed_call)) <span class="sc">+</span></span>
-<span id="cb8-147"><a href="#cb8-147" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb8-148"><a href="#cb8-148" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"# pulsed calls / minute"</span>)</span>
-<span id="cb8-149"><a href="#cb8-149" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-150"><a href="#cb8-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-151"><a href="#cb8-151" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Explore using other methods to visualize distribution data. Try:</span>
-<span id="cb8-152"><a href="#cb8-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-153"><a href="#cb8-153" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span><span class="in">`geom_boxplot()`</span></span>
-<span id="cb8-154"><a href="#cb8-154" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span><span class="in">`geom_violin()`</span></span>
-<span id="cb8-155"><a href="#cb8-155" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-156"><a href="#cb8-156" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
-<span id="cb8-157"><a href="#cb8-157" aria-hidden="true" tabindex="-1"></a>Create exploratory visualizations and statistical tests to answer your falsifiable hypothesis.</span>
-<span id="cb8-158"><a href="#cb8-158" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-159"><a href="#cb8-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-162"><a href="#cb8-162" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-163"><a href="#cb8-163" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-164"><a href="#cb8-164" aria-hidden="true" tabindex="-1"></a><span class="co"># Create exploratory visualizations and statistical tests to answer the following questions:</span></span>
-<span id="cb8-165"><a href="#cb8-165" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb8-166"><a href="#cb8-166" aria-hidden="true" tabindex="-1"></a><span class="co"># -   Does the number of calls in each call type change with group size?</span></span>
-<span id="cb8-167"><a href="#cb8-167" aria-hidden="true" tabindex="-1"></a><span class="co">#     -   Is that difference statistically significant?</span></span>
-<span id="cb8-168"><a href="#cb8-168" aria-hidden="true" tabindex="-1"></a><span class="co"># -   Is there a difference between call types with group size?</span></span>
-<span id="cb8-169"><a href="#cb8-169" aria-hidden="true" tabindex="-1"></a><span class="co">#     -   Is that difference statistically significant?</span></span>
-<span id="cb8-170"><a href="#cb8-170" aria-hidden="true" tabindex="-1"></a><span class="co"># -   Does the number of calls in each call type change with group behavior?</span></span>
-<span id="cb8-171"><a href="#cb8-171" aria-hidden="true" tabindex="-1"></a><span class="co">#     -   Is that difference statistically significant?</span></span>
-<span id="cb8-172"><a href="#cb8-172" aria-hidden="true" tabindex="-1"></a><span class="co"># -   Does the number of calls in each call type change with calf presence?</span></span>
-<span id="cb8-173"><a href="#cb8-173" aria-hidden="true" tabindex="-1"></a><span class="co">#     -   Is that difference statistically significant?</span></span>
-<span id="cb8-174"><a href="#cb8-174" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-175"><a href="#cb8-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-176"><a href="#cb8-176" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; You will want to pivot the dataframe with </span><span class="in">`pivot_longer()`</span><span class="at"> so that you can compare all **call types** at once!</span></span>
-<span id="cb8-177"><a href="#cb8-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-178"><a href="#cb8-178" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
-<span id="cb8-179"><a href="#cb8-179" aria-hidden="true" tabindex="-1"></a>Remember to use your help function <span class="in">`?pivot_longer`</span> to learn more about what that function does and what it expects as inputs and the syntax for those inputs</span>
-<span id="cb8-180"><a href="#cb8-180" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-181"><a href="#cb8-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-184"><a href="#cb8-184" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-185"><a href="#cb8-185" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-186"><a href="#cb8-186" aria-hidden="true" tabindex="-1"></a>data.long <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> </span>
-<span id="cb8-187"><a href="#cb8-187" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(combined_call,whistle,pulsed_call),</span>
-<span id="cb8-188"><a href="#cb8-188" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"call"</span>, </span>
-<span id="cb8-189"><a href="#cb8-189" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"num.call"</span>)</span>
-<span id="cb8-190"><a href="#cb8-190" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-191"><a href="#cb8-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-194"><a href="#cb8-194" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-195"><a href="#cb8-195" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-196"><a href="#cb8-196" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data.long, </span>
-<span id="cb8-197"><a href="#cb8-197" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> group_size, </span>
-<span id="cb8-198"><a href="#cb8-198" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> num.call, </span>
-<span id="cb8-199"><a href="#cb8-199" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> call, </span>
-<span id="cb8-200"><a href="#cb8-200" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> call)) <span class="sc">+</span></span>
-<span id="cb8-201"><a href="#cb8-201" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>, </span>
-<span id="cb8-202"><a href="#cb8-202" aria-hidden="true" tabindex="-1"></a>                 <span class="at">position =</span> <span class="st">"dodge"</span>, </span>
-<span id="cb8-203"><a href="#cb8-203" aria-hidden="true" tabindex="-1"></a>                 <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb8-204"><a href="#cb8-204" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme_minimal</span>()</span>
-<span id="cb8-205"><a href="#cb8-205" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-206"><a href="#cb8-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-209"><a href="#cb8-209" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-210"><a href="#cb8-210" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-211"><a href="#cb8-211" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb8-212"><a href="#cb8-212" aria-hidden="true" tabindex="-1"></a>lm.w <span class="ot">&lt;-</span> <span class="fu">lm</span>(whistle <span class="sc">~</span> group_size, <span class="at">data =</span> data)</span>
-<span id="cb8-213"><a href="#cb8-213" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm.w)</span>
-<span id="cb8-214"><a href="#cb8-214" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-215"><a href="#cb8-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-218"><a href="#cb8-218" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-219"><a href="#cb8-219" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-220"><a href="#cb8-220" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb8-221"><a href="#cb8-221" aria-hidden="true" tabindex="-1"></a>data.long <span class="sc">%&gt;%</span> </span>
-<span id="cb8-222"><a href="#cb8-222" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(num.call <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-223"><a href="#cb8-223" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> call, <span class="at">y =</span> num.call, <span class="at">color =</span> behavior, <span class="at">fill =</span> behavior)) <span class="sc">+</span></span>
-<span id="cb8-224"><a href="#cb8-224" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb8-225"><a href="#cb8-225" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb8-226"><a href="#cb8-226" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-227"><a href="#cb8-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-230"><a href="#cb8-230" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-231"><a href="#cb8-231" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-232"><a href="#cb8-232" aria-hidden="true" tabindex="-1"></a>lm.w.behavior <span class="ot">&lt;-</span> <span class="fu">aov</span>(whistle <span class="sc">~</span> behavior, <span class="at">data =</span> data)</span>
-<span id="cb8-233"><a href="#cb8-233" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm.w.behavior)</span>
-<span id="cb8-234"><a href="#cb8-234" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-235"><a href="#cb8-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-238"><a href="#cb8-238" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-239"><a href="#cb8-239" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-240"><a href="#cb8-240" aria-hidden="true" tabindex="-1"></a>lm.pc.behavior <span class="ot">&lt;-</span> <span class="fu">lm</span>(pulsed_call <span class="sc">~</span> behavior, <span class="at">data =</span> data)</span>
-<span id="cb8-241"><a href="#cb8-241" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm.pc.behavior)</span>
-<span id="cb8-242"><a href="#cb8-242" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-243"><a href="#cb8-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-246"><a href="#cb8-246" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-247"><a href="#cb8-247" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-248"><a href="#cb8-248" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data.long, <span class="fu">aes</span>(<span class="at">x =</span> call, <span class="at">y =</span> num.call, <span class="at">color =</span> calf, <span class="at">fill =</span> calf)) <span class="sc">+</span></span>
-<span id="cb8-249"><a href="#cb8-249" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
-<span id="cb8-250"><a href="#cb8-250" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb8-251"><a href="#cb8-251" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-252"><a href="#cb8-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-255"><a href="#cb8-255" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-256"><a href="#cb8-256" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-257"><a href="#cb8-257" aria-hidden="true" tabindex="-1"></a>lm.cc.calf <span class="ot">&lt;-</span> <span class="fu">lm</span>(combined_call <span class="sc">~</span> calf, <span class="at">data =</span> data)</span>
-<span id="cb8-258"><a href="#cb8-258" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm.cc.calf)</span>
-<span id="cb8-259"><a href="#cb8-259" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-260"><a href="#cb8-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-263"><a href="#cb8-263" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-264"><a href="#cb8-264" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-265"><a href="#cb8-265" aria-hidden="true" tabindex="-1"></a>data.long <span class="sc">%&gt;%</span> </span>
-<span id="cb8-266"><a href="#cb8-266" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(num.call <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-267"><a href="#cb8-267" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> call, <span class="at">y =</span> num.call, <span class="at">color =</span> behavior, <span class="at">fill =</span> behavior)) <span class="sc">+</span></span>
-<span id="cb8-268"><a href="#cb8-268" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb8-269"><a href="#cb8-269" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb8-270"><a href="#cb8-270" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>calf) <span class="sc">+</span></span>
-<span id="cb8-271"><a href="#cb8-271" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_aaas</span>() <span class="sc">+</span></span>
-<span id="cb8-272"><a href="#cb8-272" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_aaas</span>() <span class="sc">+</span></span>
-<span id="cb8-273"><a href="#cb8-273" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Call type"</span>) <span class="sc">+</span></span>
-<span id="cb8-274"><a href="#cb8-274" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Number of calls"</span>)</span>
-<span id="cb8-275"><a href="#cb8-275" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-276"><a href="#cb8-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-277"><a href="#cb8-277" aria-hidden="true" tabindex="-1"></a><span class="fu">## Q2: Does beluga vocal behavior (number or type of calls) change as we approach a change in group behavior?</span></span>
-<span id="cb8-278"><a href="#cb8-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-279"><a href="#cb8-279" aria-hidden="true" tabindex="-1"></a>When visualizing counts of calls over time approaching a behavioral transition with <span class="in">`geom_bar()`</span>, <span class="in">`ggplot`</span> expects you to pass a single value to the <span class="in">`x`</span> aesthetic (e.g., <span class="in">`timediff_transition`</span>), and a single value to the <span class="in">`y`</span> aesthetic (e.g., <span class="in">`combined_call`</span>, <span class="in">`whistle`</span>, or <span class="in">`pulsed_call`</span>).</span>
-<span id="cb8-280"><a href="#cb8-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-283"><a href="#cb8-283" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-284"><a href="#cb8-284" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data, <span class="fu">aes</span>(<span class="at">x =</span> timediff_transition, <span class="at">y =</span> combined_call)) <span class="sc">+</span></span>
-<span id="cb8-285"><a href="#cb8-285" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
-<span id="cb8-286"><a href="#cb8-286" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb8-287"><a href="#cb8-287" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-288"><a href="#cb8-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-289"><a href="#cb8-289" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Write down your null and alternative hypotheses. Identify x and y variables.</span></span>
-<span id="cb8-290"><a href="#cb8-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-291"><a href="#cb8-291" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
-<span id="cb8-292"><a href="#cb8-292" aria-hidden="true" tabindex="-1"></a>What happens when you change the geom from <span class="in">`geom_bar()`</span> to <span class="in">`geom_point()`</span> or <span class="in">`geom_jitter()`</span>? Try it out and see how the plot changes.</span>
-<span id="cb8-293"><a href="#cb8-293" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-294"><a href="#cb8-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-295"><a href="#cb8-295" aria-hidden="true" tabindex="-1"></a><span class="fu">### Now it's your turn: Create some data exporation visualizations!</span></span>
-<span id="cb8-296"><a href="#cb8-296" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-297"><a href="#cb8-297" aria-hidden="true" tabindex="-1"></a>Create visualizations like the one above for the following variables:</span>
-<span id="cb8-298"><a href="#cb8-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-299"><a href="#cb8-299" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`whistle`</span></span>
-<span id="cb8-300"><a href="#cb8-300" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`pulsed_call`</span></span>
-<span id="cb8-301"><a href="#cb8-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-304"><a href="#cb8-304" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-305"><a href="#cb8-305" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-306"><a href="#cb8-306" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data, <span class="fu">aes</span>(<span class="at">x =</span> timediff_transition, <span class="at">y =</span> whistle)) <span class="sc">+</span></span>
-<span id="cb8-307"><a href="#cb8-307" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
-<span id="cb8-308"><a href="#cb8-308" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb8-309"><a href="#cb8-309" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-310"><a href="#cb8-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-311"><a href="#cb8-311" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
-<span id="cb8-312"><a href="#cb8-312" aria-hidden="true" tabindex="-1"></a>What do you notice about the distributions? Are they normally distributed? Skewed?</span>
-<span id="cb8-313"><a href="#cb8-313" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-314"><a href="#cb8-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-315"><a href="#cb8-315" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; You will want to pivot the dataframe with </span><span class="in">`pivot_longer()`</span><span class="at"> so that you can compare all **call types** at once!</span></span>
-<span id="cb8-316"><a href="#cb8-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-317"><a href="#cb8-317" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
-<span id="cb8-318"><a href="#cb8-318" aria-hidden="true" tabindex="-1"></a>Remember to use your help function <span class="in">`?pivot_longer`</span> to learn more about what that function does and what it expects as inputs and the syntax for those inputs</span>
-<span id="cb8-319"><a href="#cb8-319" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-320"><a href="#cb8-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-321"><a href="#cb8-321" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
-<span id="cb8-322"><a href="#cb8-322" aria-hidden="true" tabindex="-1"></a>Create exploratory visualizations and statistical tests to answer your falsifiable hypothesis.</span>
-<span id="cb8-323"><a href="#cb8-323" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-324"><a href="#cb8-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-325"><a href="#cb8-325" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-326"><a href="#cb8-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-327"><a href="#cb8-327" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-330"><a href="#cb8-330" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-331"><a href="#cb8-331" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-332"><a href="#cb8-332" aria-hidden="true" tabindex="-1"></a><span class="co"># - Compare number of calls approaching behavioral transition</span></span>
-<span id="cb8-333"><a href="#cb8-333" aria-hidden="true" tabindex="-1"></a><span class="co">#     -   Is that difference statistically significant?</span></span>
-<span id="cb8-334"><a href="#cb8-334" aria-hidden="true" tabindex="-1"></a><span class="co"># - Compare types of calls approaching behavioral transition</span></span>
-<span id="cb8-335"><a href="#cb8-335" aria-hidden="true" tabindex="-1"></a><span class="co">#     -   Is that difference statistically significant?</span></span>
-<span id="cb8-336"><a href="#cb8-336" aria-hidden="true" tabindex="-1"></a><span class="co"># - Compare across different encounter types (e.g., social vs. travel)</span></span>
-<span id="cb8-337"><a href="#cb8-337" aria-hidden="true" tabindex="-1"></a><span class="co">#     -   Is that difference statistically significant?</span></span>
-<span id="cb8-338"><a href="#cb8-338" aria-hidden="true" tabindex="-1"></a><span class="co"># - Compare across calf presence</span></span>
-<span id="cb8-339"><a href="#cb8-339" aria-hidden="true" tabindex="-1"></a><span class="co">#     -   Is that difference statistically significant?  </span></span>
-<span id="cb8-340"><a href="#cb8-340" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-341"><a href="#cb8-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-342"><a href="#cb8-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-345"><a href="#cb8-345" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-346"><a href="#cb8-346" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-347"><a href="#cb8-347" aria-hidden="true" tabindex="-1"></a>data_update_long <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> </span>
-<span id="cb8-348"><a href="#cb8-348" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(pulsed_call<span class="sc">:</span>combined_call, <span class="at">names_to =</span> <span class="st">"call_type"</span>, <span class="at">values_to =</span> <span class="st">"nCalls"</span>)</span>
-<span id="cb8-349"><a href="#cb8-349" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-350"><a href="#cb8-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-353"><a href="#cb8-353" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-354"><a href="#cb8-354" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-355"><a href="#cb8-355" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_update_long, <span class="fu">aes</span>(<span class="at">x =</span> timediff_transition, <span class="at">y =</span> nCalls, <span class="at">fill =</span> call_type)) <span class="sc">+</span></span>
-<span id="cb8-356"><a href="#cb8-356" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
-<span id="cb8-357"><a href="#cb8-357" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>encounter, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb8-358"><a href="#cb8-358" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb8-359"><a href="#cb8-359" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-360"><a href="#cb8-360" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-363"><a href="#cb8-363" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-364"><a href="#cb8-364" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-365"><a href="#cb8-365" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb8-366"><a href="#cb8-366" aria-hidden="true" tabindex="-1"></a>lm_callsOverTime <span class="ot">&lt;-</span> <span class="fu">lm</span>(nCalls <span class="sc">~</span> <span class="fu">abs</span>(timediff_transition), <span class="at">data =</span> data_update_long)  </span>
-<span id="cb8-367"><a href="#cb8-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-368"><a href="#cb8-368" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm_callsOverTime)</span>
-<span id="cb8-369"><a href="#cb8-369" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-370"><a href="#cb8-370" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-371"><a href="#cb8-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-374"><a href="#cb8-374" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-375"><a href="#cb8-375" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb8-376"><a href="#cb8-376" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb8-377"><a href="#cb8-377" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_update_long, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">abs</span>(timediff_transition), <span class="at">y =</span> nCalls, </span>
-<span id="cb8-378"><a href="#cb8-378" aria-hidden="true" tabindex="-1"></a>                             <span class="at">color =</span> call_type, <span class="at">fill =</span> call_type)) <span class="sc">+</span></span>
-<span id="cb8-379"><a href="#cb8-379" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">size =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb8-380"><a href="#cb8-380" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb8-381"><a href="#cb8-381" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span>   </span>
-<span id="cb8-382"><a href="#cb8-382" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_reverse</span>() <span class="sc">+</span></span>
-<span id="cb8-383"><a href="#cb8-383" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">pnw_palette</span>(<span class="st">"Shuksan"</span>)) <span class="sc">+</span></span>
-<span id="cb8-384"><a href="#cb8-384" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">pnw_palette</span>(<span class="st">"Shuksan"</span>)) <span class="sc">+</span></span>
-<span id="cb8-385"><a href="#cb8-385" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Minutes to/from transition"</span>) <span class="sc">+</span></span>
-<span id="cb8-386"><a href="#cb8-386" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Number of calls"</span>)</span>
-<span id="cb8-387"><a href="#cb8-387" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-388"><a href="#cb8-388" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-389"><a href="#cb8-389" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data visualization with `ggplot2` tips &amp; resources</span></span>
-<span id="cb8-390"><a href="#cb8-390" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-391"><a href="#cb8-391" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Checkout great examples of <span class="in">`ggplot2`</span> usage in the <span class="co">[</span><span class="ot">R graph gallery</span><span class="co">](https://r-graph-gallery.com/)</span></span>
-<span id="cb8-392"><a href="#cb8-392" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-393"><a href="#cb8-393" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Review <span class="in">`ggplot2`</span> structure with the <span class="co">[</span><span class="ot">`ggplot2`:cheatsheet</span><span class="co">](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf)</span></span>
-<span id="cb8-394"><a href="#cb8-394" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-395"><a href="#cb8-395" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Try using <span class="in">`facet_wrap()`</span> or <span class="in">`facet_grid()`</span> to create plot multiples based on a categorical variable (pass the categrorical variable to the <span class="in">`~`</span> argument inside <span class="in">`facet_wrap()`</span> or <span class="in">`facet_grid()`</span>). An example might be <span class="in">`facet_wrap(~behavior)`</span> to create separate plots for each behavior type.</span>
-<span id="cb8-396"><a href="#cb8-396" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-397"><a href="#cb8-397" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Make visually appealing plots by customizing colors, themes, and labels. Some useful functions include:</span>
-<span id="cb8-398"><a href="#cb8-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-399"><a href="#cb8-399" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span><span class="in">`scale_color_manual()`</span> and <span class="in">`scale_fill_manual()`</span> to customize colors</span>
-<span id="cb8-400"><a href="#cb8-400" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-401"><a href="#cb8-401" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span><span class="in">`theme_minimal()`</span>, <span class="in">`theme_classic()`</span>, <span class="in">`theme_bw()`</span>, etc. to change overall plot theme</span>
-<span id="cb8-402"><a href="#cb8-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-403"><a href="#cb8-403" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span><span class="in">`xlab()`</span>, <span class="in">`ylab()`</span>, and <span class="in">`ggtitle()`</span> to add axis labels and titles</span>
-<span id="cb8-404"><a href="#cb8-404" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-405"><a href="#cb8-405" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>There are many gorgeous color palettes available in <span class="in">`R`</span> packages like <span class="in">`PNWColors`</span>, <span class="in">`colorspace`</span>, <span class="in">`RColorBrewer`</span>, and <span class="in">`viridis`</span>. Explore these packages to find color schemes that enhance your visualizations.</span>
-<span id="cb8-406"><a href="#cb8-406" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-407"><a href="#cb8-407" aria-hidden="true" tabindex="-1"></a><span class="fu">### ggsci</span></span>
-<span id="cb8-408"><a href="#cb8-408" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-409"><a href="#cb8-409" aria-hidden="true" tabindex="-1"></a>Checkout the <span class="in">`ggsci`</span> package <span class="co">[</span><span class="ot">vignette</span><span class="co">](https://nanx.me/ggsci/articles/ggsci.html)</span> for scientific journal color palettes</span>
-<span id="cb8-410"><a href="#cb8-410" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-411"><a href="#cb8-411" aria-hidden="true" tabindex="-1"></a><span class="fu">### colorspace</span></span>
-<span id="cb8-412"><a href="#cb8-412" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-413"><a href="#cb8-413" aria-hidden="true" tabindex="-1"></a>Try exploring the <span class="co">[</span><span class="ot">colorspace</span><span class="co">](https://colorspace.r-forge.r-project.org/)</span> shiny app by running:</span>
-<span id="cb8-414"><a href="#cb8-414" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-417"><a href="#cb8-417" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-418"><a href="#cb8-418" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb8-419"><a href="#cb8-419" aria-hidden="true" tabindex="-1"></a>colorspace<span class="sc">::</span><span class="fu">choose_palette</span>()</span>
-<span id="cb8-420"><a href="#cb8-420" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-421"><a href="#cb8-421" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-422"><a href="#cb8-422" aria-hidden="true" tabindex="-1"></a><span class="fu">### PNWColors</span></span>
-<span id="cb8-423"><a href="#cb8-423" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-424"><a href="#cb8-424" aria-hidden="true" tabindex="-1"></a>More info can be found on the <span class="co">[</span><span class="ot">PNWColors GitHub page</span><span class="co">](https://github.com/jakelawlor/PNWColors?tab=readme-ov-file#palettes)</span></span>
-<span id="cb8-425"><a href="#cb8-425" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-426"><a href="#cb8-426" aria-hidden="true" tabindex="-1"></a>An example pallette is "Anemone":</span>
-<span id="cb8-427"><a href="#cb8-427" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-430"><a href="#cb8-430" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-431"><a href="#cb8-431" aria-hidden="true" tabindex="-1"></a><span class="fu">pnw_palette</span>(<span class="st">"Anemone"</span>)</span>
-<span id="cb8-432"><a href="#cb8-432" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-433"><a href="#cb8-433" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-434"><a href="#cb8-434" aria-hidden="true" tabindex="-1"></a><span class="fu"># Lab reports</span></span>
-<span id="cb8-435"><a href="#cb8-435" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-436"><a href="#cb8-436" aria-hidden="true" tabindex="-1"></a><span class="fu">## Pick your question, visualization and interpretation</span></span>
-<span id="cb8-437"><a href="#cb8-437" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-438"><a href="#cb8-438" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Customize a data exploration figure to make it your own (colors, labels, themes, etc.)</span>
-<span id="cb8-439"><a href="#cb8-439" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-440"><a href="#cb8-440" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Write the null and alternative hypotheses that the figure addresses</span>
-<span id="cb8-441"><a href="#cb8-441" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-442"><a href="#cb8-442" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Include the code chunk that generates that figure in your report</span>
-<span id="cb8-443"><a href="#cb8-443" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-444"><a href="#cb8-444" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>Write a short interpretation of what the figure shows</span>
-<span id="cb8-445"><a href="#cb8-445" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-446"><a href="#cb8-446" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>What patterns do you see?</span>
-<span id="cb8-447"><a href="#cb8-447" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-448"><a href="#cb8-448" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>What do you think those patterns mean in terms of beluga whale behavior?</span>
-<span id="cb8-449"><a href="#cb8-449" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-450"><a href="#cb8-450" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>Include an appropriate statistical test to assess whether the patterns you see are statistically significant</span>
-<span id="cb8-451"><a href="#cb8-451" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-452"><a href="#cb8-452" aria-hidden="true" tabindex="-1"></a><span class="ss">6.  </span>Write a short interpretation of the statistical test results</span>
-<span id="cb8-453"><a href="#cb8-453" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-454"><a href="#cb8-454" aria-hidden="true" tabindex="-1"></a><span class="fu"># Knitting a lab report</span></span>
-<span id="cb8-455"><a href="#cb8-455" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-456"><a href="#cb8-456" aria-hidden="true" tabindex="-1"></a>When you're ready to knit your <span class="in">`.Rmd`</span> or <span class="in">`.qmd`</span> file into a final report, click the "Knit" or "Render" button at the top of the script editor in RStudio. This will generate an HTML (or PDF/Word if you choose) document that includes both your code and the output (figures, tables, etc.) from running that code.</span>
-<span id="cb8-457"><a href="#cb8-457" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-458"><a href="#cb8-458" aria-hidden="true" tabindex="-1"></a>You can control what is printed by each chunk across the script by including a setup chunk at the top of your document. A setup chunk is a special code chunk that sets global options for all code chunks in the document. A setup chunk could look like this:</span>
-<span id="cb8-459"><a href="#cb8-459" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-460"><a href="#cb8-460" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
-<span id="cb8-461"><a href="#cb8-461" aria-hidden="true" tabindex="-1"></a><span class="in"># This is the setup chunk</span></span>
-<span id="cb8-462"><a href="#cb8-462" aria-hidden="true" tabindex="-1"></a><span class="in">knitr::opts_chunk$set(</span></span>
-<span id="cb8-463"><a href="#cb8-463" aria-hidden="true" tabindex="-1"></a><span class="in">  echo = TRUE, # Display code chunks</span></span>
-<span id="cb8-464"><a href="#cb8-464" aria-hidden="true" tabindex="-1"></a><span class="in">  eval = TRUE, # Evaluate code chunks</span></span>
-<span id="cb8-465"><a href="#cb8-465" aria-hidden="true" tabindex="-1"></a><span class="in">  warning = FALSE, # Hide warnings</span></span>
-<span id="cb8-466"><a href="#cb8-466" aria-hidden="true" tabindex="-1"></a><span class="in">  message = FALSE, # Hide messages</span></span>
-<span id="cb8-467"><a href="#cb8-467" aria-hidden="true" tabindex="-1"></a><span class="in">  comment = "") # Prevents appending '##' to beginning of lines in code output))      </span></span>
-<span id="cb8-468"><a href="#cb8-468" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-469"><a href="#cb8-469" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-470"><a href="#cb8-470" aria-hidden="true" tabindex="-1"></a>In the setup chunk above, we set options to display code (<span class="in">`echo = TRUE`</span>), evaluate code (<span class="in">`eval = TRUE`</span>), and hide warnings and messages. Make sure you name the setup chunk by including <span class="in">`setup`</span> after the <span class="in">`{r,`</span> in the chunk header (e.g., <span class="in">`{r, setup, include=FALSE}`</span>). By typing include=FALSE in the setup chunk header, we prevent the setup chunk itself from being displayed in the final document.</span>
-<span id="cb8-471"><a href="#cb8-471" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-472"><a href="#cb8-472" aria-hidden="true" tabindex="-1"></a>Coincidentally, this is how we set options for individual chunks by adding parameters to the chunk header (e.g., <span class="in">`{r, echo=FALSE}`</span> to hide code for that specific chunk). You can also click the settings wheel icon in the top right corner of any code chunk in RStudio to set chunk options via a graphical user interface (GUI).</span>
-<span id="cb8-473"><a href="#cb8-473" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-474"><a href="#cb8-474" aria-hidden="true" tabindex="-1"></a><span class="al">![](/modules/week3/refs/chunk-header.png)</span></span>
-<span id="cb8-475"><a href="#cb8-475" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-476"><a href="#cb8-476" aria-hidden="true" tabindex="-1"></a>Experiment with including various chunk options and compare your knitted / rendered documents to see the differences.</span>
+<div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "1. Analyse calling behavior in Cook Inlet beluga whales"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Data visualization with `R` and `ggplot2`"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="an">page-layout:</span><span class="co"> article</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> </span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">  - Amy Van Cise</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">  - Sarah Tanja</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-01-15"</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="an">date-modified:</span><span class="co"> today</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="an">order:</span><span class="co"> 1</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, setup, include=FALSE}</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">echo =</span> <span class="cn">TRUE</span>, <span class="co"># Display code chunks</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">eval =</span> <span class="cn">TRUE</span>, <span class="co"># Evaluate code chunks</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">warning =</span> <span class="cn">FALSE</span>, <span class="co"># Hide warnings</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">message =</span> <span class="cn">FALSE</span>, <span class="co"># Hide messages</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">comment =</span> <span class="st">""</span>) <span class="co"># Prevents appending '##' to beginning of lines in code output))      </span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="fu"># Background</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>In this script, we will analyze calling behavior in Cook Inlet beluga whales using a dataset from Arial Brewer that includes visual data on group size, behavior, calf presence, and calling rates (combined calls, whistles, and pulsed calls). We will visualize the distributions of these variables and explore how calling behavior varies with group size, behavior, and calf presence. We will also explore how calling behavior changes as we approach behavioral transitions.</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="al">![](/modules/week3/refs/arialinthefield.png)</span>{fig-align="left" width="3in"}</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Arial Brewer</span><span class="co">](https://scholar.google.com/citations?user=MTBjm9sAAAAJ&amp;hl=en)</span> <span class="co">[</span><span class="ot">SAFS, Whale and Dolphin Ecology Lab PhD Student</span><span class="co">](https://www.amyvancise.com/our-lab)</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Arial earned a Bachelor of Science degree in Marine Biology from the University of California, Santa Cruz in 2010, and is a marine mammal biologist at NOAA focusing on the acoustic ecology and behavior of cetaceans. Arial has previously worked as a marine mammal trainer and field biologist and has participated in marine mammal surveys off the coasts of Mexico, California, Oregon, Washington, British Columbia, Alaska and Hawaii.At SAFS, Arial is investigating the vocal behavior, kinship, and microbiome variability of the endangered Cook Inlet beluga whale population in Alaska.</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>Voices of the Sea <span class="co">[</span><span class="ot">link</span><span class="co">](https://voicesinthesea.ucsd.edu/species/belugasNarwhals/beluga.html#)</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![Cook Inlet beluga mother and calf in turbid waters. Credit: NOAA Fisheries/Paul Wade](/modules/week3/refs/750x500-cook-inlet-aerial-calf-afsc.jpg)</span><span class="ot">{fig-alt="Cook Inlet beluga mother and calf in turbid waters. Credit: NOAA Fisheries/Paul Wade" fig-align="right"}</span><span class="co">](https://www.fisheries.noaa.gov/feature-story/vocal-repertoire-cook-inlet-beluga-whales-documented-first-time)</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>Explore the data in regards to your guiding research question (either Q1 or Q2!)</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>Remember the scientific method steps:</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="fu">### Step 1: Hypotheses and variables</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Write down your null and alternative hypotheses. Identify x and y variables.</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a><span class="fu">### Step 2: Explore the data visually</span></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a><span class="fu">### Step 3: Choose an appropriate model</span></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Categorical data: ANOVA <span class="in">`aov()`</span></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Continuous data: linear regression <span class="in">`lm()`</span></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Is the relationship significant?</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Is the relationship positive or negative?</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="fu"># Step 1. Hypotheses and variables</span></span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Open an Rmd document in R.</span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Write down your null and alternative hypotheses. Identify x and y variables.</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Set up your environment</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a><span class="fu">## Load libraries</span></span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>In <span class="in">`R`</span>, you only need to **install** packages into your library once...(until you update <span class="in">`R`</span>, then packages may need to be re-installed). To install a new package that you have not yet installed, use the <span class="in">`install.packages("package_name")`</span> function. You can run this line of code in your console (not in the script) to install any packages you don't have yet.</span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>For example, you may need to run <span class="in">`install.packages("ggsci")`</span> to install the <span class="in">`ggsci`</span> package.</span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a><span class="do">## There are many cool color palettes... pick a handful to explore</span></span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(PNWColors) <span class="co"># color palettes</span></span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggsci) <span class="co"># color palettes</span></span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(colorspace) <span class="co"># color palettes</span></span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridis) <span class="co"># color palettes</span></span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer) <span class="co"># color palettes</span></span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a><span class="fu">## Load your data</span></span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a>Pay attention to your file paths! You may need to change the file path below depending on where your data file is located relative to your working directory. Here, we assume you are working from a <span class="in">`.Rmd`</span> script that is saved in your <span class="in">`code`</span> folder, and the data file is located in a folder called <span class="in">`data`</span> that is one level up from <span class="in">`code`</span>. It's important to explicitly load your data in the script, if you use the "import data" GUi option that is *not* the tidyverse way because it isn't **reproducible** !</span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/CIB_calling_behavior.csv"</span>)</span>
+<span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
+<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a>As a reminder, you can insert a new code chunk with the keyboard shortcut <span class="in">`Ctrl + Alt + I`</span> (Windows) or <span class="in">`Cmd + Option + I`</span> (Mac).</span>
+<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-101"><a href="#cb5-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-102"><a href="#cb5-102" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Look at your data! Can you find your x and y variables as columns of your data?</span>
+<span id="cb5-103"><a href="#cb5-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-104"><a href="#cb5-104" aria-hidden="true" tabindex="-1"></a><span class="fu">## Initial data exploration</span></span>
+<span id="cb5-105"><a href="#cb5-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-106"><a href="#cb5-106" aria-hidden="true" tabindex="-1"></a><span class="fu">### Q1: Do belugas use different types of calls in different behavioral or groups contexts?</span></span>
+<span id="cb5-107"><a href="#cb5-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-108"><a href="#cb5-108" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Write down your null and alternative hypotheses. Identify x and y variables.</span></span>
+<span id="cb5-109"><a href="#cb5-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-110"><a href="#cb5-110" aria-hidden="true" tabindex="-1"></a>When visualizing distributions with <span class="in">`geom_histogram()`</span>, <span class="in">`ggplot`</span> expects you to pass a single value to the <span class="in">`x`</span> aesthetic.</span>
+<span id="cb5-111"><a href="#cb5-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-112"><a href="#cb5-112" aria-hidden="true" tabindex="-1"></a>If we want to visualize counts of group sizes, we pass <span class="in">`group_size`</span> to the <span class="in">`x`</span> variable.</span>
+<span id="cb5-113"><a href="#cb5-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-116"><a href="#cb5-116" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-117"><a href="#cb5-117" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data, <span class="fu">aes</span>(<span class="at">x=</span>group_size)) <span class="sc">+</span></span>
+<span id="cb5-118"><a href="#cb5-118" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth=</span><span class="dv">10</span>) <span class="sc">+</span></span>
+<span id="cb5-119"><a href="#cb5-119" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"group size"</span>)</span>
+<span id="cb5-120"><a href="#cb5-120" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-121"><a href="#cb5-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-122"><a href="#cb5-122" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
+<span id="cb5-123"><a href="#cb5-123" aria-hidden="true" tabindex="-1"></a>What happens when you change the binwidth? Try changing it to 5 or 20 and see how the histogram changes.</span>
+<span id="cb5-124"><a href="#cb5-124" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-125"><a href="#cb5-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-126"><a href="#cb5-126" aria-hidden="true" tabindex="-1"></a><span class="fu">### Now it's your turn: Create some histograms!</span></span>
+<span id="cb5-127"><a href="#cb5-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-128"><a href="#cb5-128" aria-hidden="true" tabindex="-1"></a>Create histograms like the one above for the following variables:</span>
+<span id="cb5-129"><a href="#cb5-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-130"><a href="#cb5-130" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`combined_call`</span></span>
+<span id="cb5-131"><a href="#cb5-131" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`whistle`</span></span>
+<span id="cb5-132"><a href="#cb5-132" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`pulsed_call`</span></span>
+<span id="cb5-133"><a href="#cb5-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-134"><a href="#cb5-134" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb5-135"><a href="#cb5-135" aria-hidden="true" tabindex="-1"></a>What do you notice about the distributions? Are they normally distributed? Skewed?</span>
+<span id="cb5-136"><a href="#cb5-136" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-137"><a href="#cb5-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-140"><a href="#cb5-140" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-141"><a href="#cb5-141" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-142"><a href="#cb5-142" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>combined_call)) <span class="sc">+</span></span>
+<span id="cb5-143"><a href="#cb5-143" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-144"><a href="#cb5-144" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"# combined calls / minute"</span>)</span>
+<span id="cb5-145"><a href="#cb5-145" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-146"><a href="#cb5-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-149"><a href="#cb5-149" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-150"><a href="#cb5-150" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-151"><a href="#cb5-151" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data, <span class="fu">aes</span>(<span class="at">x=</span>whistle)) <span class="sc">+</span></span>
+<span id="cb5-152"><a href="#cb5-152" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-153"><a href="#cb5-153" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"# whistles / minute"</span>)</span>
+<span id="cb5-154"><a href="#cb5-154" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-155"><a href="#cb5-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-158"><a href="#cb5-158" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-159"><a href="#cb5-159" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-160"><a href="#cb5-160" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data, <span class="fu">aes</span>(<span class="at">x=</span>pulsed_call)) <span class="sc">+</span></span>
+<span id="cb5-161"><a href="#cb5-161" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-162"><a href="#cb5-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"# pulsed calls / minute"</span>)</span>
+<span id="cb5-163"><a href="#cb5-163" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-164"><a href="#cb5-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-165"><a href="#cb5-165" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Explore using other methods to visualize distribution data. Try:</span>
+<span id="cb5-166"><a href="#cb5-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-167"><a href="#cb5-167" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span><span class="in">`geom_boxplot()`</span></span>
+<span id="cb5-168"><a href="#cb5-168" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span><span class="in">`geom_violin()`</span></span>
+<span id="cb5-169"><a href="#cb5-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-170"><a href="#cb5-170" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb5-171"><a href="#cb5-171" aria-hidden="true" tabindex="-1"></a>Create exploratory visualizations and statistical tests to answer your falsifiable hypothesis.</span>
+<span id="cb5-172"><a href="#cb5-172" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-173"><a href="#cb5-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-176"><a href="#cb5-176" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-177"><a href="#cb5-177" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-178"><a href="#cb5-178" aria-hidden="true" tabindex="-1"></a><span class="co"># Create exploratory visualizations and statistical tests to answer the following questions:</span></span>
+<span id="cb5-179"><a href="#cb5-179" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb5-180"><a href="#cb5-180" aria-hidden="true" tabindex="-1"></a><span class="co"># -   Does the number of calls in each call type change with group size?</span></span>
+<span id="cb5-181"><a href="#cb5-181" aria-hidden="true" tabindex="-1"></a><span class="co">#     -   Is that difference statistically significant?</span></span>
+<span id="cb5-182"><a href="#cb5-182" aria-hidden="true" tabindex="-1"></a><span class="co"># -   Is there a difference between call types with group size?</span></span>
+<span id="cb5-183"><a href="#cb5-183" aria-hidden="true" tabindex="-1"></a><span class="co">#     -   Is that difference statistically significant?</span></span>
+<span id="cb5-184"><a href="#cb5-184" aria-hidden="true" tabindex="-1"></a><span class="co"># -   Does the number of calls in each call type change with group behavior?</span></span>
+<span id="cb5-185"><a href="#cb5-185" aria-hidden="true" tabindex="-1"></a><span class="co">#     -   Is that difference statistically significant?</span></span>
+<span id="cb5-186"><a href="#cb5-186" aria-hidden="true" tabindex="-1"></a><span class="co"># -   Does the number of calls in each call type change with calf presence?</span></span>
+<span id="cb5-187"><a href="#cb5-187" aria-hidden="true" tabindex="-1"></a><span class="co">#     -   Is that difference statistically significant?</span></span>
+<span id="cb5-188"><a href="#cb5-188" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-189"><a href="#cb5-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-190"><a href="#cb5-190" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; You will want to pivot the dataframe with </span><span class="in">`pivot_longer()`</span><span class="at"> so that you can compare all **call types** at once!</span></span>
+<span id="cb5-191"><a href="#cb5-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-192"><a href="#cb5-192" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
+<span id="cb5-193"><a href="#cb5-193" aria-hidden="true" tabindex="-1"></a>Remember to use your help function <span class="in">`?pivot_longer`</span> to learn more about what that function does and what it expects as inputs and the syntax for those inputs</span>
+<span id="cb5-194"><a href="#cb5-194" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-195"><a href="#cb5-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-198"><a href="#cb5-198" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-199"><a href="#cb5-199" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-200"><a href="#cb5-200" aria-hidden="true" tabindex="-1"></a>data.long <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> </span>
+<span id="cb5-201"><a href="#cb5-201" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(combined_call,whistle,pulsed_call),</span>
+<span id="cb5-202"><a href="#cb5-202" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"call"</span>, </span>
+<span id="cb5-203"><a href="#cb5-203" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"num.call"</span>)</span>
+<span id="cb5-204"><a href="#cb5-204" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-205"><a href="#cb5-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-208"><a href="#cb5-208" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-209"><a href="#cb5-209" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-210"><a href="#cb5-210" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data.long, </span>
+<span id="cb5-211"><a href="#cb5-211" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> group_size, </span>
+<span id="cb5-212"><a href="#cb5-212" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> num.call, </span>
+<span id="cb5-213"><a href="#cb5-213" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> call, </span>
+<span id="cb5-214"><a href="#cb5-214" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> call)) <span class="sc">+</span></span>
+<span id="cb5-215"><a href="#cb5-215" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>, </span>
+<span id="cb5-216"><a href="#cb5-216" aria-hidden="true" tabindex="-1"></a>                 <span class="at">position =</span> <span class="st">"dodge"</span>, </span>
+<span id="cb5-217"><a href="#cb5-217" aria-hidden="true" tabindex="-1"></a>                 <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb5-218"><a href="#cb5-218" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme_minimal</span>()</span>
+<span id="cb5-219"><a href="#cb5-219" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-220"><a href="#cb5-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-223"><a href="#cb5-223" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-224"><a href="#cb5-224" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-225"><a href="#cb5-225" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb5-226"><a href="#cb5-226" aria-hidden="true" tabindex="-1"></a>lm.w <span class="ot">&lt;-</span> <span class="fu">lm</span>(whistle <span class="sc">~</span> group_size, <span class="at">data =</span> data)</span>
+<span id="cb5-227"><a href="#cb5-227" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm.w)</span>
+<span id="cb5-228"><a href="#cb5-228" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-229"><a href="#cb5-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-232"><a href="#cb5-232" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-233"><a href="#cb5-233" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-234"><a href="#cb5-234" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb5-235"><a href="#cb5-235" aria-hidden="true" tabindex="-1"></a>data.long <span class="sc">%&gt;%</span> </span>
+<span id="cb5-236"><a href="#cb5-236" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(num.call <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-237"><a href="#cb5-237" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> call, <span class="at">y =</span> num.call, <span class="at">color =</span> behavior, <span class="at">fill =</span> behavior)) <span class="sc">+</span></span>
+<span id="cb5-238"><a href="#cb5-238" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb5-239"><a href="#cb5-239" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb5-240"><a href="#cb5-240" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-241"><a href="#cb5-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-244"><a href="#cb5-244" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-245"><a href="#cb5-245" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-246"><a href="#cb5-246" aria-hidden="true" tabindex="-1"></a>lm.w.behavior <span class="ot">&lt;-</span> <span class="fu">aov</span>(whistle <span class="sc">~</span> behavior, <span class="at">data =</span> data)</span>
+<span id="cb5-247"><a href="#cb5-247" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm.w.behavior)</span>
+<span id="cb5-248"><a href="#cb5-248" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-249"><a href="#cb5-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-252"><a href="#cb5-252" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-253"><a href="#cb5-253" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-254"><a href="#cb5-254" aria-hidden="true" tabindex="-1"></a>lm.pc.behavior <span class="ot">&lt;-</span> <span class="fu">lm</span>(pulsed_call <span class="sc">~</span> behavior, <span class="at">data =</span> data)</span>
+<span id="cb5-255"><a href="#cb5-255" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm.pc.behavior)</span>
+<span id="cb5-256"><a href="#cb5-256" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-257"><a href="#cb5-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-260"><a href="#cb5-260" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-261"><a href="#cb5-261" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-262"><a href="#cb5-262" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data.long, <span class="fu">aes</span>(<span class="at">x =</span> call, <span class="at">y =</span> num.call, <span class="at">color =</span> calf, <span class="at">fill =</span> calf)) <span class="sc">+</span></span>
+<span id="cb5-263"><a href="#cb5-263" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
+<span id="cb5-264"><a href="#cb5-264" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb5-265"><a href="#cb5-265" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-266"><a href="#cb5-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-269"><a href="#cb5-269" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-270"><a href="#cb5-270" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-271"><a href="#cb5-271" aria-hidden="true" tabindex="-1"></a>lm.cc.calf <span class="ot">&lt;-</span> <span class="fu">lm</span>(combined_call <span class="sc">~</span> calf, <span class="at">data =</span> data)</span>
+<span id="cb5-272"><a href="#cb5-272" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm.cc.calf)</span>
+<span id="cb5-273"><a href="#cb5-273" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-274"><a href="#cb5-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-277"><a href="#cb5-277" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-278"><a href="#cb5-278" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-279"><a href="#cb5-279" aria-hidden="true" tabindex="-1"></a>data.long <span class="sc">%&gt;%</span> </span>
+<span id="cb5-280"><a href="#cb5-280" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(num.call <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-281"><a href="#cb5-281" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> call, <span class="at">y =</span> num.call, <span class="at">color =</span> behavior, <span class="at">fill =</span> behavior)) <span class="sc">+</span></span>
+<span id="cb5-282"><a href="#cb5-282" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb5-283"><a href="#cb5-283" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb5-284"><a href="#cb5-284" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>calf) <span class="sc">+</span></span>
+<span id="cb5-285"><a href="#cb5-285" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_aaas</span>() <span class="sc">+</span></span>
+<span id="cb5-286"><a href="#cb5-286" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_aaas</span>() <span class="sc">+</span></span>
+<span id="cb5-287"><a href="#cb5-287" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Call type"</span>) <span class="sc">+</span></span>
+<span id="cb5-288"><a href="#cb5-288" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Number of calls"</span>)</span>
+<span id="cb5-289"><a href="#cb5-289" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-290"><a href="#cb5-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-291"><a href="#cb5-291" aria-hidden="true" tabindex="-1"></a><span class="fu">### Q2: Does beluga vocal behavior (number or type of calls) change as we approach a change in group behavior?</span></span>
+<span id="cb5-292"><a href="#cb5-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-293"><a href="#cb5-293" aria-hidden="true" tabindex="-1"></a>When visualizing counts of calls over time approaching a behavioral transition with <span class="in">`geom_bar()`</span>, <span class="in">`ggplot`</span> expects you to pass a single value to the <span class="in">`x`</span> aesthetic (e.g., <span class="in">`timediff_transition`</span>), and a single value to the <span class="in">`y`</span> aesthetic (e.g., <span class="in">`combined_call`</span>, <span class="in">`whistle`</span>, or <span class="in">`pulsed_call`</span>).</span>
+<span id="cb5-294"><a href="#cb5-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-297"><a href="#cb5-297" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-298"><a href="#cb5-298" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data, <span class="fu">aes</span>(<span class="at">x =</span> timediff_transition, <span class="at">y =</span> combined_call)) <span class="sc">+</span></span>
+<span id="cb5-299"><a href="#cb5-299" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb5-300"><a href="#cb5-300" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb5-301"><a href="#cb5-301" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-302"><a href="#cb5-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-303"><a href="#cb5-303" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Write down your null and alternative hypotheses. Identify x and y variables.</span></span>
+<span id="cb5-304"><a href="#cb5-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-305"><a href="#cb5-305" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
+<span id="cb5-306"><a href="#cb5-306" aria-hidden="true" tabindex="-1"></a>What happens when you change the geom from <span class="in">`geom_bar()`</span> to <span class="in">`geom_point()`</span> or <span class="in">`geom_jitter()`</span>? Try it out and see how the plot changes.</span>
+<span id="cb5-307"><a href="#cb5-307" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-308"><a href="#cb5-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-309"><a href="#cb5-309" aria-hidden="true" tabindex="-1"></a><span class="fu">### Now it's your turn: Create some data exporation visualizations!</span></span>
+<span id="cb5-310"><a href="#cb5-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-311"><a href="#cb5-311" aria-hidden="true" tabindex="-1"></a>Create visualizations like the one above for the following variables:</span>
+<span id="cb5-312"><a href="#cb5-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-313"><a href="#cb5-313" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`whistle`</span></span>
+<span id="cb5-314"><a href="#cb5-314" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`pulsed_call`</span></span>
+<span id="cb5-315"><a href="#cb5-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-318"><a href="#cb5-318" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-319"><a href="#cb5-319" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-320"><a href="#cb5-320" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data, <span class="fu">aes</span>(<span class="at">x =</span> timediff_transition, <span class="at">y =</span> whistle)) <span class="sc">+</span></span>
+<span id="cb5-321"><a href="#cb5-321" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb5-322"><a href="#cb5-322" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb5-323"><a href="#cb5-323" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-324"><a href="#cb5-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-325"><a href="#cb5-325" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb5-326"><a href="#cb5-326" aria-hidden="true" tabindex="-1"></a>What do you notice about the distributions? Are they normally distributed? Skewed?</span>
+<span id="cb5-327"><a href="#cb5-327" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-328"><a href="#cb5-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-329"><a href="#cb5-329" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; You will want to pivot the dataframe with </span><span class="in">`pivot_longer()`</span><span class="at"> so that you can compare all **call types** at once!</span></span>
+<span id="cb5-330"><a href="#cb5-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-331"><a href="#cb5-331" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
+<span id="cb5-332"><a href="#cb5-332" aria-hidden="true" tabindex="-1"></a>Remember to use your help function <span class="in">`?pivot_longer`</span> to learn more about what that function does and what it expects as inputs and the syntax for those inputs</span>
+<span id="cb5-333"><a href="#cb5-333" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-334"><a href="#cb5-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-335"><a href="#cb5-335" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb5-336"><a href="#cb5-336" aria-hidden="true" tabindex="-1"></a>Create exploratory visualizations and statistical tests to answer your falsifiable hypothesis.</span>
+<span id="cb5-337"><a href="#cb5-337" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-338"><a href="#cb5-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-341"><a href="#cb5-341" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-342"><a href="#cb5-342" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-343"><a href="#cb5-343" aria-hidden="true" tabindex="-1"></a><span class="co"># - Compare number of calls approaching behavioral transition</span></span>
+<span id="cb5-344"><a href="#cb5-344" aria-hidden="true" tabindex="-1"></a><span class="co">#     -   Is that difference statistically significant?</span></span>
+<span id="cb5-345"><a href="#cb5-345" aria-hidden="true" tabindex="-1"></a><span class="co"># - Compare types of calls approaching behavioral transition</span></span>
+<span id="cb5-346"><a href="#cb5-346" aria-hidden="true" tabindex="-1"></a><span class="co">#     -   Is that difference statistically significant?</span></span>
+<span id="cb5-347"><a href="#cb5-347" aria-hidden="true" tabindex="-1"></a><span class="co"># - Compare across different encounter types (e.g., social vs. travel)</span></span>
+<span id="cb5-348"><a href="#cb5-348" aria-hidden="true" tabindex="-1"></a><span class="co">#     -   Is that difference statistically significant?</span></span>
+<span id="cb5-349"><a href="#cb5-349" aria-hidden="true" tabindex="-1"></a><span class="co"># - Compare across calf presence</span></span>
+<span id="cb5-350"><a href="#cb5-350" aria-hidden="true" tabindex="-1"></a><span class="co">#     -   Is that difference statistically significant?  </span></span>
+<span id="cb5-351"><a href="#cb5-351" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-352"><a href="#cb5-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-355"><a href="#cb5-355" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-356"><a href="#cb5-356" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-357"><a href="#cb5-357" aria-hidden="true" tabindex="-1"></a>data_update_long <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> </span>
+<span id="cb5-358"><a href="#cb5-358" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(pulsed_call<span class="sc">:</span>combined_call, <span class="at">names_to =</span> <span class="st">"call_type"</span>, <span class="at">values_to =</span> <span class="st">"nCalls"</span>)</span>
+<span id="cb5-359"><a href="#cb5-359" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-360"><a href="#cb5-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-363"><a href="#cb5-363" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-364"><a href="#cb5-364" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-365"><a href="#cb5-365" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_update_long, <span class="fu">aes</span>(<span class="at">x =</span> timediff_transition, <span class="at">y =</span> nCalls, <span class="at">fill =</span> call_type)) <span class="sc">+</span></span>
+<span id="cb5-366"><a href="#cb5-366" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb5-367"><a href="#cb5-367" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>encounter, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-368"><a href="#cb5-368" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb5-369"><a href="#cb5-369" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-370"><a href="#cb5-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-373"><a href="#cb5-373" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-374"><a href="#cb5-374" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-375"><a href="#cb5-375" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb5-376"><a href="#cb5-376" aria-hidden="true" tabindex="-1"></a>lm_callsOverTime <span class="ot">&lt;-</span> <span class="fu">lm</span>(nCalls <span class="sc">~</span> <span class="fu">abs</span>(timediff_transition), <span class="at">data =</span> data_update_long)  </span>
+<span id="cb5-377"><a href="#cb5-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-378"><a href="#cb5-378" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm_callsOverTime)</span>
+<span id="cb5-379"><a href="#cb5-379" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-380"><a href="#cb5-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-383"><a href="#cb5-383" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-384"><a href="#cb5-384" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb5-385"><a href="#cb5-385" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-386"><a href="#cb5-386" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_update_long, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">abs</span>(timediff_transition), <span class="at">y =</span> nCalls, </span>
+<span id="cb5-387"><a href="#cb5-387" aria-hidden="true" tabindex="-1"></a>                             <span class="at">color =</span> call_type, <span class="at">fill =</span> call_type)) <span class="sc">+</span></span>
+<span id="cb5-388"><a href="#cb5-388" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">size =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb5-389"><a href="#cb5-389" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb5-390"><a href="#cb5-390" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span>   </span>
+<span id="cb5-391"><a href="#cb5-391" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_reverse</span>() <span class="sc">+</span></span>
+<span id="cb5-392"><a href="#cb5-392" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">pnw_palette</span>(<span class="st">"Shuksan"</span>)) <span class="sc">+</span></span>
+<span id="cb5-393"><a href="#cb5-393" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">pnw_palette</span>(<span class="st">"Shuksan"</span>)) <span class="sc">+</span></span>
+<span id="cb5-394"><a href="#cb5-394" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Minutes to/from transition"</span>) <span class="sc">+</span></span>
+<span id="cb5-395"><a href="#cb5-395" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Number of calls"</span>)</span>
+<span id="cb5-396"><a href="#cb5-396" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-397"><a href="#cb5-397" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-398"><a href="#cb5-398" aria-hidden="true" tabindex="-1"></a><span class="fu"># Step 2. Wrangle and visualize the data</span></span>
+<span id="cb5-399"><a href="#cb5-399" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-400"><a href="#cb5-400" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
+<span id="cb5-401"><a href="#cb5-401" aria-hidden="true" tabindex="-1"></a>If your x and y variables are not columns, wrangle your dataset so that they are. Plot!</span>
+<span id="cb5-402"><a href="#cb5-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-403"><a href="#cb5-403" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`geom_bar()`</span></span>
+<span id="cb5-404"><a href="#cb5-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-405"><a href="#cb5-405" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`geom_point()`</span></span>
+<span id="cb5-406"><a href="#cb5-406" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-407"><a href="#cb5-407" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`geom_smooth()`</span></span>
+<span id="cb5-408"><a href="#cb5-408" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-409"><a href="#cb5-409" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-410"><a href="#cb5-410" aria-hidden="true" tabindex="-1"></a><span class="fu"># Step 3. Model the relationship</span></span>
+<span id="cb5-411"><a href="#cb5-411" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-412"><a href="#cb5-412" aria-hidden="true" tabindex="-1"></a>Choose an appropriate model</span>
+<span id="cb5-413"><a href="#cb5-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-414"><a href="#cb5-414" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Categorical data:</span>
+<span id="cb5-415"><a href="#cb5-415" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-416"><a href="#cb5-416" aria-hidden="true" tabindex="-1"></a><span class="ss">    -    </span>ANOVA <span class="in">`aov()`</span></span>
+<span id="cb5-417"><a href="#cb5-417" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-418"><a href="#cb5-418" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Continuous data:</span>
+<span id="cb5-419"><a href="#cb5-419" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-420"><a href="#cb5-420" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>linear regression <span class="in">`lm()`</span></span>
+<span id="cb5-421"><a href="#cb5-421" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-422"><a href="#cb5-422" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Is the relationship significant?</span>
+<span id="cb5-423"><a href="#cb5-423" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-424"><a href="#cb5-424" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Is the relationship positive or negative?</span>
+<span id="cb5-425"><a href="#cb5-425" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-426"><a href="#cb5-426" aria-hidden="true" tabindex="-1"></a><span class="fu"># Lab reports</span></span>
+<span id="cb5-427"><a href="#cb5-427" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-428"><a href="#cb5-428" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb5-429"><a href="#cb5-429" aria-hidden="true" tabindex="-1"></a>Your lab report should include the following components:</span>
+<span id="cb5-430"><a href="#cb5-430" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-431"><a href="#cb5-431" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**Your falsifiable hypothesis**</span>
+<span id="cb5-432"><a href="#cb5-432" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**The results of your statistical analysis**</span>
+<span id="cb5-433"><a href="#cb5-433" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**A figure visualizing your results**</span>
+<span id="cb5-434"><a href="#cb5-434" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>**A determination of whether you do or do not reject your hypothesis.**</span>
+<span id="cb5-435"><a href="#cb5-435" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-436"><a href="#cb5-436" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-437"><a href="#cb5-437" aria-hidden="true" tabindex="-1"></a><span class="fu"># Knitting a lab report</span></span>
+<span id="cb5-438"><a href="#cb5-438" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-439"><a href="#cb5-439" aria-hidden="true" tabindex="-1"></a>When you're ready to knit your <span class="in">`.Rmd`</span> or <span class="in">`.qmd`</span> file into a final report, click the "Knit" or "Render" button at the top of the script editor in RStudio. This will generate an HTML (or PDF/Word if you choose) document that includes both your code and the output (figures, tables, etc.) from running that code.</span>
+<span id="cb5-440"><a href="#cb5-440" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-441"><a href="#cb5-441" aria-hidden="true" tabindex="-1"></a>You can control what is printed by each chunk across the script by including a setup chunk at the top of your document. A setup chunk is a special code chunk that sets global options for all code chunks in the document. A setup chunk could look like this:</span>
+<span id="cb5-442"><a href="#cb5-442" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-443"><a href="#cb5-443" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
+<span id="cb5-444"><a href="#cb5-444" aria-hidden="true" tabindex="-1"></a><span class="in"># This is the setup chunk</span></span>
+<span id="cb5-445"><a href="#cb5-445" aria-hidden="true" tabindex="-1"></a><span class="in">knitr::opts_chunk$set(</span></span>
+<span id="cb5-446"><a href="#cb5-446" aria-hidden="true" tabindex="-1"></a><span class="in">  echo = TRUE, # Display code chunks</span></span>
+<span id="cb5-447"><a href="#cb5-447" aria-hidden="true" tabindex="-1"></a><span class="in">  eval = TRUE, # Evaluate code chunks</span></span>
+<span id="cb5-448"><a href="#cb5-448" aria-hidden="true" tabindex="-1"></a><span class="in">  warning = FALSE, # Hide warnings</span></span>
+<span id="cb5-449"><a href="#cb5-449" aria-hidden="true" tabindex="-1"></a><span class="in">  message = FALSE, # Hide messages</span></span>
+<span id="cb5-450"><a href="#cb5-450" aria-hidden="true" tabindex="-1"></a><span class="in">  comment = "") # Prevents appending '##' to beginning of lines in code output))      </span></span>
+<span id="cb5-451"><a href="#cb5-451" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-452"><a href="#cb5-452" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-453"><a href="#cb5-453" aria-hidden="true" tabindex="-1"></a>In the setup chunk above, we set options to display code (<span class="in">`echo = TRUE`</span>), evaluate code (<span class="in">`eval = TRUE`</span>), and hide warnings and messages. Make sure you name the setup chunk by including <span class="in">`setup`</span> after the <span class="in">`{r,`</span> in the chunk header (e.g., <span class="in">`{r, setup, include=FALSE}`</span>). By typing include=FALSE in the setup chunk header, we prevent the setup chunk itself from being displayed in the final document.</span>
+<span id="cb5-454"><a href="#cb5-454" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-455"><a href="#cb5-455" aria-hidden="true" tabindex="-1"></a>Coincidentally, this is how we set options for individual chunks by adding parameters to the chunk header (e.g., <span class="in">`{r, echo=FALSE}`</span> to hide code for that specific chunk). You can also click the settings wheel icon in the top right corner of any code chunk in RStudio to set chunk options via a graphical user interface (GUI).</span>
+<span id="cb5-456"><a href="#cb5-456" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-457"><a href="#cb5-457" aria-hidden="true" tabindex="-1"></a><span class="al">![](/modules/week3/refs/chunk-header.png)</span></span>
+<span id="cb5-458"><a href="#cb5-458" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-459"><a href="#cb5-459" aria-hidden="true" tabindex="-1"></a>Experiment with including various chunk options and compare your knitted / rendered documents to see the differences.</span>
+<span id="cb5-460"><a href="#cb5-460" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-461"><a href="#cb5-461" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data visualization with `ggplot2` tips &amp; resources</span></span>
+<span id="cb5-462"><a href="#cb5-462" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-463"><a href="#cb5-463" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Checkout great examples of <span class="in">`ggplot2`</span> usage in the <span class="co">[</span><span class="ot">R graph gallery</span><span class="co">](https://r-graph-gallery.com/)</span></span>
+<span id="cb5-464"><a href="#cb5-464" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-465"><a href="#cb5-465" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Review <span class="in">`ggplot2`</span> structure with the <span class="co">[</span><span class="ot">`ggplot2`:cheatsheet</span><span class="co">](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf)</span></span>
+<span id="cb5-466"><a href="#cb5-466" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-467"><a href="#cb5-467" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Try using <span class="in">`facet_wrap()`</span> or <span class="in">`facet_grid()`</span> to create plot multiples based on a categorical variable (pass the categrorical variable to the <span class="in">`~`</span> argument inside <span class="in">`facet_wrap()`</span> or <span class="in">`facet_grid()`</span>). An example might be <span class="in">`facet_wrap(~behavior)`</span> to create separate plots for each behavior type.</span>
+<span id="cb5-468"><a href="#cb5-468" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-469"><a href="#cb5-469" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Make visually appealing plots by customizing colors, themes, and labels. Some useful functions include:</span>
+<span id="cb5-470"><a href="#cb5-470" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-471"><a href="#cb5-471" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span><span class="in">`scale_color_manual()`</span> and <span class="in">`scale_fill_manual()`</span> to customize colors</span>
+<span id="cb5-472"><a href="#cb5-472" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-473"><a href="#cb5-473" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span><span class="in">`theme_minimal()`</span>, <span class="in">`theme_classic()`</span>, <span class="in">`theme_bw()`</span>, etc. to change overall plot theme</span>
+<span id="cb5-474"><a href="#cb5-474" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-475"><a href="#cb5-475" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span><span class="in">`xlab()`</span>, <span class="in">`ylab()`</span>, and <span class="in">`ggtitle()`</span> to add axis labels and titles</span>
+<span id="cb5-476"><a href="#cb5-476" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-477"><a href="#cb5-477" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>There are many gorgeous color palettes available in <span class="in">`R`</span> packages like <span class="in">`PNWColors`</span>, <span class="in">`colorspace`</span>, <span class="in">`RColorBrewer`</span>, and <span class="in">`viridis`</span>. Explore these packages to find color schemes that enhance your visualizations.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
