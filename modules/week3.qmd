@@ -29,6 +29,7 @@ title-block-banner: true
 2. Introduce common markdown syntax for formatting text, inserting images, and creating links, and knitting from `.Rmd` or `.qmd` files for lab reports. 
 
 ::: callout-tip
+Get inspiration from the [R graph gallery](https://r-graph-gallery.com/) for more `ggplot2` examples and ideas.
 Checkout the [Quarto documentation](https://quarto.org/docs/authoring/markdown-basics.html) for more information markdown basics. Another great resource is [RMarkdown for Scientists](https://rmd4sci.njtierney.com/) by [Nathaniel Tierney](https://njtierney.com/).
 :::
 
