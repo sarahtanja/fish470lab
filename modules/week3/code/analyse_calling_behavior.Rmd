@@ -24,22 +24,50 @@ knitr::opts_chunk$set(
 
 In this script, we will analyze calling behavior in Cook Inlet beluga whales using a dataset from Arial Brewer that includes visual data on group size, behavior, calf presence, and calling rates (combined calls, whistles, and pulsed calls). We will visualize the distributions of these variables and explore how calling behavior varies with group size, behavior, and calf presence. We will also explore how calling behavior changes as we approach behavioral transitions.
 
-![](/modules/week3/refs/arialinthefield.png){width="3in"}
+![](/modules/week3/refs/arialinthefield.png){fig-align="left" width="3in"}
 
-[Arial Brewer](https://scholar.google.com/citations?user=MTBjm9sAAAAJ&hl=en)
-[SAFS, Whale and Dolphin Ecology Lab PhD Student](https://www.amyvancise.com/our-lab)
+[Arial Brewer](https://scholar.google.com/citations?user=MTBjm9sAAAAJ&hl=en) [SAFS, Whale and Dolphin Ecology Lab PhD Student](https://www.amyvancise.com/our-lab)
 
 > Arial earned a Bachelor of Science degree in Marine Biology from the University of California, Santa Cruz in 2010, and is a marine mammal biologist at NOAA focusing on the acoustic ecology and behavior of cetaceans. Arial has previously worked as a marine mammal trainer and field biologist and has participated in marine mammal surveys off the coasts of Mexico, California, Oregon, Washington, British Columbia, Alaska and Hawaii.At SAFS, Arial is investigating the vocal behavior, kinship, and microbiome variability of the endangered Cook Inlet beluga whale population in Alaska.
 
 Voices of the Sea [link](https://voicesinthesea.ucsd.edu/species/belugasNarwhals/beluga.html#)
 
-# Install new packages
+[![Cook Inlet beluga mother and calf in turbid waters. Credit: NOAA Fisheries/Paul Wade](/modules/week3/refs/750x500-cook-inlet-aerial-calf-afsc.jpg){fig-alt="Cook Inlet beluga mother and calf in turbid waters. Credit: NOAA Fisheries/Paul Wade" fig-align="right"}](https://www.fisheries.noaa.gov/feature-story/vocal-repertoire-cook-inlet-beluga-whales-documented-first-time)
 
-In `R`, you only need to install packages into your library once...(until you update `R`, then packages may need to be re-installed). To install a new package that you have not yet installed, use the `install.packages("package_name")` function. You can run this line of code in your console (not in the script) to install any packages you don't have yet.
+::: callout-important
+Explore the data in regards to your guiding research question (either Q1 or Q2!)
+
+Remember the scientific method steps:
+
+### Step 1: Hypotheses and variables
+
+-   Write down your null and alternative hypotheses. Identify x and y variables.
+
+### Step 2: Explore the data visually
+
+### Step 3: Choose an appropriate model
+
+-   Categorical data: ANOVA `aov()`
+-   Continuous data: linear regression `lm()`
+-   Is the relationship significant?
+-   Is the relationship positive or negative?
+:::
+
+# Step 1. Hypotheses and variables
+
+-   Open an Rmd document in R.
+
+-   Write down your null and alternative hypotheses. Identify x and y variables.
+
+-   Set up your environment
+
+## Load libraries
+
+::: callout-tip
+In `R`, you only need to **install** packages into your library once...(until you update `R`, then packages may need to be re-installed). To install a new package that you have not yet installed, use the `install.packages("package_name")` function. You can run this line of code in your console (not in the script) to install any packages you don't have yet.
 
 For example, you may need to run `install.packages("ggsci")` to install the `ggsci` package.
-
-# Load libraries
+:::
 
 ```{r}
 library(tidyverse)
@@ -52,13 +80,14 @@ library(viridis) # color palettes
 library(RColorBrewer) # color palettes
 ```
 
-# Load your data
+## Load your data
 
 ::: callout-important
 Pay attention to your file paths! You may need to change the file path below depending on where your data file is located relative to your working directory. Here, we assume you are working from a `.Rmd` script that is saved in your `code` folder, and the data file is located in a folder called `data` that is one level up from `code`. It's important to explicitly load your data in the script, if you use the "import data" GUi option that is *not* the tidyverse way because it isn't **reproducible** !
 :::
 
 ```{r}
+#| include: false
 data <- read_csv("../data/CIB_calling_behavior.csv")
 ```
 
@@ -66,26 +95,11 @@ data <- read_csv("../data/CIB_calling_behavior.csv")
 As a reminder, you can insert a new code chunk with the keyboard shortcut `Ctrl + Alt + I` (Windows) or `Cmd + Option + I` (Mac).
 :::
 
-# Initial data exploration
+-   Look at your data! Can you find your x and y variables as columns of your data?
 
-::: callout-important
-Explore the data in regards to your guiding research question (either Q1 or Q2!)
+## Initial data exploration
 
-Remember the scientific method steps:
-### Step 1: Hypotheses and variables
-> Write down your null and alternative hypotheses. Identify x and y variables.
-
-### Step 2: Explore the data visually
-
-
-### Step 3: Choose an appropriate model
-  - Categorical data: ANOVA `aov()`
-  - Continuous data: linear regression `lm()`
-  - Is the relationship significant? 
-  - Is the relationship positive or negative?
-:::
-
-## Q1: Do belugas use different types of calls in different behavioral or groups contexts?
+### Q1: Do belugas use different types of calls in different behavioral or groups contexts?
 
 > Write down your null and alternative hypotheses. Identify x and y variables.
 
@@ -140,7 +154,7 @@ ggplot(data = data, aes(x=pulsed_call)) +
 
     -   `geom_boxplot()`
     -   `geom_violin()`
-    
+
 ::: callout-important
 Create exploratory visualizations and statistical tests to answer your falsifiable hypothesis.
 :::
@@ -242,7 +256,7 @@ ggplot(aes(x = call, y = num.call, color = behavior, fill = behavior)) +
   ylab("Number of calls")
 ```
 
-## Q2: Does beluga vocal behavior (number or type of calls) change as we approach a change in group behavior?
+### Q2: Does beluga vocal behavior (number or type of calls) change as we approach a change in group behavior?
 
 When visualizing counts of calls over time approaching a behavioral transition with `geom_bar()`, `ggplot` expects you to pass a single value to the `x` aesthetic (e.g., `timediff_transition`), and a single value to the `y` aesthetic (e.g., `combined_call`, `whistle`, or `pulsed_call`).
 
@@ -286,9 +300,6 @@ Remember to use your help function `?pivot_longer` to learn more about what that
 Create exploratory visualizations and statistical tests to answer your falsifiable hypothesis.
 :::
 
-
-
-
 ```{r}
 #| include: false
 # - Compare number of calls approaching behavioral transition
@@ -300,7 +311,6 @@ Create exploratory visualizations and statistical tests to answer your falsifiab
 # - Compare across calf presence
 #     -   Is that difference statistically significant?  
 ```
-
 
 ```{r}
 #| include: false
@@ -324,7 +334,6 @@ lm_callsOverTime <- lm(nCalls ~ abs(timediff_transition), data = data_update_lon
 summary(lm_callsOverTime)
 ```
 
-
 ```{r}
 #| echo: false
 #| include: false
@@ -340,66 +349,44 @@ ggplot(data_update_long, aes(x = abs(timediff_transition), y = nCalls,
   ylab("Number of calls")
 ```
 
-# Data visualization with `ggplot2` tips & resources
+# Step 2. Wrangle and visualize the data
 
--   Checkout great examples of `ggplot2` usage in the [R graph gallery](https://r-graph-gallery.com/)
+::: callout-tip
+If your x and y variables are not columns, wrangle your dataset so that they are. Plot!
 
--   Review `ggplot2` structure with the [`ggplot2`:cheatsheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf)
+-   `geom_bar()`
 
--   Try using `facet_wrap()` or `facet_grid()` to create plot multiples based on a categorical variable (pass the categrorical variable to the `~` argument inside `facet_wrap()` or `facet_grid()`). An example might be `facet_wrap(~behavior)` to create separate plots for each behavior type.
+-   `geom_point()`
 
--   Make visually appealing plots by customizing colors, themes, and labels. Some useful functions include:
+-   `geom_smooth()`
+:::
 
-    -   `scale_color_manual()` and `scale_fill_manual()` to customize colors
+# Step 3. Model the relationship
 
-    -   `theme_minimal()`, `theme_classic()`, `theme_bw()`, etc. to change overall plot theme
+Choose an appropriate model
 
-    -   `xlab()`, `ylab()`, and `ggtitle()` to add axis labels and titles
+-   Categorical data:
 
--   There are many gorgeous color palettes available in `R` packages like `PNWColors`, `colorspace`, `RColorBrewer`, and `viridis`. Explore these packages to find color schemes that enhance your visualizations.
+    -    ANOVA `aov()`
 
-### ggsci
+-   Continuous data:
 
-Checkout the `ggsci` package [vignette](https://nanx.me/ggsci/articles/ggsci.html) for scientific journal color palettes
+    -   linear regression `lm()`
 
-### colorspace
+-   Is the relationship significant?
 
-Try exploring the [colorspace](https://colorspace.r-forge.r-project.org/) shiny app by running:
-
-```{r}
-#| eval: false
-colorspace::choose_palette()
-```
-
-### PNWColors
-
-More info can be found on the [PNWColors GitHub page](https://github.com/jakelawlor/PNWColors?tab=readme-ov-file#palettes)
-
-An example pallette is "Anemone":
-
-```{r}
-pnw_palette("Anemone")
-```
+-   Is the relationship positive or negative?
 
 # Lab reports
 
-## Pick your question, visualization and interpretation
+::: callout-important
+Your lab report should include the following components:
 
-1.  Customize a data exploration figure to make it your own (colors, labels, themes, etc.)
-
-2.  Write the null and alternative hypotheses that the figure addresses
-
-3.  Include the code chunk that generates that figure in your report
-
-4.  Write a short interpretation of what the figure shows
-
-    -   What patterns do you see?
-
-    -   What do you think those patterns mean in terms of beluga whale behavior?
-
-5.  Include an appropriate statistical test to assess whether the patterns you see are statistically significant
-
-6.  Write a short interpretation of the statistical test results
+1.  **Your falsifiable hypothesis**
+2.  **The results of your statistical analysis**
+3.  **A figure visualizing your results**
+4.  **A determination of whether you do or do not reject your hypothesis.**
+:::
 
 # Knitting a lab report
 
@@ -424,3 +411,21 @@ Coincidentally, this is how we set options for individual chunks by adding param
 ![](/modules/week3/refs/chunk-header.png)
 
 Experiment with including various chunk options and compare your knitted / rendered documents to see the differences.
+
+# Data visualization with `ggplot2` tips & resources
+
+-   Checkout great examples of `ggplot2` usage in the [R graph gallery](https://r-graph-gallery.com/)
+
+-   Review `ggplot2` structure with the [`ggplot2`:cheatsheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf)
+
+-   Try using `facet_wrap()` or `facet_grid()` to create plot multiples based on a categorical variable (pass the categrorical variable to the `~` argument inside `facet_wrap()` or `facet_grid()`). An example might be `facet_wrap(~behavior)` to create separate plots for each behavior type.
+
+-   Make visually appealing plots by customizing colors, themes, and labels. Some useful functions include:
+
+    -   `scale_color_manual()` and `scale_fill_manual()` to customize colors
+
+    -   `theme_minimal()`, `theme_classic()`, `theme_bw()`, etc. to change overall plot theme
+
+    -   `xlab()`, `ylab()`, and `ggtitle()` to add axis labels and titles
+
+-   There are many gorgeous color palettes available in `R` packages like `PNWColors`, `colorspace`, `RColorBrewer`, and `viridis`. Explore these packages to find color schemes that enhance your visualizations.

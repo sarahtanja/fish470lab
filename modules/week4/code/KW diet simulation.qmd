@@ -1,0 +1,263 @@
+---
+title: "1. Simulate killer whale diets"
+subtitle: "The power to make your own practice data"
+page-layout: article
+author: 
+  - Amy Van Cise
+  - Sarah Tanja
+date: "2026-01-20"
+draft: true
+date-modified: today
+order: 1
+format: html
+bibliography: "../refs/bib.bibtex"
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Background
+
+Additional reading:
+
+\- [What's for dinner? Scientists unearth key clues to cuisine of
+resident killer
+whales](https://www.washington.edu/news/2024/09/19/killer-whale-cuisine/)
+
+\-[Spatial and seasonal foraging patterns drive diet differences among
+north Pacific resident killer whale
+populations](https://royalsocietypublishing.org/rsos/article/11/9/rsos240445/92991/Spatial-and-seasonal-foraging-patterns-drive-diet)
+@vancise2024
+
+### Generate KW diet data
+
+# Load libraries
+
+```{r}
+library(tidyverse)
+library(ggridges)
+```
+
+```{r}
+set.seed(42)
+
+sample.df <- data.frame(Sample = paste0("Sample", seq(1,300,1)),
+                      Ind = paste0("Ind", sample(1:30, 300, TRUE)),
+                      Month = as.factor(sample(1:12, 300, TRUE)))
+```
+
+```{r}
+ggplot(sample.df, aes(x = Ind, fill = Month)) +
+  geom_bar(stat = "count")
+```
+
+#### simulate diet
+
+```{r}
+alpha_base <- c(8, 4, 3, 0.5, 0,
+  0.7, 0.5, 0.3, 0.2)
+```
+
+```{r}
+seasonal_effects <- matrix(1, nrow = 9,
+                           ncol = 12,
+                           dimnames = list(c("Chinook salmon",
+                            "chum salmon",
+                            "coho salmon",
+                            "steelhead salmon",
+                            "pink salmon",
+                            "sablefish",
+                            "lingcod",
+                            "arrowtooth flounder",
+                            "Pacific halibut"),
+                            1:12))
+```
+
+# Example seasonal structure
+
+```{r}
+seasonal_effects["Chinook salmon", c(6,7)]  <- 2.5  
+seasonal_effects["Chinook salmon", c(1,11,12)]  <- 0.1
+seasonal_effects["chum salmon", c(11,12)]  <- 1.3
+seasonal_effects["chum salmon", c(5,6,7)]  <- 0
+seasonal_effects["coho salmon", c(8,9)]   <- 2.0 
+seasonal_effects["coho salmon", c(12,1,2)]   <- 0 
+seasonal_effects["sablefish", c(10, 11)]  <- 7
+seasonal_effects["sablefish", c(1:8)]  <- 0
+seasonal_effects["lingcod", c(1,2,3)]    <- 7
+seasonal_effects["lingcod", c(4:11)]    <- 0
+seasonal_effects["Pacific halibut", c(2,3,4)] <- 8
+seasonal_effects["Pacific halibut", c(6,7)] <- 0
+seasonal_effects["arrowtooth flounder", c(6,7)] <- 0
+seasonal_effects["arrowtooth flounder", c(10,11,12)] <- 10
+```
+
+# background noise
+
+```{r}
+seasonal_effects <- seasonal_effects *
+  matrix(runif(9 * 12, 0.9, 1.1), 9, 12)
+```
+
+# Dirichlet distribution function
+
+```{r}
+rdirichlet_base <- function(n, alpha) {
+  k <- length(alpha)
+  x <- matrix(
+    rgamma(n * k, shape = alpha, rate = 1),
+    ncol = k,
+    byrow = TRUE
+  )
+  x / rowSums(x)
+}
+```
+
+```{r}
+alpha_by_month <- lapply(1:12, function(m) {
+  alpha_base * seasonal_effects[, m]
+  })
+```
+
+```{r}
+diet_props <- matrix(NA, nrow(sample.df), 9)
+```
+
+```{r}
+for (i in seq_len(nrow(sample.df))) {
+  m <- as.integer(sample.df$Month[i])
+  diet_props[i, ] <- rdirichlet_base(1, alpha_by_month[[m]])
+}
+```
+
+```{r}
+colnames(diet_props) <- c("Chinook salmon",
+                          "chum salmon",
+                          "coho salmon",
+                          "steelhead salmon",
+                          "pink salmon",
+                          "sablefish",
+                          "lingcod",
+                          "arrowtooth flounder",
+                          "Pacific halibut")
+```
+
+```{r}
+diet.df <- cbind(sample.df, diet_props) %>% 
+  pivot_longer("Chinook salmon":"Pacific halibut",
+               names_to = "species",
+               values_to = "propDiet") %>% 
+  mutate(propDiet = ifelse(propDiet < 0.01, 0, propDiet)) %>% 
+  mutate(season = case_when(Month %in% c(1:3)~ "Winter",
+                            Month %in% c(4:6)~ "Spring",
+                            Month %in% c(7:9)~"Summer",
+                            Month %in% c(10:12)~ "Autumn")) 
+```
+
+```{r}
+nSpec_samp <- diet.df %>%   
+  group_by(Sample, Month, season) %>% 
+  summarise(nSpecies = sum(propDiet > 0))
+
+```
+
+#### Some potential stats and figures ------------------------------------------
+
+# All of these are based on number of species per month/season
+
+```{r}
+test <- aov(nSpecies ~ season, nSpec_samp)
+summary(test)
+```
+
+```{r}
+month.test <- aov(nSpecies ~ Month, nSpec_samp)
+summary(month.test)
+```
+
+```{r}
+library(dunn.test)
+posthoc <- dunn.test(nSpec_samp$nSpecies, nSpec_samp$Month, list = TRUE)
+```
+
+```{r}
+posthoc_results <- data.frame(Comparison = posthoc$comparisons,
+  Z_Statistic = posthoc$Z,
+  P_adjusted = posthoc$P.adjusted) %>% 
+  filter(P_adjusted < 0.05) %>% 
+  separate(Comparison, into = c("Month1", "Month2"), sep = " - ") %>% 
+  pivot_longer(Month1:Month2, names_to = "ComparisonLevel", values_to = "Month") %>%
+  group_by(Month) %>% 
+  summarize(nSig = n())
+```
+
+```{r}
+ggplot(nSpec_samp, aes(x = Month, y = nSpecies)) +
+  geom_boxplot() +
+  geom_point(data = posthoc_results %>% filter(nSig > 8), 
+              aes(x = Month, y = 7), color = "red", shape = 8, size = 5)
+```
+
+```{r}
+nSpecies.month <- diet.df %>% group_by(Month, season) %>% 
+  filter(propDiet > 0) %>% 
+  distinct(species) %>% 
+  summarize(nSpecies = n())
+```
+
+```{r}
+nSpecies.season <- diet.df %>% 
+  group_by(season) %>% 
+  filter(propDiet > 0) %>% 
+  distinct(species) %>% 
+  summarize(nSpecies = n())
+```
+
+# This is looking at a prop per species, e.g. Chinook
+
+```{r}
+propChinook <- diet.df %>% filter(species == "Chinook salmon")
+
+chintest <- aov(propDiet ~ season, propChinook) 
+
+summary(chintest)
+```
+
+```{r}
+chin.lm <- lm(propDiet ~ as.numeric(Month), propChinook) 
+summary(chin.lm)
+```
+
+```{r}
+ggplot(diet.df, aes(x = as.numeric(Month), y = propDiet, color = species, fill = species)) + 
+  geom_point() + 
+  geom_smooth(span = 0.8, alpha = 0.5, linewidth = 0.5) + 
+  facet_wrap(~species) + 
+  theme_ridges() + 
+  theme(legend.position = "top", text = element_text(size = 11)) +
+  labs(x = "Diet proportion", y = "Month") + 
+  guides(color = guide_legend(nrow = 2), 
+         fill = guide_legend(nrow = 2))
+```
+
+```{r}
+ggplot(diet.df %>% 
+        filter(grepl("salmon", species)), 
+        aes(x = propDiet, y = Month, 
+            color = species, fill = species)) + 
+        geom_density_ridges(scale = 1.2, alpha = 0.3, 
+                          from = 0, to = 1) + 
+        theme_ridges() + 
+        theme(legend.position = "top", 
+              text = element_text(size = 11)) + 
+        labs(x = "Diet proportion", y = "Month") + 
+        guides(color = guide_legend(nrow = 2), 
+               fill = guide_legend(nrow = 2)) + xlim(0,1)
+```
+
+```{r}
+ggplot(diet.df, 
+       aes(x = Month, y = propDiet, 
+           color = species, fill = species)) + 
+       geom_boxplot()
+```

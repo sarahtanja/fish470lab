@@ -1,0 +1,36 @@
+---
+title: "Killer whale diets"
+subtitle: "Week 4 Module"
+image: "week4.jpg"
+
+about:
+  id: description
+  template: trestles
+  image: "week4.jpg"
+  
+listing: 
+  contents: week4
+  sort: "order"
+  type: table
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, reading-time]
+  
+page-layout: full
+title-block-banner: true
+---
+
+::: {#description}
+#### Learning Goals:
+
+1. Build on our use of the `ggplot` package in `R` to customize plots using themes, colors, and labels.
+
+2. Introduce common markdown syntax for formatting text, inserting images, and creating links, and knitting from `.Rmd` or `.qmd` files for lab reports. 
+
+::: callout-tip
+Get inspiration from the [R graph gallery](https://r-graph-gallery.com/) for more `ggplot2` examples and ideas.
+Checkout the [Quarto documentation](https://quarto.org/docs/authoring/markdown-basics.html) for more information markdown basics. Another great resource is [RMarkdown for Scientists](https://rmd4sci.njtierney.com/) by [Nathaniel Tierney](https://njtierney.com/).
+:::
+
+:::
