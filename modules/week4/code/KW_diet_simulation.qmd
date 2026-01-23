@@ -16,18 +16,26 @@ editor:
     wrap: 72
 ---
 
+```{r, setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE, # Display code chunks
+  eval = TRUE, # Evaluate code chunks
+  warning = FALSE, # Hide warnings
+  message = FALSE, # Hide messages
+  comment = "") # Prevents appending '##' to beginning of lines in code output))      
+```
+
 # Background
 
 Additional reading:
 
-\- [What's for dinner? Scientists unearth key clues to cuisine of
-resident killer
-whales](https://www.washington.edu/news/2024/09/19/killer-whale-cuisine/)
-
-\-[Spatial and seasonal foraging patterns drive diet differences among
-north Pacific resident killer whale
-populations](https://royalsocietypublishing.org/rsos/article/11/9/rsos240445/92991/Spatial-and-seasonal-foraging-patterns-drive-diet)
-@vancise2024
+-   [What's for dinner? Scientists unearth key clues to cuisine of
+    resident killer
+    whales](https://www.washington.edu/news/2024/09/19/killer-whale-cuisine/)
+-   [Spatial and seasonal foraging patterns drive diet differences among
+    north Pacific resident killer whale
+    populations](https://royalsocietypublishing.org/rsos/article/11/9/rsos240445/92991/Spatial-and-seasonal-foraging-patterns-drive-diet)
+    @vancise2024
 
 ### Generate KW diet data
 
@@ -154,6 +162,13 @@ diet.df <- cbind(sample.df, diet_props) %>%
                             Month %in% c(10:12)~ "Autumn")) 
 ```
 
+
+Write out diet.df
+```{r}
+write_csv(diet.df, "../output/KW_diet_simulated_data.csv")
+```
+
+
 ```{r}
 nSpec_samp <- diet.df %>%   
   group_by(Sample, Month, season) %>% 
@@ -261,3 +276,61 @@ ggplot(diet.df,
            color = species, fill = species)) + 
        geom_boxplot()
 ```
+
+
+```{r}
+diet_summary <- diet.df %>% 
+  group_by(Ind, species) %>% 
+  summarize(meanDiet = mean(propDiet),
+            sdDiet = sd(propDiet))
+
+diet_summary
+```
+
+```{r}
+ggplot(diet_summary, aes(x = meanDiet, y = species, fill = species))+
+  geom_density_ridges()
+```
+
+Q1. Does southern resident killer whale diet change throughout the year? 
+
+```{r}
+ggplot(diet_summary, aes(x = species, y = mean_prop, fill = season)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_errorbar(aes(ymin = mean_prop - sd_prop, ymax = mean_prop + sd_prop),
+                position = position_dodge(0.9), width = 0.25) +
+  theme_minimal() +
+  labs(x = "Species", y = "Mean Proportion in Diet") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+Q2. Does chinook make up the majority of SRKW diet compared to other species?
+
+```{r}
+diet_chinook <- diet.df %>% 
+  group_by(Ind, species) %>% 
+  summarize(meanDiet = mean(propDiet),
+            sdDiet = sd(propDiet)) %>%
+  mutate(chinookyesno = ifelse(species == "Chinook salmon", "yes", "no"))
+```
+
+
+```{r}
+ggplot(diet_chinook, aes(x = chinookyesno, y = meanDiet, fill = chinookyesno)) +
+  geom_boxplot() +
+  theme_minimal() +
+  labs(x = "Chinook in Diet", y = "Mean Proportion in Diet") +
+  theme(legend.position = "none")
+```
+anova
+```{r}
+chinook_anova <- aov(meanDiet ~ chinookyesno, data = diet_chinook)
+summary(chinook_anova)
+```
+- facet_wrap
+- filter
+
+- anova or lm
+
+- group_by
+- summarise
+- mutate

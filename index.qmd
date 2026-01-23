@@ -8,6 +8,7 @@ listing:
   contents: 
     - modules/week2.qmd
     - modules/week3.qmd
+    - modules/week4.qmd
   sort: "false"
   type: grid
   grid-item-align: center

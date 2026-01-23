@@ -1,0 +1,2701 @@
+Sample,Ind,Month,species,propDiet,season
+Sample1,Ind17,5,Chinook salmon,0.9365202730591162,Spring
+Sample1,Ind17,5,chum salmon,0,Spring
+Sample1,Ind17,5,coho salmon,0.057282414635013004,Spring
+Sample1,Ind17,5,steelhead salmon,0,Spring
+Sample1,Ind17,5,pink salmon,0,Spring
+Sample1,Ind17,5,sablefish,0,Spring
+Sample1,Ind17,5,lingcod,0,Spring
+Sample1,Ind17,5,arrowtooth flounder,0,Spring
+Sample1,Ind17,5,Pacific halibut,0,Spring
+Sample2,Ind5,2,Chinook salmon,0.5147399885812072,Winter
+Sample2,Ind5,2,chum salmon,0.13613893190491416,Winter
+Sample2,Ind5,2,coho salmon,0,Winter
+Sample2,Ind5,2,steelhead salmon,0,Winter
+Sample2,Ind5,2,pink salmon,0,Winter
+Sample2,Ind5,2,sablefish,0,Winter
+Sample2,Ind5,2,lingcod,0.3047308766303687,Winter
+Sample2,Ind5,2,arrowtooth flounder,0,Winter
+Sample2,Ind5,2,Pacific halibut,0.04429162479979475,Winter
+Sample3,Ind1,9,Chinook salmon,0.5961410214573288,Summer
+Sample3,Ind1,9,chum salmon,0.17922029993173053,Summer
+Sample3,Ind1,9,coho salmon,0.17988047118352934,Summer
+Sample3,Ind1,9,steelhead salmon,0.018553904019776392,Summer
+Sample3,Ind1,9,pink salmon,0,Summer
+Sample3,Ind1,9,sablefish,0.020581502308247866,Summer
+Sample3,Ind1,9,lingcod,0,Summer
+Sample3,Ind1,9,arrowtooth flounder,0,Summer
+Sample3,Ind1,9,Pacific halibut,0,Summer
+Sample4,Ind25,6,Chinook salmon,0.7856241653545234,Spring
+Sample4,Ind25,6,chum salmon,0,Spring
+Sample4,Ind25,6,coho salmon,0.15617732347059168,Spring
+Sample4,Ind25,6,steelhead salmon,0.058198511174885,Spring
+Sample4,Ind25,6,pink salmon,0,Spring
+Sample4,Ind25,6,sablefish,0,Spring
+Sample4,Ind25,6,lingcod,0,Spring
+Sample4,Ind25,6,arrowtooth flounder,0,Spring
+Sample4,Ind25,6,Pacific halibut,0,Spring
+Sample5,Ind10,1,Chinook salmon,0.011946197788293766,Winter
+Sample5,Ind10,1,chum salmon,0.9183152807230439,Winter
+Sample5,Ind10,1,coho salmon,0,Winter
+Sample5,Ind10,1,steelhead salmon,0,Winter
+Sample5,Ind10,1,pink salmon,0,Winter
+Sample5,Ind10,1,sablefish,0,Winter
+Sample5,Ind10,1,lingcod,0.062106695362176695,Winter
+Sample5,Ind10,1,arrowtooth flounder,0,Winter
+Sample5,Ind10,1,Pacific halibut,0,Winter
+Sample6,Ind4,1,Chinook salmon,0.025339132624047384,Winter
+Sample6,Ind4,1,chum salmon,0.37968191523236555,Winter
+Sample6,Ind4,1,coho salmon,0,Winter
+Sample6,Ind4,1,steelhead salmon,0.3949523697487815,Winter
+Sample6,Ind4,1,pink salmon,0,Winter
+Sample6,Ind4,1,sablefish,0,Winter
+Sample6,Ind4,1,lingcod,0.1981673640503025,Winter
+Sample6,Ind4,1,arrowtooth flounder,0,Winter
+Sample6,Ind4,1,Pacific halibut,0,Winter
+Sample7,Ind18,11,Chinook salmon,0.04836772727148562,Autumn
+Sample7,Ind18,11,chum salmon,0.2850870600309407,Autumn
+Sample7,Ind18,11,coho salmon,0.1642246100615887,Autumn
+Sample7,Ind18,11,steelhead salmon,0.03155422479927226,Autumn
+Sample7,Ind18,11,pink salmon,0,Autumn
+Sample7,Ind18,11,sablefish,0.24076539938636018,Autumn
+Sample7,Ind18,11,lingcod,0,Autumn
+Sample7,Ind18,11,arrowtooth flounder,0.18985970321556828,Autumn
+Sample7,Ind18,11,Pacific halibut,0.04014127523478429,Autumn
+Sample8,Ind26,12,Chinook salmon,0.025582100688013927,Autumn
+Sample8,Ind26,12,chum salmon,0.40800831410202226,Autumn
+Sample8,Ind26,12,coho salmon,0,Autumn
+Sample8,Ind26,12,steelhead salmon,0,Autumn
+Sample8,Ind26,12,pink salmon,0,Autumn
+Sample8,Ind26,12,sablefish,0.03864632489279861,Autumn
+Sample8,Ind26,12,lingcod,0.10592205088426705,Autumn
+Sample8,Ind26,12,arrowtooth flounder,0.3616385824246671,Autumn
+Sample8,Ind26,12,Pacific halibut,0.05947665937398123,Autumn
+Sample9,Ind17,2,Chinook salmon,0.2962105356860975,Winter
+Sample9,Ind17,2,chum salmon,0.27705313488501826,Winter
+Sample9,Ind17,2,coho salmon,0,Winter
+Sample9,Ind17,2,steelhead salmon,0.023185182942977785,Winter
+Sample9,Ind17,2,pink salmon,0,Winter
+Sample9,Ind17,2,sablefish,0,Winter
+Sample9,Ind17,2,lingcod,0.321638400151602,Winter
+Sample9,Ind17,2,arrowtooth flounder,0,Winter
+Sample9,Ind17,2,Pacific halibut,0.07399296327939564,Winter
+Sample10,Ind15,7,Chinook salmon,0.8477115762292343,Summer
+Sample10,Ind15,7,chum salmon,0,Summer
+Sample10,Ind15,7,coho salmon,0.14981176642299546,Summer
+Sample10,Ind15,7,steelhead salmon,0,Summer
+Sample10,Ind15,7,pink salmon,0,Summer
+Sample10,Ind15,7,sablefish,0,Summer
+Sample10,Ind15,7,lingcod,0,Summer
+Sample10,Ind15,7,arrowtooth flounder,0,Summer
+Sample10,Ind15,7,Pacific halibut,0,Summer
+Sample11,Ind24,2,Chinook salmon,0.5491502542770481,Winter
+Sample11,Ind24,2,chum salmon,0.11446946787714811,Winter
+Sample11,Ind24,2,coho salmon,0,Winter
+Sample11,Ind24,2,steelhead salmon,0.05606928091396798,Winter
+Sample11,Ind24,2,pink salmon,0,Winter
+Sample11,Ind24,2,sablefish,0,Winter
+Sample11,Ind24,2,lingcod,0.12904339804532658,Winter
+Sample11,Ind24,2,arrowtooth flounder,0,Winter
+Sample11,Ind24,2,Pacific halibut,0.14876851026906246,Winter
+Sample12,Ind7,10,Chinook salmon,0.21764785758336339,Autumn
+Sample12,Ind7,10,chum salmon,0.13091868293944975,Autumn
+Sample12,Ind7,10,coho salmon,0.12086113128488689,Autumn
+Sample12,Ind7,10,steelhead salmon,0,Autumn
+Sample12,Ind7,10,pink salmon,0,Autumn
+Sample12,Ind7,10,sablefish,0.21831268495779835,Autumn
+Sample12,Ind7,10,lingcod,0,Autumn
+Sample12,Ind7,10,arrowtooth flounder,0.064892418156529,Autumn
+Sample12,Ind7,10,Pacific halibut,0.24687077324210088,Autumn
+Sample13,Ind4,10,Chinook salmon,0.4053077966227937,Autumn
+Sample13,Ind4,10,chum salmon,0.06876706250593616,Autumn
+Sample13,Ind4,10,coho salmon,0.15404582060404004,Autumn
+Sample13,Ind4,10,steelhead salmon,0.016178059947975987,Autumn
+Sample13,Ind4,10,pink salmon,0,Autumn
+Sample13,Ind4,10,sablefish,0.2968408106255339,Autumn
+Sample13,Ind4,10,lingcod,0,Autumn
+Sample13,Ind4,10,arrowtooth flounder,0.02760217349168979,Autumn
+Sample13,Ind4,10,Pacific halibut,0.03125827620203044,Autumn
+Sample14,Ind25,4,Chinook salmon,0.22087482848937065,Spring
+Sample14,Ind25,4,chum salmon,0.14320026410799924,Spring
+Sample14,Ind25,4,coho salmon,0.5238238036143527,Spring
+Sample14,Ind25,4,steelhead salmon,0.026312167754012558,Spring
+Sample14,Ind25,4,pink salmon,0,Spring
+Sample14,Ind25,4,sablefish,0,Spring
+Sample14,Ind25,4,lingcod,0,Spring
+Sample14,Ind25,4,arrowtooth flounder,0,Spring
+Sample14,Ind25,4,Pacific halibut,0.08577532123478063,Spring
+Sample15,Ind5,4,Chinook salmon,0.4694382634744808,Spring
+Sample15,Ind5,4,chum salmon,0.19848091603100673,Spring
+Sample15,Ind5,4,coho salmon,0.20667562415067395,Spring
+Sample15,Ind5,4,steelhead salmon,0.1215430345818543,Spring
+Sample15,Ind5,4,pink salmon,0,Spring
+Sample15,Ind5,4,sablefish,0,Spring
+Sample15,Ind5,4,lingcod,0,Spring
+Sample15,Ind5,4,arrowtooth flounder,0,Spring
+Sample15,Ind5,4,Pacific halibut,0,Spring
+Sample16,Ind14,7,Chinook salmon,0.9128706587426193,Summer
+Sample16,Ind14,7,chum salmon,0,Summer
+Sample16,Ind14,7,coho salmon,0.07380644974947882,Summer
+Sample16,Ind14,7,steelhead salmon,0.01332289150790185,Summer
+Sample16,Ind14,7,pink salmon,0,Summer
+Sample16,Ind14,7,sablefish,0,Summer
+Sample16,Ind14,7,lingcod,0,Summer
+Sample16,Ind14,7,arrowtooth flounder,0,Summer
+Sample16,Ind14,7,Pacific halibut,0,Summer
+Sample17,Ind20,1,Chinook salmon,0,Winter
+Sample17,Ind20,1,chum salmon,0.6656273149728663,Winter
+Sample17,Ind20,1,coho salmon,0,Winter
+Sample17,Ind20,1,steelhead salmon,0.017091241454612112,Winter
+Sample17,Ind20,1,pink salmon,0,Winter
+Sample17,Ind20,1,sablefish,0,Winter
+Sample17,Ind20,1,lingcod,0.25455466628889,Winter
+Sample17,Ind20,1,arrowtooth flounder,0.055784571339707774,Winter
+Sample17,Ind20,1,Pacific halibut,0,Winter
+Sample18,Ind26,11,Chinook salmon,0.01744130147712073,Autumn
+Sample18,Ind26,11,chum salmon,0.39380895305244945,Autumn
+Sample18,Ind26,11,coho salmon,0.10802828115648606,Autumn
+Sample18,Ind26,11,steelhead salmon,0,Autumn
+Sample18,Ind26,11,pink salmon,0,Autumn
+Sample18,Ind26,11,sablefish,0.17123106407789276,Autumn
+Sample18,Ind26,11,lingcod,0,Autumn
+Sample18,Ind26,11,arrowtooth flounder,0.3001315480110063,Autumn
+Sample18,Ind26,11,Pacific halibut,0,Autumn
+Sample19,Ind18,5,Chinook salmon,0.6769506513050518,Spring
+Sample19,Ind18,5,chum salmon,0,Spring
+Sample19,Ind18,5,coho salmon,0.3045663982917412,Spring
+Sample19,Ind18,5,steelhead salmon,0,Spring
+Sample19,Ind18,5,pink salmon,0,Spring
+Sample19,Ind18,5,sablefish,0,Spring
+Sample19,Ind18,5,lingcod,0,Spring
+Sample19,Ind18,5,arrowtooth flounder,0.01176107650646206,Spring
+Sample19,Ind18,5,Pacific halibut,0,Spring
+Sample20,Ind15,6,Chinook salmon,0.9031708981075127,Spring
+Sample20,Ind15,6,chum salmon,0,Spring
+Sample20,Ind15,6,coho salmon,0.07177291356723418,Spring
+Sample20,Ind15,6,steelhead salmon,0.025056188325253102,Spring
+Sample20,Ind15,6,pink salmon,0,Spring
+Sample20,Ind15,6,sablefish,0,Spring
+Sample20,Ind15,6,lingcod,0,Spring
+Sample20,Ind15,6,arrowtooth flounder,0,Spring
+Sample20,Ind15,6,Pacific halibut,0,Spring
+Sample21,Ind3,4,Chinook salmon,0.5124366729652932,Spring
+Sample21,Ind3,4,chum salmon,0.24496660626531758,Spring
+Sample21,Ind3,4,coho salmon,0.07943210175283698,Spring
+Sample21,Ind3,4,steelhead salmon,0,Spring
+Sample21,Ind3,4,pink salmon,0,Spring
+Sample21,Ind3,4,sablefish,0,Spring
+Sample21,Ind3,4,lingcod,0,Spring
+Sample21,Ind3,4,arrowtooth flounder,0,Spring
+Sample21,Ind3,4,Pacific halibut,0.15835712285013992,Spring
+Sample22,Ind9,2,Chinook salmon,0.4398563534786325,Winter
+Sample22,Ind9,2,chum salmon,0.20400346906225103,Winter
+Sample22,Ind9,2,coho salmon,0,Winter
+Sample22,Ind9,2,steelhead salmon,0.03133462676139628,Winter
+Sample22,Ind9,2,pink salmon,0,Winter
+Sample22,Ind9,2,sablefish,0,Winter
+Sample22,Ind9,2,lingcod,0.24975601118279875,Winter
+Sample22,Ind9,2,arrowtooth flounder,0,Winter
+Sample22,Ind9,2,Pacific halibut,0.07264826266722701,Winter
+Sample23,Ind25,10,Chinook salmon,0.3877987629961325,Autumn
+Sample23,Ind25,10,chum salmon,0.23756648070342032,Autumn
+Sample23,Ind25,10,coho salmon,0.09724472684127512,Autumn
+Sample23,Ind25,10,steelhead salmon,0,Autumn
+Sample23,Ind25,10,pink salmon,0,Autumn
+Sample23,Ind25,10,sablefish,0.1512623200366238,Autumn
+Sample23,Ind25,10,lingcod,0,Autumn
+Sample23,Ind25,10,arrowtooth flounder,0.12194214213534406,Autumn
+Sample23,Ind25,10,Pacific halibut,0,Autumn
+Sample24,Ind27,9,Chinook salmon,0.2344170707381602,Summer
+Sample24,Ind27,9,chum salmon,0.2924044403605733,Summer
+Sample24,Ind27,9,coho salmon,0.45652756494909497,Summer
+Sample24,Ind27,9,steelhead salmon,0,Summer
+Sample24,Ind27,9,pink salmon,0,Summer
+Sample24,Ind27,9,sablefish,0,Summer
+Sample24,Ind27,9,lingcod,0,Summer
+Sample24,Ind27,9,arrowtooth flounder,0,Summer
+Sample24,Ind27,9,Pacific halibut,0,Summer
+Sample25,Ind4,11,Chinook salmon,0.1635531638621165,Autumn
+Sample25,Ind4,11,chum salmon,0.3473269911073284,Autumn
+Sample25,Ind4,11,coho salmon,0.18289073241742113,Autumn
+Sample25,Ind4,11,steelhead salmon,0.013433635751599454,Autumn
+Sample25,Ind4,11,pink salmon,0,Autumn
+Sample25,Ind4,11,sablefish,0.22200316606096762,Autumn
+Sample25,Ind4,11,lingcod,0,Autumn
+Sample25,Ind4,11,arrowtooth flounder,0.07079198469111289,Autumn
+Sample25,Ind4,11,Pacific halibut,0,Autumn
+Sample26,Ind5,12,Chinook salmon,0.029721567501055854,Autumn
+Sample26,Ind5,12,chum salmon,0.4823821867012307,Autumn
+Sample26,Ind5,12,coho salmon,0,Autumn
+Sample26,Ind5,12,steelhead salmon,0.21251790984677252,Autumn
+Sample26,Ind5,12,pink salmon,0,Autumn
+Sample26,Ind5,12,sablefish,0.07554207946106249,Autumn
+Sample26,Ind5,12,lingcod,0,Autumn
+Sample26,Ind5,12,arrowtooth flounder,0.1975417110375311,Autumn
+Sample26,Ind5,12,Pacific halibut,0,Autumn
+Sample27,Ind13,6,Chinook salmon,0.9446007193159648,Spring
+Sample27,Ind13,6,chum salmon,0,Spring
+Sample27,Ind13,6,coho salmon,0.04905930859779365,Spring
+Sample27,Ind13,6,steelhead salmon,0,Spring
+Sample27,Ind13,6,pink salmon,0,Spring
+Sample27,Ind13,6,sablefish,0,Spring
+Sample27,Ind13,6,lingcod,0,Spring
+Sample27,Ind13,6,arrowtooth flounder,0,Spring
+Sample27,Ind13,6,Pacific halibut,0,Spring
+Sample28,Ind5,10,Chinook salmon,0.24314427863638072,Autumn
+Sample28,Ind5,10,chum salmon,0.2896263501897401,Autumn
+Sample28,Ind5,10,coho salmon,0.1559321194949613,Autumn
+Sample28,Ind5,10,steelhead salmon,0,Autumn
+Sample28,Ind5,10,pink salmon,0,Autumn
+Sample28,Ind5,10,sablefish,0.2222431396460759,Autumn
+Sample28,Ind5,10,lingcod,0,Autumn
+Sample28,Ind5,10,arrowtooth flounder,0.08803019155097155,Autumn
+Sample28,Ind5,10,Pacific halibut,0,Autumn
+Sample29,Ind20,9,Chinook salmon,0.2690886407662481,Summer
+Sample29,Ind20,9,chum salmon,0.33937065812929446,Summer
+Sample29,Ind20,9,coho salmon,0.3701846795528261,Summer
+Sample29,Ind20,9,steelhead salmon,0,Summer
+Sample29,Ind20,9,pink salmon,0,Summer
+Sample29,Ind20,9,sablefish,0,Summer
+Sample29,Ind20,9,lingcod,0,Summer
+Sample29,Ind20,9,arrowtooth flounder,0,Summer
+Sample29,Ind20,9,Pacific halibut,0,Summer
+Sample30,Ind2,7,Chinook salmon,0.8904421732633234,Summer
+Sample30,Ind2,7,chum salmon,0,Summer
+Sample30,Ind2,7,coho salmon,0.09662260673561442,Summer
+Sample30,Ind2,7,steelhead salmon,0.012935220001062087,Summer
+Sample30,Ind2,7,pink salmon,0,Summer
+Sample30,Ind2,7,sablefish,0,Summer
+Sample30,Ind2,7,lingcod,0,Summer
+Sample30,Ind2,7,arrowtooth flounder,0,Summer
+Sample30,Ind2,7,Pacific halibut,0,Summer
+Sample31,Ind28,10,Chinook salmon,0.5430467033907762,Autumn
+Sample31,Ind28,10,chum salmon,0.09170580251681587,Autumn
+Sample31,Ind28,10,coho salmon,0.13594954614333424,Autumn
+Sample31,Ind28,10,steelhead salmon,0.010952055142203432,Autumn
+Sample31,Ind28,10,pink salmon,0,Autumn
+Sample31,Ind28,10,sablefish,0.1639545461896757,Autumn
+Sample31,Ind28,10,lingcod,0,Autumn
+Sample31,Ind28,10,arrowtooth flounder,0.05439133695872219,Autumn
+Sample31,Ind28,10,Pacific halibut,0,Autumn
+Sample32,Ind8,3,Chinook salmon,0.43664718161624333,Winter
+Sample32,Ind8,3,chum salmon,0.14211550775078863,Winter
+Sample32,Ind8,3,coho salmon,0.09897519132405332,Winter
+Sample32,Ind8,3,steelhead salmon,0,Winter
+Sample32,Ind8,3,pink salmon,0,Winter
+Sample32,Ind8,3,sablefish,0,Winter
+Sample32,Ind8,3,lingcod,0.2056293574336906,Winter
+Sample32,Ind8,3,arrowtooth flounder,0.048127680427686906,Winter
+Sample32,Ind8,3,Pacific halibut,0.06592754795884681,Winter
+Sample33,Ind3,9,Chinook salmon,0.4898062197510815,Summer
+Sample33,Ind3,9,chum salmon,0.09203062614398677,Summer
+Sample33,Ind3,9,coho salmon,0.3765406349175285,Summer
+Sample33,Ind3,9,steelhead salmon,0,Summer
+Sample33,Ind3,9,pink salmon,0,Summer
+Sample33,Ind3,9,sablefish,0.035543146205176186,Summer
+Sample33,Ind3,9,lingcod,0,Summer
+Sample33,Ind3,9,arrowtooth flounder,0,Summer
+Sample33,Ind3,9,Pacific halibut,0,Summer
+Sample34,Ind26,11,Chinook salmon,0.05683222999818886,Autumn
+Sample34,Ind26,11,chum salmon,0.34502068948868087,Autumn
+Sample34,Ind26,11,coho salmon,0.14884818706534086,Autumn
+Sample34,Ind26,11,steelhead salmon,0.02769161845091002,Autumn
+Sample34,Ind26,11,pink salmon,0,Autumn
+Sample34,Ind26,11,sablefish,0.2635461201462331,Autumn
+Sample34,Ind26,11,lingcod,0,Autumn
+Sample34,Ind26,11,arrowtooth flounder,0.15804448069085172,Autumn
+Sample34,Ind26,11,Pacific halibut,0,Autumn
+Sample35,Ind1,3,Chinook salmon,0.36404643025254724,Winter
+Sample35,Ind1,3,chum salmon,0.34739830177585923,Winter
+Sample35,Ind1,3,coho salmon,0.1278589359785379,Winter
+Sample35,Ind1,3,steelhead salmon,0,Winter
+Sample35,Ind1,3,pink salmon,0,Winter
+Sample35,Ind1,3,sablefish,0,Winter
+Sample35,Ind1,3,lingcod,0.11575781697303718,Winter
+Sample35,Ind1,3,arrowtooth flounder,0.012849408632883514,Winter
+Sample35,Ind1,3,Pacific halibut,0.029031163184892156,Winter
+Sample36,Ind10,12,Chinook salmon,0.20900883662076783,Autumn
+Sample36,Ind10,12,chum salmon,0.6201843289425292,Autumn
+Sample36,Ind10,12,coho salmon,0,Autumn
+Sample36,Ind10,12,steelhead salmon,0,Autumn
+Sample36,Ind10,12,pink salmon,0,Autumn
+Sample36,Ind10,12,sablefish,0,Autumn
+Sample36,Ind10,12,lingcod,0,Autumn
+Sample36,Ind10,12,arrowtooth flounder,0.1400699173662376,Autumn
+Sample36,Ind10,12,Pacific halibut,0.020007313713757878,Autumn
+Sample37,Ind24,5,Chinook salmon,0.763083123231759,Spring
+Sample37,Ind24,5,chum salmon,0,Spring
+Sample37,Ind24,5,coho salmon,0.21958223592013326,Spring
+Sample37,Ind24,5,steelhead salmon,0.01670028544940593,Spring
+Sample37,Ind24,5,pink salmon,0,Spring
+Sample37,Ind24,5,sablefish,0,Spring
+Sample37,Ind24,5,lingcod,0,Spring
+Sample37,Ind24,5,arrowtooth flounder,0,Spring
+Sample37,Ind24,5,Pacific halibut,0,Spring
+Sample38,Ind30,4,Chinook salmon,0.3517059321172455,Spring
+Sample38,Ind30,4,chum salmon,0.1760623250075302,Spring
+Sample38,Ind30,4,coho salmon,0.1967947431542904,Spring
+Sample38,Ind30,4,steelhead salmon,0.031426510374558,Spring
+Sample38,Ind30,4,pink salmon,0,Spring
+Sample38,Ind30,4,sablefish,0,Spring
+Sample38,Ind30,4,lingcod,0,Spring
+Sample38,Ind30,4,arrowtooth flounder,0,Spring
+Sample38,Ind30,4,Pacific halibut,0.24059564899334307,Spring
+Sample39,Ind11,10,Chinook salmon,0.2791653239865433,Autumn
+Sample39,Ind11,10,chum salmon,0.0931169263193163,Autumn
+Sample39,Ind11,10,coho salmon,0.10251948750092064,Autumn
+Sample39,Ind11,10,steelhead salmon,0,Autumn
+Sample39,Ind11,10,pink salmon,0,Autumn
+Sample39,Ind11,10,sablefish,0.1996314171180589,Autumn
+Sample39,Ind11,10,lingcod,0,Autumn
+Sample39,Ind11,10,arrowtooth flounder,0.32035753935630695,Autumn
+Sample39,Ind11,10,Pacific halibut,0,Autumn
+Sample40,Ind15,6,Chinook salmon,0.871441977969816,Spring
+Sample40,Ind15,6,chum salmon,0,Spring
+Sample40,Ind15,6,coho salmon,0.1228274304896657,Spring
+Sample40,Ind15,6,steelhead salmon,0,Spring
+Sample40,Ind15,6,pink salmon,0,Spring
+Sample40,Ind15,6,sablefish,0,Spring
+Sample40,Ind15,6,lingcod,0,Spring
+Sample40,Ind15,6,arrowtooth flounder,0,Spring
+Sample40,Ind15,6,Pacific halibut,0,Spring
+Sample41,Ind22,9,Chinook salmon,0.6219523069823986,Summer
+Sample41,Ind22,9,chum salmon,0.10457322689649849,Summer
+Sample41,Ind22,9,coho salmon,0.20996447154145043,Summer
+Sample41,Ind22,9,steelhead salmon,0.031821234178616896,Summer
+Sample41,Ind22,9,pink salmon,0,Summer
+Sample41,Ind22,9,sablefish,0,Summer
+Sample41,Ind22,9,lingcod,0,Summer
+Sample41,Ind22,9,arrowtooth flounder,0,Summer
+Sample41,Ind22,9,Pacific halibut,0.031279722503802364,Summer
+Sample42,Ind26,6,Chinook salmon,0.7167821300327682,Spring
+Sample42,Ind26,6,chum salmon,0,Spring
+Sample42,Ind26,6,coho salmon,0.24302528295130651,Spring
+Sample42,Ind26,6,steelhead salmon,0.04019258701592526,Spring
+Sample42,Ind26,6,pink salmon,0,Spring
+Sample42,Ind26,6,sablefish,0,Spring
+Sample42,Ind26,6,lingcod,0,Spring
+Sample42,Ind26,6,arrowtooth flounder,0,Spring
+Sample42,Ind26,6,Pacific halibut,0,Spring
+Sample43,Ind8,11,Chinook salmon,0,Autumn
+Sample43,Ind8,11,chum salmon,0.15066738948282424,Autumn
+Sample43,Ind8,11,coho salmon,0.08633640736943247,Autumn
+Sample43,Ind8,11,steelhead salmon,0,Autumn
+Sample43,Ind8,11,pink salmon,0,Autumn
+Sample43,Ind8,11,sablefish,0.6081779576298791,Autumn
+Sample43,Ind8,11,lingcod,0,Autumn
+Sample43,Ind8,11,arrowtooth flounder,0.15349546728570665,Autumn
+Sample43,Ind8,11,Pacific halibut,0,Autumn
+Sample44,Ind4,1,Chinook salmon,0,Winter
+Sample44,Ind4,1,chum salmon,0.2852978965802947,Winter
+Sample44,Ind4,1,coho salmon,0,Winter
+Sample44,Ind4,1,steelhead salmon,0,Winter
+Sample44,Ind4,1,pink salmon,0,Winter
+Sample44,Ind4,1,sablefish,0,Winter
+Sample44,Ind4,1,lingcod,0.6930123464746548,Winter
+Sample44,Ind4,1,arrowtooth flounder,0,Winter
+Sample44,Ind4,1,Pacific halibut,0,Winter
+Sample45,Ind4,11,Chinook salmon,0,Autumn
+Sample45,Ind4,11,chum salmon,0.2535846913374228,Autumn
+Sample45,Ind4,11,coho salmon,0.29188957784153896,Autumn
+Sample45,Ind4,11,steelhead salmon,0,Autumn
+Sample45,Ind4,11,pink salmon,0,Autumn
+Sample45,Ind4,11,sablefish,0.2116954762877932,Autumn
+Sample45,Ind4,11,lingcod,0,Autumn
+Sample45,Ind4,11,arrowtooth flounder,0.2342225393602907,Autumn
+Sample45,Ind4,11,Pacific halibut,0,Autumn
+Sample46,Ind22,5,Chinook salmon,0.4300394536919002,Spring
+Sample46,Ind22,5,chum salmon,0,Spring
+Sample46,Ind22,5,coho salmon,0.4394257586329664,Spring
+Sample46,Ind22,5,steelhead salmon,0.11458398891375822,Spring
+Sample46,Ind22,5,pink salmon,0,Spring
+Sample46,Ind22,5,sablefish,0,Spring
+Sample46,Ind22,5,lingcod,0,Spring
+Sample46,Ind22,5,arrowtooth flounder,0,Spring
+Sample46,Ind22,5,Pacific halibut,0.015916222459329343,Spring
+Sample47,Ind18,12,Chinook salmon,0.02290221381776583,Autumn
+Sample47,Ind18,12,chum salmon,0.4487992168763088,Autumn
+Sample47,Ind18,12,coho salmon,0,Autumn
+Sample47,Ind18,12,steelhead salmon,0.03602649938413763,Autumn
+Sample47,Ind18,12,pink salmon,0,Autumn
+Sample47,Ind18,12,sablefish,0.19990856788577316,Autumn
+Sample47,Ind18,12,lingcod,0.09935015231945511,Autumn
+Sample47,Ind18,12,arrowtooth flounder,0.193013172488779,Autumn
+Sample47,Ind18,12,Pacific halibut,0,Autumn
+Sample48,Ind13,5,Chinook salmon,0.8427630154202854,Spring
+Sample48,Ind13,5,chum salmon,0,Spring
+Sample48,Ind13,5,coho salmon,0.13193123537333123,Spring
+Sample48,Ind13,5,steelhead salmon,0.012092296815539059,Spring
+Sample48,Ind13,5,pink salmon,0,Spring
+Sample48,Ind13,5,sablefish,0,Spring
+Sample48,Ind13,5,lingcod,0,Spring
+Sample48,Ind13,5,arrowtooth flounder,0.013170463019326294,Spring
+Sample48,Ind13,5,Pacific halibut,0,Spring
+Sample49,Ind28,6,Chinook salmon,0.917717297164001,Spring
+Sample49,Ind28,6,chum salmon,0,Spring
+Sample49,Ind28,6,coho salmon,0.06403060649390777,Spring
+Sample49,Ind28,6,steelhead salmon,0.018252096342091215,Spring
+Sample49,Ind28,6,pink salmon,0,Spring
+Sample49,Ind28,6,sablefish,0,Spring
+Sample49,Ind28,6,lingcod,0,Spring
+Sample49,Ind28,6,arrowtooth flounder,0,Spring
+Sample49,Ind28,6,Pacific halibut,0,Spring
+Sample50,Ind5,9,Chinook salmon,0.382545575989159,Summer
+Sample50,Ind5,9,chum salmon,0.3124610941740676,Summer
+Sample50,Ind5,9,coho salmon,0.26865197429100596,Summer
+Sample50,Ind5,9,steelhead salmon,0,Summer
+Sample50,Ind5,9,pink salmon,0,Summer
+Sample50,Ind5,9,sablefish,0.019346510260419513,Summer
+Sample50,Ind5,9,lingcod,0,Summer
+Sample50,Ind5,9,arrowtooth flounder,0.010692499234310008,Summer
+Sample50,Ind5,9,Pacific halibut,0,Summer
+Sample51,Ind4,10,Chinook salmon,0.3106601938332628,Autumn
+Sample51,Ind4,10,chum salmon,0.16471916461989605,Autumn
+Sample51,Ind4,10,coho salmon,0.23513570216467344,Autumn
+Sample51,Ind4,10,steelhead salmon,0,Autumn
+Sample51,Ind4,10,pink salmon,0,Autumn
+Sample51,Ind4,10,sablefish,0.2145244261655467,Autumn
+Sample51,Ind4,10,lingcod,0,Autumn
+Sample51,Ind4,10,arrowtooth flounder,0.06783246899317351,Autumn
+Sample51,Ind4,10,Pacific halibut,0,Autumn
+Sample52,Ind2,8,Chinook salmon,0.35447261764229976,Summer
+Sample52,Ind2,8,chum salmon,0.1888963509179414,Summer
+Sample52,Ind2,8,coho salmon,0.4166020514759878,Summer
+Sample52,Ind2,8,steelhead salmon,0,Summer
+Sample52,Ind2,8,pink salmon,0,Summer
+Sample52,Ind2,8,sablefish,0,Summer
+Sample52,Ind2,8,lingcod,0,Summer
+Sample52,Ind2,8,arrowtooth flounder,0,Summer
+Sample52,Ind2,8,Pacific halibut,0.030724658265679165,Summer
+Sample53,Ind24,2,Chinook salmon,0.6154157066330522,Winter
+Sample53,Ind24,2,chum salmon,0.17738820681826192,Winter
+Sample53,Ind24,2,coho salmon,0,Winter
+Sample53,Ind24,2,steelhead salmon,0.011195456966340802,Winter
+Sample53,Ind24,2,pink salmon,0,Winter
+Sample53,Ind24,2,sablefish,0,Winter
+Sample53,Ind24,2,lingcod,0.0726751775127204,Winter
+Sample53,Ind24,2,arrowtooth flounder,0,Winter
+Sample53,Ind24,2,Pacific halibut,0.11586211108014431,Winter
+Sample54,Ind18,7,Chinook salmon,0.8025932753338392,Summer
+Sample54,Ind18,7,chum salmon,0,Summer
+Sample54,Ind18,7,coho salmon,0.18169481391237163,Summer
+Sample54,Ind18,7,steelhead salmon,0.015711910753789277,Summer
+Sample54,Ind18,7,pink salmon,0,Summer
+Sample54,Ind18,7,sablefish,0,Summer
+Sample54,Ind18,7,lingcod,0,Summer
+Sample54,Ind18,7,arrowtooth flounder,0,Summer
+Sample54,Ind18,7,Pacific halibut,0,Summer
+Sample55,Ind3,7,Chinook salmon,0.6261393177935773,Summer
+Sample55,Ind3,7,chum salmon,0,Summer
+Sample55,Ind3,7,coho salmon,0.3702813874671198,Summer
+Sample55,Ind3,7,steelhead salmon,0,Summer
+Sample55,Ind3,7,pink salmon,0,Summer
+Sample55,Ind3,7,sablefish,0,Summer
+Sample55,Ind3,7,lingcod,0,Summer
+Sample55,Ind3,7,arrowtooth flounder,0,Summer
+Sample55,Ind3,7,Pacific halibut,0,Summer
+Sample56,Ind24,12,Chinook salmon,0.16031501436995688,Autumn
+Sample56,Ind24,12,chum salmon,0.4835040771239803,Autumn
+Sample56,Ind24,12,coho salmon,0,Autumn
+Sample56,Ind24,12,steelhead salmon,0.026083532648675127,Autumn
+Sample56,Ind24,12,pink salmon,0,Autumn
+Sample56,Ind24,12,sablefish,0.010874500861780758,Autumn
+Sample56,Ind24,12,lingcod,0,Autumn
+Sample56,Ind24,12,arrowtooth flounder,0.31237416365203374,Autumn
+Sample56,Ind24,12,Pacific halibut,0,Autumn
+Sample57,Ind23,5,Chinook salmon,0.5571980188575179,Spring
+Sample57,Ind23,5,chum salmon,0,Spring
+Sample57,Ind23,5,coho salmon,0.44239981805024775,Spring
+Sample57,Ind23,5,steelhead salmon,0,Spring
+Sample57,Ind23,5,pink salmon,0,Spring
+Sample57,Ind23,5,sablefish,0,Spring
+Sample57,Ind23,5,lingcod,0,Spring
+Sample57,Ind23,5,arrowtooth flounder,0,Spring
+Sample57,Ind23,5,Pacific halibut,0,Spring
+Sample58,Ind17,3,Chinook salmon,0.19653627413758687,Winter
+Sample58,Ind17,3,chum salmon,0.10692299519486435,Winter
+Sample58,Ind17,3,coho salmon,0.3434269974937222,Winter
+Sample58,Ind17,3,steelhead salmon,0.02051629449018056,Winter
+Sample58,Ind17,3,pink salmon,0,Winter
+Sample58,Ind17,3,sablefish,0,Winter
+Sample58,Ind17,3,lingcod,0.3104200487828419,Winter
+Sample58,Ind17,3,arrowtooth flounder,0.017892232077110708,Winter
+Sample58,Ind17,3,Pacific halibut,0,Winter
+Sample59,Ind21,10,Chinook salmon,0.14093708991356155,Autumn
+Sample59,Ind21,10,chum salmon,0.09312019364356147,Autumn
+Sample59,Ind21,10,coho salmon,0.4140095969205555,Autumn
+Sample59,Ind21,10,steelhead salmon,0.04231977150495803,Autumn
+Sample59,Ind21,10,pink salmon,0,Autumn
+Sample59,Ind21,10,sablefish,0.23856840672104254,Autumn
+Sample59,Ind21,10,lingcod,0,Autumn
+Sample59,Ind21,10,arrowtooth flounder,0.07100436051695518,Autumn
+Sample59,Ind21,10,Pacific halibut,0,Autumn
+Sample60,Ind26,9,Chinook salmon,0.35953025580673686,Summer
+Sample60,Ind26,9,chum salmon,0.3185636666792662,Summer
+Sample60,Ind26,9,coho salmon,0.3002323986723836,Summer
+Sample60,Ind26,9,steelhead salmon,0,Summer
+Sample60,Ind26,9,pink salmon,0,Summer
+Sample60,Ind26,9,sablefish,0,Summer
+Sample60,Ind26,9,lingcod,0,Summer
+Sample60,Ind26,9,arrowtooth flounder,0.011457507195348847,Summer
+Sample60,Ind26,9,Pacific halibut,0,Summer
+Sample61,Ind18,9,Chinook salmon,0.28022032436034544,Summer
+Sample61,Ind18,9,chum salmon,0.19378244656800075,Summer
+Sample61,Ind18,9,coho salmon,0.38418183851392634,Summer
+Sample61,Ind18,9,steelhead salmon,0.10234831784981997,Summer
+Sample61,Ind18,9,pink salmon,0,Summer
+Sample61,Ind18,9,sablefish,0.027488140421004698,Summer
+Sample61,Ind18,9,lingcod,0,Summer
+Sample61,Ind18,9,arrowtooth flounder,0,Summer
+Sample61,Ind18,9,Pacific halibut,0.011936541861295884,Summer
+Sample62,Ind6,5,Chinook salmon,0.6674428839483364,Spring
+Sample62,Ind6,5,chum salmon,0,Spring
+Sample62,Ind6,5,coho salmon,0.3002070994055065,Spring
+Sample62,Ind6,5,steelhead salmon,0,Spring
+Sample62,Ind6,5,pink salmon,0,Spring
+Sample62,Ind6,5,sablefish,0,Spring
+Sample62,Ind6,5,lingcod,0,Spring
+Sample62,Ind6,5,arrowtooth flounder,0,Spring
+Sample62,Ind6,5,Pacific halibut,0.020638238885808912,Spring
+Sample63,Ind6,2,Chinook salmon,0.5203674997793365,Winter
+Sample63,Ind6,2,chum salmon,0.20423790246987122,Winter
+Sample63,Ind6,2,coho salmon,0,Winter
+Sample63,Ind6,2,steelhead salmon,0.029761943897608736,Winter
+Sample63,Ind6,2,pink salmon,0,Winter
+Sample63,Ind6,2,sablefish,0,Winter
+Sample63,Ind6,2,lingcod,0.18104323662139019,Winter
+Sample63,Ind6,2,arrowtooth flounder,0,Winter
+Sample63,Ind6,2,Pacific halibut,0.06447930839934837,Winter
+Sample64,Ind2,3,Chinook salmon,0.5594608887383912,Winter
+Sample64,Ind2,3,chum salmon,0.12928702161148697,Winter
+Sample64,Ind2,3,coho salmon,0.12097550714969986,Winter
+Sample64,Ind2,3,steelhead salmon,0.027194791092013386,Winter
+Sample64,Ind2,3,pink salmon,0,Winter
+Sample64,Ind2,3,sablefish,0,Winter
+Sample64,Ind2,3,lingcod,0.08071069640051376,Winter
+Sample64,Ind2,3,arrowtooth flounder,0,Winter
+Sample64,Ind2,3,Pacific halibut,0.08172225187984052,Winter
+Sample65,Ind20,2,Chinook salmon,0.4410431247229308,Winter
+Sample65,Ind20,2,chum salmon,0.32361709270004974,Winter
+Sample65,Ind20,2,coho salmon,0,Winter
+Sample65,Ind20,2,steelhead salmon,0.013847826953267448,Winter
+Sample65,Ind20,2,pink salmon,0,Winter
+Sample65,Ind20,2,sablefish,0,Winter
+Sample65,Ind20,2,lingcod,0.14510093739853433,Winter
+Sample65,Ind20,2,arrowtooth flounder,0,Winter
+Sample65,Ind20,2,Pacific halibut,0.07578585839437278,Winter
+Sample66,Ind3,11,Chinook salmon,0.03825035864896933,Autumn
+Sample66,Ind3,11,chum salmon,0.40751774565704907,Autumn
+Sample66,Ind3,11,coho salmon,0.1860101873593494,Autumn
+Sample66,Ind3,11,steelhead salmon,0.050266286890621695,Autumn
+Sample66,Ind3,11,pink salmon,0,Autumn
+Sample66,Ind3,11,sablefish,0.14805311008548283,Autumn
+Sample66,Ind3,11,lingcod,0,Autumn
+Sample66,Ind3,11,arrowtooth flounder,0.11414651878158365,Autumn
+Sample66,Ind3,11,Pacific halibut,0.0557557925769439,Autumn
+Sample67,Ind22,11,Chinook salmon,0.023744095714776654,Autumn
+Sample67,Ind22,11,chum salmon,0.3424451870699262,Autumn
+Sample67,Ind22,11,coho salmon,0.16236046412429464,Autumn
+Sample67,Ind22,11,steelhead salmon,0,Autumn
+Sample67,Ind22,11,pink salmon,0,Autumn
+Sample67,Ind22,11,sablefish,0.3584508828387521,Autumn
+Sample67,Ind22,11,lingcod,0,Autumn
+Sample67,Ind22,11,arrowtooth flounder,0.1031483535537776,Autumn
+Sample67,Ind22,11,Pacific halibut,0,Autumn
+Sample68,Ind21,4,Chinook salmon,0.40608100323981033,Spring
+Sample68,Ind21,4,chum salmon,0.24947935662834952,Spring
+Sample68,Ind21,4,coho salmon,0.20013651587567424,Spring
+Sample68,Ind21,4,steelhead salmon,0.019456894472084645,Spring
+Sample68,Ind21,4,pink salmon,0,Spring
+Sample68,Ind21,4,sablefish,0,Spring
+Sample68,Ind21,4,lingcod,0,Spring
+Sample68,Ind21,4,arrowtooth flounder,0,Spring
+Sample68,Ind21,4,Pacific halibut,0.12484564385513883,Spring
+Sample69,Ind2,8,Chinook salmon,0.43572618764368193,Summer
+Sample69,Ind2,8,chum salmon,0.20446051765236262,Summer
+Sample69,Ind2,8,coho salmon,0.3578107533940411,Summer
+Sample69,Ind2,8,steelhead salmon,0,Summer
+Sample69,Ind2,8,pink salmon,0,Summer
+Sample69,Ind2,8,sablefish,0,Summer
+Sample69,Ind2,8,lingcod,0,Summer
+Sample69,Ind2,8,arrowtooth flounder,0,Summer
+Sample69,Ind2,8,Pacific halibut,0,Summer
+Sample70,Ind23,5,Chinook salmon,0.657326471385213,Spring
+Sample70,Ind23,5,chum salmon,0,Spring
+Sample70,Ind23,5,coho salmon,0.28794258688215546,Spring
+Sample70,Ind23,5,steelhead salmon,0.053283177712546516,Spring
+Sample70,Ind23,5,pink salmon,0,Spring
+Sample70,Ind23,5,sablefish,0,Spring
+Sample70,Ind23,5,lingcod,0,Spring
+Sample70,Ind23,5,arrowtooth flounder,0,Spring
+Sample70,Ind23,5,Pacific halibut,0,Spring
+Sample71,Ind6,8,Chinook salmon,0.20862085431796465,Summer
+Sample71,Ind6,8,chum salmon,0.5649887039985176,Summer
+Sample71,Ind6,8,coho salmon,0.19499609361317016,Summer
+Sample71,Ind6,8,steelhead salmon,0,Summer
+Sample71,Ind6,8,pink salmon,0,Summer
+Sample71,Ind6,8,sablefish,0,Summer
+Sample71,Ind6,8,lingcod,0,Summer
+Sample71,Ind6,8,arrowtooth flounder,0.02198280437053015,Summer
+Sample71,Ind6,8,Pacific halibut,0,Summer
+Sample72,Ind26,6,Chinook salmon,0.9336849108330681,Spring
+Sample72,Ind26,6,chum salmon,0,Spring
+Sample72,Ind26,6,coho salmon,0.06474545654730633,Spring
+Sample72,Ind26,6,steelhead salmon,0,Spring
+Sample72,Ind26,6,pink salmon,0,Spring
+Sample72,Ind26,6,sablefish,0,Spring
+Sample72,Ind26,6,lingcod,0,Spring
+Sample72,Ind26,6,arrowtooth flounder,0,Spring
+Sample72,Ind26,6,Pacific halibut,0,Spring
+Sample73,Ind10,4,Chinook salmon,0.3527043446185416,Spring
+Sample73,Ind10,4,chum salmon,0.16894568486884298,Spring
+Sample73,Ind10,4,coho salmon,0.32733249663616,Spring
+Sample73,Ind10,4,steelhead salmon,0,Spring
+Sample73,Ind10,4,pink salmon,0,Spring
+Sample73,Ind10,4,sablefish,0,Spring
+Sample73,Ind10,4,lingcod,0,Spring
+Sample73,Ind10,4,arrowtooth flounder,0,Spring
+Sample73,Ind10,4,Pacific halibut,0.1490039308699638,Spring
+Sample74,Ind8,5,Chinook salmon,0.6970613229497382,Spring
+Sample74,Ind8,5,chum salmon,0,Spring
+Sample74,Ind8,5,coho salmon,0.2693062303179727,Spring
+Sample74,Ind8,5,steelhead salmon,0.022844946543485095,Spring
+Sample74,Ind8,5,pink salmon,0,Spring
+Sample74,Ind8,5,sablefish,0,Spring
+Sample74,Ind8,5,lingcod,0,Spring
+Sample74,Ind8,5,arrowtooth flounder,0.010642755565093327,Spring
+Sample74,Ind8,5,Pacific halibut,0,Spring
+Sample75,Ind5,4,Chinook salmon,0.33513860209987384,Spring
+Sample75,Ind5,4,chum salmon,0.20058244534546568,Spring
+Sample75,Ind5,4,coho salmon,0.1869868620134024,Spring
+Sample75,Ind5,4,steelhead salmon,0.02593482641714275,Spring
+Sample75,Ind5,4,pink salmon,0,Spring
+Sample75,Ind5,4,sablefish,0,Spring
+Sample75,Ind5,4,lingcod,0,Spring
+Sample75,Ind5,4,arrowtooth flounder,0.038664716705197555,Spring
+Sample75,Ind5,4,Pacific halibut,0.21269254741891772,Spring
+Sample76,Ind1,11,Chinook salmon,0,Autumn
+Sample76,Ind1,11,chum salmon,0.535263631256491,Autumn
+Sample76,Ind1,11,coho salmon,0.20972873084147536,Autumn
+Sample76,Ind1,11,steelhead salmon,0,Autumn
+Sample76,Ind1,11,pink salmon,0,Autumn
+Sample76,Ind1,11,sablefish,0.16763032699046493,Autumn
+Sample76,Ind1,11,lingcod,0,Autumn
+Sample76,Ind1,11,arrowtooth flounder,0.08126399668941231,Autumn
+Sample76,Ind1,11,Pacific halibut,0,Autumn
+Sample77,Ind17,10,Chinook salmon,0.3956782444807404,Autumn
+Sample77,Ind17,10,chum salmon,0.1857054497931114,Autumn
+Sample77,Ind17,10,coho salmon,0.12569122823535722,Autumn
+Sample77,Ind17,10,steelhead salmon,0,Autumn
+Sample77,Ind17,10,pink salmon,0,Autumn
+Sample77,Ind17,10,sablefish,0.14469809056699592,Autumn
+Sample77,Ind17,10,lingcod,0,Autumn
+Sample77,Ind17,10,arrowtooth flounder,0.14606216873120306,Autumn
+Sample77,Ind17,10,Pacific halibut,0,Autumn
+Sample78,Ind7,1,Chinook salmon,0,Winter
+Sample78,Ind7,1,chum salmon,0.4491885425984332,Winter
+Sample78,Ind7,1,coho salmon,0,Winter
+Sample78,Ind7,1,steelhead salmon,0.025327779515985464,Winter
+Sample78,Ind7,1,pink salmon,0,Winter
+Sample78,Ind7,1,sablefish,0,Winter
+Sample78,Ind7,1,lingcod,0.484330461340428,Winter
+Sample78,Ind7,1,arrowtooth flounder,0.024830978828711003,Winter
+Sample78,Ind7,1,Pacific halibut,0.012413583688400098,Winter
+Sample79,Ind4,11,Chinook salmon,0.09688182436253225,Autumn
+Sample79,Ind4,11,chum salmon,0.23464590688540243,Autumn
+Sample79,Ind4,11,coho salmon,0.07084226748424377,Autumn
+Sample79,Ind4,11,steelhead salmon,0.022625258955499973,Autumn
+Sample79,Ind4,11,pink salmon,0,Autumn
+Sample79,Ind4,11,sablefish,0.22009305474619378,Autumn
+Sample79,Ind4,11,lingcod,0,Autumn
+Sample79,Ind4,11,arrowtooth flounder,0.35387230201240016,Autumn
+Sample79,Ind4,11,Pacific halibut,0,Autumn
+Sample80,Ind13,12,Chinook salmon,0.05373079621979475,Autumn
+Sample80,Ind13,12,chum salmon,0.33302900987907136,Autumn
+Sample80,Ind13,12,coho salmon,0,Autumn
+Sample80,Ind13,12,steelhead salmon,0,Autumn
+Sample80,Ind13,12,pink salmon,0,Autumn
+Sample80,Ind13,12,sablefish,0.2337206459999883,Autumn
+Sample80,Ind13,12,lingcod,0,Autumn
+Sample80,Ind13,12,arrowtooth flounder,0.3731346107793278,Autumn
+Sample80,Ind13,12,Pacific halibut,0,Autumn
+Sample81,Ind10,1,Chinook salmon,0.1025396233408456,Winter
+Sample81,Ind10,1,chum salmon,0.39211998631638617,Winter
+Sample81,Ind10,1,coho salmon,0,Winter
+Sample81,Ind10,1,steelhead salmon,0.031157020287804912,Winter
+Sample81,Ind10,1,pink salmon,0,Winter
+Sample81,Ind10,1,sablefish,0,Winter
+Sample81,Ind10,1,lingcod,0.4638309622991003,Winter
+Sample81,Ind10,1,arrowtooth flounder,0,Winter
+Sample81,Ind10,1,Pacific halibut,0,Winter
+Sample82,Ind9,4,Chinook salmon,0.5487370464118376,Spring
+Sample82,Ind9,4,chum salmon,0.08950404377551942,Spring
+Sample82,Ind9,4,coho salmon,0.14346833979818743,Spring
+Sample82,Ind9,4,steelhead salmon,0.013685567219623608,Spring
+Sample82,Ind9,4,pink salmon,0,Spring
+Sample82,Ind9,4,sablefish,0,Spring
+Sample82,Ind9,4,lingcod,0,Spring
+Sample82,Ind9,4,arrowtooth flounder,0.05195511190690292,Spring
+Sample82,Ind9,4,Pacific halibut,0.15264989088792905,Spring
+Sample83,Ind29,6,Chinook salmon,0.8573410975728557,Spring
+Sample83,Ind29,6,chum salmon,0,Spring
+Sample83,Ind29,6,coho salmon,0.14219649600999396,Spring
+Sample83,Ind29,6,steelhead salmon,0,Spring
+Sample83,Ind29,6,pink salmon,0,Spring
+Sample83,Ind29,6,sablefish,0,Spring
+Sample83,Ind29,6,lingcod,0,Spring
+Sample83,Ind29,6,arrowtooth flounder,0,Spring
+Sample83,Ind29,6,Pacific halibut,0,Spring
+Sample84,Ind12,6,Chinook salmon,0.7964269737843692,Spring
+Sample84,Ind12,6,chum salmon,0,Spring
+Sample84,Ind12,6,coho salmon,0.13517156672466168,Spring
+Sample84,Ind12,6,steelhead salmon,0.06840145949096917,Spring
+Sample84,Ind12,6,pink salmon,0,Spring
+Sample84,Ind12,6,sablefish,0,Spring
+Sample84,Ind12,6,lingcod,0,Spring
+Sample84,Ind12,6,arrowtooth flounder,0,Spring
+Sample84,Ind12,6,Pacific halibut,0,Spring
+Sample85,Ind20,12,Chinook salmon,0.25792234460250874,Autumn
+Sample85,Ind20,12,chum salmon,0.40238575505280694,Autumn
+Sample85,Ind20,12,coho salmon,0,Autumn
+Sample85,Ind20,12,steelhead salmon,0,Autumn
+Sample85,Ind20,12,pink salmon,0,Autumn
+Sample85,Ind20,12,sablefish,0.012140095582689353,Autumn
+Sample85,Ind20,12,lingcod,0.10630071347418467,Autumn
+Sample85,Ind20,12,arrowtooth flounder,0.21784973956403872,Autumn
+Sample85,Ind20,12,Pacific halibut,0,Autumn
+Sample86,Ind9,7,Chinook salmon,0.8004602800626744,Summer
+Sample86,Ind9,7,chum salmon,0,Summer
+Sample86,Ind9,7,coho salmon,0.16346911800756336,Summer
+Sample86,Ind9,7,steelhead salmon,0.036070601929762185,Summer
+Sample86,Ind9,7,pink salmon,0,Summer
+Sample86,Ind9,7,sablefish,0,Summer
+Sample86,Ind9,7,lingcod,0,Summer
+Sample86,Ind9,7,arrowtooth flounder,0,Summer
+Sample86,Ind9,7,Pacific halibut,0,Summer
+Sample87,Ind11,12,Chinook salmon,0.04390524909206223,Autumn
+Sample87,Ind11,12,chum salmon,0.4146700191947945,Autumn
+Sample87,Ind11,12,coho salmon,0,Autumn
+Sample87,Ind11,12,steelhead salmon,0,Autumn
+Sample87,Ind11,12,pink salmon,0,Autumn
+Sample87,Ind11,12,sablefish,0.04632350576434106,Autumn
+Sample87,Ind11,12,lingcod,0.16330680618994853,Autumn
+Sample87,Ind11,12,arrowtooth flounder,0.33133625408379364,Autumn
+Sample87,Ind11,12,Pacific halibut,0,Autumn
+Sample88,Ind3,5,Chinook salmon,0.6429666856239817,Spring
+Sample88,Ind3,5,chum salmon,0,Spring
+Sample88,Ind3,5,coho salmon,0.11657276383135652,Spring
+Sample88,Ind3,5,steelhead salmon,0,Spring
+Sample88,Ind3,5,pink salmon,0,Spring
+Sample88,Ind3,5,sablefish,0,Spring
+Sample88,Ind3,5,lingcod,0,Spring
+Sample88,Ind3,5,arrowtooth flounder,0,Spring
+Sample88,Ind3,5,Pacific halibut,0.23593949609809184,Spring
+Sample89,Ind29,2,Chinook salmon,0.5800871790970433,Winter
+Sample89,Ind29,2,chum salmon,0.20129839491027587,Winter
+Sample89,Ind29,2,coho salmon,0,Winter
+Sample89,Ind29,2,steelhead salmon,0,Winter
+Sample89,Ind29,2,pink salmon,0,Winter
+Sample89,Ind29,2,sablefish,0,Winter
+Sample89,Ind29,2,lingcod,0.16763480965728694,Winter
+Sample89,Ind29,2,arrowtooth flounder,0,Winter
+Sample89,Ind29,2,Pacific halibut,0.046368482353113236,Winter
+Sample90,Ind16,7,Chinook salmon,0.8672800533922195,Summer
+Sample90,Ind16,7,chum salmon,0,Summer
+Sample90,Ind16,7,coho salmon,0.06212805503159176,Summer
+Sample90,Ind16,7,steelhead salmon,0.07059189157618866,Summer
+Sample90,Ind16,7,pink salmon,0,Summer
+Sample90,Ind16,7,sablefish,0,Summer
+Sample90,Ind16,7,lingcod,0,Summer
+Sample90,Ind16,7,arrowtooth flounder,0,Summer
+Sample90,Ind16,7,Pacific halibut,0,Summer
+Sample91,Ind5,10,Chinook salmon,0.24351845885868245,Autumn
+Sample91,Ind5,10,chum salmon,0.2022416950624268,Autumn
+Sample91,Ind5,10,coho salmon,0.09861452252639087,Autumn
+Sample91,Ind5,10,steelhead salmon,0.049017501588712355,Autumn
+Sample91,Ind5,10,pink salmon,0,Autumn
+Sample91,Ind5,10,sablefish,0.21308861882908983,Autumn
+Sample91,Ind5,10,lingcod,0,Autumn
+Sample91,Ind5,10,arrowtooth flounder,0.19351838223387796,Autumn
+Sample91,Ind5,10,Pacific halibut,0,Autumn
+Sample92,Ind28,6,Chinook salmon,0.7204777164482856,Spring
+Sample92,Ind28,6,chum salmon,0,Spring
+Sample92,Ind28,6,coho salmon,0.22236997423538543,Spring
+Sample92,Ind28,6,steelhead salmon,0.05715230931632894,Spring
+Sample92,Ind28,6,pink salmon,0,Spring
+Sample92,Ind28,6,sablefish,0,Spring
+Sample92,Ind28,6,lingcod,0,Spring
+Sample92,Ind28,6,arrowtooth flounder,0,Spring
+Sample92,Ind28,6,Pacific halibut,0,Spring
+Sample93,Ind24,2,Chinook salmon,0.2741329148206412,Winter
+Sample93,Ind24,2,chum salmon,0.1811746101616247,Winter
+Sample93,Ind24,2,coho salmon,0,Winter
+Sample93,Ind24,2,steelhead salmon,0,Winter
+Sample93,Ind24,2,pink salmon,0,Winter
+Sample93,Ind24,2,sablefish,0,Winter
+Sample93,Ind24,2,lingcod,0.4729090063815181,Winter
+Sample93,Ind24,2,arrowtooth flounder,0,Winter
+Sample93,Ind24,2,Pacific halibut,0.0695649483479939,Winter
+Sample94,Ind14,12,Chinook salmon,0.10845552997345954,Autumn
+Sample94,Ind14,12,chum salmon,0.42958849380782965,Autumn
+Sample94,Ind14,12,coho salmon,0,Autumn
+Sample94,Ind14,12,steelhead salmon,0.03662633286756607,Autumn
+Sample94,Ind14,12,pink salmon,0,Autumn
+Sample94,Ind14,12,sablefish,0.08701877890019673,Autumn
+Sample94,Ind14,12,lingcod,0.020052679860106615,Autumn
+Sample94,Ind14,12,arrowtooth flounder,0.22168071407080206,Autumn
+Sample94,Ind14,12,Pacific halibut,0.09657747052003922,Autumn
+Sample95,Ind5,3,Chinook salmon,0.4299787789837313,Winter
+Sample95,Ind5,3,chum salmon,0.1299432785413081,Winter
+Sample95,Ind5,3,coho salmon,0.13808271860049165,Winter
+Sample95,Ind5,3,steelhead salmon,0,Winter
+Sample95,Ind5,3,pink salmon,0,Winter
+Sample95,Ind5,3,sablefish,0,Winter
+Sample95,Ind5,3,lingcod,0.263589638189484,Winter
+Sample95,Ind5,3,arrowtooth flounder,0,Winter
+Sample95,Ind5,3,Pacific halibut,0.029964001363715704,Winter
+Sample96,Ind28,1,Chinook salmon,0.4386466106049843,Winter
+Sample96,Ind28,1,chum salmon,0.19376326299663646,Winter
+Sample96,Ind28,1,coho salmon,0,Winter
+Sample96,Ind28,1,steelhead salmon,0,Winter
+Sample96,Ind28,1,pink salmon,0,Winter
+Sample96,Ind28,1,sablefish,0,Winter
+Sample96,Ind28,1,lingcod,0.26932773982938574,Winter
+Sample96,Ind28,1,arrowtooth flounder,0.04810153842019183,Winter
+Sample96,Ind28,1,Pacific halibut,0.042687951855686836,Winter
+Sample97,Ind22,4,Chinook salmon,0.4052843946236405,Spring
+Sample97,Ind22,4,chum salmon,0.3181151834943242,Spring
+Sample97,Ind22,4,coho salmon,0.08625441289497511,Spring
+Sample97,Ind22,4,steelhead salmon,0.12480881312572267,Spring
+Sample97,Ind22,4,pink salmon,0,Spring
+Sample97,Ind22,4,sablefish,0,Spring
+Sample97,Ind22,4,lingcod,0,Spring
+Sample97,Ind22,4,arrowtooth flounder,0,Spring
+Sample97,Ind22,4,Pacific halibut,0.05736018942097337,Spring
+Sample98,Ind2,11,Chinook salmon,0.010579011770564334,Autumn
+Sample98,Ind2,11,chum salmon,0.1836405820858109,Autumn
+Sample98,Ind2,11,coho salmon,0.269489854660122,Autumn
+Sample98,Ind2,11,steelhead salmon,0.055851532410943865,Autumn
+Sample98,Ind2,11,pink salmon,0,Autumn
+Sample98,Ind2,11,sablefish,0.336252445509139,Autumn
+Sample98,Ind2,11,lingcod,0,Autumn
+Sample98,Ind2,11,arrowtooth flounder,0.1435255547435079,Autumn
+Sample98,Ind2,11,Pacific halibut,0,Autumn
+Sample99,Ind18,9,Chinook salmon,0.4600745292184738,Summer
+Sample99,Ind18,9,chum salmon,0.0934544197775756,Summer
+Sample99,Ind18,9,coho salmon,0.3466626532015951,Summer
+Sample99,Ind18,9,steelhead salmon,0.019973727656918395,Summer
+Sample99,Ind18,9,pink salmon,0,Summer
+Sample99,Ind18,9,sablefish,0.07248280645754798,Summer
+Sample99,Ind18,9,lingcod,0,Summer
+Sample99,Ind18,9,arrowtooth flounder,0,Summer
+Sample99,Ind18,9,Pacific halibut,0,Summer
+Sample100,Ind24,6,Chinook salmon,0.7428182541524205,Spring
+Sample100,Ind24,6,chum salmon,0,Spring
+Sample100,Ind24,6,coho salmon,0.15540265444080567,Spring
+Sample100,Ind24,6,steelhead salmon,0.10177909140677381,Spring
+Sample100,Ind24,6,pink salmon,0,Spring
+Sample100,Ind24,6,sablefish,0,Spring
+Sample100,Ind24,6,lingcod,0,Spring
+Sample100,Ind24,6,arrowtooth flounder,0,Spring
+Sample100,Ind24,6,Pacific halibut,0,Spring
+Sample101,Ind17,10,Chinook salmon,0.2742997593718619,Autumn
+Sample101,Ind17,10,chum salmon,0.2097302288121483,Autumn
+Sample101,Ind17,10,coho salmon,0.13463586975714373,Autumn
+Sample101,Ind17,10,steelhead salmon,0.016741642055078408,Autumn
+Sample101,Ind17,10,pink salmon,0,Autumn
+Sample101,Ind17,10,sablefish,0.2747932394344211,Autumn
+Sample101,Ind17,10,lingcod,0,Autumn
+Sample101,Ind17,10,arrowtooth flounder,0.08967071428998831,Autumn
+Sample101,Ind17,10,Pacific halibut,0,Autumn
+Sample102,Ind18,7,Chinook salmon,0.8850555018888375,Summer
+Sample102,Ind18,7,chum salmon,0,Summer
+Sample102,Ind18,7,coho salmon,0.1148270893150794,Summer
+Sample102,Ind18,7,steelhead salmon,0,Summer
+Sample102,Ind18,7,pink salmon,0,Summer
+Sample102,Ind18,7,sablefish,0,Summer
+Sample102,Ind18,7,lingcod,0,Summer
+Sample102,Ind18,7,arrowtooth flounder,0,Summer
+Sample102,Ind18,7,Pacific halibut,0,Summer
+Sample103,Ind5,3,Chinook salmon,0.4371818122477455,Winter
+Sample103,Ind5,3,chum salmon,0.0443064758305993,Winter
+Sample103,Ind5,3,coho salmon,0.06176236635495961,Winter
+Sample103,Ind5,3,steelhead salmon,0.014126466896195204,Winter
+Sample103,Ind5,3,pink salmon,0,Winter
+Sample103,Ind5,3,sablefish,0,Winter
+Sample103,Ind5,3,lingcod,0.2107736835451596,Winter
+Sample103,Ind5,3,arrowtooth flounder,0,Winter
+Sample103,Ind5,3,Pacific halibut,0.23181676091326578,Winter
+Sample104,Ind14,12,Chinook salmon,0,Autumn
+Sample104,Ind14,12,chum salmon,0.5116776602358432,Autumn
+Sample104,Ind14,12,coho salmon,0,Autumn
+Sample104,Ind14,12,steelhead salmon,0.13322611725786584,Autumn
+Sample104,Ind14,12,pink salmon,0,Autumn
+Sample104,Ind14,12,sablefish,0.03085954669554767,Autumn
+Sample104,Ind14,12,lingcod,0.016866714261186404,Autumn
+Sample104,Ind14,12,arrowtooth flounder,0.2858766846007615,Autumn
+Sample104,Ind14,12,Pacific halibut,0.015544595915460303,Autumn
+Sample105,Ind8,2,Chinook salmon,0.47946929251154513,Winter
+Sample105,Ind8,2,chum salmon,0.22532057232863073,Winter
+Sample105,Ind8,2,coho salmon,0,Winter
+Sample105,Ind8,2,steelhead salmon,0.01849859376846841,Winter
+Sample105,Ind8,2,pink salmon,0,Winter
+Sample105,Ind8,2,sablefish,0,Winter
+Sample105,Ind8,2,lingcod,0.11107331136857768,Winter
+Sample105,Ind8,2,arrowtooth flounder,0,Winter
+Sample105,Ind8,2,Pacific halibut,0.16563822776424966,Winter
+Sample106,Ind23,9,Chinook salmon,0.46826352461326376,Summer
+Sample106,Ind23,9,chum salmon,0.24153345921132774,Summer
+Sample106,Ind23,9,coho salmon,0.23891245666279312,Summer
+Sample106,Ind23,9,steelhead salmon,0,Summer
+Sample106,Ind23,9,pink salmon,0,Summer
+Sample106,Ind23,9,sablefish,0.016739915464522498,Summer
+Sample106,Ind23,9,lingcod,0,Summer
+Sample106,Ind23,9,arrowtooth flounder,0.011470883902772134,Summer
+Sample106,Ind23,9,Pacific halibut,0.013307414904180933,Summer
+Sample107,Ind8,12,Chinook salmon,0.03509168505221613,Autumn
+Sample107,Ind8,12,chum salmon,0.362518524314675,Autumn
+Sample107,Ind8,12,coho salmon,0,Autumn
+Sample107,Ind8,12,steelhead salmon,0.06984314966735852,Autumn
+Sample107,Ind8,12,pink salmon,0,Autumn
+Sample107,Ind8,12,sablefish,0,Autumn
+Sample107,Ind8,12,lingcod,0.05086259608986412,Autumn
+Sample107,Ind8,12,arrowtooth flounder,0.47906489559239507,Autumn
+Sample107,Ind8,12,Pacific halibut,0,Autumn
+Sample108,Ind21,10,Chinook salmon,0.35179633571408636,Autumn
+Sample108,Ind21,10,chum salmon,0.15075829628852555,Autumn
+Sample108,Ind21,10,coho salmon,0.1259500927238644,Autumn
+Sample108,Ind21,10,steelhead salmon,0,Autumn
+Sample108,Ind21,10,pink salmon,0,Autumn
+Sample108,Ind21,10,sablefish,0.3188469182726812,Autumn
+Sample108,Ind21,10,lingcod,0,Autumn
+Sample108,Ind21,10,arrowtooth flounder,0.049057862251472205,Autumn
+Sample108,Ind21,10,Pacific halibut,0,Autumn
+Sample109,Ind4,9,Chinook salmon,0.21611713098397858,Summer
+Sample109,Ind4,9,chum salmon,0.29866908291023725,Summer
+Sample109,Ind4,9,coho salmon,0.4301630770651268,Summer
+Sample109,Ind4,9,steelhead salmon,0,Summer
+Sample109,Ind4,9,pink salmon,0,Summer
+Sample109,Ind4,9,sablefish,0.0140397477464559,Summer
+Sample109,Ind4,9,lingcod,0,Summer
+Sample109,Ind4,9,arrowtooth flounder,0.034855293250228965,Summer
+Sample109,Ind4,9,Pacific halibut,0,Summer
+Sample110,Ind25,3,Chinook salmon,0.4464227206424441,Winter
+Sample110,Ind25,3,chum salmon,0.27855503484368316,Winter
+Sample110,Ind25,3,coho salmon,0.05441826754810431,Winter
+Sample110,Ind25,3,steelhead salmon,0,Winter
+Sample110,Ind25,3,pink salmon,0,Winter
+Sample110,Ind25,3,sablefish,0,Winter
+Sample110,Ind25,3,lingcod,0.18240023775700623,Winter
+Sample110,Ind25,3,arrowtooth flounder,0,Winter
+Sample110,Ind25,3,Pacific halibut,0.029528467140188107,Winter
+Sample111,Ind4,7,Chinook salmon,0.927901328734147,Summer
+Sample111,Ind4,7,chum salmon,0,Summer
+Sample111,Ind4,7,coho salmon,0.07182457103727793,Summer
+Sample111,Ind4,7,steelhead salmon,0,Summer
+Sample111,Ind4,7,pink salmon,0,Summer
+Sample111,Ind4,7,sablefish,0,Summer
+Sample111,Ind4,7,lingcod,0,Summer
+Sample111,Ind4,7,arrowtooth flounder,0,Summer
+Sample111,Ind4,7,Pacific halibut,0,Summer
+Sample112,Ind7,3,Chinook salmon,0.41585330980793384,Winter
+Sample112,Ind7,3,chum salmon,0.09314366078364504,Winter
+Sample112,Ind7,3,coho salmon,0.2409796080419014,Winter
+Sample112,Ind7,3,steelhead salmon,0.02468908717071139,Winter
+Sample112,Ind7,3,pink salmon,0,Winter
+Sample112,Ind7,3,sablefish,0,Winter
+Sample112,Ind7,3,lingcod,0.05848269909224048,Winter
+Sample112,Ind7,3,arrowtooth flounder,0.024911791448474135,Winter
+Sample112,Ind7,3,Pacific halibut,0.1419398436550937,Winter
+Sample113,Ind10,6,Chinook salmon,0.8263371704044286,Spring
+Sample113,Ind10,6,chum salmon,0,Spring
+Sample113,Ind10,6,coho salmon,0.13562115363219146,Spring
+Sample113,Ind10,6,steelhead salmon,0.03804167596338006,Spring
+Sample113,Ind10,6,pink salmon,0,Spring
+Sample113,Ind10,6,sablefish,0,Spring
+Sample113,Ind10,6,lingcod,0,Spring
+Sample113,Ind10,6,arrowtooth flounder,0,Spring
+Sample113,Ind10,6,Pacific halibut,0,Spring
+Sample114,Ind18,4,Chinook salmon,0.48020642433238964,Spring
+Sample114,Ind18,4,chum salmon,0.27403724744898,Spring
+Sample114,Ind18,4,coho salmon,0.08967590894374206,Spring
+Sample114,Ind18,4,steelhead salmon,0,Spring
+Sample114,Ind18,4,pink salmon,0,Spring
+Sample114,Ind18,4,sablefish,0,Spring
+Sample114,Ind18,4,lingcod,0,Spring
+Sample114,Ind18,4,arrowtooth flounder,0.07229803925467636,Spring
+Sample114,Ind18,4,Pacific halibut,0.08374189947671677,Spring
+Sample115,Ind27,10,Chinook salmon,0.3921802346342549,Autumn
+Sample115,Ind27,10,chum salmon,0.10423368950751456,Autumn
+Sample115,Ind27,10,coho salmon,0.10421983580546651,Autumn
+Sample115,Ind27,10,steelhead salmon,0.02286343885131406,Autumn
+Sample115,Ind27,10,pink salmon,0,Autumn
+Sample115,Ind27,10,sablefish,0.27146013173263295,Autumn
+Sample115,Ind27,10,lingcod,0,Autumn
+Sample115,Ind27,10,arrowtooth flounder,0.10494268090935326,Autumn
+Sample115,Ind27,10,Pacific halibut,0,Autumn
+Sample116,Ind13,2,Chinook salmon,0.5913642800962834,Winter
+Sample116,Ind13,2,chum salmon,0.14933040489352936,Winter
+Sample116,Ind13,2,coho salmon,0,Winter
+Sample116,Ind13,2,steelhead salmon,0,Winter
+Sample116,Ind13,2,pink salmon,0,Winter
+Sample116,Ind13,2,sablefish,0,Winter
+Sample116,Ind13,2,lingcod,0.18349338006307972,Winter
+Sample116,Ind13,2,arrowtooth flounder,0,Winter
+Sample116,Ind13,2,Pacific halibut,0.06415007090919435,Winter
+Sample117,Ind21,7,Chinook salmon,0.8134332020878186,Summer
+Sample117,Ind21,7,chum salmon,0,Summer
+Sample117,Ind21,7,coho salmon,0.1865305870532469,Summer
+Sample117,Ind21,7,steelhead salmon,0,Summer
+Sample117,Ind21,7,pink salmon,0,Summer
+Sample117,Ind21,7,sablefish,0,Summer
+Sample117,Ind21,7,lingcod,0,Summer
+Sample117,Ind21,7,arrowtooth flounder,0,Summer
+Sample117,Ind21,7,Pacific halibut,0,Summer
+Sample118,Ind22,1,Chinook salmon,0.22587021456770456,Winter
+Sample118,Ind22,1,chum salmon,0.27839643768186445,Winter
+Sample118,Ind22,1,coho salmon,0,Winter
+Sample118,Ind22,1,steelhead salmon,0.1413262926076265,Winter
+Sample118,Ind22,1,pink salmon,0,Winter
+Sample118,Ind22,1,sablefish,0,Winter
+Sample118,Ind22,1,lingcod,0.30667009097132664,Winter
+Sample118,Ind22,1,arrowtooth flounder,0.04339169254021798,Winter
+Sample118,Ind22,1,Pacific halibut,0,Winter
+Sample119,Ind19,2,Chinook salmon,0.5061216710470927,Winter
+Sample119,Ind19,2,chum salmon,0.15623522592578018,Winter
+Sample119,Ind19,2,coho salmon,0,Winter
+Sample119,Ind19,2,steelhead salmon,0.023540837231296623,Winter
+Sample119,Ind19,2,pink salmon,0,Winter
+Sample119,Ind19,2,sablefish,0,Winter
+Sample119,Ind19,2,lingcod,0.2080229109998917,Winter
+Sample119,Ind19,2,arrowtooth flounder,0,Winter
+Sample119,Ind19,2,Pacific halibut,0.10598635752196303,Winter
+Sample120,Ind16,3,Chinook salmon,0.3979693803407845,Winter
+Sample120,Ind16,3,chum salmon,0.17869053826480835,Winter
+Sample120,Ind16,3,coho salmon,0.18826163755296568,Winter
+Sample120,Ind16,3,steelhead salmon,0,Winter
+Sample120,Ind16,3,pink salmon,0,Winter
+Sample120,Ind16,3,sablefish,0,Winter
+Sample120,Ind16,3,lingcod,0.0959218869615914,Winter
+Sample120,Ind16,3,arrowtooth flounder,0.02555401066648893,Winter
+Sample120,Ind16,3,Pacific halibut,0.106204226547238,Winter
+Sample121,Ind22,1,Chinook salmon,0.06715001003171202,Winter
+Sample121,Ind22,1,chum salmon,0.5107278764021406,Winter
+Sample121,Ind22,1,coho salmon,0,Winter
+Sample121,Ind22,1,steelhead salmon,0.017227828745489455,Winter
+Sample121,Ind22,1,pink salmon,0,Winter
+Sample121,Ind22,1,sablefish,0,Winter
+Sample121,Ind22,1,lingcod,0.3925464377155003,Winter
+Sample121,Ind22,1,arrowtooth flounder,0.01228728791827501,Winter
+Sample121,Ind22,1,Pacific halibut,0,Winter
+Sample122,Ind28,10,Chinook salmon,0.4577458667551901,Autumn
+Sample122,Ind28,10,chum salmon,0.22605112577385528,Autumn
+Sample122,Ind28,10,coho salmon,0.10397162986022827,Autumn
+Sample122,Ind28,10,steelhead salmon,0.022095867894976008,Autumn
+Sample122,Ind28,10,pink salmon,0,Autumn
+Sample122,Ind28,10,sablefish,0.12939671873433836,Autumn
+Sample122,Ind28,10,lingcod,0,Autumn
+Sample122,Ind28,10,arrowtooth flounder,0.06073833175838169,Autumn
+Sample122,Ind28,10,Pacific halibut,0,Autumn
+Sample123,Ind29,5,Chinook salmon,0.403635086041599,Spring
+Sample123,Ind29,5,chum salmon,0,Spring
+Sample123,Ind29,5,coho salmon,0.5901575983569984,Spring
+Sample123,Ind29,5,steelhead salmon,0,Spring
+Sample123,Ind29,5,pink salmon,0,Spring
+Sample123,Ind29,5,sablefish,0,Spring
+Sample123,Ind29,5,lingcod,0,Spring
+Sample123,Ind29,5,arrowtooth flounder,0,Spring
+Sample123,Ind29,5,Pacific halibut,0,Spring
+Sample124,Ind17,2,Chinook salmon,0.5242994762947137,Winter
+Sample124,Ind17,2,chum salmon,0.1837558875484523,Winter
+Sample124,Ind17,2,coho salmon,0,Winter
+Sample124,Ind17,2,steelhead salmon,0,Winter
+Sample124,Ind17,2,pink salmon,0,Winter
+Sample124,Ind17,2,sablefish,0,Winter
+Sample124,Ind17,2,lingcod,0.2334891379784481,Winter
+Sample124,Ind17,2,arrowtooth flounder,0,Winter
+Sample124,Ind17,2,Pacific halibut,0.048849468200333854,Winter
+Sample125,Ind12,3,Chinook salmon,0.23993300874131643,Winter
+Sample125,Ind12,3,chum salmon,0.10117145296482499,Winter
+Sample125,Ind12,3,coho salmon,0.14460708277260348,Winter
+Sample125,Ind12,3,steelhead salmon,0.16508602410263015,Winter
+Sample125,Ind12,3,pink salmon,0,Winter
+Sample125,Ind12,3,sablefish,0,Winter
+Sample125,Ind12,3,lingcod,0.2476533654167003,Winter
+Sample125,Ind12,3,arrowtooth flounder,0,Winter
+Sample125,Ind12,3,Pacific halibut,0.09680174486412119,Winter
+Sample126,Ind9,3,Chinook salmon,0.5317250612547914,Winter
+Sample126,Ind9,3,chum salmon,0.16084884915175168,Winter
+Sample126,Ind9,3,coho salmon,0.06654749921109115,Winter
+Sample126,Ind9,3,steelhead salmon,0.019139302203648064,Winter
+Sample126,Ind9,3,pink salmon,0,Winter
+Sample126,Ind9,3,sablefish,0,Winter
+Sample126,Ind9,3,lingcod,0.16233103225338313,Winter
+Sample126,Ind9,3,arrowtooth flounder,0.01755493801248842,Winter
+Sample126,Ind9,3,Pacific halibut,0.041853317912846195,Winter
+Sample127,Ind25,10,Chinook salmon,0.3248114798649982,Autumn
+Sample127,Ind25,10,chum salmon,0.14560101638344294,Autumn
+Sample127,Ind25,10,coho salmon,0.16817200016331843,Autumn
+Sample127,Ind25,10,steelhead salmon,0.029020087728155782,Autumn
+Sample127,Ind25,10,pink salmon,0,Autumn
+Sample127,Ind25,10,sablefish,0.15321874369414787,Autumn
+Sample127,Ind25,10,lingcod,0,Autumn
+Sample127,Ind25,10,arrowtooth flounder,0.17890066257715181,Autumn
+Sample127,Ind25,10,Pacific halibut,0,Autumn
+Sample128,Ind21,2,Chinook salmon,0.4662381868375403,Winter
+Sample128,Ind21,2,chum salmon,0.23236685148787373,Winter
+Sample128,Ind21,2,coho salmon,0,Winter
+Sample128,Ind21,2,steelhead salmon,0.014296078850995512,Winter
+Sample128,Ind21,2,pink salmon,0,Winter
+Sample128,Ind21,2,sablefish,0,Winter
+Sample128,Ind21,2,lingcod,0.2348996312032044,Winter
+Sample128,Ind21,2,arrowtooth flounder,0,Winter
+Sample128,Ind21,2,Pacific halibut,0.04848989964212632,Winter
+Sample129,Ind30,10,Chinook salmon,0.26440943186710353,Autumn
+Sample129,Ind30,10,chum salmon,0.4064419350103128,Autumn
+Sample129,Ind30,10,coho salmon,0.0426370816987439,Autumn
+Sample129,Ind30,10,steelhead salmon,0.01439081264155034,Autumn
+Sample129,Ind30,10,pink salmon,0,Autumn
+Sample129,Ind30,10,sablefish,0.05341275790366111,Autumn
+Sample129,Ind30,10,lingcod,0,Autumn
+Sample129,Ind30,10,arrowtooth flounder,0.21857556678661327,Autumn
+Sample129,Ind30,10,Pacific halibut,0,Autumn
+Sample130,Ind11,4,Chinook salmon,0.39083486096160197,Spring
+Sample130,Ind11,4,chum salmon,0.22114809519388526,Spring
+Sample130,Ind11,4,coho salmon,0.20063252044874388,Spring
+Sample130,Ind11,4,steelhead salmon,0.15124548909963853,Spring
+Sample130,Ind11,4,pink salmon,0,Spring
+Sample130,Ind11,4,sablefish,0,Spring
+Sample130,Ind11,4,lingcod,0,Spring
+Sample130,Ind11,4,arrowtooth flounder,0.010610029273514168,Spring
+Sample130,Ind11,4,Pacific halibut,0.025529005022616215,Spring
+Sample131,Ind25,9,Chinook salmon,0.5657392345433878,Summer
+Sample131,Ind25,9,chum salmon,0.08041471686787022,Summer
+Sample131,Ind25,9,coho salmon,0.2543262433069663,Summer
+Sample131,Ind25,9,steelhead salmon,0.05083252847536192,Summer
+Sample131,Ind25,9,pink salmon,0,Summer
+Sample131,Ind25,9,sablefish,0.020810859130402568,Summer
+Sample131,Ind25,9,lingcod,0,Summer
+Sample131,Ind25,9,arrowtooth flounder,0.022992017762326507,Summer
+Sample131,Ind25,9,Pacific halibut,0,Summer
+Sample132,Ind26,10,Chinook salmon,0.22020716342761573,Autumn
+Sample132,Ind26,10,chum salmon,0.2178277606670878,Autumn
+Sample132,Ind26,10,coho salmon,0.06952754779654509,Autumn
+Sample132,Ind26,10,steelhead salmon,0,Autumn
+Sample132,Ind26,10,pink salmon,0,Autumn
+Sample132,Ind26,10,sablefish,0.13419438504888356,Autumn
+Sample132,Ind26,10,lingcod,0,Autumn
+Sample132,Ind26,10,arrowtooth flounder,0.3564349319202422,Autumn
+Sample132,Ind26,10,Pacific halibut,0,Autumn
+Sample133,Ind16,7,Chinook salmon,0.8752693409150187,Summer
+Sample133,Ind16,7,chum salmon,0,Summer
+Sample133,Ind16,7,coho salmon,0.11504003309177306,Summer
+Sample133,Ind16,7,steelhead salmon,0,Summer
+Sample133,Ind16,7,pink salmon,0,Summer
+Sample133,Ind16,7,sablefish,0,Summer
+Sample133,Ind16,7,lingcod,0,Summer
+Sample133,Ind16,7,arrowtooth flounder,0,Summer
+Sample133,Ind16,7,Pacific halibut,0,Summer
+Sample134,Ind8,1,Chinook salmon,0.026838308061589437,Winter
+Sample134,Ind8,1,chum salmon,0.5237808903401994,Winter
+Sample134,Ind8,1,coho salmon,0,Winter
+Sample134,Ind8,1,steelhead salmon,0.050017143623250715,Winter
+Sample134,Ind8,1,pink salmon,0,Winter
+Sample134,Ind8,1,sablefish,0,Winter
+Sample134,Ind8,1,lingcod,0.29496513162164917,Winter
+Sample134,Ind8,1,arrowtooth flounder,0.1043974754533072,Winter
+Sample134,Ind8,1,Pacific halibut,0,Winter
+Sample135,Ind29,4,Chinook salmon,0.27653213841925706,Spring
+Sample135,Ind29,4,chum salmon,0.2629581197006757,Spring
+Sample135,Ind29,4,coho salmon,0.17045942185911067,Spring
+Sample135,Ind29,4,steelhead salmon,0.04375626405234738,Spring
+Sample135,Ind29,4,pink salmon,0,Spring
+Sample135,Ind29,4,sablefish,0,Spring
+Sample135,Ind29,4,lingcod,0,Spring
+Sample135,Ind29,4,arrowtooth flounder,0.0715570035376864,Spring
+Sample135,Ind29,4,Pacific halibut,0.17473705243092277,Spring
+Sample136,Ind23,6,Chinook salmon,0.8662060882798016,Spring
+Sample136,Ind23,6,chum salmon,0,Spring
+Sample136,Ind23,6,coho salmon,0.1091733402558666,Spring
+Sample136,Ind23,6,steelhead salmon,0.02462057146433183,Spring
+Sample136,Ind23,6,pink salmon,0,Spring
+Sample136,Ind23,6,sablefish,0,Spring
+Sample136,Ind23,6,lingcod,0,Spring
+Sample136,Ind23,6,arrowtooth flounder,0,Spring
+Sample136,Ind23,6,Pacific halibut,0,Spring
+Sample137,Ind6,3,Chinook salmon,0.46713206453431394,Winter
+Sample137,Ind6,3,chum salmon,0.15124438011230273,Winter
+Sample137,Ind6,3,coho salmon,0.0707427485637164,Winter
+Sample137,Ind6,3,steelhead salmon,0.08126673734020734,Winter
+Sample137,Ind6,3,pink salmon,0,Winter
+Sample137,Ind6,3,sablefish,0,Winter
+Sample137,Ind6,3,lingcod,0.05841214638429719,Winter
+Sample137,Ind6,3,arrowtooth flounder,0.10813654202311454,Winter
+Sample137,Ind6,3,Pacific halibut,0.06306538104204783,Winter
+Sample138,Ind1,12,Chinook salmon,0.10481186311480424,Autumn
+Sample138,Ind1,12,chum salmon,0.2003703905752763,Autumn
+Sample138,Ind1,12,coho salmon,0,Autumn
+Sample138,Ind1,12,steelhead salmon,0.22743258509193784,Autumn
+Sample138,Ind1,12,pink salmon,0,Autumn
+Sample138,Ind1,12,sablefish,0.11602475819531048,Autumn
+Sample138,Ind1,12,lingcod,0,Autumn
+Sample138,Ind1,12,arrowtooth flounder,0.32423857732140615,Autumn
+Sample138,Ind1,12,Pacific halibut,0.022735213342083675,Autumn
+Sample139,Ind13,3,Chinook salmon,0.4613189130193953,Winter
+Sample139,Ind13,3,chum salmon,0.10500175315617613,Winter
+Sample139,Ind13,3,coho salmon,0.24154339436864775,Winter
+Sample139,Ind13,3,steelhead salmon,0,Winter
+Sample139,Ind13,3,pink salmon,0,Winter
+Sample139,Ind13,3,sablefish,0,Winter
+Sample139,Ind13,3,lingcod,0.0578317923713745,Winter
+Sample139,Ind13,3,arrowtooth flounder,0,Winter
+Sample139,Ind13,3,Pacific halibut,0.13395793409540405,Winter
+Sample140,Ind14,6,Chinook salmon,0.8437431497290602,Spring
+Sample140,Ind14,6,chum salmon,0,Spring
+Sample140,Ind14,6,coho salmon,0.0964174217786743,Spring
+Sample140,Ind14,6,steelhead salmon,0.05983942849226562,Spring
+Sample140,Ind14,6,pink salmon,0,Spring
+Sample140,Ind14,6,sablefish,0,Spring
+Sample140,Ind14,6,lingcod,0,Spring
+Sample140,Ind14,6,arrowtooth flounder,0,Spring
+Sample140,Ind14,6,Pacific halibut,0,Spring
+Sample141,Ind5,12,Chinook salmon,0,Autumn
+Sample141,Ind5,12,chum salmon,0.5797455623678833,Autumn
+Sample141,Ind5,12,coho salmon,0,Autumn
+Sample141,Ind5,12,steelhead salmon,0.018068581408701632,Autumn
+Sample141,Ind5,12,pink salmon,0,Autumn
+Sample141,Ind5,12,sablefish,0.024690534415851118,Autumn
+Sample141,Ind5,12,lingcod,0.1814973945957612,Autumn
+Sample141,Ind5,12,arrowtooth flounder,0.18295624000354013,Autumn
+Sample141,Ind5,12,Pacific halibut,0,Autumn
+Sample142,Ind9,9,Chinook salmon,0.23236028469497125,Summer
+Sample142,Ind9,9,chum salmon,0.15443517555995967,Summer
+Sample142,Ind9,9,coho salmon,0.45363887452169294,Summer
+Sample142,Ind9,9,steelhead salmon,0,Summer
+Sample142,Ind9,9,pink salmon,0,Summer
+Sample142,Ind9,9,sablefish,0.13136791764713476,Summer
+Sample142,Ind9,9,lingcod,0,Summer
+Sample142,Ind9,9,arrowtooth flounder,0.028022367387065143,Summer
+Sample142,Ind9,9,Pacific halibut,0,Summer
+Sample143,Ind23,10,Chinook salmon,0.30380767418104726,Autumn
+Sample143,Ind23,10,chum salmon,0.1242072988904729,Autumn
+Sample143,Ind23,10,coho salmon,0.11896706128012861,Autumn
+Sample143,Ind23,10,steelhead salmon,0.04215858568169225,Autumn
+Sample143,Ind23,10,pink salmon,0,Autumn
+Sample143,Ind23,10,sablefish,0.3566387114923001,Autumn
+Sample143,Ind23,10,lingcod,0,Autumn
+Sample143,Ind23,10,arrowtooth flounder,0.05422019415734809,Autumn
+Sample143,Ind23,10,Pacific halibut,0,Autumn
+Sample144,Ind16,7,Chinook salmon,0.7915865120211459,Summer
+Sample144,Ind16,7,chum salmon,0,Summer
+Sample144,Ind16,7,coho salmon,0.16828438294598622,Summer
+Sample144,Ind16,7,steelhead salmon,0.04012910503286779,Summer
+Sample144,Ind16,7,pink salmon,0,Summer
+Sample144,Ind16,7,sablefish,0,Summer
+Sample144,Ind16,7,lingcod,0,Summer
+Sample144,Ind16,7,arrowtooth flounder,0,Summer
+Sample144,Ind16,7,Pacific halibut,0,Summer
+Sample145,Ind26,3,Chinook salmon,0.5001732022321254,Winter
+Sample145,Ind26,3,chum salmon,0.1905457742486,Winter
+Sample145,Ind26,3,coho salmon,0.058849321075765876,Winter
+Sample145,Ind26,3,steelhead salmon,0,Winter
+Sample145,Ind26,3,pink salmon,0,Winter
+Sample145,Ind26,3,sablefish,0,Winter
+Sample145,Ind26,3,lingcod,0.09801718482219587,Winter
+Sample145,Ind26,3,arrowtooth flounder,0,Winter
+Sample145,Ind26,3,Pacific halibut,0.14781003871176115,Winter
+Sample146,Ind11,9,Chinook salmon,0.6149017608089612,Summer
+Sample146,Ind11,9,chum salmon,0.05632861553582313,Summer
+Sample146,Ind11,9,coho salmon,0.24445271741001487,Summer
+Sample146,Ind11,9,steelhead salmon,0,Summer
+Sample146,Ind11,9,pink salmon,0,Summer
+Sample146,Ind11,9,sablefish,0.016739719277679296,Summer
+Sample146,Ind11,9,lingcod,0,Summer
+Sample146,Ind11,9,arrowtooth flounder,0,Summer
+Sample146,Ind11,9,Pacific halibut,0.06399575668609173,Summer
+Sample147,Ind10,2,Chinook salmon,0.5773602668056708,Winter
+Sample147,Ind10,2,chum salmon,0.14809351734073897,Winter
+Sample147,Ind10,2,coho salmon,0,Winter
+Sample147,Ind10,2,steelhead salmon,0,Winter
+Sample147,Ind10,2,pink salmon,0,Winter
+Sample147,Ind10,2,sablefish,0,Winter
+Sample147,Ind10,2,lingcod,0.1650671752462109,Winter
+Sample147,Ind10,2,arrowtooth flounder,0.08624825635177596,Winter
+Sample147,Ind10,2,Pacific halibut,0.02235107193925712,Winter
+Sample148,Ind10,6,Chinook salmon,0.698627468272509,Spring
+Sample148,Ind10,6,chum salmon,0,Spring
+Sample148,Ind10,6,coho salmon,0.29553523760992223,Spring
+Sample148,Ind10,6,steelhead salmon,0,Spring
+Sample148,Ind10,6,pink salmon,0,Spring
+Sample148,Ind10,6,sablefish,0,Spring
+Sample148,Ind10,6,lingcod,0,Spring
+Sample148,Ind10,6,arrowtooth flounder,0,Spring
+Sample148,Ind10,6,Pacific halibut,0,Spring
+Sample149,Ind24,9,Chinook salmon,0.26226205762910304,Summer
+Sample149,Ind24,9,chum salmon,0.3072591893645972,Summer
+Sample149,Ind24,9,coho salmon,0.3455801766694362,Summer
+Sample149,Ind24,9,steelhead salmon,0,Summer
+Sample149,Ind24,9,pink salmon,0,Summer
+Sample149,Ind24,9,sablefish,0.07822542764237334,Summer
+Sample149,Ind24,9,lingcod,0,Summer
+Sample149,Ind24,9,arrowtooth flounder,0,Summer
+Sample149,Ind24,9,Pacific halibut,0,Summer
+Sample150,Ind1,8,Chinook salmon,0.3094241848724148,Summer
+Sample150,Ind1,8,chum salmon,0.06481483988952483,Summer
+Sample150,Ind1,8,coho salmon,0.4006190813405397,Summer
+Sample150,Ind1,8,steelhead salmon,0.10977625877794212,Summer
+Sample150,Ind1,8,pink salmon,0,Summer
+Sample150,Ind1,8,sablefish,0,Summer
+Sample150,Ind1,8,lingcod,0,Summer
+Sample150,Ind1,8,arrowtooth flounder,0.10129079415457434,Summer
+Sample150,Ind1,8,Pacific halibut,0.014074840965004182,Summer
+Sample151,Ind27,11,Chinook salmon,0.01634334975604374,Autumn
+Sample151,Ind27,11,chum salmon,0.5183701919100738,Autumn
+Sample151,Ind27,11,coho salmon,0.16895498558588612,Autumn
+Sample151,Ind27,11,steelhead salmon,0.011819137447621043,Autumn
+Sample151,Ind27,11,pink salmon,0,Autumn
+Sample151,Ind27,11,sablefish,0.08310526824536459,Autumn
+Sample151,Ind27,11,lingcod,0,Autumn
+Sample151,Ind27,11,arrowtooth flounder,0.2014066153591244,Autumn
+Sample151,Ind27,11,Pacific halibut,0,Autumn
+Sample152,Ind25,6,Chinook salmon,0.9121837015719354,Spring
+Sample152,Ind25,6,chum salmon,0,Spring
+Sample152,Ind25,6,coho salmon,0.08119874444652862,Spring
+Sample152,Ind25,6,steelhead salmon,0,Spring
+Sample152,Ind25,6,pink salmon,0,Spring
+Sample152,Ind25,6,sablefish,0,Spring
+Sample152,Ind25,6,lingcod,0,Spring
+Sample152,Ind25,6,arrowtooth flounder,0,Spring
+Sample152,Ind25,6,Pacific halibut,0,Spring
+Sample153,Ind29,5,Chinook salmon,0.5544714825600642,Spring
+Sample153,Ind29,5,chum salmon,0,Spring
+Sample153,Ind29,5,coho salmon,0.44521219770164844,Spring
+Sample153,Ind29,5,steelhead salmon,0,Spring
+Sample153,Ind29,5,pink salmon,0,Spring
+Sample153,Ind29,5,sablefish,0,Spring
+Sample153,Ind29,5,lingcod,0,Spring
+Sample153,Ind29,5,arrowtooth flounder,0,Spring
+Sample153,Ind29,5,Pacific halibut,0,Spring
+Sample154,Ind25,10,Chinook salmon,0.40587542994366616,Autumn
+Sample154,Ind25,10,chum salmon,0.2655786183053532,Autumn
+Sample154,Ind25,10,coho salmon,0.15124878430305055,Autumn
+Sample154,Ind25,10,steelhead salmon,0,Autumn
+Sample154,Ind25,10,pink salmon,0,Autumn
+Sample154,Ind25,10,sablefish,0.09258426922025041,Autumn
+Sample154,Ind25,10,lingcod,0,Autumn
+Sample154,Ind25,10,arrowtooth flounder,0.07767631342234899,Autumn
+Sample154,Ind25,10,Pacific halibut,0,Autumn
+Sample155,Ind19,1,Chinook salmon,0.1598254350230934,Winter
+Sample155,Ind19,1,chum salmon,0.3797133495604095,Winter
+Sample155,Ind19,1,coho salmon,0,Winter
+Sample155,Ind19,1,steelhead salmon,0,Winter
+Sample155,Ind19,1,pink salmon,0,Winter
+Sample155,Ind19,1,sablefish,0,Winter
+Sample155,Ind19,1,lingcod,0.45808348690860573,Winter
+Sample155,Ind19,1,arrowtooth flounder,0,Winter
+Sample155,Ind19,1,Pacific halibut,0,Winter
+Sample156,Ind17,9,Chinook salmon,0.4301156867850827,Summer
+Sample156,Ind17,9,chum salmon,0.22799685592356989,Summer
+Sample156,Ind17,9,coho salmon,0.311256710445481,Summer
+Sample156,Ind17,9,steelhead salmon,0,Summer
+Sample156,Ind17,9,pink salmon,0,Summer
+Sample156,Ind17,9,sablefish,0,Summer
+Sample156,Ind17,9,lingcod,0,Summer
+Sample156,Ind17,9,arrowtooth flounder,0,Summer
+Sample156,Ind17,9,Pacific halibut,0.016782594465567617,Summer
+Sample157,Ind14,10,Chinook salmon,0.31265717797591824,Autumn
+Sample157,Ind14,10,chum salmon,0.2152837175882778,Autumn
+Sample157,Ind14,10,coho salmon,0.15920774639905466,Autumn
+Sample157,Ind14,10,steelhead salmon,0.03206830420522689,Autumn
+Sample157,Ind14,10,pink salmon,0,Autumn
+Sample157,Ind14,10,sablefish,0.2498523523647419,Autumn
+Sample157,Ind14,10,lingcod,0,Autumn
+Sample157,Ind14,10,arrowtooth flounder,0.030615662433745805,Autumn
+Sample157,Ind14,10,Pacific halibut,0,Autumn
+Sample158,Ind14,1,Chinook salmon,0,Winter
+Sample158,Ind14,1,chum salmon,0.5597737524463751,Winter
+Sample158,Ind14,1,coho salmon,0,Winter
+Sample158,Ind14,1,steelhead salmon,0,Winter
+Sample158,Ind14,1,pink salmon,0,Winter
+Sample158,Ind14,1,sablefish,0,Winter
+Sample158,Ind14,1,lingcod,0.4290092284162176,Winter
+Sample158,Ind14,1,arrowtooth flounder,0,Winter
+Sample158,Ind14,1,Pacific halibut,0,Winter
+Sample159,Ind15,12,Chinook salmon,0.10129310781119448,Autumn
+Sample159,Ind15,12,chum salmon,0.5871335499355477,Autumn
+Sample159,Ind15,12,coho salmon,0,Autumn
+Sample159,Ind15,12,steelhead salmon,0,Autumn
+Sample159,Ind15,12,pink salmon,0,Autumn
+Sample159,Ind15,12,sablefish,0.03360227666744512,Autumn
+Sample159,Ind15,12,lingcod,0.010490159960816944,Autumn
+Sample159,Ind15,12,arrowtooth flounder,0.2667384088687068,Autumn
+Sample159,Ind15,12,Pacific halibut,0,Autumn
+Sample160,Ind6,6,Chinook salmon,0.8948111412109728,Spring
+Sample160,Ind6,6,chum salmon,0,Spring
+Sample160,Ind6,6,coho salmon,0.047128617024862006,Spring
+Sample160,Ind6,6,steelhead salmon,0.05806024176416515,Spring
+Sample160,Ind6,6,pink salmon,0,Spring
+Sample160,Ind6,6,sablefish,0,Spring
+Sample160,Ind6,6,lingcod,0,Spring
+Sample160,Ind6,6,arrowtooth flounder,0,Spring
+Sample160,Ind6,6,Pacific halibut,0,Spring
+Sample161,Ind24,1,Chinook salmon,0.06367798890538859,Winter
+Sample161,Ind24,1,chum salmon,0.5715194750716269,Winter
+Sample161,Ind24,1,coho salmon,0,Winter
+Sample161,Ind24,1,steelhead salmon,0.04866292776293622,Winter
+Sample161,Ind24,1,pink salmon,0,Winter
+Sample161,Ind24,1,sablefish,0,Winter
+Sample161,Ind24,1,lingcod,0.31275790494876854,Winter
+Sample161,Ind24,1,arrowtooth flounder,0,Winter
+Sample161,Ind24,1,Pacific halibut,0,Winter
+Sample162,Ind15,11,Chinook salmon,0.11545098887212439,Autumn
+Sample162,Ind15,11,chum salmon,0.3109320287673626,Autumn
+Sample162,Ind15,11,coho salmon,0.10105823491803209,Autumn
+Sample162,Ind15,11,steelhead salmon,0,Autumn
+Sample162,Ind15,11,pink salmon,0,Autumn
+Sample162,Ind15,11,sablefish,0.32203229351846563,Autumn
+Sample162,Ind15,11,lingcod,0,Autumn
+Sample162,Ind15,11,arrowtooth flounder,0.15005582731857317,Autumn
+Sample162,Ind15,11,Pacific halibut,0,Autumn
+Sample163,Ind11,9,Chinook salmon,0.4152172266753565,Summer
+Sample163,Ind11,9,chum salmon,0.19112604076858114,Summer
+Sample163,Ind11,9,coho salmon,0.30882676277606075,Summer
+Sample163,Ind11,9,steelhead salmon,0.02846227429752392,Summer
+Sample163,Ind11,9,pink salmon,0,Summer
+Sample163,Ind11,9,sablefish,0.05176133486190988,Summer
+Sample163,Ind11,9,lingcod,0,Summer
+Sample163,Ind11,9,arrowtooth flounder,0,Summer
+Sample163,Ind11,9,Pacific halibut,0,Summer
+Sample164,Ind30,4,Chinook salmon,0.532210069209052,Spring
+Sample164,Ind30,4,chum salmon,0.13853408464061145,Spring
+Sample164,Ind30,4,coho salmon,0.19600530182361392,Spring
+Sample164,Ind30,4,steelhead salmon,0.026808534961151462,Spring
+Sample164,Ind30,4,pink salmon,0,Spring
+Sample164,Ind30,4,sablefish,0,Spring
+Sample164,Ind30,4,lingcod,0,Spring
+Sample164,Ind30,4,arrowtooth flounder,0,Spring
+Sample164,Ind30,4,Pacific halibut,0.10046031218863584,Spring
+Sample165,Ind5,3,Chinook salmon,0.3035604626835363,Winter
+Sample165,Ind5,3,chum salmon,0.15575226598874584,Winter
+Sample165,Ind5,3,coho salmon,0.23797924274307172,Winter
+Sample165,Ind5,3,steelhead salmon,0.028488720912750908,Winter
+Sample165,Ind5,3,pink salmon,0,Winter
+Sample165,Ind5,3,sablefish,0,Winter
+Sample165,Ind5,3,lingcod,0.16941308104311417,Winter
+Sample165,Ind5,3,arrowtooth flounder,0.016932881403619378,Winter
+Sample165,Ind5,3,Pacific halibut,0.08787334522516167,Winter
+Sample166,Ind16,11,Chinook salmon,0.15067675450750873,Autumn
+Sample166,Ind16,11,chum salmon,0.476369410187237,Autumn
+Sample166,Ind16,11,coho salmon,0.1810680134889484,Autumn
+Sample166,Ind16,11,steelhead salmon,0.04857262233256978,Autumn
+Sample166,Ind16,11,pink salmon,0,Autumn
+Sample166,Ind16,11,sablefish,0.11171005719572703,Autumn
+Sample166,Ind16,11,lingcod,0,Autumn
+Sample166,Ind16,11,arrowtooth flounder,0.025198929710170306,Autumn
+Sample166,Ind16,11,Pacific halibut,0,Autumn
+Sample167,Ind17,5,Chinook salmon,0.6045361381607584,Spring
+Sample167,Ind17,5,chum salmon,0,Spring
+Sample167,Ind17,5,coho salmon,0.3725531696493467,Spring
+Sample167,Ind17,5,steelhead salmon,0.022142152092437594,Spring
+Sample167,Ind17,5,pink salmon,0,Spring
+Sample167,Ind17,5,sablefish,0,Spring
+Sample167,Ind17,5,lingcod,0,Spring
+Sample167,Ind17,5,arrowtooth flounder,0,Spring
+Sample167,Ind17,5,Pacific halibut,0,Spring
+Sample168,Ind22,6,Chinook salmon,0.9297243618814381,Spring
+Sample168,Ind22,6,chum salmon,0,Spring
+Sample168,Ind22,6,coho salmon,0.06214480391357275,Spring
+Sample168,Ind22,6,steelhead salmon,0,Spring
+Sample168,Ind22,6,pink salmon,0,Spring
+Sample168,Ind22,6,sablefish,0,Spring
+Sample168,Ind22,6,lingcod,0,Spring
+Sample168,Ind22,6,arrowtooth flounder,0,Spring
+Sample168,Ind22,6,Pacific halibut,0,Spring
+Sample169,Ind17,11,Chinook salmon,0.0123298829821213,Autumn
+Sample169,Ind17,11,chum salmon,0.26903225003577247,Autumn
+Sample169,Ind17,11,coho salmon,0.128878578581692,Autumn
+Sample169,Ind17,11,steelhead salmon,0.020495376391139387,Autumn
+Sample169,Ind17,11,pink salmon,0,Autumn
+Sample169,Ind17,11,sablefish,0.42040374188295954,Autumn
+Sample169,Ind17,11,lingcod,0,Autumn
+Sample169,Ind17,11,arrowtooth flounder,0.14799950564442613,Autumn
+Sample169,Ind17,11,Pacific halibut,0,Autumn
+Sample170,Ind18,5,Chinook salmon,0.8065568137492058,Spring
+Sample170,Ind18,5,chum salmon,0,Spring
+Sample170,Ind18,5,coho salmon,0.16453776365117823,Spring
+Sample170,Ind18,5,steelhead salmon,0,Spring
+Sample170,Ind18,5,pink salmon,0,Spring
+Sample170,Ind18,5,sablefish,0,Spring
+Sample170,Ind18,5,lingcod,0,Spring
+Sample170,Ind18,5,arrowtooth flounder,0,Spring
+Sample170,Ind18,5,Pacific halibut,0.024654432736058877,Spring
+Sample171,Ind2,10,Chinook salmon,0.3933395945706496,Autumn
+Sample171,Ind2,10,chum salmon,0.09930408691829501,Autumn
+Sample171,Ind2,10,coho salmon,0.0927855441626324,Autumn
+Sample171,Ind2,10,steelhead salmon,0.07242672048389344,Autumn
+Sample171,Ind2,10,pink salmon,0,Autumn
+Sample171,Ind2,10,sablefish,0.23398237810868203,Autumn
+Sample171,Ind2,10,lingcod,0,Autumn
+Sample171,Ind2,10,arrowtooth flounder,0.10788560167230085,Autumn
+Sample171,Ind2,10,Pacific halibut,0,Autumn
+Sample172,Ind30,4,Chinook salmon,0.27445211801647,Spring
+Sample172,Ind30,4,chum salmon,0.24779790515113703,Spring
+Sample172,Ind30,4,coho salmon,0.1829830649446207,Spring
+Sample172,Ind30,4,steelhead salmon,0.067877924764424,Spring
+Sample172,Ind30,4,pink salmon,0,Spring
+Sample172,Ind30,4,sablefish,0,Spring
+Sample172,Ind30,4,lingcod,0,Spring
+Sample172,Ind30,4,arrowtooth flounder,0.08272864130915333,Spring
+Sample172,Ind30,4,Pacific halibut,0.14416034581419498,Spring
+Sample173,Ind6,2,Chinook salmon,0.38976310393550045,Winter
+Sample173,Ind6,2,chum salmon,0.12279091003358246,Winter
+Sample173,Ind6,2,coho salmon,0,Winter
+Sample173,Ind6,2,steelhead salmon,0.07204686446638696,Winter
+Sample173,Ind6,2,pink salmon,0,Winter
+Sample173,Ind6,2,sablefish,0,Winter
+Sample173,Ind6,2,lingcod,0.3262913097440105,Winter
+Sample173,Ind6,2,arrowtooth flounder,0.02019779835147844,Winter
+Sample173,Ind6,2,Pacific halibut,0.06891001346904126,Winter
+Sample174,Ind22,7,Chinook salmon,0.9208405344088237,Summer
+Sample174,Ind22,7,chum salmon,0,Summer
+Sample174,Ind22,7,coho salmon,0.07479887143609526,Summer
+Sample174,Ind22,7,steelhead salmon,0,Summer
+Sample174,Ind22,7,pink salmon,0,Summer
+Sample174,Ind22,7,sablefish,0,Summer
+Sample174,Ind22,7,lingcod,0,Summer
+Sample174,Ind22,7,arrowtooth flounder,0,Summer
+Sample174,Ind22,7,Pacific halibut,0,Summer
+Sample175,Ind6,4,Chinook salmon,0.3136509789214877,Spring
+Sample175,Ind6,4,chum salmon,0.21666566246317084,Spring
+Sample175,Ind6,4,coho salmon,0.3495619099883248,Spring
+Sample175,Ind6,4,steelhead salmon,0.02641514470957311,Spring
+Sample175,Ind6,4,pink salmon,0,Spring
+Sample175,Ind6,4,sablefish,0,Spring
+Sample175,Ind6,4,lingcod,0,Spring
+Sample175,Ind6,4,arrowtooth flounder,0,Spring
+Sample175,Ind6,4,Pacific halibut,0.09130721016009213,Spring
+Sample176,Ind6,9,Chinook salmon,0.3143945188728257,Summer
+Sample176,Ind6,9,chum salmon,0.4328604743391073,Summer
+Sample176,Ind6,9,coho salmon,0.23367586338789312,Summer
+Sample176,Ind6,9,steelhead salmon,0,Summer
+Sample176,Ind6,9,pink salmon,0,Summer
+Sample176,Ind6,9,sablefish,0,Summer
+Sample176,Ind6,9,lingcod,0,Summer
+Sample176,Ind6,9,arrowtooth flounder,0,Summer
+Sample176,Ind6,9,Pacific halibut,0,Summer
+Sample177,Ind20,9,Chinook salmon,0.46610732245110276,Summer
+Sample177,Ind20,9,chum salmon,0.1467371890613766,Summer
+Sample177,Ind20,9,coho salmon,0.27511818144620437,Summer
+Sample177,Ind20,9,steelhead salmon,0,Summer
+Sample177,Ind20,9,pink salmon,0,Summer
+Sample177,Ind20,9,sablefish,0.06576627363696057,Summer
+Sample177,Ind20,9,lingcod,0,Summer
+Sample177,Ind20,9,arrowtooth flounder,0.018928065437059986,Summer
+Sample177,Ind20,9,Pacific halibut,0.022340955637533202,Summer
+Sample178,Ind28,4,Chinook salmon,0.3973560798551349,Spring
+Sample178,Ind28,4,chum salmon,0.34539360106823724,Spring
+Sample178,Ind28,4,coho salmon,0.1138165475354458,Spring
+Sample178,Ind28,4,steelhead salmon,0,Spring
+Sample178,Ind28,4,pink salmon,0,Spring
+Sample178,Ind28,4,sablefish,0,Spring
+Sample178,Ind28,4,lingcod,0,Spring
+Sample178,Ind28,4,arrowtooth flounder,0,Spring
+Sample178,Ind28,4,Pacific halibut,0.13586767756816778,Spring
+Sample179,Ind15,9,Chinook salmon,0.542860472779405,Summer
+Sample179,Ind15,9,chum salmon,0.1808628156383023,Summer
+Sample179,Ind15,9,coho salmon,0.26256584144495254,Summer
+Sample179,Ind15,9,steelhead salmon,0.012831634380811778,Summer
+Sample179,Ind15,9,pink salmon,0,Summer
+Sample179,Ind15,9,sablefish,0,Summer
+Sample179,Ind15,9,lingcod,0,Summer
+Sample179,Ind15,9,arrowtooth flounder,0,Summer
+Sample179,Ind15,9,Pacific halibut,0,Summer
+Sample180,Ind2,11,Chinook salmon,0.09549393279441516,Autumn
+Sample180,Ind2,11,chum salmon,0.38011131998693504,Autumn
+Sample180,Ind2,11,coho salmon,0.2141943552440127,Autumn
+Sample180,Ind2,11,steelhead salmon,0,Autumn
+Sample180,Ind2,11,pink salmon,0,Autumn
+Sample180,Ind2,11,sablefish,0.15709808157548438,Autumn
+Sample180,Ind2,11,lingcod,0,Autumn
+Sample180,Ind2,11,arrowtooth flounder,0.14847535806305415,Autumn
+Sample180,Ind2,11,Pacific halibut,0,Autumn
+Sample181,Ind10,3,Chinook salmon,0.43096570895429875,Winter
+Sample181,Ind10,3,chum salmon,0.15555532747893322,Winter
+Sample181,Ind10,3,coho salmon,0.09396223045310384,Winter
+Sample181,Ind10,3,steelhead salmon,0.09777252209152862,Winter
+Sample181,Ind10,3,pink salmon,0,Winter
+Sample181,Ind10,3,sablefish,0,Winter
+Sample181,Ind10,3,lingcod,0.13093501732805937,Winter
+Sample181,Ind10,3,arrowtooth flounder,0,Winter
+Sample181,Ind10,3,Pacific halibut,0.09076863522841624,Winter
+Sample182,Ind23,2,Chinook salmon,0.5447980047147554,Winter
+Sample182,Ind23,2,chum salmon,0.1331081658706861,Winter
+Sample182,Ind23,2,coho salmon,0,Winter
+Sample182,Ind23,2,steelhead salmon,0,Winter
+Sample182,Ind23,2,pink salmon,0,Winter
+Sample182,Ind23,2,sablefish,0,Winter
+Sample182,Ind23,2,lingcod,0.21937527915237703,Winter
+Sample182,Ind23,2,arrowtooth flounder,0,Winter
+Sample182,Ind23,2,Pacific halibut,0.09247944774565749,Winter
+Sample183,Ind28,10,Chinook salmon,0.2801853536919843,Autumn
+Sample183,Ind28,10,chum salmon,0.04167640692786342,Autumn
+Sample183,Ind28,10,coho salmon,0.07997526432884611,Autumn
+Sample183,Ind28,10,steelhead salmon,0.01102012534213476,Autumn
+Sample183,Ind28,10,pink salmon,0,Autumn
+Sample183,Ind28,10,sablefish,0.3239577949064666,Autumn
+Sample183,Ind28,10,lingcod,0,Autumn
+Sample183,Ind28,10,arrowtooth flounder,0.26318505480261667,Autumn
+Sample183,Ind28,10,Pacific halibut,0,Autumn
+Sample184,Ind30,1,Chinook salmon,0,Winter
+Sample184,Ind30,1,chum salmon,0.7275444912292229,Winter
+Sample184,Ind30,1,coho salmon,0,Winter
+Sample184,Ind30,1,steelhead salmon,0.10153365137475617,Winter
+Sample184,Ind30,1,pink salmon,0,Winter
+Sample184,Ind30,1,sablefish,0,Winter
+Sample184,Ind30,1,lingcod,0.16648722622317932,Winter
+Sample184,Ind30,1,arrowtooth flounder,0,Winter
+Sample184,Ind30,1,Pacific halibut,0,Winter
+Sample185,Ind12,8,Chinook salmon,0.44866851842839484,Summer
+Sample185,Ind12,8,chum salmon,0.24496997290502512,Summer
+Sample185,Ind12,8,coho salmon,0.2875032745273976,Summer
+Sample185,Ind12,8,steelhead salmon,0,Summer
+Sample185,Ind12,8,pink salmon,0,Summer
+Sample185,Ind12,8,sablefish,0,Summer
+Sample185,Ind12,8,lingcod,0,Summer
+Sample185,Ind12,8,arrowtooth flounder,0,Summer
+Sample185,Ind12,8,Pacific halibut,0.018405828289075846,Summer
+Sample186,Ind26,4,Chinook salmon,0.44341370437152877,Spring
+Sample186,Ind26,4,chum salmon,0.22123558852555747,Spring
+Sample186,Ind26,4,coho salmon,0.1289306403482797,Spring
+Sample186,Ind26,4,steelhead salmon,0.014016359711907933,Spring
+Sample186,Ind26,4,pink salmon,0,Spring
+Sample186,Ind26,4,sablefish,0,Spring
+Sample186,Ind26,4,lingcod,0,Spring
+Sample186,Ind26,4,arrowtooth flounder,0,Spring
+Sample186,Ind26,4,Pacific halibut,0.19232973492075817,Spring
+Sample187,Ind9,5,Chinook salmon,0.712240632711173,Spring
+Sample187,Ind9,5,chum salmon,0,Spring
+Sample187,Ind9,5,coho salmon,0.26346024005582397,Spring
+Sample187,Ind9,5,steelhead salmon,0.017175986561951476,Spring
+Sample187,Ind9,5,pink salmon,0,Spring
+Sample187,Ind9,5,sablefish,0,Spring
+Sample187,Ind9,5,lingcod,0,Spring
+Sample187,Ind9,5,arrowtooth flounder,0,Spring
+Sample187,Ind9,5,Pacific halibut,0,Spring
+Sample188,Ind1,5,Chinook salmon,0.426826908818129,Spring
+Sample188,Ind1,5,chum salmon,0,Spring
+Sample188,Ind1,5,coho salmon,0.5707762727510292,Spring
+Sample188,Ind1,5,steelhead salmon,0,Spring
+Sample188,Ind1,5,pink salmon,0,Spring
+Sample188,Ind1,5,sablefish,0,Spring
+Sample188,Ind1,5,lingcod,0,Spring
+Sample188,Ind1,5,arrowtooth flounder,0,Spring
+Sample188,Ind1,5,Pacific halibut,0,Spring
+Sample189,Ind2,6,Chinook salmon,0.8991982991655803,Spring
+Sample189,Ind2,6,chum salmon,0,Spring
+Sample189,Ind2,6,coho salmon,0.09856128704191425,Spring
+Sample189,Ind2,6,steelhead salmon,0,Spring
+Sample189,Ind2,6,pink salmon,0,Spring
+Sample189,Ind2,6,sablefish,0,Spring
+Sample189,Ind2,6,lingcod,0,Spring
+Sample189,Ind2,6,arrowtooth flounder,0,Spring
+Sample189,Ind2,6,Pacific halibut,0,Spring
+Sample190,Ind24,4,Chinook salmon,0.5553754306738745,Spring
+Sample190,Ind24,4,chum salmon,0.2665424839419438,Spring
+Sample190,Ind24,4,coho salmon,0.17403834747582939,Spring
+Sample190,Ind24,4,steelhead salmon,0,Spring
+Sample190,Ind24,4,pink salmon,0,Spring
+Sample190,Ind24,4,sablefish,0,Spring
+Sample190,Ind24,4,lingcod,0,Spring
+Sample190,Ind24,4,arrowtooth flounder,0,Spring
+Sample190,Ind24,4,Pacific halibut,0,Spring
+Sample191,Ind24,11,Chinook salmon,0.15197394996349076,Autumn
+Sample191,Ind24,11,chum salmon,0.3816401317041307,Autumn
+Sample191,Ind24,11,coho salmon,0.04291636161095545,Autumn
+Sample191,Ind24,11,steelhead salmon,0.049390243832222513,Autumn
+Sample191,Ind24,11,pink salmon,0,Autumn
+Sample191,Ind24,11,sablefish,0.2861424647255255,Autumn
+Sample191,Ind24,11,lingcod,0,Autumn
+Sample191,Ind24,11,arrowtooth flounder,0.061319744206006215,Autumn
+Sample191,Ind24,11,Pacific halibut,0.026617103957668944,Autumn
+Sample192,Ind2,9,Chinook salmon,0.32592974205551056,Summer
+Sample192,Ind2,9,chum salmon,0.1208557563469514,Summer
+Sample192,Ind2,9,coho salmon,0.3858851929186662,Summer
+Sample192,Ind2,9,steelhead salmon,0.049153438351485126,Summer
+Sample192,Ind2,9,pink salmon,0,Summer
+Sample192,Ind2,9,sablefish,0.020891221544509442,Summer
+Sample192,Ind2,9,lingcod,0,Summer
+Sample192,Ind2,9,arrowtooth flounder,0.09456673003468558,Summer
+Sample192,Ind2,9,Pacific halibut,0,Summer
+Sample193,Ind25,8,Chinook salmon,0.3562711478116782,Summer
+Sample193,Ind25,8,chum salmon,0.3708297522554679,Summer
+Sample193,Ind25,8,coho salmon,0.262928724834928,Summer
+Sample193,Ind25,8,steelhead salmon,0,Summer
+Sample193,Ind25,8,pink salmon,0,Summer
+Sample193,Ind25,8,sablefish,0,Summer
+Sample193,Ind25,8,lingcod,0,Summer
+Sample193,Ind25,8,arrowtooth flounder,0,Summer
+Sample193,Ind25,8,Pacific halibut,0,Summer
+Sample194,Ind28,7,Chinook salmon,0.8040202098721272,Summer
+Sample194,Ind28,7,chum salmon,0,Summer
+Sample194,Ind28,7,coho salmon,0.16429172928934524,Summer
+Sample194,Ind28,7,steelhead salmon,0.03168806083852762,Summer
+Sample194,Ind28,7,pink salmon,0,Summer
+Sample194,Ind28,7,sablefish,0,Summer
+Sample194,Ind28,7,lingcod,0,Summer
+Sample194,Ind28,7,arrowtooth flounder,0,Summer
+Sample194,Ind28,7,Pacific halibut,0,Summer
+Sample195,Ind11,10,Chinook salmon,0.2314110581736482,Autumn
+Sample195,Ind11,10,chum salmon,0.17732914239519684,Autumn
+Sample195,Ind11,10,coho salmon,0.13443414932933884,Autumn
+Sample195,Ind11,10,steelhead salmon,0.020722769503018157,Autumn
+Sample195,Ind11,10,pink salmon,0,Autumn
+Sample195,Ind11,10,sablefish,0.3045661004939029,Autumn
+Sample195,Ind11,10,lingcod,0,Autumn
+Sample195,Ind11,10,arrowtooth flounder,0.087323889066592,Autumn
+Sample195,Ind11,10,Pacific halibut,0.04421289103830296,Autumn
+Sample196,Ind29,12,Chinook salmon,0.09405761525739127,Autumn
+Sample196,Ind29,12,chum salmon,0.28006427321795835,Autumn
+Sample196,Ind29,12,coho salmon,0,Autumn
+Sample196,Ind29,12,steelhead salmon,0,Autumn
+Sample196,Ind29,12,pink salmon,0,Autumn
+Sample196,Ind29,12,sablefish,0.11404610123542044,Autumn
+Sample196,Ind29,12,lingcod,0,Autumn
+Sample196,Ind29,12,arrowtooth flounder,0.502928676043206,Autumn
+Sample196,Ind29,12,Pacific halibut,0,Autumn
+Sample197,Ind30,10,Chinook salmon,0.283433341339608,Autumn
+Sample197,Ind30,10,chum salmon,0.16808226128876158,Autumn
+Sample197,Ind30,10,coho salmon,0.10089616939974735,Autumn
+Sample197,Ind30,10,steelhead salmon,0.04229567194529849,Autumn
+Sample197,Ind30,10,pink salmon,0,Autumn
+Sample197,Ind30,10,sablefish,0.21177753682608097,Autumn
+Sample197,Ind30,10,lingcod,0,Autumn
+Sample197,Ind30,10,arrowtooth flounder,0.13956717414212613,Autumn
+Sample197,Ind30,10,Pacific halibut,0.05394784505837756,Autumn
+Sample198,Ind14,7,Chinook salmon,0.8378788801047484,Summer
+Sample198,Ind14,7,chum salmon,0,Summer
+Sample198,Ind14,7,coho salmon,0.15633480921163997,Summer
+Sample198,Ind14,7,steelhead salmon,0,Summer
+Sample198,Ind14,7,pink salmon,0,Summer
+Sample198,Ind14,7,sablefish,0,Summer
+Sample198,Ind14,7,lingcod,0,Summer
+Sample198,Ind14,7,arrowtooth flounder,0,Summer
+Sample198,Ind14,7,Pacific halibut,0,Summer
+Sample199,Ind2,11,Chinook salmon,0.030129025807520228,Autumn
+Sample199,Ind2,11,chum salmon,0.26835867008533526,Autumn
+Sample199,Ind2,11,coho salmon,0.14016841184314546,Autumn
+Sample199,Ind2,11,steelhead salmon,0,Autumn
+Sample199,Ind2,11,pink salmon,0,Autumn
+Sample199,Ind2,11,sablefish,0.3331821865040877,Autumn
+Sample199,Ind2,11,lingcod,0,Autumn
+Sample199,Ind2,11,arrowtooth flounder,0.22116078657149793,Autumn
+Sample199,Ind2,11,Pacific halibut,0,Autumn
+Sample200,Ind28,7,Chinook salmon,0.9042210890208052,Summer
+Sample200,Ind28,7,chum salmon,0,Summer
+Sample200,Ind28,7,coho salmon,0.09058466412715072,Summer
+Sample200,Ind28,7,steelhead salmon,0,Summer
+Sample200,Ind28,7,pink salmon,0,Summer
+Sample200,Ind28,7,sablefish,0,Summer
+Sample200,Ind28,7,lingcod,0,Summer
+Sample200,Ind28,7,arrowtooth flounder,0,Summer
+Sample200,Ind28,7,Pacific halibut,0,Summer
+Sample201,Ind2,6,Chinook salmon,0.8813185264500415,Spring
+Sample201,Ind2,6,chum salmon,0,Spring
+Sample201,Ind2,6,coho salmon,0.09606697601825297,Spring
+Sample201,Ind2,6,steelhead salmon,0.022614497531705517,Spring
+Sample201,Ind2,6,pink salmon,0,Spring
+Sample201,Ind2,6,sablefish,0,Spring
+Sample201,Ind2,6,lingcod,0,Spring
+Sample201,Ind2,6,arrowtooth flounder,0,Spring
+Sample201,Ind2,6,Pacific halibut,0,Spring
+Sample202,Ind27,9,Chinook salmon,0.4599666664008535,Summer
+Sample202,Ind27,9,chum salmon,0.10750208295507205,Summer
+Sample202,Ind27,9,coho salmon,0.31173394486557676,Summer
+Sample202,Ind27,9,steelhead salmon,0.013685516698675588,Summer
+Sample202,Ind27,9,pink salmon,0,Summer
+Sample202,Ind27,9,sablefish,0.09479112894422963,Summer
+Sample202,Ind27,9,lingcod,0,Summer
+Sample202,Ind27,9,arrowtooth flounder,0.011867475710952051,Summer
+Sample202,Ind27,9,Pacific halibut,0,Summer
+Sample203,Ind10,11,Chinook salmon,0,Autumn
+Sample203,Ind10,11,chum salmon,0.23710380702795128,Autumn
+Sample203,Ind10,11,coho salmon,0.22805069505307746,Autumn
+Sample203,Ind10,11,steelhead salmon,0.07731627171063898,Autumn
+Sample203,Ind10,11,pink salmon,0,Autumn
+Sample203,Ind10,11,sablefish,0.24283940049716157,Autumn
+Sample203,Ind10,11,lingcod,0,Autumn
+Sample203,Ind10,11,arrowtooth flounder,0.21270110195740388,Autumn
+Sample203,Ind10,11,Pacific halibut,0,Autumn
+Sample204,Ind25,2,Chinook salmon,0.4312159348219615,Winter
+Sample204,Ind25,2,chum salmon,0.20865108434787183,Winter
+Sample204,Ind25,2,coho salmon,0,Winter
+Sample204,Ind25,2,steelhead salmon,0,Winter
+Sample204,Ind25,2,pink salmon,0,Winter
+Sample204,Ind25,2,sablefish,0,Winter
+Sample204,Ind25,2,lingcod,0.17768670174848347,Winter
+Sample204,Ind25,2,arrowtooth flounder,0,Winter
+Sample204,Ind25,2,Pacific halibut,0.18037596740520823,Winter
+Sample205,Ind28,9,Chinook salmon,0.46319820454986277,Summer
+Sample205,Ind28,9,chum salmon,0.1669050105856312,Summer
+Sample205,Ind28,9,coho salmon,0.3494881367904102,Summer
+Sample205,Ind28,9,steelhead salmon,0,Summer
+Sample205,Ind28,9,pink salmon,0,Summer
+Sample205,Ind28,9,sablefish,0,Summer
+Sample205,Ind28,9,lingcod,0,Summer
+Sample205,Ind28,9,arrowtooth flounder,0,Summer
+Sample205,Ind28,9,Pacific halibut,0.010656718352852744,Summer
+Sample206,Ind22,12,Chinook salmon,0.15186750440435376,Autumn
+Sample206,Ind22,12,chum salmon,0.25654386419410247,Autumn
+Sample206,Ind22,12,coho salmon,0,Autumn
+Sample206,Ind22,12,steelhead salmon,0.03457387856192615,Autumn
+Sample206,Ind22,12,pink salmon,0,Autumn
+Sample206,Ind22,12,sablefish,0.049589155733937705,Autumn
+Sample206,Ind22,12,lingcod,0.07217205904572327,Autumn
+Sample206,Ind22,12,arrowtooth flounder,0.34273681794643907,Autumn
+Sample206,Ind22,12,Pacific halibut,0.09251672011351751,Autumn
+Sample207,Ind5,1,Chinook salmon,0.03421591425398732,Winter
+Sample207,Ind5,1,chum salmon,0.3425075590153406,Winter
+Sample207,Ind5,1,coho salmon,0,Winter
+Sample207,Ind5,1,steelhead salmon,0.03803042814000889,Winter
+Sample207,Ind5,1,pink salmon,0,Winter
+Sample207,Ind5,1,sablefish,0,Winter
+Sample207,Ind5,1,lingcod,0.45957866152268206,Winter
+Sample207,Ind5,1,arrowtooth flounder,0.12473380476056556,Winter
+Sample207,Ind5,1,Pacific halibut,0,Winter
+Sample208,Ind10,6,Chinook salmon,0.835940822602247,Spring
+Sample208,Ind10,6,chum salmon,0,Spring
+Sample208,Ind10,6,coho salmon,0.1502902012181268,Spring
+Sample208,Ind10,6,steelhead salmon,0.0137689761796262,Spring
+Sample208,Ind10,6,pink salmon,0,Spring
+Sample208,Ind10,6,sablefish,0,Spring
+Sample208,Ind10,6,lingcod,0,Spring
+Sample208,Ind10,6,arrowtooth flounder,0,Spring
+Sample208,Ind10,6,Pacific halibut,0,Spring
+Sample209,Ind17,7,Chinook salmon,0.7574542524785512,Summer
+Sample209,Ind17,7,chum salmon,0,Summer
+Sample209,Ind17,7,coho salmon,0.24069422267713023,Summer
+Sample209,Ind17,7,steelhead salmon,0,Summer
+Sample209,Ind17,7,pink salmon,0,Summer
+Sample209,Ind17,7,sablefish,0,Summer
+Sample209,Ind17,7,lingcod,0,Summer
+Sample209,Ind17,7,arrowtooth flounder,0,Summer
+Sample209,Ind17,7,Pacific halibut,0,Summer
+Sample210,Ind17,3,Chinook salmon,0.34221332501164864,Winter
+Sample210,Ind17,3,chum salmon,0.0450939199307112,Winter
+Sample210,Ind17,3,coho salmon,0.2891913762028252,Winter
+Sample210,Ind17,3,steelhead salmon,0,Winter
+Sample210,Ind17,3,pink salmon,0,Winter
+Sample210,Ind17,3,sablefish,0,Winter
+Sample210,Ind17,3,lingcod,0.1573916581575508,Winter
+Sample210,Ind17,3,arrowtooth flounder,0,Winter
+Sample210,Ind17,3,Pacific halibut,0.16023706219876074,Winter
+Sample211,Ind5,10,Chinook salmon,0.2178395785057999,Autumn
+Sample211,Ind5,10,chum salmon,0.09573127745594838,Autumn
+Sample211,Ind5,10,coho salmon,0.1258871748028777,Autumn
+Sample211,Ind5,10,steelhead salmon,0,Autumn
+Sample211,Ind5,10,pink salmon,0,Autumn
+Sample211,Ind5,10,sablefish,0.3759726067007744,Autumn
+Sample211,Ind5,10,lingcod,0,Autumn
+Sample211,Ind5,10,arrowtooth flounder,0.04891405338711828,Autumn
+Sample211,Ind5,10,Pacific halibut,0.13071250789636557,Autumn
+Sample212,Ind3,6,Chinook salmon,0.8219022203926821,Spring
+Sample212,Ind3,6,chum salmon,0,Spring
+Sample212,Ind3,6,coho salmon,0.03643504396164634,Spring
+Sample212,Ind3,6,steelhead salmon,0.14166273564567156,Spring
+Sample212,Ind3,6,pink salmon,0,Spring
+Sample212,Ind3,6,sablefish,0,Spring
+Sample212,Ind3,6,lingcod,0,Spring
+Sample212,Ind3,6,arrowtooth flounder,0,Spring
+Sample212,Ind3,6,Pacific halibut,0,Spring
+Sample213,Ind14,1,Chinook salmon,0.019460969993773485,Winter
+Sample213,Ind14,1,chum salmon,0.3145023155441788,Winter
+Sample213,Ind14,1,coho salmon,0,Winter
+Sample213,Ind14,1,steelhead salmon,0.010017106156977042,Winter
+Sample213,Ind14,1,pink salmon,0,Winter
+Sample213,Ind14,1,sablefish,0,Winter
+Sample213,Ind14,1,lingcod,0.5213136354844982,Winter
+Sample213,Ind14,1,arrowtooth flounder,0.13455364193146263,Winter
+Sample213,Ind14,1,Pacific halibut,0,Winter
+Sample214,Ind14,11,Chinook salmon,0.02257975500875259,Autumn
+Sample214,Ind14,11,chum salmon,0.3283430704834073,Autumn
+Sample214,Ind14,11,coho salmon,0.21377755365846932,Autumn
+Sample214,Ind14,11,steelhead salmon,0,Autumn
+Sample214,Ind14,11,pink salmon,0,Autumn
+Sample214,Ind14,11,sablefish,0.2663584671215112,Autumn
+Sample214,Ind14,11,lingcod,0,Autumn
+Sample214,Ind14,11,arrowtooth flounder,0.15882986710969857,Autumn
+Sample214,Ind14,11,Pacific halibut,0,Autumn
+Sample215,Ind28,10,Chinook salmon,0.2878034957122508,Autumn
+Sample215,Ind28,10,chum salmon,0.171157314379822,Autumn
+Sample215,Ind28,10,coho salmon,0.12028117491343225,Autumn
+Sample215,Ind28,10,steelhead salmon,0,Autumn
+Sample215,Ind28,10,pink salmon,0,Autumn
+Sample215,Ind28,10,sablefish,0.2517453367113956,Autumn
+Sample215,Ind28,10,lingcod,0,Autumn
+Sample215,Ind28,10,arrowtooth flounder,0.16723981374970434,Autumn
+Sample215,Ind28,10,Pacific halibut,0,Autumn
+Sample216,Ind26,10,Chinook salmon,0.38794294618286895,Autumn
+Sample216,Ind26,10,chum salmon,0.14940255840599834,Autumn
+Sample216,Ind26,10,coho salmon,0.12183197440255765,Autumn
+Sample216,Ind26,10,steelhead salmon,0.05080301710913183,Autumn
+Sample216,Ind26,10,pink salmon,0,Autumn
+Sample216,Ind26,10,sablefish,0.16684164626324663,Autumn
+Sample216,Ind26,10,lingcod,0,Autumn
+Sample216,Ind26,10,arrowtooth flounder,0.12271645920752128,Autumn
+Sample216,Ind26,10,Pacific halibut,0,Autumn
+Sample217,Ind1,10,Chinook salmon,0.46594503545355304,Autumn
+Sample217,Ind1,10,chum salmon,0.24159278234529688,Autumn
+Sample217,Ind1,10,coho salmon,0.08860839726780544,Autumn
+Sample217,Ind1,10,steelhead salmon,0,Autumn
+Sample217,Ind1,10,pink salmon,0,Autumn
+Sample217,Ind1,10,sablefish,0.07167292052649846,Autumn
+Sample217,Ind1,10,lingcod,0,Autumn
+Sample217,Ind1,10,arrowtooth flounder,0.13027971666959848,Autumn
+Sample217,Ind1,10,Pacific halibut,0,Autumn
+Sample218,Ind5,11,Chinook salmon,0,Autumn
+Sample218,Ind5,11,chum salmon,0.28888760639803285,Autumn
+Sample218,Ind5,11,coho salmon,0.19403399580052832,Autumn
+Sample218,Ind5,11,steelhead salmon,0.02115247625882817,Autumn
+Sample218,Ind5,11,pink salmon,0,Autumn
+Sample218,Ind5,11,sablefish,0.32743860595525437,Autumn
+Sample218,Ind5,11,lingcod,0,Autumn
+Sample218,Ind5,11,arrowtooth flounder,0.16623951960253497,Autumn
+Sample218,Ind5,11,Pacific halibut,0,Autumn
+Sample219,Ind3,1,Chinook salmon,0.1495706036993857,Winter
+Sample219,Ind3,1,chum salmon,0.45620252558142144,Winter
+Sample219,Ind3,1,coho salmon,0,Winter
+Sample219,Ind3,1,steelhead salmon,0.039030288515607144,Winter
+Sample219,Ind3,1,pink salmon,0,Winter
+Sample219,Ind3,1,sablefish,0,Winter
+Sample219,Ind3,1,lingcod,0.17218441139231813,Winter
+Sample219,Ind3,1,arrowtooth flounder,0.025447065537197895,Winter
+Sample219,Ind3,1,Pacific halibut,0.15756510527406964,Winter
+Sample220,Ind22,8,Chinook salmon,0.425665832131094,Summer
+Sample220,Ind22,8,chum salmon,0.27479910588398365,Summer
+Sample220,Ind22,8,coho salmon,0.2777158400128098,Summer
+Sample220,Ind22,8,steelhead salmon,0.01247318136640749,Summer
+Sample220,Ind22,8,pink salmon,0,Summer
+Sample220,Ind22,8,sablefish,0,Summer
+Sample220,Ind22,8,lingcod,0,Summer
+Sample220,Ind22,8,arrowtooth flounder,0,Summer
+Sample220,Ind22,8,Pacific halibut,0,Summer
+Sample221,Ind26,4,Chinook salmon,0.5851740841519857,Spring
+Sample221,Ind26,4,chum salmon,0.25523977892455624,Spring
+Sample221,Ind26,4,coho salmon,0.049150563410457614,Spring
+Sample221,Ind26,4,steelhead salmon,0,Spring
+Sample221,Ind26,4,pink salmon,0,Spring
+Sample221,Ind26,4,sablefish,0,Spring
+Sample221,Ind26,4,lingcod,0,Spring
+Sample221,Ind26,4,arrowtooth flounder,0,Spring
+Sample221,Ind26,4,Pacific halibut,0.109527858247724,Spring
+Sample222,Ind13,6,Chinook salmon,0.8837032194787404,Spring
+Sample222,Ind13,6,chum salmon,0,Spring
+Sample222,Ind13,6,coho salmon,0.08376439396253071,Spring
+Sample222,Ind13,6,steelhead salmon,0.03253238655872891,Spring
+Sample222,Ind13,6,pink salmon,0,Spring
+Sample222,Ind13,6,sablefish,0,Spring
+Sample222,Ind13,6,lingcod,0,Spring
+Sample222,Ind13,6,arrowtooth flounder,0,Spring
+Sample222,Ind13,6,Pacific halibut,0,Spring
+Sample223,Ind11,10,Chinook salmon,0.3053300207962801,Autumn
+Sample223,Ind11,10,chum salmon,0.18120674207874407,Autumn
+Sample223,Ind11,10,coho salmon,0.1963137553192799,Autumn
+Sample223,Ind11,10,steelhead salmon,0,Autumn
+Sample223,Ind11,10,pink salmon,0,Autumn
+Sample223,Ind11,10,sablefish,0.19727756162101454,Autumn
+Sample223,Ind11,10,lingcod,0,Autumn
+Sample223,Ind11,10,arrowtooth flounder,0.11986226090549493,Autumn
+Sample223,Ind11,10,Pacific halibut,0,Autumn
+Sample224,Ind20,12,Chinook salmon,0,Autumn
+Sample224,Ind20,12,chum salmon,0.5565183301230406,Autumn
+Sample224,Ind20,12,coho salmon,0,Autumn
+Sample224,Ind20,12,steelhead salmon,0.022423802272961323,Autumn
+Sample224,Ind20,12,pink salmon,0,Autumn
+Sample224,Ind20,12,sablefish,0,Autumn
+Sample224,Ind20,12,lingcod,0.16362984488960455,Autumn
+Sample224,Ind20,12,arrowtooth flounder,0.2451995390148626,Autumn
+Sample224,Ind20,12,Pacific halibut,0,Autumn
+Sample225,Ind26,11,Chinook salmon,0.08099270556190007,Autumn
+Sample225,Ind26,11,chum salmon,0.2919174408883306,Autumn
+Sample225,Ind26,11,coho salmon,0.12354126828982456,Autumn
+Sample225,Ind26,11,steelhead salmon,0,Autumn
+Sample225,Ind26,11,pink salmon,0,Autumn
+Sample225,Ind26,11,sablefish,0.2786596465948327,Autumn
+Sample225,Ind26,11,lingcod,0,Autumn
+Sample225,Ind26,11,arrowtooth flounder,0.2193521801724158,Autumn
+Sample225,Ind26,11,Pacific halibut,0,Autumn
+Sample226,Ind17,4,Chinook salmon,0.3601569212351303,Spring
+Sample226,Ind17,4,chum salmon,0.43575960048749285,Spring
+Sample226,Ind17,4,coho salmon,0.10771503892666662,Spring
+Sample226,Ind17,4,steelhead salmon,0,Spring
+Sample226,Ind17,4,pink salmon,0,Spring
+Sample226,Ind17,4,sablefish,0,Spring
+Sample226,Ind17,4,lingcod,0,Spring
+Sample226,Ind17,4,arrowtooth flounder,0,Spring
+Sample226,Ind17,4,Pacific halibut,0.0930082177712253,Spring
+Sample227,Ind27,8,Chinook salmon,0.39763736141182304,Summer
+Sample227,Ind27,8,chum salmon,0.22236810267293333,Summer
+Sample227,Ind27,8,coho salmon,0.21349180244191684,Summer
+Sample227,Ind27,8,steelhead salmon,0.0360651735039182,Summer
+Sample227,Ind27,8,pink salmon,0,Summer
+Sample227,Ind27,8,sablefish,0,Summer
+Sample227,Ind27,8,lingcod,0,Summer
+Sample227,Ind27,8,arrowtooth flounder,0.1293370302966082,Summer
+Sample227,Ind27,8,Pacific halibut,0,Summer
+Sample228,Ind27,9,Chinook salmon,0.570379588658561,Summer
+Sample228,Ind27,9,chum salmon,0.10535186114968552,Summer
+Sample228,Ind27,9,coho salmon,0.30731302372358876,Summer
+Sample228,Ind27,9,steelhead salmon,0,Summer
+Sample228,Ind27,9,pink salmon,0,Summer
+Sample228,Ind27,9,sablefish,0,Summer
+Sample228,Ind27,9,lingcod,0,Summer
+Sample228,Ind27,9,arrowtooth flounder,0,Summer
+Sample228,Ind27,9,Pacific halibut,0,Summer
+Sample229,Ind30,8,Chinook salmon,0.58611113512591,Summer
+Sample229,Ind30,8,chum salmon,0.14582926876708255,Summer
+Sample229,Ind30,8,coho salmon,0.2508630162945371,Summer
+Sample229,Ind30,8,steelhead salmon,0,Summer
+Sample229,Ind30,8,pink salmon,0,Summer
+Sample229,Ind30,8,sablefish,0,Summer
+Sample229,Ind30,8,lingcod,0,Summer
+Sample229,Ind30,8,arrowtooth flounder,0,Summer
+Sample229,Ind30,8,Pacific halibut,0,Summer
+Sample230,Ind20,12,Chinook salmon,0.01945075784171117,Autumn
+Sample230,Ind20,12,chum salmon,0.5107608564699491,Autumn
+Sample230,Ind20,12,coho salmon,0,Autumn
+Sample230,Ind20,12,steelhead salmon,0.11720324995144514,Autumn
+Sample230,Ind20,12,pink salmon,0,Autumn
+Sample230,Ind20,12,sablefish,0.019089339207125945,Autumn
+Sample230,Ind20,12,lingcod,0.05188949224283769,Autumn
+Sample230,Ind20,12,arrowtooth flounder,0.26480238141440016,Autumn
+Sample230,Ind20,12,Pacific halibut,0.016803922872530734,Autumn
+Sample231,Ind4,3,Chinook salmon,0.4685545234997614,Winter
+Sample231,Ind4,3,chum salmon,0.21171529829399657,Winter
+Sample231,Ind4,3,coho salmon,0.1304868016695713,Winter
+Sample231,Ind4,3,steelhead salmon,0,Winter
+Sample231,Ind4,3,pink salmon,0,Winter
+Sample231,Ind4,3,sablefish,0,Winter
+Sample231,Ind4,3,lingcod,0.11983370325109946,Winter
+Sample231,Ind4,3,arrowtooth flounder,0.03059355834766128,Winter
+Sample231,Ind4,3,Pacific halibut,0.03464398926758049,Winter
+Sample232,Ind20,3,Chinook salmon,0.3760964835505868,Winter
+Sample232,Ind20,3,chum salmon,0.29731343799585985,Winter
+Sample232,Ind20,3,coho salmon,0.1286047190532254,Winter
+Sample232,Ind20,3,steelhead salmon,0.018418804607975223,Winter
+Sample232,Ind20,3,pink salmon,0,Winter
+Sample232,Ind20,3,sablefish,0,Winter
+Sample232,Ind20,3,lingcod,0.1450009163747067,Winter
+Sample232,Ind20,3,arrowtooth flounder,0,Winter
+Sample232,Ind20,3,Pacific halibut,0.0337363856842308,Winter
+Sample233,Ind11,8,Chinook salmon,0.18076153177584353,Summer
+Sample233,Ind11,8,chum salmon,0.2994011640310485,Summer
+Sample233,Ind11,8,coho salmon,0.4319828747904743,Summer
+Sample233,Ind11,8,steelhead salmon,0.04194088415370023,Summer
+Sample233,Ind11,8,pink salmon,0,Summer
+Sample233,Ind11,8,sablefish,0,Summer
+Sample233,Ind11,8,lingcod,0,Summer
+Sample233,Ind11,8,arrowtooth flounder,0.03781365115774494,Summer
+Sample233,Ind11,8,Pacific halibut,0,Summer
+Sample234,Ind17,5,Chinook salmon,0.7855143614879274,Spring
+Sample234,Ind17,5,chum salmon,0,Spring
+Sample234,Ind17,5,coho salmon,0.1792071718714472,Spring
+Sample234,Ind17,5,steelhead salmon,0.02521197529820658,Spring
+Sample234,Ind17,5,pink salmon,0,Spring
+Sample234,Ind17,5,sablefish,0,Spring
+Sample234,Ind17,5,lingcod,0,Spring
+Sample234,Ind17,5,arrowtooth flounder,0,Spring
+Sample234,Ind17,5,Pacific halibut,0,Spring
+Sample235,Ind9,7,Chinook salmon,0.803775566286774,Summer
+Sample235,Ind9,7,chum salmon,0,Summer
+Sample235,Ind9,7,coho salmon,0.05366660752639358,Summer
+Sample235,Ind9,7,steelhead salmon,0.1425578261868323,Summer
+Sample235,Ind9,7,pink salmon,0,Summer
+Sample235,Ind9,7,sablefish,0,Summer
+Sample235,Ind9,7,lingcod,0,Summer
+Sample235,Ind9,7,arrowtooth flounder,0,Summer
+Sample235,Ind9,7,Pacific halibut,0,Summer
+Sample236,Ind17,3,Chinook salmon,0.409529668755582,Winter
+Sample236,Ind17,3,chum salmon,0.10226508456991779,Winter
+Sample236,Ind17,3,coho salmon,0.11504332292918966,Winter
+Sample236,Ind17,3,steelhead salmon,0.027587151121521446,Winter
+Sample236,Ind17,3,pink salmon,0,Winter
+Sample236,Ind17,3,sablefish,0,Winter
+Sample236,Ind17,3,lingcod,0.26898725053294403,Winter
+Sample236,Ind17,3,arrowtooth flounder,0,Winter
+Sample236,Ind17,3,Pacific halibut,0.06663761952843639,Winter
+Sample237,Ind30,10,Chinook salmon,0.434298693776188,Autumn
+Sample237,Ind30,10,chum salmon,0.2345677286462448,Autumn
+Sample237,Ind30,10,coho salmon,0.18661197695583362,Autumn
+Sample237,Ind30,10,steelhead salmon,0,Autumn
+Sample237,Ind30,10,pink salmon,0,Autumn
+Sample237,Ind30,10,sablefish,0.09958618402747264,Autumn
+Sample237,Ind30,10,lingcod,0,Autumn
+Sample237,Ind30,10,arrowtooth flounder,0.044361611853280455,Autumn
+Sample237,Ind30,10,Pacific halibut,0,Autumn
+Sample238,Ind13,5,Chinook salmon,0.8304459233652796,Spring
+Sample238,Ind13,5,chum salmon,0,Spring
+Sample238,Ind13,5,coho salmon,0.15405566477795016,Spring
+Sample238,Ind13,5,steelhead salmon,0.011753249803688798,Spring
+Sample238,Ind13,5,pink salmon,0,Spring
+Sample238,Ind13,5,sablefish,0,Spring
+Sample238,Ind13,5,lingcod,0,Spring
+Sample238,Ind13,5,arrowtooth flounder,0,Spring
+Sample238,Ind13,5,Pacific halibut,0,Spring
+Sample239,Ind30,10,Chinook salmon,0.3832102134732376,Autumn
+Sample239,Ind30,10,chum salmon,0.1594528890719921,Autumn
+Sample239,Ind30,10,coho salmon,0.05200439349559469,Autumn
+Sample239,Ind30,10,steelhead salmon,0,Autumn
+Sample239,Ind30,10,pink salmon,0,Autumn
+Sample239,Ind30,10,sablefish,0.180637514367442,Autumn
+Sample239,Ind30,10,lingcod,0,Autumn
+Sample239,Ind30,10,arrowtooth flounder,0.21907798578806262,Autumn
+Sample239,Ind30,10,Pacific halibut,0,Autumn
+Sample240,Ind28,7,Chinook salmon,0.814488035258569,Summer
+Sample240,Ind28,7,chum salmon,0,Summer
+Sample240,Ind28,7,coho salmon,0.17904455192821617,Summer
+Sample240,Ind28,7,steelhead salmon,0,Summer
+Sample240,Ind28,7,pink salmon,0,Summer
+Sample240,Ind28,7,sablefish,0,Summer
+Sample240,Ind28,7,lingcod,0,Summer
+Sample240,Ind28,7,arrowtooth flounder,0,Summer
+Sample240,Ind28,7,Pacific halibut,0,Summer
+Sample241,Ind17,3,Chinook salmon,0.2952523266214021,Winter
+Sample241,Ind17,3,chum salmon,0.08646807496696406,Winter
+Sample241,Ind17,3,coho salmon,0.24780815593981495,Winter
+Sample241,Ind17,3,steelhead salmon,0.012406299122031225,Winter
+Sample241,Ind17,3,pink salmon,0,Winter
+Sample241,Ind17,3,sablefish,0,Winter
+Sample241,Ind17,3,lingcod,0.29292440434518613,Winter
+Sample241,Ind17,3,arrowtooth flounder,0,Winter
+Sample241,Ind17,3,Pacific halibut,0.06273948777704713,Winter
+Sample242,Ind29,10,Chinook salmon,0.44553927573931407,Autumn
+Sample242,Ind29,10,chum salmon,0.11618578337451929,Autumn
+Sample242,Ind29,10,coho salmon,0.15764720035507784,Autumn
+Sample242,Ind29,10,steelhead salmon,0,Autumn
+Sample242,Ind29,10,pink salmon,0,Autumn
+Sample242,Ind29,10,sablefish,0.23632684190438857,Autumn
+Sample242,Ind29,10,lingcod,0,Autumn
+Sample242,Ind29,10,arrowtooth flounder,0.03989762555587118,Autumn
+Sample242,Ind29,10,Pacific halibut,0,Autumn
+Sample243,Ind20,7,Chinook salmon,0.8133687319975546,Summer
+Sample243,Ind20,7,chum salmon,0,Summer
+Sample243,Ind20,7,coho salmon,0.16340877611834645,Summer
+Sample243,Ind20,7,steelhead salmon,0.023222491884099077,Summer
+Sample243,Ind20,7,pink salmon,0,Summer
+Sample243,Ind20,7,sablefish,0,Summer
+Sample243,Ind20,7,lingcod,0,Summer
+Sample243,Ind20,7,arrowtooth flounder,0,Summer
+Sample243,Ind20,7,Pacific halibut,0,Summer
+Sample244,Ind1,8,Chinook salmon,0.2685634433199395,Summer
+Sample244,Ind1,8,chum salmon,0.38635002247574807,Summer
+Sample244,Ind1,8,coho salmon,0.1520869540074042,Summer
+Sample244,Ind1,8,steelhead salmon,0,Summer
+Sample244,Ind1,8,pink salmon,0,Summer
+Sample244,Ind1,8,sablefish,0,Summer
+Sample244,Ind1,8,lingcod,0,Summer
+Sample244,Ind1,8,arrowtooth flounder,0.17797686961669937,Summer
+Sample244,Ind1,8,Pacific halibut,0,Summer
+Sample245,Ind17,8,Chinook salmon,0.22744105571684803,Summer
+Sample245,Ind17,8,chum salmon,0.228129307190993,Summer
+Sample245,Ind17,8,coho salmon,0.4975978519431765,Summer
+Sample245,Ind17,8,steelhead salmon,0,Summer
+Sample245,Ind17,8,pink salmon,0,Summer
+Sample245,Ind17,8,sablefish,0,Summer
+Sample245,Ind17,8,lingcod,0,Summer
+Sample245,Ind17,8,arrowtooth flounder,0.03883636889276889,Summer
+Sample245,Ind17,8,Pacific halibut,0,Summer
+Sample246,Ind1,11,Chinook salmon,0.025698942870764668,Autumn
+Sample246,Ind1,11,chum salmon,0.2828818212121113,Autumn
+Sample246,Ind1,11,coho salmon,0.1668069145263703,Autumn
+Sample246,Ind1,11,steelhead salmon,0.011069422263690823,Autumn
+Sample246,Ind1,11,pink salmon,0,Autumn
+Sample246,Ind1,11,sablefish,0.29328526671137656,Autumn
+Sample246,Ind1,11,lingcod,0,Autumn
+Sample246,Ind1,11,arrowtooth flounder,0.22025763240652602,Autumn
+Sample246,Ind1,11,Pacific halibut,0,Autumn
+Sample247,Ind28,3,Chinook salmon,0.3293706341429388,Winter
+Sample247,Ind28,3,chum salmon,0.2578341609357286,Winter
+Sample247,Ind28,3,coho salmon,0.13988062578897625,Winter
+Sample247,Ind28,3,steelhead salmon,0.0370476746446618,Winter
+Sample247,Ind28,3,pink salmon,0,Winter
+Sample247,Ind28,3,sablefish,0,Winter
+Sample247,Ind28,3,lingcod,0.09898032641427684,Winter
+Sample247,Ind28,3,arrowtooth flounder,0.03207934983789446,Winter
+Sample247,Ind28,3,Pacific halibut,0.10480722823552317,Winter
+Sample248,Ind2,10,Chinook salmon,0.38374831792374453,Autumn
+Sample248,Ind2,10,chum salmon,0.2341484171437388,Autumn
+Sample248,Ind2,10,coho salmon,0.08457514145227747,Autumn
+Sample248,Ind2,10,steelhead salmon,0.012444656588301881,Autumn
+Sample248,Ind2,10,pink salmon,0,Autumn
+Sample248,Ind2,10,sablefish,0.1421710218162946,Autumn
+Sample248,Ind2,10,lingcod,0,Autumn
+Sample248,Ind2,10,arrowtooth flounder,0.120256273084283,Autumn
+Sample248,Ind2,10,Pacific halibut,0.022656171991359737,Autumn
+Sample249,Ind8,3,Chinook salmon,0.4330827208711276,Winter
+Sample249,Ind8,3,chum salmon,0.10784652290950042,Winter
+Sample249,Ind8,3,coho salmon,0.1245341019604438,Winter
+Sample249,Ind8,3,steelhead salmon,0,Winter
+Sample249,Ind8,3,pink salmon,0,Winter
+Sample249,Ind8,3,sablefish,0,Winter
+Sample249,Ind8,3,lingcod,0.12476041587273969,Winter
+Sample249,Ind8,3,arrowtooth flounder,0.11744805274063064,Winter
+Sample249,Ind8,3,Pacific halibut,0.092073072938969,Winter
+Sample250,Ind16,2,Chinook salmon,0.6004173935307022,Winter
+Sample250,Ind16,2,chum salmon,0.2546879373790137,Winter
+Sample250,Ind16,2,coho salmon,0,Winter
+Sample250,Ind16,2,steelhead salmon,0,Winter
+Sample250,Ind16,2,pink salmon,0,Winter
+Sample250,Ind16,2,sablefish,0,Winter
+Sample250,Ind16,2,lingcod,0.07563757621433753,Winter
+Sample250,Ind16,2,arrowtooth flounder,0.013995014275830251,Winter
+Sample250,Ind16,2,Pacific halibut,0.05523691942982494,Winter
+Sample251,Ind3,7,Chinook salmon,0.8629038734115788,Summer
+Sample251,Ind3,7,chum salmon,0,Summer
+Sample251,Ind3,7,coho salmon,0.1280559047786943,Summer
+Sample251,Ind3,7,steelhead salmon,0,Summer
+Sample251,Ind3,7,pink salmon,0,Summer
+Sample251,Ind3,7,sablefish,0,Summer
+Sample251,Ind3,7,lingcod,0,Summer
+Sample251,Ind3,7,arrowtooth flounder,0,Summer
+Sample251,Ind3,7,Pacific halibut,0,Summer
+Sample252,Ind5,4,Chinook salmon,0.5085350618708924,Spring
+Sample252,Ind5,4,chum salmon,0.24137060472553223,Spring
+Sample252,Ind5,4,coho salmon,0.12389942477498693,Spring
+Sample252,Ind5,4,steelhead salmon,0,Spring
+Sample252,Ind5,4,pink salmon,0,Spring
+Sample252,Ind5,4,sablefish,0,Spring
+Sample252,Ind5,4,lingcod,0,Spring
+Sample252,Ind5,4,arrowtooth flounder,0.042475797076824987,Spring
+Sample252,Ind5,4,Pacific halibut,0.08204346194229055,Spring
+Sample253,Ind13,5,Chinook salmon,0.5750841053584933,Spring
+Sample253,Ind13,5,chum salmon,0,Spring
+Sample253,Ind13,5,coho salmon,0.3940360712816116,Spring
+Sample253,Ind13,5,steelhead salmon,0.012216710323831743,Spring
+Sample253,Ind13,5,pink salmon,0,Spring
+Sample253,Ind13,5,sablefish,0,Spring
+Sample253,Ind13,5,lingcod,0,Spring
+Sample253,Ind13,5,arrowtooth flounder,0,Spring
+Sample253,Ind13,5,Pacific halibut,0.010494391077322272,Spring
+Sample254,Ind12,5,Chinook salmon,0.3937540886224079,Spring
+Sample254,Ind12,5,chum salmon,0,Spring
+Sample254,Ind12,5,coho salmon,0.5438907068831175,Spring
+Sample254,Ind12,5,steelhead salmon,0,Spring
+Sample254,Ind12,5,pink salmon,0,Spring
+Sample254,Ind12,5,sablefish,0,Spring
+Sample254,Ind12,5,lingcod,0,Spring
+Sample254,Ind12,5,arrowtooth flounder,0.052698347301589975,Spring
+Sample254,Ind12,5,Pacific halibut,0,Spring
+Sample255,Ind1,11,Chinook salmon,0.026061435567473597,Autumn
+Sample255,Ind1,11,chum salmon,0.26766482985302503,Autumn
+Sample255,Ind1,11,coho salmon,0.22441905850852362,Autumn
+Sample255,Ind1,11,steelhead salmon,0.05852951215439613,Autumn
+Sample255,Ind1,11,pink salmon,0,Autumn
+Sample255,Ind1,11,sablefish,0.296747595339889,Autumn
+Sample255,Ind1,11,lingcod,0,Autumn
+Sample255,Ind1,11,arrowtooth flounder,0.1265039714198604,Autumn
+Sample255,Ind1,11,Pacific halibut,0,Autumn
+Sample256,Ind30,10,Chinook salmon,0.27223857024191767,Autumn
+Sample256,Ind30,10,chum salmon,0.0895532846667618,Autumn
+Sample256,Ind30,10,coho salmon,0.1442111166868708,Autumn
+Sample256,Ind30,10,steelhead salmon,0,Autumn
+Sample256,Ind30,10,pink salmon,0,Autumn
+Sample256,Ind30,10,sablefish,0.22264782170911626,Autumn
+Sample256,Ind30,10,lingcod,0,Autumn
+Sample256,Ind30,10,arrowtooth flounder,0.2578916181861395,Autumn
+Sample256,Ind30,10,Pacific halibut,0.013451617855660571,Autumn
+Sample257,Ind19,11,Chinook salmon,0.1645515285084988,Autumn
+Sample257,Ind19,11,chum salmon,0.3501636562854896,Autumn
+Sample257,Ind19,11,coho salmon,0.19039697079501539,Autumn
+Sample257,Ind19,11,steelhead salmon,0,Autumn
+Sample257,Ind19,11,pink salmon,0,Autumn
+Sample257,Ind19,11,sablefish,0.23772070512927534,Autumn
+Sample257,Ind19,11,lingcod,0,Autumn
+Sample257,Ind19,11,arrowtooth flounder,0.05413162138278592,Autumn
+Sample257,Ind19,11,Pacific halibut,0,Autumn
+Sample258,Ind28,10,Chinook salmon,0.1381501106008562,Autumn
+Sample258,Ind28,10,chum salmon,0.2825646174000931,Autumn
+Sample258,Ind28,10,coho salmon,0.11794255025576127,Autumn
+Sample258,Ind28,10,steelhead salmon,0.019197804411079357,Autumn
+Sample258,Ind28,10,pink salmon,0,Autumn
+Sample258,Ind28,10,sablefish,0.3073602117633094,Autumn
+Sample258,Ind28,10,lingcod,0,Autumn
+Sample258,Ind28,10,arrowtooth flounder,0.13476566561096018,Autumn
+Sample258,Ind28,10,Pacific halibut,0,Autumn
+Sample259,Ind5,1,Chinook salmon,0.15087076291251403,Winter
+Sample259,Ind5,1,chum salmon,0.18979997989701622,Winter
+Sample259,Ind5,1,coho salmon,0,Winter
+Sample259,Ind5,1,steelhead salmon,0,Winter
+Sample259,Ind5,1,pink salmon,0,Winter
+Sample259,Ind5,1,sablefish,0,Winter
+Sample259,Ind5,1,lingcod,0.6502358463943251,Winter
+Sample259,Ind5,1,arrowtooth flounder,0,Winter
+Sample259,Ind5,1,Pacific halibut,0,Winter
+Sample260,Ind15,5,Chinook salmon,0.6342926360295073,Spring
+Sample260,Ind15,5,chum salmon,0,Spring
+Sample260,Ind15,5,coho salmon,0.3482754155783156,Spring
+Sample260,Ind15,5,steelhead salmon,0,Spring
+Sample260,Ind15,5,pink salmon,0,Spring
+Sample260,Ind15,5,sablefish,0,Spring
+Sample260,Ind15,5,lingcod,0,Spring
+Sample260,Ind15,5,arrowtooth flounder,0,Spring
+Sample260,Ind15,5,Pacific halibut,0,Spring
+Sample261,Ind24,6,Chinook salmon,0.836982780010527,Spring
+Sample261,Ind24,6,chum salmon,0,Spring
+Sample261,Ind24,6,coho salmon,0.1613382026840833,Spring
+Sample261,Ind24,6,steelhead salmon,0,Spring
+Sample261,Ind24,6,pink salmon,0,Spring
+Sample261,Ind24,6,sablefish,0,Spring
+Sample261,Ind24,6,lingcod,0,Spring
+Sample261,Ind24,6,arrowtooth flounder,0,Spring
+Sample261,Ind24,6,Pacific halibut,0,Spring
+Sample262,Ind6,10,Chinook salmon,0.4596634985767597,Autumn
+Sample262,Ind6,10,chum salmon,0.19164992517014906,Autumn
+Sample262,Ind6,10,coho salmon,0.044416623515515966,Autumn
+Sample262,Ind6,10,steelhead salmon,0,Autumn
+Sample262,Ind6,10,pink salmon,0,Autumn
+Sample262,Ind6,10,sablefish,0.23197185622930555,Autumn
+Sample262,Ind6,10,lingcod,0,Autumn
+Sample262,Ind6,10,arrowtooth flounder,0.06708984354514941,Autumn
+Sample262,Ind6,10,Pacific halibut,0,Autumn
+Sample263,Ind23,7,Chinook salmon,0.8735907050500752,Summer
+Sample263,Ind23,7,chum salmon,0,Summer
+Sample263,Ind23,7,coho salmon,0.10372244631984087,Summer
+Sample263,Ind23,7,steelhead salmon,0.022686848630083977,Summer
+Sample263,Ind23,7,pink salmon,0,Summer
+Sample263,Ind23,7,sablefish,0,Summer
+Sample263,Ind23,7,lingcod,0,Summer
+Sample263,Ind23,7,arrowtooth flounder,0,Summer
+Sample263,Ind23,7,Pacific halibut,0,Summer
+Sample264,Ind16,10,Chinook salmon,0.32056080785833085,Autumn
+Sample264,Ind16,10,chum salmon,0.2986550872266061,Autumn
+Sample264,Ind16,10,coho salmon,0.17637508314871753,Autumn
+Sample264,Ind16,10,steelhead salmon,0,Autumn
+Sample264,Ind16,10,pink salmon,0,Autumn
+Sample264,Ind16,10,sablefish,0.10158687565125969,Autumn
+Sample264,Ind16,10,lingcod,0,Autumn
+Sample264,Ind16,10,arrowtooth flounder,0.1021839103997011,Autumn
+Sample264,Ind16,10,Pacific halibut,0,Autumn
+Sample265,Ind10,9,Chinook salmon,0.4820243607843248,Summer
+Sample265,Ind10,9,chum salmon,0.14079793517595604,Summer
+Sample265,Ind10,9,coho salmon,0.2987591325134474,Summer
+Sample265,Ind10,9,steelhead salmon,0.0651520735927673,Summer
+Sample265,Ind10,9,pink salmon,0,Summer
+Sample265,Ind10,9,sablefish,0.012539139475813525,Summer
+Sample265,Ind10,9,lingcod,0,Summer
+Sample265,Ind10,9,arrowtooth flounder,0,Summer
+Sample265,Ind10,9,Pacific halibut,0,Summer
+Sample266,Ind7,12,Chinook salmon,0.11789827496933908,Autumn
+Sample266,Ind7,12,chum salmon,0.7289957071383774,Autumn
+Sample266,Ind7,12,coho salmon,0,Autumn
+Sample266,Ind7,12,steelhead salmon,0.06540941297072457,Autumn
+Sample266,Ind7,12,pink salmon,0,Autumn
+Sample266,Ind7,12,sablefish,0,Autumn
+Sample266,Ind7,12,lingcod,0,Autumn
+Sample266,Ind7,12,arrowtooth flounder,0.06843042509321005,Autumn
+Sample266,Ind7,12,Pacific halibut,0,Autumn
+Sample267,Ind9,12,Chinook salmon,0,Autumn
+Sample267,Ind9,12,chum salmon,0.36090365593299684,Autumn
+Sample267,Ind9,12,coho salmon,0,Autumn
+Sample267,Ind9,12,steelhead salmon,0.034636173670412516,Autumn
+Sample267,Ind9,12,pink salmon,0,Autumn
+Sample267,Ind9,12,sablefish,0.08613740004354947,Autumn
+Sample267,Ind9,12,lingcod,0.022838903448650368,Autumn
+Sample267,Ind9,12,arrowtooth flounder,0.49134599897773035,Autumn
+Sample267,Ind9,12,Pacific halibut,0,Autumn
+Sample268,Ind9,12,Chinook salmon,0.0776033798119778,Autumn
+Sample268,Ind9,12,chum salmon,0.18143724989912677,Autumn
+Sample268,Ind9,12,coho salmon,0,Autumn
+Sample268,Ind9,12,steelhead salmon,0.01093180122273477,Autumn
+Sample268,Ind9,12,pink salmon,0,Autumn
+Sample268,Ind9,12,sablefish,0,Autumn
+Sample268,Ind9,12,lingcod,0.05355641503396528,Autumn
+Sample268,Ind9,12,arrowtooth flounder,0.5032562753039496,Autumn
+Sample268,Ind9,12,Pacific halibut,0.16843424501698745,Autumn
+Sample269,Ind25,2,Chinook salmon,0.7708474665409014,Winter
+Sample269,Ind25,2,chum salmon,0.12689098924843548,Winter
+Sample269,Ind25,2,coho salmon,0,Winter
+Sample269,Ind25,2,steelhead salmon,0,Winter
+Sample269,Ind25,2,pink salmon,0,Winter
+Sample269,Ind25,2,sablefish,0,Winter
+Sample269,Ind25,2,lingcod,0.0644052550811654,Winter
+Sample269,Ind25,2,arrowtooth flounder,0.01086266589268929,Winter
+Sample269,Ind25,2,Pacific halibut,0.025920244373077113,Winter
+Sample270,Ind3,5,Chinook salmon,0.6797230605491444,Spring
+Sample270,Ind3,5,chum salmon,0,Spring
+Sample270,Ind3,5,coho salmon,0.14292408592844033,Spring
+Sample270,Ind3,5,steelhead salmon,0.060262351468229475,Spring
+Sample270,Ind3,5,pink salmon,0,Spring
+Sample270,Ind3,5,sablefish,0,Spring
+Sample270,Ind3,5,lingcod,0,Spring
+Sample270,Ind3,5,arrowtooth flounder,0,Spring
+Sample270,Ind3,5,Pacific halibut,0.11701876348578544,Spring
+Sample271,Ind18,1,Chinook salmon,0,Winter
+Sample271,Ind18,1,chum salmon,0.8108279635808385,Winter
+Sample271,Ind18,1,coho salmon,0,Winter
+Sample271,Ind18,1,steelhead salmon,0,Winter
+Sample271,Ind18,1,pink salmon,0,Winter
+Sample271,Ind18,1,sablefish,0,Winter
+Sample271,Ind18,1,lingcod,0.18151612743848095,Winter
+Sample271,Ind18,1,arrowtooth flounder,0,Winter
+Sample271,Ind18,1,Pacific halibut,0,Winter
+Sample272,Ind21,11,Chinook salmon,0,Autumn
+Sample272,Ind21,11,chum salmon,0.18995931587163914,Autumn
+Sample272,Ind21,11,coho salmon,0.1532831005924682,Autumn
+Sample272,Ind21,11,steelhead salmon,0,Autumn
+Sample272,Ind21,11,pink salmon,0,Autumn
+Sample272,Ind21,11,sablefish,0.5244076319375106,Autumn
+Sample272,Ind21,11,lingcod,0,Autumn
+Sample272,Ind21,11,arrowtooth flounder,0.11749984538839456,Autumn
+Sample272,Ind21,11,Pacific halibut,0,Autumn
+Sample273,Ind15,8,Chinook salmon,0.4998784205626654,Summer
+Sample273,Ind15,8,chum salmon,0.2063645855999939,Summer
+Sample273,Ind15,8,coho salmon,0.27173566932791826,Summer
+Sample273,Ind15,8,steelhead salmon,0.018696910288813325,Summer
+Sample273,Ind15,8,pink salmon,0,Summer
+Sample273,Ind15,8,sablefish,0,Summer
+Sample273,Ind15,8,lingcod,0,Summer
+Sample273,Ind15,8,arrowtooth flounder,0,Summer
+Sample273,Ind15,8,Pacific halibut,0,Summer
+Sample274,Ind28,2,Chinook salmon,0.4533670289319836,Winter
+Sample274,Ind28,2,chum salmon,0.11352662160034228,Winter
+Sample274,Ind28,2,coho salmon,0,Winter
+Sample274,Ind28,2,steelhead salmon,0,Winter
+Sample274,Ind28,2,pink salmon,0,Winter
+Sample274,Ind28,2,sablefish,0,Winter
+Sample274,Ind28,2,lingcod,0.3506069552238611,Winter
+Sample274,Ind28,2,arrowtooth flounder,0,Winter
+Sample274,Ind28,2,Pacific halibut,0.07298667494832742,Winter
+Sample275,Ind28,6,Chinook salmon,0.8842458493413351,Spring
+Sample275,Ind28,6,chum salmon,0,Spring
+Sample275,Ind28,6,coho salmon,0.10400402640585593,Spring
+Sample275,Ind28,6,steelhead salmon,0.011750124252808908,Spring
+Sample275,Ind28,6,pink salmon,0,Spring
+Sample275,Ind28,6,sablefish,0,Spring
+Sample275,Ind28,6,lingcod,0,Spring
+Sample275,Ind28,6,arrowtooth flounder,0,Spring
+Sample275,Ind28,6,Pacific halibut,0,Spring
+Sample276,Ind15,3,Chinook salmon,0.5355634349237528,Winter
+Sample276,Ind15,3,chum salmon,0.21217287479719957,Winter
+Sample276,Ind15,3,coho salmon,0.1128912662532448,Winter
+Sample276,Ind15,3,steelhead salmon,0,Winter
+Sample276,Ind15,3,pink salmon,0,Winter
+Sample276,Ind15,3,sablefish,0,Winter
+Sample276,Ind15,3,lingcod,0.08240492321835746,Winter
+Sample276,Ind15,3,arrowtooth flounder,0,Winter
+Sample276,Ind15,3,Pacific halibut,0.055978145938376245,Winter
+Sample277,Ind29,12,Chinook salmon,0.07946968431335141,Autumn
+Sample277,Ind29,12,chum salmon,0.5042300835027417,Autumn
+Sample277,Ind29,12,coho salmon,0,Autumn
+Sample277,Ind29,12,steelhead salmon,0.135994089562744,Autumn
+Sample277,Ind29,12,pink salmon,0,Autumn
+Sample277,Ind29,12,sablefish,0,Autumn
+Sample277,Ind29,12,lingcod,0.016639488602422717,Autumn
+Sample277,Ind29,12,arrowtooth flounder,0.2583019585206949,Autumn
+Sample277,Ind29,12,Pacific halibut,0,Autumn
+Sample278,Ind25,3,Chinook salmon,0.2698039248964085,Winter
+Sample278,Ind25,3,chum salmon,0.46052467858553753,Winter
+Sample278,Ind25,3,coho salmon,0.10724908510256208,Winter
+Sample278,Ind25,3,steelhead salmon,0,Winter
+Sample278,Ind25,3,pink salmon,0,Winter
+Sample278,Ind25,3,sablefish,0,Winter
+Sample278,Ind25,3,lingcod,0.12389193841433341,Winter
+Sample278,Ind25,3,arrowtooth flounder,0,Winter
+Sample278,Ind25,3,Pacific halibut,0.03594812788838002,Winter
+Sample279,Ind20,8,Chinook salmon,0.5381332750863045,Summer
+Sample279,Ind20,8,chum salmon,0.16213663170665063,Summer
+Sample279,Ind20,8,coho salmon,0.26202879477505137,Summer
+Sample279,Ind20,8,steelhead salmon,0.03690250758350265,Summer
+Sample279,Ind20,8,pink salmon,0,Summer
+Sample279,Ind20,8,sablefish,0,Summer
+Sample279,Ind20,8,lingcod,0,Summer
+Sample279,Ind20,8,arrowtooth flounder,0,Summer
+Sample279,Ind20,8,Pacific halibut,0,Summer
+Sample280,Ind25,9,Chinook salmon,0.26445980818906223,Summer
+Sample280,Ind25,9,chum salmon,0.10244987522179182,Summer
+Sample280,Ind25,9,coho salmon,0.5365965196843829,Summer
+Sample280,Ind25,9,steelhead salmon,0,Summer
+Sample280,Ind25,9,pink salmon,0,Summer
+Sample280,Ind25,9,sablefish,0.06095834044001393,Summer
+Sample280,Ind25,9,lingcod,0,Summer
+Sample280,Ind25,9,arrowtooth flounder,0,Summer
+Sample280,Ind25,9,Pacific halibut,0.025744505184497897,Summer
+Sample281,Ind16,7,Chinook salmon,0.878399763009952,Summer
+Sample281,Ind16,7,chum salmon,0,Summer
+Sample281,Ind16,7,coho salmon,0.12038773566816541,Summer
+Sample281,Ind16,7,steelhead salmon,0,Summer
+Sample281,Ind16,7,pink salmon,0,Summer
+Sample281,Ind16,7,sablefish,0,Summer
+Sample281,Ind16,7,lingcod,0,Summer
+Sample281,Ind16,7,arrowtooth flounder,0,Summer
+Sample281,Ind16,7,Pacific halibut,0,Summer
+Sample282,Ind22,6,Chinook salmon,0.9394340412474173,Spring
+Sample282,Ind22,6,chum salmon,0,Spring
+Sample282,Ind22,6,coho salmon,0,Spring
+Sample282,Ind22,6,steelhead salmon,0.054729583450744156,Spring
+Sample282,Ind22,6,pink salmon,0,Spring
+Sample282,Ind22,6,sablefish,0,Spring
+Sample282,Ind22,6,lingcod,0,Spring
+Sample282,Ind22,6,arrowtooth flounder,0,Spring
+Sample282,Ind22,6,Pacific halibut,0,Spring
+Sample283,Ind24,6,Chinook salmon,0.7893535689583598,Spring
+Sample283,Ind24,6,chum salmon,0,Spring
+Sample283,Ind24,6,coho salmon,0.0690178109377009,Spring
+Sample283,Ind24,6,steelhead salmon,0.14162862010393923,Spring
+Sample283,Ind24,6,pink salmon,0,Spring
+Sample283,Ind24,6,sablefish,0,Spring
+Sample283,Ind24,6,lingcod,0,Spring
+Sample283,Ind24,6,arrowtooth flounder,0,Spring
+Sample283,Ind24,6,Pacific halibut,0,Spring
+Sample284,Ind1,8,Chinook salmon,0.3516658088424487,Summer
+Sample284,Ind1,8,chum salmon,0.1553290167631629,Summer
+Sample284,Ind1,8,coho salmon,0.48482866654016543,Summer
+Sample284,Ind1,8,steelhead salmon,0,Summer
+Sample284,Ind1,8,pink salmon,0,Summer
+Sample284,Ind1,8,sablefish,0,Summer
+Sample284,Ind1,8,lingcod,0,Summer
+Sample284,Ind1,8,arrowtooth flounder,0,Summer
+Sample284,Ind1,8,Pacific halibut,0,Summer
+Sample285,Ind29,10,Chinook salmon,0.35435542714822166,Autumn
+Sample285,Ind29,10,chum salmon,0.2222103313909304,Autumn
+Sample285,Ind29,10,coho salmon,0.06437401034550873,Autumn
+Sample285,Ind29,10,steelhead salmon,0,Autumn
+Sample285,Ind29,10,pink salmon,0,Autumn
+Sample285,Ind29,10,sablefish,0.15797960953628154,Autumn
+Sample285,Ind29,10,lingcod,0,Autumn
+Sample285,Ind29,10,arrowtooth flounder,0.17838922058164386,Autumn
+Sample285,Ind29,10,Pacific halibut,0.018395302112381093,Autumn
+Sample286,Ind6,5,Chinook salmon,0.6427325835057756,Spring
+Sample286,Ind6,5,chum salmon,0,Spring
+Sample286,Ind6,5,coho salmon,0.33949581524783706,Spring
+Sample286,Ind6,5,steelhead salmon,0.011546274079073122,Spring
+Sample286,Ind6,5,pink salmon,0,Spring
+Sample286,Ind6,5,sablefish,0,Spring
+Sample286,Ind6,5,lingcod,0,Spring
+Sample286,Ind6,5,arrowtooth flounder,0,Spring
+Sample286,Ind6,5,Pacific halibut,0,Spring
+Sample287,Ind11,7,Chinook salmon,0.8327810001237309,Summer
+Sample287,Ind11,7,chum salmon,0,Summer
+Sample287,Ind11,7,coho salmon,0.08969951466871426,Summer
+Sample287,Ind11,7,steelhead salmon,0.07751948520755483,Summer
+Sample287,Ind11,7,pink salmon,0,Summer
+Sample287,Ind11,7,sablefish,0,Summer
+Sample287,Ind11,7,lingcod,0,Summer
+Sample287,Ind11,7,arrowtooth flounder,0,Summer
+Sample287,Ind11,7,Pacific halibut,0,Summer
+Sample288,Ind9,9,Chinook salmon,0.3708281728556306,Summer
+Sample288,Ind9,9,chum salmon,0.07762124444086446,Summer
+Sample288,Ind9,9,coho salmon,0.46604334261330554,Summer
+Sample288,Ind9,9,steelhead salmon,0,Summer
+Sample288,Ind9,9,pink salmon,0,Summer
+Sample288,Ind9,9,sablefish,0.054969919634725126,Summer
+Sample288,Ind9,9,lingcod,0,Summer
+Sample288,Ind9,9,arrowtooth flounder,0,Summer
+Sample288,Ind9,9,Pacific halibut,0.01282329169597255,Summer
+Sample289,Ind22,10,Chinook salmon,0.5589029164034917,Autumn
+Sample289,Ind22,10,chum salmon,0.16069372312285846,Autumn
+Sample289,Ind22,10,coho salmon,0.04119797112700502,Autumn
+Sample289,Ind22,10,steelhead salmon,0.03292623057329357,Autumn
+Sample289,Ind22,10,pink salmon,0,Autumn
+Sample289,Ind22,10,sablefish,0.17105004102625498,Autumn
+Sample289,Ind22,10,lingcod,0,Autumn
+Sample289,Ind22,10,arrowtooth flounder,0.025567087658443857,Autumn
+Sample289,Ind22,10,Pacific halibut,0,Autumn
+Sample290,Ind26,11,Chinook salmon,0.04769660905432562,Autumn
+Sample290,Ind26,11,chum salmon,0.24378306298174832,Autumn
+Sample290,Ind26,11,coho salmon,0.15873961298975536,Autumn
+Sample290,Ind26,11,steelhead salmon,0,Autumn
+Sample290,Ind26,11,pink salmon,0,Autumn
+Sample290,Ind26,11,sablefish,0.24753842717241883,Autumn
+Sample290,Ind26,11,lingcod,0,Autumn
+Sample290,Ind26,11,arrowtooth flounder,0.2941390538070494,Autumn
+Sample290,Ind26,11,Pacific halibut,0,Autumn
+Sample291,Ind22,12,Chinook salmon,0.2142216849779339,Autumn
+Sample291,Ind22,12,chum salmon,0.26046891260135624,Autumn
+Sample291,Ind22,12,coho salmon,0,Autumn
+Sample291,Ind22,12,steelhead salmon,0.02312229746882178,Autumn
+Sample291,Ind22,12,pink salmon,0,Autumn
+Sample291,Ind22,12,sablefish,0.02520794042637395,Autumn
+Sample291,Ind22,12,lingcod,0,Autumn
+Sample291,Ind22,12,arrowtooth flounder,0.4409821965180012,Autumn
+Sample291,Ind22,12,Pacific halibut,0.03319847271422347,Autumn
+Sample292,Ind22,10,Chinook salmon,0.1805218354982477,Autumn
+Sample292,Ind22,10,chum salmon,0.2515326787882918,Autumn
+Sample292,Ind22,10,coho salmon,0.09263572633627022,Autumn
+Sample292,Ind22,10,steelhead salmon,0.13270055522412655,Autumn
+Sample292,Ind22,10,pink salmon,0,Autumn
+Sample292,Ind22,10,sablefish,0.2274293114577956,Autumn
+Sample292,Ind22,10,lingcod,0,Autumn
+Sample292,Ind22,10,arrowtooth flounder,0.11401573187436671,Autumn
+Sample292,Ind22,10,Pacific halibut,0,Autumn
+Sample293,Ind20,11,Chinook salmon,0,Autumn
+Sample293,Ind20,11,chum salmon,0.3637102660054835,Autumn
+Sample293,Ind20,11,coho salmon,0.1341185823452512,Autumn
+Sample293,Ind20,11,steelhead salmon,0.11246653296483497,Autumn
+Sample293,Ind20,11,pink salmon,0,Autumn
+Sample293,Ind20,11,sablefish,0.30809870946565965,Autumn
+Sample293,Ind20,11,lingcod,0,Autumn
+Sample293,Ind20,11,arrowtooth flounder,0.07317229901012368,Autumn
+Sample293,Ind20,11,Pacific halibut,0,Autumn
+Sample294,Ind23,11,Chinook salmon,0.04610633595828185,Autumn
+Sample294,Ind23,11,chum salmon,0.25623875256190565,Autumn
+Sample294,Ind23,11,coho salmon,0.020016076979174124,Autumn
+Sample294,Ind23,11,steelhead salmon,0,Autumn
+Sample294,Ind23,11,pink salmon,0,Autumn
+Sample294,Ind23,11,sablefish,0.29458548007888213,Autumn
+Sample294,Ind23,11,lingcod,0,Autumn
+Sample294,Ind23,11,arrowtooth flounder,0.3655262467763133,Autumn
+Sample294,Ind23,11,Pacific halibut,0,Autumn
+Sample295,Ind22,7,Chinook salmon,0.9176647494657213,Summer
+Sample295,Ind22,7,chum salmon,0,Summer
+Sample295,Ind22,7,coho salmon,0.08204927701963183,Summer
+Sample295,Ind22,7,steelhead salmon,0,Summer
+Sample295,Ind22,7,pink salmon,0,Summer
+Sample295,Ind22,7,sablefish,0,Summer
+Sample295,Ind22,7,lingcod,0,Summer
+Sample295,Ind22,7,arrowtooth flounder,0,Summer
+Sample295,Ind22,7,Pacific halibut,0,Summer
+Sample296,Ind26,1,Chinook salmon,0,Winter
+Sample296,Ind26,1,chum salmon,0.5497964826965072,Winter
+Sample296,Ind26,1,coho salmon,0,Winter
+Sample296,Ind26,1,steelhead salmon,0,Winter
+Sample296,Ind26,1,pink salmon,0,Winter
+Sample296,Ind26,1,sablefish,0,Winter
+Sample296,Ind26,1,lingcod,0.39598151306598084,Winter
+Sample296,Ind26,1,arrowtooth flounder,0.033421284505494926,Winter
+Sample296,Ind26,1,Pacific halibut,0,Winter
+Sample297,Ind13,6,Chinook salmon,0.8507731269746556,Spring
+Sample297,Ind13,6,chum salmon,0,Spring
+Sample297,Ind13,6,coho salmon,0.14802701425490883,Spring
+Sample297,Ind13,6,steelhead salmon,0,Spring
+Sample297,Ind13,6,pink salmon,0,Spring
+Sample297,Ind13,6,sablefish,0,Spring
+Sample297,Ind13,6,lingcod,0,Spring
+Sample297,Ind13,6,arrowtooth flounder,0,Spring
+Sample297,Ind13,6,Pacific halibut,0,Spring
+Sample298,Ind5,4,Chinook salmon,0.3962949856011716,Spring
+Sample298,Ind5,4,chum salmon,0.27074298626455884,Spring
+Sample298,Ind5,4,coho salmon,0.14211623285259997,Spring
+Sample298,Ind5,4,steelhead salmon,0.02772994174764529,Spring
+Sample298,Ind5,4,pink salmon,0,Spring
+Sample298,Ind5,4,sablefish,0,Spring
+Sample298,Ind5,4,lingcod,0,Spring
+Sample298,Ind5,4,arrowtooth flounder,0,Spring
+Sample298,Ind5,4,Pacific halibut,0.15994010465402364,Spring
+Sample299,Ind11,12,Chinook salmon,0,Autumn
+Sample299,Ind11,12,chum salmon,0.4012286682142691,Autumn
+Sample299,Ind11,12,coho salmon,0,Autumn
+Sample299,Ind11,12,steelhead salmon,0.1170857375830613,Autumn
+Sample299,Ind11,12,pink salmon,0,Autumn
+Sample299,Ind11,12,sablefish,0.04544028961730604,Autumn
+Sample299,Ind11,12,lingcod,0,Autumn
+Sample299,Ind11,12,arrowtooth flounder,0.42558324999233155,Autumn
+Sample299,Ind11,12,Pacific halibut,0,Autumn
+Sample300,Ind15,7,Chinook salmon,0.9865842190534213,Summer
+Sample300,Ind15,7,chum salmon,0,Summer
+Sample300,Ind15,7,coho salmon,0.013314119345677741,Summer
+Sample300,Ind15,7,steelhead salmon,0,Summer
+Sample300,Ind15,7,pink salmon,0,Summer
+Sample300,Ind15,7,sablefish,0,Summer
+Sample300,Ind15,7,lingcod,0,Summer
+Sample300,Ind15,7,arrowtooth flounder,0,Summer
+Sample300,Ind15,7,Pacific halibut,0,Summer

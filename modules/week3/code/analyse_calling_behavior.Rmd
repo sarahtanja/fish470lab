@@ -180,6 +180,10 @@ Remember to use your help function `?pivot_longer` to learn more about what that
 :::
 
 ```{r}
+?pivot_longer()
+```
+
+```{r}
 #| include: false
 data.long <- data %>% 
   pivot_longer(cols = c(combined_call,whistle,pulsed_call),
@@ -188,15 +192,13 @@ data.long <- data %>%
 ```
 
 ```{r}
-#| include: false
 ggplot(data = data.long, 
        aes(x = group_size, 
-           y = num.call, 
-           color = call, 
+           y = num.call,
            fill = call)) +
         geom_bar(stat="identity", 
                  position = "dodge", 
-                 alpha = 0.5) +
+                 alpha = 0.9) +
         theme_minimal()
 ```
 
@@ -367,7 +369,7 @@ Choose an appropriate model
 
 -   Categorical data:
 
-    -    ANOVA `aov()`
+    -   ANOVA `aov()`
 
 -   Continuous data:
 
