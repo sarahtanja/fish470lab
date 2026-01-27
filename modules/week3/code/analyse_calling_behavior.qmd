@@ -180,6 +180,7 @@ Remember to use your help function `?pivot_longer` to learn more about what that
 :::
 
 ```{r}
+#| eval: false
 ?pivot_longer()
 ```
 

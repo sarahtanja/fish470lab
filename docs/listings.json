@@ -1,5 +1,11 @@
 [
   {
+    "listing": "/modules/week4.html",
+    "items": [
+      "/modules/week4/code/KW_diet_simulation.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
       "/modules/week2.html",
@@ -19,9 +25,5 @@
     "items": [
       "/modules/week3/code/analyse_calling_behavior.html"
     ]
-  },
-  {
-    "listing": "/modules/week4.html",
-    "items": []
   }
 ]

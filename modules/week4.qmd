@@ -24,13 +24,12 @@ title-block-banner: true
 ::: {#description}
 #### Learning Goals:
 
-1. Build on our use of the `ggplot` package in `R` to customize plots using themes, colors, and labels.
+1. Practice working with `dplyr` and `tidyr` to manipulate and summarize statistics with grouped operations.
 
-2. Introduce common markdown syntax for formatting text, inserting images, and creating links, and knitting from `.Rmd` or `.qmd` files for lab reports. 
+2. Build on our use of the `ggplot` package in `R` to customize plots using `facet_wrap()`.
 
 ::: callout-tip
-Get inspiration from the [R graph gallery](https://r-graph-gallery.com/) for more `ggplot2` examples and ideas.
-Checkout the [Quarto documentation](https://quarto.org/docs/authoring/markdown-basics.html) for more information markdown basics. Another great resource is [RMarkdown for Scientists](https://rmd4sci.njtierney.com/) by [Nathaniel Tierney](https://njtierney.com/).
+Checkout [this posit learning webpage](https://posit.cloud/learn/recipes/transform/TransformI) to review computing summary statistics for groups of rows within a data frame
 :::
 
 :::
