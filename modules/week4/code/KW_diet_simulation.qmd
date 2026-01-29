@@ -9,7 +9,12 @@ date: "2026-01-20"
 draft: false
 date-modified: today
 order: 1
-format: html
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    code-fold: true
 bibliography: "../refs/bib.bibtex"
 editor: 
   markdown: 

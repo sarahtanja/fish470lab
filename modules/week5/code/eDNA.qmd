@@ -1,0 +1,215 @@
+---
+title: "eDNA"
+draft: true
+format: html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE
+  )
+```
+
+# Background
+
+# Step 1. Hypotheses and variables
+
+## Setup coding environment
+
+- Create a new folder within your R Project for this week's analysis!
+- Download the dataset `eDNA_MM_detections.csv` from the course Canvas page and save it in a `data` folder within your new analysis folder.
+
+::: callout-important
+Before starting, make sure you have the `ggOceanMaps` package installed!
+You can install it by typing `install.packages("ggOceanMaps")` in the R console.
+You should only need to do this once! R may ask you to restart after installation... Save your .Rmd file and restart R if prompted.
+Remember.. you will need to install the package before attempting to load the package from your library...
+:::
+
+- Load libraries
+```{r}
+library(tidyverse)
+library(ggOceanMaps) # we will need this new package to build a map!
+library(raster) # for working with spatial data, dependency for marmap
+library(marmap) # for bathymetry data
+library(plotly) # for making an interactive 3D plot!
+```
+s
+- Load data using `read_csv("path/to/your/file.csv")`
+```{r}
+detect_data <- read_csv("../data/eDNA_MM_detections.csv")
+```
+
+- Checkout your data! 
+  - What are the variables? 
+  - How many observations are there?
+  - Use helper functions like:
+    - `head(your_data)` to see the first few rows of your data
+    - `glimpse(your_data)` to see the structure of your data
+    - `summary(your_data)` to see summary statistics of your data
+    
+# Step 2. Wrangle and visualize data
+
+```{r}
+#1. Wrangle: use filter to just look at just positive detections
+
+detect_data_positive <- detect_data %>% 
+  filter(Detected == 1)
+```
+
+::: callout-tip
+How many observations were filtered out when we filtered our rows (aka number of observations) to only include positive detections?
+Some options for you:
+- Look at the number of observations in the global environment view pane and compere the dataframes before and after filtering.
+- Look at the dimensions of the data before and after filtering using the `dim(your_data)` function. 
+- Or use the `nrow(your_data)` function to count the number of rows in a dataframe.
+:::
+
+```{r}
+glimpse(detect_data_positive)
+```
+
+
+```{r, fig.width = 12}
+#2a Visualize: plot MM detections by depth
+ggplot(detect_data_positive, aes(y = common_name, x = depth, 
+                            fill = Family, color = Family)) +
+  geom_count(alpha = 0.7) +
+  coord_flip(clip = "off") +
+  scale_x_reverse() +
+  scale_y_discrete() +
+  theme_minimal()+
+  theme(
+    axis.text.y = element_text(size = 10),# straight labels
+    axis.text.x = element_text(size = 10, 
+                               angle = 90, 
+                               hjust = 1) # right aligned x-axis labels
+  )
+```
+## Make a 2D map of the sample 
+```{r}
+#2b Visualize: plot MM detection 2D map
+
+
+#first have them make the map
+base_map <- basemap(limits = c(min(detect_data$lon),
+                                    max(detect_data$lon),
+                                    min(detect_data$lat),
+                                    max(detect_data$lat)),
+                         bathy.style = "rcb", crs = 4326,
+                         rotate = FALSE)
+## must download data the first time this is run each day. Select 1 for yes.
+```
+
+```{r}
+#installing marmap can take 30-60 seconds
+#make sure R is up to date (v 4.0.x) with "version" in console
+library(raster) #may need to reinstall
+library(marmap)
+```
+
+
+```{r}
+lon1 <- max(detect_data$lon) + 2
+lon2 <- min(detect_data$lon) - 1
+
+lat1 <- min(detect_data$lat) - 2
+lat2 <- max(detect_data$lat) + 2
+```
+
+
+get the bathymetry from NOAA. Resolution in minutes, default = 4, 
+minimum = 1. Smaller = higher resolution and longer times
+keep=TRUE writes downloaded data into a file
+lon : E to W & lat: S to N
+```{r}
+bathy_map <- getNOAA.bathy(lon1=lon1, lon2=lon2, lat1=lat1, lat2=lat2,
+            resolution=1, keep=TRUE) 
+```
+
+
+```{r, fig.height=12}
+#create a ggplot object appropriate to the bathy data object
+base_map <- autoplot.bathy(bathy_map, geom=c('raster'),
+                show.legend=FALSE) +     #turn off legend
+  scale_fill_etopo() +                   #special topographic colors
+  theme(axis.title = element_blank()) +  #remove the axis titles
+  scale_x_continuous(breaks=seq(-126,-124, 2),  #where to place the values
+                     labels=paste0(seq(126, 124, -2),'W'), 
+                     expand = c(0, 0)) + 
+  scale_y_continuous(breaks=seq(38,48,2),  #where to place the values
+                     labels=paste0(seq(38,48,2),'N'),
+                     expand = c(0, 0))
+base_map
+```
+
+```{r}
+base_map <- autoplot.bathy(bathy_map, geom=c('raster'),
+                show.legend=FALSE) +     #turn off legend
+  scale_fill_gradient2(low = "white", mid = "white", high = "gainsboro", 
+                       limits   = c(min(bathy_map), 0),  # only sea depths; land becomes NA
+                       na.value = "gainsboro") +     # land colour
+  theme(axis.title = element_blank()) +  #remove the axis titles
+  scale_x_continuous(breaks=seq(-126,-124, 2),  #where to place the values
+                     labels=paste0(seq(126, 124, -2),'W'), 
+                     expand = c(0, 0)) + 
+  scale_y_continuous(breaks=seq(38,48,2),  #where to place the values
+                     labels=paste0(seq(38,48,2),'N'),
+                     expand = c(0, 0))
+base_map
+
+```
+
+
+### Add points to the map
+```{r}
+#then add points to the map
+
+whale_map <- base_map +
+  geom_point(data = detect_data_positive, aes(x=lon, y=lat, color = Family),
+             alpha = 0.5, size = 2)
+
+whale_map
+```
+
+```{r}
+#2c Visualize: plot MM detections in 3D
+
+
+#using phocids (true seals) as an example here, students can do whatever they want
+phocids <- detect_data_positive %>% filter(Family == "Phocidae")
+```
+
+```{r}
+phocid_3D <- plot_ly(phocids,
+  x = ~lon,
+  y = ~lat,
+  z = ~rev(depth),
+  color = ~Species,
+  type = "scatter3d",
+  mode = "markers") %>% #this first bit up to here is all you need. The rest makes it a bit fancier
+  layout(scene = list(aspectmode = "manual",
+                      aspectratio = list(x = 1, y = 3, z = 0.5), #this stretches longitude axis so that it's a bit closer to reality
+                      zaxis = list(autorange = "reversed"), #this reverses the depth axis so that deeper detections are at the bottom
+                      xaxis = list(title = "Longitude"),
+                      yaxis = list(title = "Latitude")))
+
+```
+
+
+```{r}
+phocid_3D
+```
+
+fish file is 2.3GB! taking my computer (which has 50GB RAM and 6 core CPU 2 hours to download!)
+```{r}
+### Now let's try looking at fishes
+
+detect_data_fish <- read_csv("../data/eDNA_MM_fish_detections.csv")
+#1 Wrangle: filter for 1 MM and pivot the fish to a single column
+```
+
+
+# Step 3. Model the relationship
