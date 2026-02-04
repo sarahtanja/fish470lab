@@ -1,35 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sarahtanja.github.io/fish470lab/modules/week4.html</loc>
-    <lastmod>2026-01-27T19:35:35.258Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sarahtanja.github.io/fish470lab/modules/week4/code/KW_diet_simulation.html</loc>
-    <lastmod>2026-01-27T21:18:54.383Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sarahtanja.github.io/fish470lab/modules/week3/code/analyse_calling_behavior.html</loc>
-    <lastmod>2026-01-27T19:38:53.708Z</lastmod>
+    <loc>https://sarahtanja.github.io/fish470lab/index.html</loc>
+    <lastmod>2026-02-04T08:33:11.120Z</lastmod>
   </url>
   <url>
     <loc>https://sarahtanja.github.io/fish470lab/modules/week2/code/into_the_tidyverse.html</loc>
-    <lastmod>2026-01-15T20:56:29.337Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sarahtanja.github.io/fish470lab/index.html</loc>
-    <lastmod>2026-01-23T18:11:59.524Z</lastmod>
+    <lastmod>2026-02-04T08:33:19.013Z</lastmod>
   </url>
   <url>
     <loc>https://sarahtanja.github.io/fish470lab/modules/week2/code/pilot_whales.html</loc>
-    <lastmod>2026-01-15T20:56:29.210Z</lastmod>
+    <lastmod>2026-02-04T08:33:26.307Z</lastmod>
   </url>
   <url>
     <loc>https://sarahtanja.github.io/fish470lab/modules/week2.html</loc>
-    <lastmod>2026-01-15T20:56:29.336Z</lastmod>
+    <lastmod>2026-02-04T08:33:29.249Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sarahtanja.github.io/fish470lab/modules/week3/code/analyse_calling_behavior.html</loc>
+    <lastmod>2026-02-04T08:33:42.666Z</lastmod>
   </url>
   <url>
     <loc>https://sarahtanja.github.io/fish470lab/modules/week3.html</loc>
-    <lastmod>2026-01-23T18:05:40.444Z</lastmod>
+    <lastmod>2026-02-04T08:33:43.269Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sarahtanja.github.io/fish470lab/modules/week4/code/KW_diet_simulation.html</loc>
+    <lastmod>2026-02-04T08:34:00.264Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sarahtanja.github.io/fish470lab/modules/week4.html</loc>
+    <lastmod>2026-02-04T08:34:04.639Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sarahtanja.github.io/fish470lab/modules/week5/code/eDNA.html</loc>
+    <lastmod>2026-02-04T08:34:36.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sarahtanja.github.io/fish470lab/modules/week5.html</loc>
+    <lastmod>2026-02-04T08:34:37.300Z</lastmod>
   </url>
 </urlset>
