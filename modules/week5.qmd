@@ -1,0 +1,34 @@
+---
+title: "Spatial eDNA detection patterns of marine mammals and their prey"
+subtitle: "Week 5 Module"
+image: "week5.png"
+
+about:
+  id: description
+  template: trestles
+  image: "week5.png"
+  
+listing: 
+  contents: week5
+  sort: "order"
+  type: table
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, reading-time]
+  
+page-layout: full
+title-block-banner: true
+---
+
+::: {#description}
+#### Learning Goals:
+
+1. Walk through building a map and an interactive 3D plot using `marmap` and `plotly` packages in `R`.
+
+2. Build on our use of the `ggplot` package in `R` to do initial data exploration and visualization of spatial patterns in eDNA detections.
+
+
+:::
+
+

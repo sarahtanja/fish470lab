@@ -132,9 +132,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-reading-time',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-date','listing-title','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -190,6 +190,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <a class="dropdown-item" href="../modules/week3.html">
  <span class="dropdown-text">Week 3</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../modules/week4.html">
+ <span class="dropdown-text">Week 4</span></a>
+  </li>  
     </ul>
   </li>
 </ul>
@@ -235,8 +239,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="learning-goals" class="level4">
 <h4 data-anchor-id="learning-goals">Learning Goals:</h4>
 <ol type="1">
-<li><p>Build on our use of the <code>ggplot</code> package in <code>R</code> to customize plots using themes, colors, and labels.</p></li>
-<li><p>Introduce common markdown syntax for formatting text, inserting images, and creating links, and knitting from <code>.Rmd</code> or <code>.qmd</code> files for lab reports.</p></li>
+<li><p>Practice working with <code>dplyr</code> and <code>tidyr</code> to manipulate and summarize statistics with grouped operations.</p></li>
+<li><p>Build on our use of the <code>ggplot</code> package in <code>R</code> to customize plots using <code>facet_wrap()</code>.</p></li>
 </ol>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -248,7 +252,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Get inspiration from the <a href="https://r-graph-gallery.com/">R graph gallery</a> for more <code>ggplot2</code> examples and ideas. Checkout the <a href="https://quarto.org/docs/authoring/markdown-basics.html">Quarto documentation</a> for more information markdown basics. Another great resource is <a href="https://rmd4sci.njtierney.com/">RMarkdown for Scientists</a> by <a href="https://njtierney.com/">Nathaniel Tierney</a>.</p>
+<p>Checkout <a href="https://posit.cloud/learn/recipes/transform/TransformI">this posit learning webpage</a> to review computing summary statistics for groups of rows within a data frame</p>
 </div>
 </div>
 </section>
@@ -279,6 +283,17 @@ Reading Time
 </tr>
 </thead>
 <tbody class="list">
+<tr data-index="0" data-listing-date-sort="1768896000000" data-listing-file-modified-sort="1769728043873" data-listing-reading-time-sort="10.8" data-listing-title-sort="1. Southern resident killer whale diets" data-listing-filename-sort="KW_diet_simulation.qmd">
+<td class="listing-date">
+Jan 20, 2026
+</td>
+<td class="listing-title">
+<a href="../modules/week4/code/KW_diet_simulation.html" class="title">1. Southern resident killer whale diets</a>
+</td>
+<td class="listing-reading-time">
+10 min
+</td>
+</tr>
 </tbody>
 
 </table>
@@ -505,16 +520,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>::: {#description}</span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Learning Goals:</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Build on our use of the <span class="in">`ggplot`</span> package in <span class="in">`R`</span> to customize plots using themes, colors, and labels.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Practice working with <span class="in">`dplyr`</span> and <span class="in">`tidyr`</span> to manipulate and summarize statistics with grouped operations.</span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Introduce common markdown syntax for formatting text, inserting images, and creating links, and knitting from <span class="in">`.Rmd`</span> or <span class="in">`.qmd`</span> files for lab reports. </span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Build on our use of the <span class="in">`ggplot`</span> package in <span class="in">`R`</span> to customize plots using <span class="in">`facet_wrap()`</span>.</span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>Get inspiration from the <span class="co">[</span><span class="ot">R graph gallery</span><span class="co">](https://r-graph-gallery.com/)</span> for more <span class="in">`ggplot2`</span> examples and ideas.</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>Checkout the <span class="co">[</span><span class="ot">Quarto documentation</span><span class="co">](https://quarto.org/docs/authoring/markdown-basics.html)</span> for more information markdown basics. Another great resource is <span class="co">[</span><span class="ot">RMarkdown for Scientists</span><span class="co">](https://rmd4sci.njtierney.com/)</span> by <span class="co">[</span><span class="ot">Nathaniel Tierney</span><span class="co">](https://njtierney.com/)</span>.</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>Checkout <span class="co">[</span><span class="ot">this posit learning webpage</span><span class="co">](https://posit.cloud/learn/recipes/transform/TransformI)</span> to review computing summary statistics for groups of rows within a data frame</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

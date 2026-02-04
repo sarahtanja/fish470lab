@@ -4,7 +4,8 @@
     "items": [
       "/modules/week2.html",
       "/modules/week3.html",
-      "/modules/week4.html"
+      "/modules/week4.html",
+      "/modules/week5.html"
     ]
   },
   {
@@ -22,6 +23,14 @@
   },
   {
     "listing": "/modules/week4.html",
-    "items": []
+    "items": [
+      "/modules/week4/code/KW_diet_simulation.html"
+    ]
+  },
+  {
+    "listing": "/modules/week5.html",
+    "items": [
+      "/modules/week5/code/eDNA.html"
+    ]
   }
 ]
