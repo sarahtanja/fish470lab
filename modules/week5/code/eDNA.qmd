@@ -345,7 +345,7 @@ humpy <- eDNA %>%
   filter(common_name == "humpback whale") %>% 
   pivot_longer(16:length(.), names_to = "prey_species", values_to = "prey_prop") %>% 
   group_by(Detected, prey_species) %>%
-  filter(mean(prey_prop) > 0.10) %>%
+  filter(mean(prey_prop) > 0.02) %>%
   ungroup()
 ```
 
@@ -367,18 +367,20 @@ Here we use `ggplot()` with `geom_boxplot()` and `facet_wrap()` to create boxplo
 `x = prey_species` and `y = prey_prop` from the wrangled and filtered data frame where `pivot_longer()` was used to make the new columns `prey_species` reflect the fish species and `prey_prop` reflect the proportion of DNA reads that mapped to that fish species.
 :::
 
-```{r fig.height=8, echo=FALSE}
-ggplot(humpy, aes(x = prey_species, y = prey_prop)) +
-  geom_boxplot(aes(fill = prey_species)) +
+```{r fig.height=10, echo=FALSE}
+ggplot(humpy, aes(x = as.factor(Detected), y = prey_prop)) +
+  geom_boxplot(aes(fill = as.factor(Detected))) +
   theme(legend.position = "none") +
-  facet_wrap(~Detected) +
+  facet_wrap(~prey_species) +
   scale_x_discrete() +
   theme_minimal()+
   theme(
       axis.text.x = element_text(size = 10, 
                                angle = 90, 
                                hjust = 1)
-  )
+  ) +
+  coord_flip() + 
+  ylim(0,0.5)
 ```
 
 ```{r, include=FALSE}
