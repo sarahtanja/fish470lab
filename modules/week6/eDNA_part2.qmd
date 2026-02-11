@@ -1,0 +1,31 @@
+---
+title: "1. Specific Hypotheses and figure generation using eDNA data"
+subtitle: "Building on group eDNA projects"
+page-layout: article
+author: 
+  - Amy Van Cise
+  - Sarah Tanja
+date: "2026-02-10"
+draft: false
+date-modified: today
+order: 1
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    code-fold: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE
+  )
+```
+
+# Background
