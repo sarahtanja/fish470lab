@@ -20,7 +20,11 @@ website:
           - text: "Week 3"
             file: modules/week3.qmd
           - text: "Week 4"
-            file: modules/week4.qmd  
+            file: modules/week4.qmd 
+          - text: "Week 5"
+            file: modules/week5.qmd
+          - text: "Week 6"
+            file: modules/week6.qmd  
     right:
       - icon: github
         href: "https://github.com/sarahtanja/fish470lab"
@@ -56,4 +60,4 @@ format:
     link-external-icon: true
     link-external-newwindow: true
     reference-location: margin
-    citation-location: margin
+    citation-location: document

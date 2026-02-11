@@ -10,6 +10,7 @@ listing:
     - modules/week3.qmd
     - modules/week4.qmd
     - modules/week5.qmd
+    - modules/week5.qmd
   sort: "false"
   type: grid
   grid-item-align: center
