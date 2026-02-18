@@ -35,8 +35,9 @@ knitr::opts_chunk$set(
 
 This week you will work in your groups to build on the eDNA data
 exploration we did in week 5 to generate specific hypotheses about eDNA
-distributions of marine mammals (and their prey). We will also practice
-hiding code chunks and integrating citations into our writing.
+distributions of marine mammals (and their prey)[@Anderson2023-op]. We
+will also practice hiding code chunks and integrating citations into our
+writing.[@Carroll2021-ln]
 
 ::: callout-important
 -   eDNA data for fish prey species is proportional to the number of DNA
@@ -110,7 +111,7 @@ humpy <- eDNA %>%
   filter(common_name == "humpback whale") %>% 
   pivot_longer(16:length(.), names_to = "prey_species", values_to = "prey_prop") %>% 
   group_by(Detected, prey_species) %>%
-  filter(mean(prey_prop) > 0.02) %>% #
+  filter(mean(prey_prop) > 0.01) %>% # !!!!
   ungroup()
 ```
 
@@ -203,13 +204,13 @@ library(PNWColors)
 mycolors <- rev(pnw_palette("Bay", 2, type = "discrete"))
 ```
 
-## `ggplot()` 
+## `ggplot()`
 
 -   `scale_color_manual()` controls the outline of your geom
 
 -   `scale_fill_manual()` controls the fill of your geom
 
-```{r, fig.height=8}
+```{r fig.height=8}
 ggplot(humpy %>% filter(prey_species == "Stenobrachius leucopsarus"), 
        aes(x = prey_prop, y = as.factor(Detected), fill = as.factor(Detected), color = as.factor(Detected))) +
   geom_point() +
@@ -287,7 +288,7 @@ At the end of your document, add a section header where the bibliography
 should appear. Pandoc will automatically generate the reference list:
 
 ::: callout-tip
-## Learn more about citations in Visual R Markdown from [this guide page](https://rstudio.github.io/visual-markdown-editing/citations.html) 
+## Learn more about citations in Visual R Markdown from [this guide page](https://rstudio.github.io/visual-markdown-editing/citations.html)
 :::
 
 # Report formatting tips and tricks

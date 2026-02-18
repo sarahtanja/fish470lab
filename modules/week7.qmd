@@ -1,0 +1,32 @@
+---
+title: "Part 3 : CA Current eDNA detections of marine mammals and their prey"
+subtitle: "Week 7 Module"
+image: "week7.png"
+
+about:
+  id: description
+  template: trestles
+  image: "week7.png"
+  
+listing: 
+  contents: week7
+  sort: "order"
+  type: table
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, reading-time]
+  
+page-layout: full
+title-block-banner: true
+---
+
+::: {#description}
+#### Learning Goals:
+
+1. Identify predictor variables as categorical or continuous, and use an appropriate statistical test.
+
+2. Polish figures to effectively communicate your findings. Checkout inspiration for using ggplot from the [R graph gallery](https://r-graph-gallery.com/)
+
+:::
+

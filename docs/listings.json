@@ -1,5 +1,11 @@
 [
   {
+    "listing": "/modules/week7.html",
+    "items": [
+      "/modules/week7/code/eDNA_part3.html"
+    ]
+  },
+  {
     "listing": "/modules/week6.html",
     "items": [
       "/modules/week6/code/eDNA_part2.html"
@@ -23,7 +29,9 @@
       "/modules/week2.html",
       "/modules/week3.html",
       "/modules/week4.html",
-      "/modules/week5.html"
+      "/modules/week5.html",
+      "/modules/week6.html",
+      "/modules/week7.html"
     ]
   },
   {

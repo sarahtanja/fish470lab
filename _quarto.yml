@@ -24,7 +24,9 @@ website:
           - text: "Week 5"
             file: modules/week5.qmd
           - text: "Week 6"
-            file: modules/week6.qmd  
+            file: modules/week6.qmd 
+          - text: "Week 7"
+            file: modules/week7.qmd
     right:
       - icon: github
         href: "https://github.com/sarahtanja/fish470lab"
