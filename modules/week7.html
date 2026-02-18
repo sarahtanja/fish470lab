@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Killer whale diets – FISH 470 Lab</title>
+<title>Part 3 : CA Current eDNA detections of marine mammals and their prey – FISH 470 Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -165,10 +165,12 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Killer whale diets – FISH 470 Lab">
-<meta property="og:description" content="Week 4 Module">
-<meta property="og:image" content="https://sarahtanja.github.io/fish470lab/modules/week4.jpg">
+<meta property="og:title" content="Part 3 : CA Current eDNA detections of marine mammals and their prey – FISH 470 Lab">
+<meta property="og:description" content="Week 7 Module">
+<meta property="og:image" content="https://sarahtanja.github.io/fish470lab/modules/week7.png">
 <meta property="og:site_name" content="FISH 470 Lab">
+<meta property="og:image:height" content="399">
+<meta property="og:image:width" content="640">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -237,8 +239,8 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page">
-      <div class="quarto-title-block"><div><h1 class="title">Killer whale diets</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-            <p class="subtitle lead">Week 4 Module</p>
+      <div class="quarto-title-block"><div><h1 class="title">Part 3 : CA Current eDNA detections of marine mammals and their prey</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+            <p class="subtitle lead">Week 7 Module</p>
                       </div>
   </div>
   <div class="quarto-title-meta column-page">
@@ -256,7 +258,7 @@ window.Quarto = {
 
 <div class="quarto-about-trestles column-page">
   <div class="about-entity">
-    <img src="week4.jpg" class="about-image
+    <img src="week7.png" class="about-image
   rounded " style="width: 20em;">
 
   </div>
@@ -264,22 +266,9 @@ window.Quarto = {
 <section id="learning-goals" class="level4">
 <h4 data-anchor-id="learning-goals">Learning Goals:</h4>
 <ol type="1">
-<li><p>Practice working with <code>dplyr</code> and <code>tidyr</code> to manipulate and summarize statistics with grouped operations.</p></li>
-<li><p>Build on our use of the <code>ggplot</code> package in <code>R</code> to customize plots using <code>facet_wrap()</code>.</p></li>
+<li><p>Identify predictor variables as categorical or continuous, and use an appropriate statistical test.</p></li>
+<li><p>Polish figures to effectively communicate your findings. Checkout inspiration for using ggplot from the <a href="https://r-graph-gallery.com/">R graph gallery</a></p></li>
 </ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Checkout <a href="https://posit.cloud/learn/recipes/transform/TransformI">this posit learning webpage</a> to review computing summary statistics for groups of rows within a data frame</p>
-</div>
-</div>
 </section>
 </div></div>
 </div>
@@ -312,15 +301,15 @@ Reading Time
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-date-sort="1768896000000" data-listing-file-modified-sort="1769728043873" data-listing-date-modified-sort="1771315200000" data-listing-reading-time-sort="11" data-listing-word-count-sort="2160" data-listing-title-sort="1. Southern resident killer whale diets" data-listing-filename-sort="KW_diet_simulation.qmd">
+<tr data-index="0" data-listing-date-sort="1770883200000" data-listing-file-modified-sort="1771395168263" data-listing-date-modified-sort="1771315200000" data-listing-reading-time-sort="8" data-listing-word-count-sort="1499" data-listing-title-sort="1. Figures and statistical tests using eDNA data" data-listing-filename-sort="eDNA_part3.qmd">
 <td>
-<span class="listing-date">Jan 20, 2026</span>
+<span class="listing-date">Feb 12, 2026</span>
 </td>
 <td>
-<a href="../modules/week4/code/KW_diet_simulation.html" class="title listing-title">1. Southern resident killer whale diets</a>
+<a href="../modules/week7/code/eDNA_part3.html" class="title listing-title">1. Figures and statistical tests using eDNA data</a>
 </td>
 <td>
-<span class="listing-reading-time">11 min</span>
+<span class="listing-reading-time">8 min</span>
 </td>
 
 </tr>
@@ -781,17 +770,17 @@ Reading Time
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Killer whale diets"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Week 4 Module"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "week4.jpg"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Part 3 : CA Current eDNA detections of marine mammals and their prey"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Week 7 Module"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "week7.png"</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">about:</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  id: description</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  template: trestles</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  image: "week4.jpg"</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  image: "week7.png"</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  </span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span><span class="co"> </span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">  contents: week4</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">  contents: week7</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">  sort: "order"</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">  type: table</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">  categories: false</span></span>
@@ -806,15 +795,11 @@ Reading Time
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>::: {#description}</span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Learning Goals:</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Practice working with <span class="in">`dplyr`</span> and <span class="in">`tidyr`</span> to manipulate and summarize statistics with grouped operations.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Identify predictor variables as categorical or continuous, and use an appropriate statistical test.</span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Build on our use of the <span class="in">`ggplot`</span> package in <span class="in">`R`</span> to customize plots using <span class="in">`facet_wrap()`</span>.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Polish figures to effectively communicate your findings. Checkout inspiration for using ggplot from the <span class="co">[</span><span class="ot">R graph gallery</span><span class="co">](https://r-graph-gallery.com/)</span></span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>Checkout <span class="co">[</span><span class="ot">this posit learning webpage</span><span class="co">](https://posit.cloud/learn/recipes/transform/TransformI)</span> to review computing summary statistics for groups of rows within a data frame</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

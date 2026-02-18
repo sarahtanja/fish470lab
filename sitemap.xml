@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://sarahtanja.github.io/fish470lab/modules/week7.html</loc>
+    <lastmod>2026-02-12T18:57:17.929Z</lastmod>
+  </url>
+  <url>
     <loc>https://sarahtanja.github.io/fish470lab/modules/week6.html</loc>
     <lastmod>2026-02-11T17:32:14.102Z</lastmod>
   </url>
@@ -26,7 +30,7 @@
   </url>
   <url>
     <loc>https://sarahtanja.github.io/fish470lab/index.html</loc>
-    <lastmod>2026-02-11T19:43:56.470Z</lastmod>
+    <lastmod>2026-02-12T18:37:56.128Z</lastmod>
   </url>
   <url>
     <loc>https://sarahtanja.github.io/fish470lab/modules/week2/code/pilot_whales.html</loc>
@@ -46,6 +50,10 @@
   </url>
   <url>
     <loc>https://sarahtanja.github.io/fish470lab/modules/week6/code/eDNA_part2.html</loc>
-    <lastmod>2026-02-11T19:20:44.752Z</lastmod>
+    <lastmod>2026-02-12T18:45:52.769Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sarahtanja.github.io/fish470lab/modules/week7/code/eDNA_part3.html</loc>
+    <lastmod>2026-02-18T06:12:48.263Z</lastmod>
   </url>
 </urlset>

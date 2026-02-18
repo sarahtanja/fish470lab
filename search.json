@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "modules/week7.html",
+    "href": "modules/week7.html",
+    "title": "Part 3 : CA Current eDNA detections of marine mammals and their prey",
+    "section": "",
+    "text": "Learning Goals:\n\nIdentify predictor variables as categorical or continuous, and use an appropriate statistical test.\nPolish figures to effectively communicate your findings. Checkout inspiration for using ggplot from the R graph gallery\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nReading Time\n\n\n\n\n\n\n\n\nFeb 12, 2026\n\n\n1. Figures and statistical tests using eDNA data\n\n\n8 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "modules/week6.html",
     "href": "modules/week6.html",
     "title": "Part 2 : CA Current eDNA detections of marine mammals and their prey",
@@ -221,7 +228,7 @@
     "href": "index.html",
     "title": "",
     "section": "",
-    "text": "Code\n\n\n\n\nWelcome to the R based coding modules for FISH 470 Lab! Here you can find various learning modules designed to help you enhance your skills in data analysis and visualization using R and the tidyverse. Each module includes background information, step-by-step instructions, and practical exercises to reinforce your learning. When first learning to code, repitition and replication are key! I challenge you to work through the modules by physically typing out the commands rather than copy-paste. This will help you become more familiar with the syntax and structure of R programming. Don’t hesitate to experiment with the code and use the help function ?function_name frequently.\nI encourage you to print out these cheat sheets and keep them handy as you work through the modules:\n\ntidyr\ndplyr\nlubridate\nggplot\nmany more Posit cheatsheets !\n\nHappy coding!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInto the Tidyverse\n\n\nWeek 2 Module\n\n\n\n\n\n\n\n\n\n\n\n\nBeluga social vocals\n\n\nWeek 3 Module\n\n\n\n\n\n\n\n\n\n\n\n\nKiller whale diets\n\n\nWeek 4 Module\n\n\n\n\n\n\n\n\n\n\n\n\nSpatial eDNA detection patterns of marine mammals and their prey\n\n\nWeek 5 Module\n\n\n\n\n\nNo matching items"
+    "text": "Code\n\n\n\n\nWelcome to the R based coding modules for FISH 470 Lab! Here you can find various learning modules designed to help you enhance your skills in data analysis and visualization using R and the tidyverse. Each module includes background information, step-by-step instructions, and practical exercises to reinforce your learning. When first learning to code, repitition and replication are key! I challenge you to work through the modules by physically typing out the commands rather than copy-paste. This will help you become more familiar with the syntax and structure of R programming. Don’t hesitate to experiment with the code and use the help function ?function_name frequently.\nI encourage you to print out these cheat sheets and keep them handy as you work through the modules:\n\ntidyr\ndplyr\nlubridate\nggplot\nmany more Posit cheatsheets !\n\nHappy coding!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInto the Tidyverse\n\n\nWeek 2 Module\n\n\n\n\n\n\n\n\n\n\n\n\nBeluga social vocals\n\n\nWeek 3 Module\n\n\n\n\n\n\n\n\n\n\n\n\nKiller whale diets\n\n\nWeek 4 Module\n\n\n\n\n\n\n\n\n\n\n\n\nSpatial eDNA detection patterns of marine mammals and their prey\n\n\nWeek 5 Module\n\n\n\n\n\n\n\n\n\n\n\n\nPart 2 : CA Current eDNA detections of marine mammals and their prey\n\n\nWeek 6 Module\n\n\n\n\n\n\n\n\n\n\n\n\nPart 3 : CA Current eDNA detections of marine mammals and their prey\n\n\nWeek 7 Module\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/week2/code/pilot_whales.html",
@@ -397,5 +404,26 @@
     "title": "1. Specific Hypotheses and figure generation using eDNA data",
     "section": "yaml front matter",
     "text": "yaml front matter\nCheckout html or PDF format options here"
+  },
+  {
+    "objectID": "modules/week7/code/eDNA_part3.html",
+    "href": "modules/week7/code/eDNA_part3.html",
+    "title": "1. Figures and statistical tests using eDNA data",
+    "section": "",
+    "text": "This week you will continue to work in your groups to build upon your final lab project using the eDNA dataset!\nThe focus in this lab will be polishing up your figures and performing statistical tests to answer your specific research question. You will continue to write up your findings in a lab report format with citations!\n\nA note about statistical tests: So far this quarter, we’ve looked at research questions that can be answered with an ANOVA or a linear regression. For the major lab project, the required statistic is an ANOVA or linear regression. If you learned a statistical test or model in another class that you want to apply here, I encourage you to try it out!"
+  },
+  {
+    "objectID": "modules/week7/code/eDNA_part3.html#anova",
+    "href": "modules/week7/code/eDNA_part3.html#anova",
+    "title": "1. Figures and statistical tests using eDNA data",
+    "section": "ANOVA",
+    "text": "ANOVA\nA one-way ANOVA in R tests whether the means of a continuous response (y) variable differ across your categorical predictor (x) variable of two or more groups. Conceptually, it asks: Is the variation between group means larger than we would expect from random variation within groups? In R, you typically run it with aov(y ~ group, data = your_dataframe)\n\n\n\n\n\n\nTip\n\n\n\nRead up on the usage of the built in ANOVA function aov() from the stats package by running ?aov in the console or a code chunk\n\n\n\n\nCode\n?aov\n\n\n\n\nCode\nanova_res &lt;- aov(prey_prop ~ Detected, data = humpy_Sleucopsarus)\n\nsummary(anova_res)\n\n\n             Df Sum Sq Mean Sq F value Pr(&gt;F)\nDetected      1  0.021 0.02150   1.113  0.292\nResiduals   514  9.926 0.01931               \n\n\n\n\nCode\nhumpy_Sleucopsarus %&gt;% \n  group_by(Detected) %&gt;% \n  summarise(mean(prey_prop))\n\n\n# A tibble: 2 × 2\n  Detected `mean(prey_prop)`\n     &lt;dbl&gt;             &lt;dbl&gt;\n1        0            0.0656\n2        1            0.0897"
+  },
+  {
+    "objectID": "modules/week7/code/eDNA_part3.html#linear-regression",
+    "href": "modules/week7/code/eDNA_part3.html#linear-regression",
+    "title": "1. Figures and statistical tests using eDNA data",
+    "section": "Linear regression",
+    "text": "Linear regression\nA linear model in R using lm() estimates the relationship between a continuous response (y) variable and one or more continuous predictor (x) variables. At its core, it fits a line that minimizes squared residuals.\n\n\n\n\n\n\nTip\n\n\n\nRead up on the usage of the built in linear model function lm() from the stats package by running ?lm in the console or a code chunk\n\n\n\n\nCode\n?lm\n\n\n\n\nCode\nlm_res &lt;- lm(Detected ~ prey_prop, data=humpy_Sleucopsarus)\nsummary(lm_res)\n\n\n\nCall:\nlm(formula = Detected ~ prey_prop, data = humpy_Sleucopsarus)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.16102 -0.07673 -0.07169 -0.07148  0.92852 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  0.07148    0.01310   5.456 7.57e-08 ***\nprey_prop    0.08954    0.08486   1.055    0.292    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.2676 on 514 degrees of freedom\nMultiple R-squared:  0.002161,  Adjusted R-squared:  0.0002199 \nF-statistic: 1.113 on 1 and 514 DF,  p-value: 0.2919"
   }
 ]
